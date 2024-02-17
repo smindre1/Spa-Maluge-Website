@@ -1,10 +1,33 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
+import "./index.css";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import Home from "./pages/Home.jsx";
+import Services from "./pages/Services.jsx";
+import BookNow from "./pages/BookNow.jsx";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <h1 className="display-2">Wrong page!</h1>,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "/Services",
+        element: <Services />,
+      },
+      {
+        path: "/BookNow",
+        element: <BookNow />,
+      }
+    ],
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);
