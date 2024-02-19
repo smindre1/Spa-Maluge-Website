@@ -13,31 +13,55 @@
   /* font-family: ""; */
 }
 
+.lineBreak {
+  margin-bottom: 18px;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
 /* ------------------- Header ------------------- */
 header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   width: 100%;
   margin: 0 0 2vw 0;
   padding: 2% 0 1% 0;
   background-color: var(--base);
 }
 
+.menu {
+  margin-left: auto;
+  padding-top: 1.5%;
+  padding-right: 2%;
+}
+
 .highlight {
-  border-bottom: solid var(--gold) 5px;
+  border-bottom: solid var(--gold) 3px;
+  color: var(--gold);
 }
 
 .highlight:hover {
   color: var(--darkgray);
 }
 
+.textColor {
+ color: var(--cream); 
+}
+
 .menuBarText {
-  color: var(--cream);
+  
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.5px;
-  padding: 2px 4px;
-  border-radius: 5px;
+  padding: 0 0 5px 0;
+  margin: 0 40px 0 0;
 }
 
 .menuBarText:hover {
@@ -47,6 +71,65 @@ header {
 .logo {
   width: 10vw;
   height: 10vw;
+  margin: 0 0 0 2vw;
+}
+
+/* ------------------- Home Page ------------------- */
+
+.welcomeMsg {
+  font-weight: bold;
+  font-size: 42px;
+}
+
+.subWelcomeMsg {
+  font-weight: bold;
+  font-size: 28px;
+}
+
+.wideContentBlock {
+  margin: 10vw 20vw 10vw 20vw;
+}
+
+.bodyText {
+  font-size: 18px;
+}
+
+.contentBlock {
+  width: 450px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.subSectionTitle {
+  margin: 0 0 18px 0;
+}
+
+.servicesRow {
+  display: flex;
+  flex-direction: row;
+}
+
+.service {
+  width: 25vw;
+  /* For the image alt tag: */
+  text-align: center;
+}
+
+/* .serviceImg {
+  
+} */
+
+.minorTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.sectionBreak {
+  margin: 0 0 60px 0;
+  padding: 60px 0 0 0;
 }
 
 /* @keyframes logo-spin {

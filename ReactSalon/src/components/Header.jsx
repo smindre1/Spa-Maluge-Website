@@ -24,10 +24,10 @@ function Header() {
     <header>
         <img className="logo" src={Logo} ></img>
         <nav className="menu">
-            <a href="/" className={home ? "highlight menuBarText" : "menuBarText"}>Home</a>
-            <a href="/Services" className={services ? "highlight menuBarText" : "menuBarText"}>Services</a>
-            {/* <a href="/BookNow" className={book ? "highlight menuBarText" : "menuBarText"}>Book Now</a> */}
-            <a href="/ContactUs" className={contact ? "highlight menuBarText" : "menuBarText"}>Contact Us</a>
+            <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
+            <a href="/Services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a>
+            {/* <a href="/BookNow" className={book ? "highlight menuBarText" : "textColor menuBarText"}>Book Now</a> */}
+            <a href="/ContactUs" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
         </nav>
     </header>
     );
