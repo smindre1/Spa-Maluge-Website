@@ -1,9 +1,14 @@
 :root {
   --base: #1f1503;
-  --cream: #ebebeb;
+  --white: #ebebeb;
   --gray: #bfbfbf;
   --black: #100b07;
   --gold: #fcc127;
+
+  /* --------- */
+  --cream: #f7f3e3;
+  /* --bistre: #2b2118; */
+  --copper: #A8763E;
 }
 
 * {
@@ -11,6 +16,18 @@
   list-style: none;
   margin: 0;
   /* font-family: ""; */
+}
+
+body {
+  background-color: var(--cream);
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .lineBreak {
@@ -26,12 +43,15 @@
   display: flex;
   flex-direction: column;
 }
+
+.bkgrdColor {
+  background-color: var(--copper);
+}
 /* ------------------- Header ------------------- */
 header {
   display: flex;
   align-items: center;
   width: 100%;
-  margin: 0 0 2vw 0;
   padding: 2% 0 1% 0;
   background-color: var(--base);
 }
@@ -52,11 +72,10 @@ header {
 }
 
 .textColor {
- color: var(--cream); 
+  color: var(--white);
 }
 
 .menuBarText {
-  
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -76,18 +95,18 @@ header {
 
 /* ------------------- Home Page ------------------- */
 
-.welcomeMsg {
+.pageTitle {
   font-weight: bold;
   font-size: 42px;
 }
 
-.subWelcomeMsg {
+.welcomeMsg {
   font-weight: bold;
   font-size: 28px;
 }
 
 .wideContentBlock {
-  margin: 10vw 20vw 10vw 20vw;
+  padding: 10vw 20vw 10vw 20vw;
 }
 
 .bodyText {
@@ -128,8 +147,13 @@ header {
 }
 
 .sectionBreak {
-  margin: 0 0 60px 0;
-  padding: 60px 0 0 0;
+  padding: 60px 0 60px 0;
+}
+
+/* ------------------- Home Page ------------------- */
+
+.pageTitleBlock {
+  margin: 100px 0 100px 0;
 }
 
 /* @keyframes logo-spin {

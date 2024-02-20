@@ -1,7 +1,10 @@
 function ContactUs() {
     return (
     <div>
-        <p>Contacts</p>
+      <section className='pageTitleBlock center'>
+        <h1 className='pageTitle'>Contact Us</h1>
+      </section>
+      
     </div>
   );
 }
