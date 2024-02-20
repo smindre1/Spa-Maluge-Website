@@ -20,6 +20,7 @@
 
 body {
   background-color: var(--cream);
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
@@ -67,9 +68,9 @@ header {
   color: var(--gold);
 }
 
-.highlight:hover {
+/* .highlight:hover {
   color: var(--darkgray);
-}
+} */
 
 .textColor {
   color: var(--white);
@@ -150,12 +151,34 @@ header {
   padding: 60px 0 60px 0;
 }
 
-/* ------------------- Home Page ------------------- */
+/* ------------------- Contact Page ------------------- */
 
 .pageTitleBlock {
   margin: 100px 0 100px 0;
 }
 
+/* ------------------- Footer ------------------- */
+
+.footerSect {
+  background-color: var(--base);
+}
+
+.footer {
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+
+.footerText {
+  margin: 0 0 10px 0;
+}
+
+.footerLink {
+  margin: 0 5px 0 5px;
+}
+
+.footerLink:hover {
+  color: var(--gold);
+}
 /* @keyframes logo-spin {
   from {
     transform: rotate(0deg);
