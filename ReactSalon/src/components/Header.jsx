@@ -11,9 +11,9 @@ function Header() {
     const pageSelection = () => {
         const page = window.location.pathname;
         page == "/" ? setHome(true) : setHome(false);
-        page == "/Services" ? setServices(true) : setServices(false);
-        page == "/ContactUs" ? setContact(true) : setContact(false);
-        page == "/BookNow" ? setBookNow(true) : setBookNow(false);
+        page == "/services" ? setServices(true) : setServices(false);
+        page == "/contact-us" ? setContact(true) : setContact(false);
+        page == "/book-now" ? setBookNow(true) : setBookNow(false);
     };
 
     useEffect(() => {
@@ -25,9 +25,9 @@ function Header() {
         <img className="logo" src={Logo} ></img>
         <nav className="menu">
             <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
-            <a href="/Services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a>
-            {/* <a href="/BookNow" className={book ? "highlight menuBarText" : "textColor menuBarText"}>Book Now</a> */}
-            <a href="/ContactUs" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
+            <a href="/services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a>
+            {/* <a href="/book-now" className={book ? "highlight menuBarText" : "textColor menuBarText"}>Book Now</a> */}
+            <a href="/contact-us" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
         </nav>
     </header>
     );

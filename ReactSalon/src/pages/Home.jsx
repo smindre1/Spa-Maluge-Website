@@ -20,20 +20,20 @@ function Home() {
 
       <section className='sectionBreak center bkgrdColor'>
         <div className='flexRow'>
-          <div className='contentBlock'>
-            <h2 className='subSectionTitle'>Our Spa Massage Services
+          <div className='contentBlock pushRight'>
+            <h2 className='prgTitle'>Our Spa Massage Services
             </h2>
             <p className='bodyText'>Indulge your senses and embrace the ultimate in relaxation with our exquisite massage services. Our team of skilled therapists offers a diverse range of techniques and modalities to cater to your specific needs and preferences. Whether you seek relief from muscle tension, stress reduction, or simply a moment of pure tranquility, we are committed to providing you with a deeply rejuvenating experience. From Swedish and deep tissue massages to aromatherapy and hot stone treatments, each session is crafted to promote healing, balance, and holistic well-being. Step into our serene sanctuary and let us melt away your cares, leaving you feeling restored, refreshed, and renewed.
             </p>
           </div>
           
-          <img src='' alt='Massage Services Image'></img>
+          <img className='contentImage pushLeft' src='' alt='Massage Services Image'></img>
         </div>
         
       </section>
 
       <section className='sectionBreak flexColumn'>
-        <h2 className='subSectionTitle center'>Our Services</h2>
+        <h2 className='sectionTitle center'>Our Services</h2>
         <div className='servicesRow center'>
           <div className='service'>
             <img className='serviceImg' src='' alt='Original Massage Image'></img>

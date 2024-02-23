@@ -11,11 +11,11 @@ function Footer() {
             <div className='flexRow'>
                 <a className='textColor footerLink' href='/'>Home</a>
                 <p className='textColor'>|</p>
-                <a className='textColor footerLink' href='/Privacy-Policy'>Privacy Policy</a>
+                <a className='textColor footerLink' href='/privacy-policy'>Privacy Policy</a>
                 <p className='textColor'>|</p>
-                <a className='textColor footerLink' href='/Cancellation-and-Refund-Policy'>Cancellation and Refund Policy</a>
+                <a className='textColor footerLink' href='/cancellation-and-refund-policy'>Cancellation and Refund Policy</a>
                 <p className='textColor'>|</p>
-                <a className='textColor footerLink' href='/ContactUs'>Contact</a>
+                <a className='textColor footerLink' href='/contact-us'>Contact</a>
             </div>
         </div>
         

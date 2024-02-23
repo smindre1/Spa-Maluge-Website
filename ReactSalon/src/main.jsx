@@ -8,6 +8,8 @@ import Home from "./pages/Home.jsx";
 import Services from "./pages/Services.jsx";
 import BookNow from "./pages/BookNow.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
+import Refund from "./pages/Refund.jsx";
 
 const router = createBrowserRouter([
   {
@@ -20,16 +22,24 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/Services",
+        path: "/services",
         element: <Services />,
       },
       {
-        path: "/BookNow",
+        path: "/book-now",
         element: <BookNow />,
       },
       {
-        path: "/ContactUs",
+        path: "/contact-us",
         element: <ContactUs />,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
+      },
+      {
+        path: "/cancellation-and-refund-policy",
+        element: <Refund />,
       }
     ],
   },

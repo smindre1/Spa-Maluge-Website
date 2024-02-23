@@ -35,6 +35,14 @@ a {
   margin-bottom: 18px;
 }
 
+.prgBreak {
+  margin-bottom: 36px;
+}
+
+.bulletPoint {
+  list-style: initial;
+}
+
 .flexRow {
   display: flex;
   flex-direction: row;
@@ -97,25 +105,42 @@ header {
 /* ------------------- Home Page ------------------- */
 
 .pageTitle {
+  font-family:'Times New Roman', Times, serif;
   font-weight: bold;
-  font-size: 42px;
+  font-size: 72px;
+  line-height: 72px;
+  margin: 0 0 36px 0;
 }
 
 .welcomeMsg {
-  font-weight: bold;
-  font-size: 28px;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
 }
 
 .wideContentBlock {
   padding: 10vw 20vw 10vw 20vw;
 }
 
+.wideContentPage {
+  padding: 0 20vw 0 20vw;
+}
+
 .bodyText {
+  font-family: "Lato", sans-serif;
+  line-height: 36px;
+  font-style: normal;
+  font-weight: 400;
   font-size: 18px;
 }
 
 .contentBlock {
-  width: 450px;
+  width: 550px;
+}
+
+.contentImage {
+  width: 550px;
 }
 
 .center {
@@ -123,13 +148,22 @@ header {
   justify-content: center;
 }
 
-.subSectionTitle {
+.prgTitle {
   margin: 0 0 18px 0;
+  font-weight: 900;
+  font-size: 26px;
+}
+
+.sectionTitle {
+  margin: 0 0 48px 0;
+  font-weight: 900;
+  font-size: 40px;
 }
 
 .servicesRow {
   display: flex;
   flex-direction: row;
+  margin: 0 0 50px 0;
 }
 
 .service {
@@ -145,10 +179,22 @@ header {
 .minorTitle {
   display: flex;
   justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 24px;
 }
 
 .sectionBreak {
   padding: 60px 0 60px 0;
+}
+
+.pushRight {
+  margin: 0 18px 0 0;
+}
+
+.pushLeft {
+  margin: 0 0 0 18px;
 }
 
 /* ------------------- Contact Page ------------------- */
@@ -161,6 +207,10 @@ header {
 
 .footerSect {
   background-color: var(--base);
+  /* width: 100%;
+  margin-top: 100%;
+  position: relative;
+  bottom: 0; */
 }
 
 .footer {

@@ -1,7 +1,9 @@
 function Services() {
     return (
     <div>
-        <p>Services</p>
+      <section className='pageTitleBlock center'>
+        <h1 className='sectionTitle'>Services</h1>
+      </section>
     </div>
   );
 }
