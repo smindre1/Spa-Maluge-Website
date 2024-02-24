@@ -1,5 +1,8 @@
 :root {
-  --base: #1f1503;
+  /* --base: #1f1503; */
+  --base: #515252;
+  /* --base: #72d0a6; */
+  --pureWhite: #ffffff;
   --white: #ebebeb;
   --gray: #bfbfbf;
   --black: #100b07;
@@ -7,8 +10,7 @@
 
   /* --------- */
   --cream: #f7f3e3;
-  /* --bistre: #2b2118; */
-  --copper: #A8763E;
+  --copper: #a8763e;
 }
 
 * {
@@ -19,7 +21,8 @@
 }
 
 body {
-  background-color: var(--cream);
+  /* background-color: var(--cream); */
+  background-color: var(--pureWhite);
   height: 100%;
 }
 
@@ -29,6 +32,51 @@ body::-webkit-scrollbar {
 
 a {
   text-decoration: none;
+}
+
+.scrollProgressBar {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--black);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+
+  animation: scrollProgressBar linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollProgressBar {
+  to {
+    scale: 1 1;
+  }
+}
+
+.lineBreak {
+  margin-bottom: 18px;
+}
+
+.scrollProgressColumn {
+  width: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--black);
+  height: 100vh;
+  scale: 1 0;
+  transform-origin: top;
+
+  animation: scrollProgressColumn linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollProgressColumn {
+  to {
+    scale: 1 1;
+  }
 }
 
 .lineBreak {
@@ -54,7 +102,8 @@ a {
 }
 
 .bkgrdColor {
-  background-color: var(--copper);
+  /* background-color: var(--copper); */
+  background-color: var(--base);
 }
 /* ------------------- Header ------------------- */
 header {
@@ -82,6 +131,7 @@ header {
 
 .textColor {
   color: var(--white);
+  /* color: var(--black); */
 }
 
 .menuBarText {
@@ -104,8 +154,31 @@ header {
 
 /* ------------------- Home Page ------------------- */
 
+@media (prefers-reduced-motion: no-preference) {
+  .titleAnim {
+    opacity: 1;
+    /* transform: translateX(40px); */
+    /* For the moving animation */
+    animation: fade-right linear both;
+    animation-timeline: view();
+    animation-range: cover 30 cover 20;
+    /* animation-range-start: cover;
+    animation-range-end: contain 600px; */
+  }
+
+  @keyframes fade-right {
+    /* from {translate: 200px;} This moves from right to left*/
+    0% {opacity: 1;}
+    50% { opacity: 0.9; transform: translateX(0px);}
+    100% {
+      opacity: 0;
+      transform: translateX(-200px);
+    }
+  }
+}
+
 .pageTitle {
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-weight: bold;
   font-size: 72px;
   line-height: 72px;
@@ -163,20 +236,58 @@ header {
 .servicesRow {
   display: flex;
   flex-direction: row;
-  margin: 0 0 50px 0;
+  margin: 0 0 40px 0;
 }
 
-.service {
+.overflow {
+  height: 19.5vw;
   width: 25vw;
-  /* For the image alt tag: */
-  text-align: center;
+  overflow: hidden;
 }
 
-/* .serviceImg {
-  
-} */
+.serviceImg {
+  height: 19.5vw;
+  width: 25vw;
+  /* This is for easing out of zoom after hovering */
+  transition: transform 500ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+.serviceImg:hover {
+  transform: scale(1.25);
+  /* This is eases into zooming */
+  transition: transform 750ms;
+}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .service {
+    /* width: 25vw; */
+    margin: 0 8px 0 8px;
+    opacity: 0;
+    transform: translateY(40px);
+    /* For the image alt tag: */
+    text-align: center;
+    /* For the moving animation */
+    animation: fade-up linear forwards;
+    animation-timeline: view();
+    animation-range: entry 10% cover 30%;
+    /* animation-range-start: cover;
+    animation-range-end: contain 600px; */
+  }
+
+  @keyframes fade-up {
+    /* from {translate: 200px;} This moves from right to left*/
+    /* from {transform: translateY(20px);} */
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+}
 
 .minorTitle {
+  margin: 10px 0 0 0;
   display: flex;
   justify-content: center;
   font-family: "Lato", sans-serif;

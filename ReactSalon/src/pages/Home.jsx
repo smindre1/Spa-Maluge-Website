@@ -1,4 +1,19 @@
 import { useState } from 'react'
+import Detox from '../assets/images/services/detox.jpg'
+import Deep from '../assets/images/services/deep.jpg'
+import HotStone from '../assets/images/services/stone.jpg'
+import Sport from '../assets/images/services/sport.jpg'
+import CBD from '../assets/images/services/CBD.jpg'
+import Head from '../assets/images/services/head.jpg'
+import Prenatal from '../assets/images/services/prenatal.jpg'
+import CouplesOne from '../assets/images/services/coupleOne.jpg'
+import CouplesTwo from '../assets/images/services/coupleTwo.jpg'
+import ReflexOne from '../assets/images/services/reflexOne.jpg'
+import ReflexTwo from '../assets/images/services/reflexTwo.jpg'
+import Cup from '../assets/images/services/cup.jpg'
+import Facial from '../assets/images/services/facial.jpg'
+import Lymph from '../assets/images/services/lymph.jpg'
+
 
 function Home() {
   const [language, setLanguage] = useState('english');
@@ -6,9 +21,11 @@ function Home() {
     return (
     <div className='page'>
       <section className='wideContentBlock bkgrdColor'>
-        <h1 className='pageTitle'>Welcome to<br></br>Spa Maluge</h1>
-        <h2 className='welcomeMsg'>Enjoy Relaxation At It's Finest</h2>
-        {/* <a>Schedule Now</a> */}
+        <div className='titleAnim'>
+          <h1 className='pageTitle'>Welcome to<br></br>Spa Maluge</h1>
+          <h2 className='welcomeMsg'>Enjoy Relaxation At It's Finest</h2>
+          {/* <a>Schedule Now</a> */}
+        </div>
       </section>
 
       <section className='wideContentBlock'>
@@ -36,46 +53,87 @@ function Home() {
         <h2 className='sectionTitle center'>Our Services</h2>
         <div className='servicesRow center'>
           <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
+            <div className='overflow'>
+              <img className='serviceImg' src={Detox} alt='Petox Custom Swedish Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Detox Custom Swedish Massage</h3>
           </div>
           <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
+            <div className='overflow'>
+              <img className='serviceImg' src={Deep} alt='Deep Tissue Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Deep Tissue Massage</h3>
           </div>
           <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
-          </div>
-        </div>
-
-        <div className='servicesRow center'>
-          <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
-          </div>
-          <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
-          </div>
-          <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
+            <div className='overflow'>
+              <img className='serviceImg' src={HotStone} alt='Hot Stone Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Hot Stone Massage</h3>
           </div>
         </div>
 
         <div className='servicesRow center'>
           <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
+            <div className='overflow'>
+             <img className='serviceImg' src={Sport} alt='Sport Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Sport Massage</h3>
           </div>
           <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
+            <div className='overflow'>
+             <img className='serviceImg' src={CBD} alt='CBD Custom Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>CBD Custom Massage</h3>
           </div>
           <div className='service'>
-            <img className='serviceImg' src='' alt='Original Massage Image'></img>
-            <h3 className='minorTitle'>Original Massage</h3>
+            <div className='overflow'>
+              <img className='serviceImg' src={Head} alt='Head-Neck-Shoulders Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Head - Neck - Shoulders Massage</h3>
+          </div>
+        </div>
+
+        <div className='servicesRow center'>
+          <div className='service'>
+            <div className='overflow'>
+             <img className='serviceImg' src={Prenatal} alt='Prenatal and Postnatal Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Prenatal and Postnatal Massage</h3>
+          </div>
+          <div className='service'>
+            <div className='overflow'>
+             <img className='serviceImg' src={CouplesOne} alt='Couples Massage Image'></img>
+              {/* <img className='serviceImg' src={CouplesTwo} alt='Couples Massage Image'></img> */}
+            </div>
+            <h3 className='minorTitle'>Couples Massage</h3>
+          </div>
+          <div className='service'>
+            <div className='overflow'>
+              <img className='serviceImg' src={ReflexOne} alt='Reflexology Massage Image'></img>
+              {/* <img className='serviceImg' src={ReflexOne} alt='Reflexology Massage Image'></img> */}
+            </div>
+            <h3 className='minorTitle'>Reflexology Massage</h3>
+          </div>
+        </div>
+
+        <div className='servicesRow center'>
+          <div className='service'>
+           <div className='overflow'>
+             <img className='serviceImg' src={Cup} alt='Cupping Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Cupping Massage</h3>
+          </div>
+          <div className='service'>
+            <div className='overflow'>
+              <img className='serviceImg' src={Facial} alt='Facial Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Facial Massage</h3>
+          </div>
+          <div className='service'>
+            <div className='overflow'>
+              <img className='serviceImg' src={Lymph} alt='Lymph Drainage Massage Image'></img>
+            </div>
+            <h3 className='minorTitle'>Lymph Drainage Massage</h3>
           </div>
         </div>
       </section>

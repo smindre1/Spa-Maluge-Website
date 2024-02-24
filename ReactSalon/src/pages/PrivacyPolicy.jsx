@@ -1,6 +1,7 @@
 function PrivacyPolicy() {
     return (
     <div>
+      <div className='scrollProgressBar'></div>
       <section className='pageTitleBlock'>
         <h1 className='sectionTitle center'>Privacy Policy</h1>
         <div  className='wideContentPage'>
