@@ -245,6 +245,10 @@ header {
   overflow: hidden;
 }
 
+.serviceAnchor {
+  color: var(--black);
+}
+
 .serviceImg {
   height: 19.5vw;
   width: 25vw;
