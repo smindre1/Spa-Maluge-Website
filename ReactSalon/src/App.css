@@ -358,3 +358,19 @@ header {
     animation: logo-spin infinite 20s linear;
   }
 } */
+
+/* ------------------- Service Page's ------------------- */
+
+.servicePage {
+  padding: 5vw;
+}
+
+.servicePageImg {
+  height: 30vw;
+  width: 40vw;
+  margin: 0 5vw 0 0;
+}
+
+.serviceSummary {
+
+}
