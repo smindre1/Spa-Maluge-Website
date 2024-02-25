@@ -76,9 +76,7 @@ function Home() {
               <h3 className='minorTitle'>Hot Stone Massage</h3>
             </div>
           </a>
-        </div>
 
-        <div className='servicesRow center'>
           <a className='serviceAnchor' href='/services/sport-massage' >
             <div className='service'>
               <div className='overflow'>
@@ -103,9 +101,7 @@ function Home() {
               <h3 className='minorTitle'>Head - Neck - Shoulders Massage</h3>
             </div>
           </a>
-        </div>
 
-        <div className='servicesRow center'>
           <a className='serviceAnchor' href='/services/prenatal-and-postnatal-massage' >
             <div className='service'>
               <div className='overflow'>
@@ -132,9 +128,7 @@ function Home() {
               <h3 className='minorTitle'>Reflexology Massage</h3>
             </div>
           </a>
-        </div>
 
-        <div className='servicesRow center'>
           <a className='serviceAnchor' href='/services/cupping-massage' >
             <div className='service'>
             <div className='overflow'>
