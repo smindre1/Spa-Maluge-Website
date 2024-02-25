@@ -99,6 +99,14 @@ a {
   color: var(--black);
 }
 
+.goldBackground {
+  background-image: url("./background.jpg");
+  background-size: cover;
+  /* width: 100%; */
+  /* height: 100%; */
+  border-bottom: solid 6vw var(--base);
+}
+
 .flexRow {
   display: flex;
   flex-direction: row;
@@ -155,10 +163,27 @@ header {
 }
 
 .logo {
-  width: 10vw;
-  height: 10vw;
-  margin: 0 0 0 2vw;
+  width: 20vw;
+  /* height: 10vw; */
+  /* margin: 0 0 0 2vw; */
+  padding: 0 4vw 0 4vw;
+  /* position: absolute; */
+  margin: 0 10vw 0 0;
+  background-color: var(--pureWhite);
+  /* padding: 3vw 2vw 7vw 2vw; */
 }
+
+.logoBckgrd {
+  height: 100%;
+}
+
+.grayBackground {
+  background-color: var(--base);
+}
+/* ------------------- Hero Box ------------------- */
+/* .heroPadding {
+  padding: 10vw 20vw 10vw 0;
+} */
 
 /* ------------------- Home Page ------------------- */
 
@@ -167,22 +192,37 @@ header {
     opacity: 1;
     /* transform: translateX(40px); */
     /* For the moving animation */
-    animation: fade-right linear both;
+    /* animation: fade-right linear both;
     animation-timeline: view();
-    animation-range: cover 30 cover 20;
+    animation-range: cover 30 cover 20; */
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    padding: 3vw 0 0 0;;
+
     /* animation-range-start: cover;
     animation-range-end: contain 600px; */
+    /* padding: 10vw 20vw 10vw 0; */
   }
 
   @keyframes fade-right {
     /* from {translate: 200px;} This moves from right to left*/
-    0% {opacity: 1;}
-    50% { opacity: 0.9; transform: translateX(0px);}
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.9;
+      transform: translateX(0px);
+    }
     100% {
       opacity: 0;
       transform: translateX(-200px);
     }
   }
+}
+
+.smallPageTitle {
+  font-size: 48px;
 }
 
 .pageTitle {
@@ -197,7 +237,13 @@ header {
   font-family: "Lato", sans-serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 36px;
+  /* font-size: 36px; */
+  font-size: 42px;
+  margin: 3vw;
+}
+
+.introContent {
+  padding: 10vw 10vw 10vw 10vw;
 }
 
 .wideContentBlock {
@@ -266,11 +312,11 @@ header {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-.serviceImg:hover {
-  transform: scale(1.25);
-  /* This is eases into zooming */
-  transition: transform 750ms;
-}
+  .serviceImg:hover {
+    transform: scale(1.25);
+    /* This is eases into zooming */
+    transition: transform 750ms;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -326,6 +372,91 @@ header {
 
 .contactPage {
   padding: 5vw 10vw 5vw 10vw;
+}
+
+/* ------------------- Contact Form ------------------- */
+
+.contactForm {
+  width: 600px;
+  text-align: center;
+}
+
+.formFields {
+  color: var(--gold);
+  background-color: var(--black);
+  border: solid var(--darkgold) 2px;
+  border-radius: 3px;
+  opacity: 80%;
+  font-size: 16px;
+  padding: 18px;
+  resize: none;
+  margin: 0 0 20px 0;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--ash);
+}
+
+input:focus,
+textarea:focus {
+  border: solid var(--lightgold) 2px;
+  border-radius: 3px;
+  color: var(--lightgold);
+  outline: var(--lightgold);
+  box-shadow: 0 0 10px var(--lightgold);
+}
+
+.formDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.formBtn {
+  color: var(--black);
+  background-color: var(--darkgold);
+  border: solid var(--darkgold) 2px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 30px 10px 30px;
+  margin: 20px auto 10px auto;
+  font-weight: 900;
+}
+
+.formBtn:hover {
+  box-shadow: 0 0 10px var(--lightgold);
+  border: solid var(--lightgold) 2px;
+  background-color: var(--gold);
+  cursor: pointer;
+}
+
+.formSection {
+  width: 48.5%;
+}
+
+.errorTxt {
+  font-size: 14px;
+  color: var(--red);
+  text-align: left;
+  margin: -10px 0 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.error {
+  border: solid var(--red) 2px;
+}
+
+.contactIcon {
+  width: 60px;
+  padding: 10px;
+  background-color: var(--darkgold);
+  border: none;
+  border-radius: 15px;
 }
 
 /* ------------------- Footer ------------------- */
@@ -401,7 +532,7 @@ header {
 
 .serviceText {
   font-size: 18px;
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 .italic {
@@ -440,7 +571,6 @@ header {
 
 /* ------------------- Screen Adjustments --------------------- */
 @media only screen and (max-width: 1140px) {
-
   .serviceImg {
     height: 30vw;
     width: 40vw;
@@ -458,7 +588,7 @@ header {
   .contentBlock {
     width: 40vw;
   }
-  
+
   .contentImage {
     width: 40vw;
   }
@@ -467,4 +597,3 @@ header {
     padding: 10vw 8vw 10vw 8vw;
   }
 }
-
