@@ -2,8 +2,8 @@ import CuppingImg from '../../assets/images/services/cup.jpg';
 
 function Cupping() {
     return (
-    <div>
-        <img src={CuppingImg}></img>
+    <div className='servicePage'>
+        <img className='servicePageImg' src={CuppingImg}></img>
     </div>
   );
 }

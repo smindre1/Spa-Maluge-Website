@@ -2,8 +2,8 @@ import PrenatalImg from '../../assets/images/services/prenatal.jpg';
 
 function Prenatal() {
     return (
-    <div>
-        <img src={PrenatalImg}></img>
+    <div className='servicePage'>
+        <img className='servicePageImg' src={PrenatalImg}></img>
     </div>
   );
 }

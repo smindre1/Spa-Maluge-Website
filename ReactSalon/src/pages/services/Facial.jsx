@@ -2,8 +2,8 @@ import FacialImg from '../../assets/images/services/facial.jpg';
 
 function Facial() {
     return (
-    <div>
-        <img src={FacialImg}></img>
+    <div className='servicePage'>
+        <img className='servicePageImg' src={FacialImg}></img>
     </div>
   );
 }

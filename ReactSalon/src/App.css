@@ -54,10 +54,6 @@ a {
   }
 }
 
-.lineBreak {
-  margin-bottom: 18px;
-}
-
 .scrollProgressColumn {
   width: 10px;
   position: fixed;
@@ -89,6 +85,10 @@ a {
 
 .bulletPoint {
   list-style: initial;
+}
+
+.white {
+  color: var(--pureWhite);
 }
 
 .flexRow {
@@ -371,6 +371,53 @@ header {
   margin: 0 5vw 0 0;
 }
 
-.serviceSummary {
+.serviceTitle {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 900;
+  font-size: clamp(28px, 2.5vw, 40px);
+  /* font-style: italic; */
+}
 
+.serviceSubTitle {
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: clamp(18px, 1.5vw, 24px);
+}
+
+.prgSubject {
+  margin: 0 0 10px 0;
+}
+
+.serviceText {
+  font-size: 18px;
+  font-family: 'Lato';
+}
+
+.italic {
+  font-style: italic;
+}
+
+.list {
+  margin: 0 0 12px 0;
+  font-style: italic;
+}
+
+.bookNowBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  width: 225px;
+  margin: 0 0 10px 0;
+  background-color: var(--black);
+  color: var(--pureWhite);
+  padding: 10px 15px 10px 15px;
+  font-size: 18px;
+  /* border-radius: 10px; */
+}
+
+.bookNowBtn:hover {
+  background-color: var(--gold);
+  color: var(--black);
 }

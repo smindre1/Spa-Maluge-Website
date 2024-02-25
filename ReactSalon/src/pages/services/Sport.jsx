@@ -2,8 +2,8 @@ import SportImg from '../../assets/images/services/sport.jpg';
 
 function Sport() {
     return (
-    <div>
-        <img src={SportImg}></img>
+    <div className='servicePage'>
+        <img className='servicePageImg' src={SportImg}></img>
     </div>
   );
 }

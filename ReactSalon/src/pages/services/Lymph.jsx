@@ -2,8 +2,8 @@ import LymphImg from '../../assets/images/services/lymph.jpg';
 
 function Lymph() {
     return (
-    <div>
-        <img src={LymphImg}></img>
+    <div className='servicePage'>
+        <img className='servicePageImg' src={LymphImg}></img>
     </div>
   );
 }
