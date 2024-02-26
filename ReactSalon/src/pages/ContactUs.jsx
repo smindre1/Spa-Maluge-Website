@@ -5,10 +5,11 @@ function ContactUs() {
     <div className='contactPage flexColumn'>
       <h1 className='sectionTitle center'>Contact Us</h1>
       <section className='center flexRow'>
-        <div>
-          <p>Call Us At: </p>
-          <p>Email Us At: </p>
-          <a>Find Us At: </a>
+        <div className='businessInfo'>
+          <h2 className="minorTitle">Business Contacts</h2>
+          <p className='businessInfoTxt'>Call Us At: </p>
+          <p className='businessInfoTxt'>Email Us At: </p>
+          <a className='businessInfoTxt'>Find Us At: </a>
         </div>
         <Form></Form>
       </section>

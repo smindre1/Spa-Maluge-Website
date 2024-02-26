@@ -7,6 +7,7 @@
   --gray: #bfbfbf;
   --black: #100b07;
   --gold: #fcc127;
+  --red: #df0000;
 
   /* --------- */
   --cream: #f7f3e3;
@@ -100,11 +101,11 @@ a {
 }
 
 .goldBackground {
-  background-image: url("./background.jpg");
+  background-image: url("./assets/background.jpg");
   background-size: cover;
   /* width: 100%; */
   /* height: 100%; */
-  border-bottom: solid 6vw var(--base);
+  border-bottom: solid 5vw var(--base);
 }
 
 .flexRow {
@@ -131,8 +132,9 @@ header {
 }
 
 .menu {
+  display: flex;
   margin-left: auto;
-  padding-top: 1.5%;
+  /* padding-top: 1.5%; */
   padding-right: 2%;
 }
 
@@ -198,10 +200,8 @@ header {
     display: flex;
     /* flex-direction: column; */
     justify-content: center;
-    padding: 3vw 0 0 0;;
+    padding: 3vw 0 0 0;
 
-    /* animation-range-start: cover;
-    animation-range-end: contain 600px; */
     /* padding: 10vw 20vw 10vw 0; */
   }
 
@@ -374,17 +374,29 @@ header {
   padding: 5vw 10vw 5vw 10vw;
 }
 
+.businessInfo {
+  width: 35vw;
+  padding: 0 2.5vw 0 0;
+  border-right: solid var(--base) 2px;
+}
+
+.businessInfoTxt {
+  font-size: 18px;
+  margin: 0 0 5px 0;
+}
+
 /* ------------------- Contact Form ------------------- */
 
 .contactForm {
-  width: 600px;
+  width: 35vw;
   text-align: center;
+  margin: 0 0 0 2.5vw;
 }
 
 .formFields {
-  color: var(--gold);
-  background-color: var(--black);
-  border: solid var(--darkgold) 2px;
+  color: var(--black);
+  background-color: var(--pureWhite);
+  border: solid var(--black) 2px;
   border-radius: 3px;
   opacity: 80%;
   font-size: 16px;
@@ -395,16 +407,16 @@ header {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--ash);
+  color: var(--base);
 }
 
 input:focus,
 textarea:focus {
-  border: solid var(--lightgold) 2px;
+  border: solid var(--gold) 2px;
   border-radius: 3px;
-  color: var(--lightgold);
-  outline: var(--lightgold);
-  box-shadow: 0 0 10px var(--lightgold);
+  /* color: var(--lightgold); */
+  outline: var(--gold);
+  /* box-shadow: 0 0 10px var(--black); */
 }
 
 .formDiv {
@@ -414,9 +426,9 @@ textarea:focus {
 }
 
 .formBtn {
-  color: var(--black);
-  background-color: var(--darkgold);
-  border: solid var(--darkgold) 2px;
+  color: var(--pureWhite);
+  background-color: var(--black);
+  border: solid var(--black) 2px;
   border-radius: 3px;
   font-size: 16px;
   font-weight: 600;
@@ -427,7 +439,7 @@ textarea:focus {
 
 .formBtn:hover {
   box-shadow: 0 0 10px var(--lightgold);
-  border: solid var(--lightgold) 2px;
+  border: solid var(--black) 2px;
   background-color: var(--gold);
   cursor: pointer;
 }
@@ -437,7 +449,7 @@ textarea:focus {
 }
 
 .errorTxt {
-  font-size: 14px;
+  font-size: 18px;
   color: var(--red);
   text-align: left;
   margin: -10px 0 10px;

@@ -100,7 +100,7 @@ const ContactForm = () => {
 
   return (
     <form className="contactForm" autoComplete="off" onSubmit={handleSubmit}>
-      {/* <h2>Contact</h2> */}
+      <h2 className="minorTitle">Send A Message:</h2>
       <div ref={divId} className="formDiv">
         <div ref={nameId} className="flexColumn formSection">
           <input className="formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
