@@ -24,11 +24,12 @@ function Home() {
       <section className="flexRow bkgrdColor goldBackground">
         <img className="logo" src={Logo}></img>
 
-        <div className="titleAnim">
+        <div className="titleAnim flexColumn">
           <h1 className="pageTitle">
-            <p className="smallPageTitle">Welcome to</p>Spa Maluge
+            <p className="smallPageTitle">Welcome to </p> Spa Maluge
           </h1>
-          <h2 className="welcomeMsg">Enjoy Relaxation At It's Finest</h2>
+          <h2 className="welcomeMsg pari">Enjoy Relaxation At It's Finest</h2>
+          {/* <h2 className="welcomeMsg">Enjoy Relaxation At It's Finest</h2> */}
           {/* <a>Schedule Now</a> */}
         </div>
       </section>
