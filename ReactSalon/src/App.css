@@ -3,6 +3,7 @@
   --base: #515252;
   /* --base: #72d0a6; */
   --pureWhite: #ffffff;
+  --fadedWhite: #ffffff8C;
   --white: #ebebeb;
   --gray: #bfbfbf;
   --black: #100b07;
@@ -22,12 +23,12 @@
 }
 
 body {
-  /* background-color: var(--cream); */
   background-color: var(--pureWhite);
   height: 100%;
   /* background-image: url(./assets/background_pattern.jpg);
   background-repeat: no-repeat;
   background-size: contain; */
+  /* background-image: url(./assets/baroque_pixelated_pattern.png); */
 }
 
 body::-webkit-scrollbar {
@@ -38,46 +39,7 @@ a {
   text-decoration: none;
 }
 
-.scrollProgressBar {
-  height: 10px;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--black);
-  width: 100%;
-  scale: 0 1;
-  transform-origin: left;
-
-  animation: scrollProgressBar linear;
-  animation-timeline: scroll();
-}
-
-@keyframes scrollProgressBar {
-  to {
-    scale: 1 1;
-  }
-}
-
-.scrollProgressColumn {
-  width: 10px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1000;
-  background-color: var(--black);
-  height: 100vh;
-  scale: 1 0;
-  transform-origin: top;
-
-  animation: scrollProgressColumn linear;
-  animation-timeline: scroll();
-}
-
-@keyframes scrollProgressColumn {
-  to {
-    scale: 1 1;
-  }
-}
+/* ------General Classes For All Pages----------- */
 
 .lineBreak {
   margin-bottom: 18px;
@@ -103,14 +65,6 @@ a {
   color: var(--black);
 }
 
-.goldBackground {
-  background-image: url("./assets/background.jpg");
-  background-size: cover;
-  /* width: 100%; */
-  /* height: 100%; */
-  border-bottom: solid 8vw var(--base);
-}
-
 .flexRow {
   display: flex;
   flex-direction: row;
@@ -125,6 +79,16 @@ a {
   /* background-color: var(--copper); */
   background-color: var(--base);
 }
+
+.clearWhiteBackground {
+  background-color: var(--fadedWhite);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
 /* ------------------- Header ------------------- */
 header {
   display: flex;
@@ -148,13 +112,9 @@ header {
   color: var(--gold);
 }
 
-/* .highlight:hover {
-  color: var(--darkgray);
-} */
 
 .textColor {
   color: var(--white);
-  /* color: var(--black); */
 }
 
 .menuBarText {
@@ -194,6 +154,14 @@ header {
 
 /* ------------------- Home Page ------------------- */
 
+.goldBackground {
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  /* width: 100%; */
+  /* height: 100%; */
+  border-bottom: solid 8vw var(--base);
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .titleAnim {
     opacity: 1;
@@ -231,6 +199,7 @@ header {
   margin: 0 25px 0 0;
 }
 
+
 .pageTitle {
   display: flex;
   flex-direction: row;
@@ -263,11 +232,10 @@ header {
   font-family: "Alex Brush", cursive;
   font-family: "Parisienne", cursive;
   font-family: "Great Vibes", cursive;
-
 } */
 
 .introContent {
-  padding: 10vw 10vw 10vw 10vw;
+  margin: 10vw 10vw 10vw 10vw;
 }
 
 .wideContentBlock {
@@ -292,11 +260,6 @@ header {
 
 .contentImage {
   width: 35vw;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
 }
 
 .prgTitle {
@@ -521,20 +484,6 @@ textarea:focus {
 .footerLink:hover {
   color: var(--gold);
 }
-/* @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-} */
 
 /* ------------------- Service Page's ------------------- */
 
@@ -591,7 +540,6 @@ textarea:focus {
   color: var(--pureWhite);
   padding: 10px 15px 10px 15px;
   font-size: 18px;
-  /* border-radius: 10px; */
 }
 
 .bookNowBtn:hover {
@@ -603,6 +551,49 @@ textarea:focus {
 
 .pageTitleBlock {
   margin: 100px 0 100px 0;
+}
+
+/* This is a horizontal scroll progress bar */
+.scrollProgressBar {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--black);
+  width: 100%;
+  scale: 0 1;
+  transform-origin: left;
+
+  animation: scrollProgressBar linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollProgressBar {
+  to {
+    scale: 1 1;
+  }
+}
+
+/* This is an alternate vertical scroll progress bar */
+.scrollProgressColumn {
+  width: 10px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--black);
+  height: 100vh;
+  scale: 1 0;
+  transform-origin: top;
+
+  animation: scrollProgressColumn linear;
+  animation-timeline: scroll();
+}
+
+@keyframes scrollProgressColumn {
+  to {
+    scale: 1 1;
+  }
 }
 
 /* ------------------- Screen Adjustments --------------------- */

@@ -29,7 +29,6 @@ function Home() {
             <p className="smallPageTitle">Welcome to </p> Spa Maluge
           </h1>
           <h2 className="welcomeMsg pari">Enjoy Relaxation At It's Finest</h2>
-          {/* <h2 className="welcomeMsg">Enjoy Relaxation At It's Finest</h2> */}
           {/* <a>Schedule Now</a> */}
         </div>
       </section>

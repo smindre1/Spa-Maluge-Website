@@ -1,6 +1,6 @@
 import { useState, useEffect} from "react"
 import Logo from "../assets/Maluge_Logo.svg"
-
+import LogoTwo from "../assets/Maluge_Logo_Two.svg"
 
 function Header() {
     const [home, setHome] = useState(false);
