@@ -3,7 +3,7 @@
   --base: #515252;
   /* --base: #72d0a6; */
   --pureWhite: #ffffff;
-  --fadedWhite: #ffffff8C;
+  --fadedWhite: #ffffffB3;
   --white: #ebebeb;
   --gray: #bfbfbf;
   --black: #100b07;
@@ -28,7 +28,7 @@ body {
   /* background-image: url(./assets/background_pattern.jpg);
   background-repeat: no-repeat;
   background-size: contain; */
-  /* background-image: url(./assets/baroque_pixelated_pattern.png); */
+  background-image: url(./assets/images/baroque_pixelated_pattern.png);
 }
 
 body::-webkit-scrollbar {
@@ -47,6 +47,10 @@ a {
 
 .prgBreak {
   margin-bottom: 36px;
+}
+
+.smallPadding {
+  padding: 18px;
 }
 
 .bulletPoint {
@@ -87,6 +91,11 @@ a {
 .center {
   display: flex;
   justify-content: center;
+}
+
+.marginCenter {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ------------------- Header ------------------- */
@@ -155,7 +164,7 @@ header {
 /* ------------------- Home Page ------------------- */
 
 .goldBackground {
-  background-image: url("./assets/background.jpg");
+  background-image: url(./assets/images/background.jpg);
   background-size: cover;
   /* width: 100%; */
   /* height: 100%; */
@@ -236,6 +245,7 @@ header {
 
 .introContent {
   margin: 10vw 10vw 10vw 10vw;
+  padding: 1vw;
 }
 
 .wideContentBlock {
@@ -255,11 +265,12 @@ header {
 }
 
 .contentBlock {
-  width: 35vw;
+  width: 38vw;
+  padding: 18px;
 }
 
 .contentImage {
-  width: 35vw;
+  width: 38vw;
 }
 
 .prgTitle {
@@ -343,12 +354,52 @@ header {
   font-size: clamp(18px, 1.5vw, 24px);
 }
 
+.servicesFrame {
+  width: 85vw;
+  padding-top: 2vw;
+}
+
+/* .sectionTitleFrame {
+  background-image: url(./assets/images/decals/Section_Title_Frame.svg);
+  background-repeat: no-repeat;
+} */
+
+.sectionTitleFrameDiv {
+  position: relative;
+}
+
+.sectionTitleFrame {
+  width: 250px;
+  transform: translateY(32px);
+}
+
+.sectionImageLabel {
+  position: absolute;
+  transform: translateY(95px);
+}
+
+.detailedBorder {
+  border: 40px solid;
+  border-top-width: 64px ;
+  border-image-source: url(./assets/images/decals/Box_Border_Image.svg);
+  border-image-slice: 64 42 42 42;
+  /* border-image-width: 20; */
+  /* background-size: cover; */
+  border-image-outset: 42px 15px 15px 15px;
+  border-image-repeat: stretch round;
+  /* background-color: transparent; */
+}
+
 .sectionBreak {
   padding: 60px 0 60px 0;
 }
 
+.conclusionSection {
+  padding: 60px 0 0 0;
+}
+
 .pushRight {
-  margin: 0 18px 0 0;
+  margin: 0 40px 0 0;
 }
 
 .pushLeft {
@@ -494,7 +545,7 @@ textarea:focus {
 .servicePageImg {
   height: 30vw;
   width: 40vw;
-  margin: 0 5vw 0 0;
+  margin: 0 3vw 0 0;
 }
 
 .serviceTitle {
@@ -502,6 +553,10 @@ textarea:focus {
   font-weight: 900;
   font-size: clamp(28px, 2.5vw, 40px);
   /* font-style: italic; */
+}
+
+.serviceSummary {
+  padding: 10px;
 }
 
 .serviceSubTitle {

@@ -16,6 +16,11 @@ import Lymph from "../assets/images/services/lymph.jpg";
 
 import Logo from "../assets/test_frame_w.png";
 
+import RBorder from "../assets/images/decals/Right_Border.svg";
+import LBorder from "../assets/images/decals/Left_Border.svg";
+import BBorder from "../assets/images/decals/Bottom_Border.svg";
+import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
+
 function Home() {
   const [language, setLanguage] = useState("english");
 
@@ -33,7 +38,7 @@ function Home() {
         </div>
       </section>
 
-      <section className="introContent">
+      <section className="introContent clearWhiteBackground">
         <p className="bodyText lineBreak">
           Welcome to Spa Maluge's Massage Salon, your oasis of relaxation nestled in the heart of charming Hoboken, New Jersey. At Spa Maluge, we invite you to
           escape the hustle and bustle of daily life and indulge in a rejuvenating experience tailored to soothe your mind, body, and spirit. Our expert
@@ -48,7 +53,7 @@ function Home() {
 
       <section className="sectionBreak center">
         <div className="flexRow">
-          <div className="contentBlock pushRight">
+          <div className="contentBlock pushRight clearWhiteBackground">
             <h2 className="prgTitle">Our Spa Massage Services</h2>
             <p className="bodyText">
               Indulge your senses and embrace the ultimate relaxation with our exquisite massage services. Our team of skilled therapists offers a diverse range
@@ -64,114 +69,122 @@ function Home() {
       </section>
 
       <section className="sectionBreak flexColumn">
-        <h2 className="sectionTitle center">Maluge Services</h2>
-        <div className="servicesRow center">
-          <a className="serviceAnchor" href="/services/detox-custom-swedish-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Detox} alt="Petox Custom Swedish Massage Image"></img>
+        <div className="center">
+          <img className="sectionTitleFrame" src={TitleFrame} alt="Title Frame"></img>
+          <h2 className="sectionTitle sectionImageLabel">Maluge Services</h2>
+        </div>
+        
+        
+        <div className="clearWhiteBackground servicesFrame marginCenter detailedBorder">
+          {/* <img className='rightBorder' src={RBorder}></img> */}
+          <div className="servicesRow center">
+            <a className="serviceAnchor" href="/services/detox-custom-swedish-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Detox} alt="Petox Custom Swedish Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Detox Custom Swedish Massage</h3>
               </div>
-              <h3 className="minorTitle">Detox Custom Swedish Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/deep-tissue-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Deep} alt="Deep Tissue Massage Image"></img>
+            </a>
+            <a className="serviceAnchor" href="/services/deep-tissue-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Deep} alt="Deep Tissue Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Deep Tissue Massage</h3>
               </div>
-              <h3 className="minorTitle">Deep Tissue Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/hot-stone-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={HotStone} alt="Hot Stone Massage Image"></img>
+            </a>
+            <a className="serviceAnchor" href="/services/hot-stone-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={HotStone} alt="Hot Stone Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Hot Stone Massage</h3>
               </div>
-              <h3 className="minorTitle">Hot Stone Massage</h3>
-            </div>
-          </a>
+            </a>
 
-          <a className="serviceAnchor" href="/services/sport-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Sport} alt="Sport Massage Image"></img>
+            <a className="serviceAnchor" href="/services/sport-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Sport} alt="Sport Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Sport Massage</h3>
               </div>
-              <h3 className="minorTitle">Sport Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/cbd-custom-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={CBD} alt="CBD Custom Massage Image"></img>
+            </a>
+            <a className="serviceAnchor" href="/services/cbd-custom-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={CBD} alt="CBD Custom Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">CBD Custom Massage</h3>
               </div>
-              <h3 className="minorTitle">CBD Custom Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/head-neck-shoulders-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Head} alt="Head-Neck-Shoulders Massage Image"></img>
+            </a>
+            <a className="serviceAnchor" href="/services/head-neck-shoulders-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Head} alt="Head-Neck-Shoulders Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Head - Neck - Shoulders Massage</h3>
               </div>
-              <h3 className="minorTitle">Head - Neck - Shoulders Massage</h3>
-            </div>
-          </a>
+            </a>
 
-          <a className="serviceAnchor" href="/services/prenatal-and-postnatal-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Prenatal} alt="Prenatal and Postnatal Massage Image"></img>
+            <a className="serviceAnchor" href="/services/prenatal-and-postnatal-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Prenatal} alt="Prenatal and Postnatal Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Prenatal and Postnatal Massage</h3>
               </div>
-              <h3 className="minorTitle">Prenatal and Postnatal Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/couples-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={CouplesOne} alt="Couples Massage Image"></img>
-                {/* <img className='serviceImg' src={CouplesTwo} alt='Couples Massage Image'></img> */}
+            </a>
+            <a className="serviceAnchor" href="/services/couples-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={CouplesOne} alt="Couples Massage Image"></img>
+                  {/* <img className='serviceImg' src={CouplesTwo} alt='Couples Massage Image'></img> */}
+                </div>
+                <h3 className="minorTitle">Couples Massage</h3>
               </div>
-              <h3 className="minorTitle">Couples Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/reflexology-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={ReflexOne} alt="Reflexology Massage Image"></img>
-                {/* <img className='serviceImg' src={ReflexOne} alt='Reflexology Massage Image'></img> */}
+            </a>
+            <a className="serviceAnchor" href="/services/reflexology-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={ReflexOne} alt="Reflexology Massage Image"></img>
+                  {/* <img className='serviceImg' src={ReflexOne} alt='Reflexology Massage Image'></img> */}
+                </div>
+                <h3 className="minorTitle">Reflexology Massage</h3>
               </div>
-              <h3 className="minorTitle">Reflexology Massage</h3>
-            </div>
-          </a>
+            </a>
 
-          <a className="serviceAnchor" href="/services/cupping-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Cup} alt="Cupping Massage Image"></img>
+            <a className="serviceAnchor" href="/services/cupping-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Cup} alt="Cupping Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Cupping Massage</h3>
               </div>
-              <h3 className="minorTitle">Cupping Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/facial-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Facial} alt="Facial Massage Image"></img>
+            </a>
+            <a className="serviceAnchor" href="/services/facial-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Facial} alt="Facial Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Facial Massage</h3>
               </div>
-              <h3 className="minorTitle">Facial Massage</h3>
-            </div>
-          </a>
-          <a className="serviceAnchor" href="/services/lymph-drainage-massage">
-            <div className="service">
-              <div className="overflow">
-                <img className="serviceImg" src={Lymph} alt="Lymph Drainage Massage Image"></img>
+            </a>
+            <a className="serviceAnchor" href="/services/lymph-drainage-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Lymph} alt="Lymph Drainage Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Lymph Drainage Massage</h3>
               </div>
-              <h3 className="minorTitle">Lymph Drainage Massage</h3>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
       </section>
 
-      <section className="sectionBreak">
-        <div className="wideContentBlock">
+      <section className="conclusionSection">
+        <div className="wideContentBlock clearWhiteBackground">
           <p className="bodyText">
             Ready to experience the blissful benefits of our expert massage services? Treat yourself to the ultimate indulgence. Don't wait to invest in your
             well-being and take the first step towards a happier, healthier you by scheduling your appointment now.

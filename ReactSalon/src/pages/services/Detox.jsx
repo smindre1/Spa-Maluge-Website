@@ -4,12 +4,12 @@ function Detox() {
     return (
     <div className='servicePage'>
       <div className='flexRow prgBreak'>
-        <img className='servicePageImg' src={DetoxImg}></img>
+        <img className='servicePageImg' src={DetoxImg} alt='Detox Massage Display Image'></img>
 
-        <section className='serviceSummary'>
+        <section className='serviceSummary clearWhiteBackground'>
           <h1 className='serviceTitle lineBreak'>Detox Custom Swedish Massage</h1>
           <p className='serviceText lineBreak'>Swedish massage is an effective Classic European therapy that works real miracles, healing the body from many ailments.</p>
-          <p className='serviceText prgBreak'>Massage helps treat diseases and diagnose them. Swedish massage is a special massage system aimed at deep penetration into tissues, affecting muscles, joints and neurovascular bundles.</p>
+          <p className='serviceText lineBreak'>Massage helps treat diseases and diagnose them. Swedish massage is a special massage system aimed at deep penetration into tissues, affecting muscles, joints and neurovascular bundles.</p>
           <h2 className='serviceSubTitle lineBreak'>What does a Swedish massage give?</h2>
           <ul>
             <li className='list bulletPoint serviceText'>The technique copes well with adhesions, various seals and scars in the joints.</li>
@@ -23,7 +23,7 @@ function Detox() {
         </section>
       </div>
 
-      <section>
+      <section className='clearWhiteBackground smallPadding prgBreak'>
         <h2 className='serviceSubTitle lineBreak'>History Of Origin</h2>
         {/* <img src=''></img> */}
         <p className='serviceText lineBreak'>Swedish massage, or the Swedish Massage System, is a unique technique for the treatment and prevention of many diseases of the musculoskeletal system, problems with joints and muscles. There is no need to select medication or choose from a variety of techniques.</p>
@@ -35,7 +35,7 @@ function Detox() {
 
       </section>
 
-      <section className='prgBreak'>
+      <section className='prgBreak clearWhiteBackground smallPadding'>
         <h2 className='serviceSubTitle lineBreak'>Precaution</h2>
         <h3 className='prgSubject'>The procedure should not be performed on people with any of the following conditions as it can be dangerous.</h3>
         <p className='serviceText italic lineBreak'>Fresh fracture or wound(s), Thrombosis, Diseases of the heart and vascular system, Predisposition to increased blood pressure, Varicose veins, Pregnancy, Hernias, Inflammatory processes, and/or Tuberculosis.</p>
