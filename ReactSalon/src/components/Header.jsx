@@ -22,8 +22,8 @@ function Header() {
     }, [home, services, contact, book])
     
     return (
-    <header>
-        <img className="logo" src={LogoTwo} ></img>
+    <header className={home ? "homeHeader" : null}>
+        {/* <img className="logo" src={LogoTwo} ></img> */}
         <nav className="menu">
             <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
             <a href="/services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a>

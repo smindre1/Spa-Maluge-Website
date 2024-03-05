@@ -99,6 +99,12 @@ a {
 }
 
 /* ------------------- Header ------------------- */
+.homeHeader {
+  position: absolute;
+  z-index: 100;
+  background-color: transparent;
+}
+
 header {
   display: flex;
   align-items: center;
@@ -141,11 +147,14 @@ header {
   /* width: 25vw; */
   height: 10vw;
   /* margin: 0 0 0 2vw; */
-  padding: 0 4vw 0 4vw;
+  /* padding: 0 4vw 0 4vw; */
   /* position: absolute; */
   margin: 0 4vw 0 0;
   /* background-color: var(--pureWhite); */
   /* padding: 3vw 2vw 7vw 2vw; */
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
 
 .logoBckgrd {
@@ -168,6 +177,14 @@ header {
   height: 500px;
   display: flex;
   justify-content: center;
+  border: solid 10px #916f16;
+  /* border: solid 10px #A97F27; */
+
+  background-image: url(./assets/images/wood/dark-oak.jpg);
+  background-image: url(./assets/images/wood/mahogany.jpg);
+  background-image: url(./assets/images/wood/planks-one.jpg);
+  background-image: url(./assets/images/wood/planks-three.jpg);
+
 }
 
 .topLeftCorner {
@@ -239,6 +256,7 @@ header {
 .smallPageTitle {
   font-size: 104px;
   margin: 0 25px 0 0;
+  font-weight: 100;
 }
 
 .pageTitle {
@@ -254,7 +272,7 @@ header {
   line-height: 80px;
   margin: 0 0px 0px 0;
 
-  padding: 25px 0 0 10px;
+  padding: 25px 0 4px 10px;
   background-image: url(./assets/images/background.jpg);
   background-size: cover;
   background-clip: text;

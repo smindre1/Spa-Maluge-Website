@@ -21,6 +21,7 @@ import TRCorner from "../assets/images/decals/TR_Baroque_Corner.svg";
 import BLCorner from "../assets/images/decals/BL_Baroque_Corner.svg";
 import BRCorner from "../assets/images/decals/BR_Baroque_Corner.svg";
 import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
+import LogoTwo from "../assets/Maluge_Logo_Two.svg";
 
 function Home() {
   const [language, setLanguage] = useState("english");
@@ -31,6 +32,7 @@ function Home() {
         {/* <img className="logo" src={Logo}></img> */}
         <img className="topLeftCorner" src={TLCorner} alt="Top Left Frame Corner"></img>
         <img className="topRightCorner" src={TRCorner} alt="Top Right Frame Corner"></img>
+        <img className="logo" src={LogoTwo} ></img>
         <div className="titleAnim flexColumn">
           <h1 className="pageTitle">
             <p className="smallPageTitle">Welcome to </p> Spa Maluge
