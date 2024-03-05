@@ -16,9 +16,10 @@ import Lymph from "../assets/images/services/lymph.jpg";
 
 import Logo from "../assets/test_frame_w.png";
 
-import RBorder from "../assets/images/decals/Right_Border.svg";
-import LBorder from "../assets/images/decals/Left_Border.svg";
-import BBorder from "../assets/images/decals/Bottom_Border.svg";
+import TLCorner from "../assets/images/decals/TL_Baroque_Corner.svg";
+import TRCorner from "../assets/images/decals/TR_Baroque_Corner.svg";
+import BLCorner from "../assets/images/decals/BL_Baroque_Corner.svg";
+import BRCorner from "../assets/images/decals/BR_Baroque_Corner.svg";
 import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
 
 function Home() {
@@ -26,9 +27,10 @@ function Home() {
 
   return (
     <div className="page">
-      <section className="flexRow bkgrdColor goldBackground">
-        <img className="logo" src={Logo}></img>
-
+      <section className="hero">
+        {/* <img className="logo" src={Logo}></img> */}
+        <img className="topLeftCorner" src={TLCorner} alt="Top Left Frame Corner"></img>
+        <img className="topRightCorner" src={TRCorner} alt="Top Right Frame Corner"></img>
         <div className="titleAnim flexColumn">
           <h1 className="pageTitle">
             <p className="smallPageTitle">Welcome to </p> Spa Maluge
@@ -36,6 +38,8 @@ function Home() {
           <h2 className="welcomeMsg pari">Enjoy Relaxation At It's Finest</h2>
           {/* <a>Schedule Now</a> */}
         </div>
+        <img className="bottomLeftCorner" src={BLCorner} alt="Bottom Left Frame Corner"></img>
+        <img className="bottomRightCorner" src={BRCorner} alt="Bottom Right Frame Corner"></img>
       </section>
 
       <section className="introContent clearWhiteBackground">
@@ -73,8 +77,7 @@ function Home() {
           <img className="sectionTitleFrame" src={TitleFrame} alt="Title Frame"></img>
           <h2 className="sectionTitle sectionImageLabel">Maluge Services</h2>
         </div>
-        
-        
+
         <div className="clearWhiteBackground servicesFrame marginCenter detailedBorder">
           {/* <img className='rightBorder' src={RBorder}></img> */}
           <div className="servicesRow center">

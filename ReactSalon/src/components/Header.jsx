@@ -23,7 +23,7 @@ function Header() {
     
     return (
     <header>
-        {/* <img className="logo" src={LogoTwo} ></img> */}
+        <img className="logo" src={LogoTwo} ></img>
         <nav className="menu">
             <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
             <a href="/services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a>

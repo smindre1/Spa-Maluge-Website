@@ -3,7 +3,7 @@
   --base: #515252;
   /* --base: #72d0a6; */
   --pureWhite: #ffffff;
-  --fadedWhite: #ffffffB3;
+  --fadedWhite: #ffffffb3;
   --white: #ebebeb;
   --gray: #bfbfbf;
   --black: #100b07;
@@ -121,7 +121,6 @@ header {
   color: var(--gold);
 }
 
-
 .textColor {
   color: var(--white);
 }
@@ -139,8 +138,8 @@ header {
 }
 
 .logo {
-  width: 25vw;
-  /* height: 10vw; */
+  /* width: 25vw; */
+  height: 10vw;
   /* margin: 0 0 0 2vw; */
   padding: 0 4vw 0 4vw;
   /* position: absolute; */
@@ -162,6 +161,40 @@ header {
 } */
 
 /* ------------------- Home Page ------------------- */
+.hero {
+  /* background-color: #412b00; */
+  background-color: #392602;
+  position: relative;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.topLeftCorner {
+  position: absolute;
+  left: 0;
+  height: 150px;
+}
+
+.topRightCorner {
+  position: absolute;
+  right: 0;
+  height: 150px;
+}
+
+.bottomLeftCorner {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 150px;
+}
+
+.bottomRightCorner {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 150px;
+}
 
 .goldBackground {
   background-image: url(./assets/images/background.jpg);
@@ -208,7 +241,6 @@ header {
   margin: 0 25px 0 0;
 }
 
-
 .pageTitle {
   display: flex;
   flex-direction: row;
@@ -221,6 +253,13 @@ header {
   font-size: 74px;
   line-height: 80px;
   margin: 0 0px 0px 0;
+
+  padding: 25px 0 0 10px;
+  background-image: url(./assets/images/background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .welcomeMsg {
@@ -234,6 +273,12 @@ header {
   font-size: 46px;
   margin: 0 0vw 0 18vw;
   font-family: "Parisienne", cursive;
+
+  background-image: url(./assets/images/background.jpg);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* .pin {
@@ -380,7 +425,7 @@ header {
 
 .detailedBorder {
   border: 40px solid;
-  border-top-width: 64px ;
+  border-top-width: 64px;
   border-image-source: url(./assets/images/decals/Box_Border_Image.svg);
   border-image-slice: 64 42 42 42;
   /* border-image-width: 20; */
