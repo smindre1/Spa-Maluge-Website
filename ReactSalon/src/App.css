@@ -61,6 +61,10 @@ a {
   color: var(--pureWhite);
 }
 
+.lightWhite {
+  color: var(--white);
+}
+
 .gold {
   color: var(--gold);
 }
@@ -86,6 +90,10 @@ a {
 
 .clearWhiteBackground {
   background-color: var(--fadedWhite);
+}
+
+.whiteBackground {
+  background-color: var(--pureWhite);
 }
 
 .center {
@@ -172,7 +180,7 @@ header {
 /* ------------------- Home Page ------------------- */
 .hero {
   /* background-color: #412b00; */
-  background-color: #392602;
+  background-color: #220E06;
   position: relative;
   height: 500px;
   display: flex;
@@ -181,10 +189,14 @@ header {
   /* border: solid 10px #A97F27; */
 
   background-image: url(./assets/images/wood/dark-oak.jpg);
-  background-image: url(./assets/images/wood/mahogany.jpg);
   background-image: url(./assets/images/wood/planks-one.jpg);
   background-image: url(./assets/images/wood/planks-three.jpg);
 
+  background-size: cover;
+  background-image: url(./assets/images/hero/hero-one.png);
+  background-image: url(./assets/images/hero/hero-two.png);
+  background-image: url(./assets/images/hero/hero-three.png);
+  background-image: url(./assets/images/hero/hero-four.png);
 }
 
 .topLeftCorner {
@@ -459,6 +471,17 @@ header {
 
 .conclusionSection {
   padding: 60px 0 0 0;
+}
+
+.heroTwo {
+  background-size: cover;
+  overflow: hidden;
+  background-image: url(./assets/images/hero/hero-two.png);
+  background-image: url(./assets/images/hero/hero-three.png);
+  background-image: url(./assets/images/hero/hero-four.png);
+  background-image: url(./assets/images/hero/hero-one-small.png);
+  background-color: #4a4a4a;
+  margin: 10vw 0 0 0;
 }
 
 .pushRight {

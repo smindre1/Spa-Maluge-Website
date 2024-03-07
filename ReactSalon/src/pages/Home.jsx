@@ -44,7 +44,7 @@ function Home() {
         <img className="bottomRightCorner" src={BRCorner} alt="Bottom Right Frame Corner"></img>
       </section>
 
-      <section className="introContent clearWhiteBackground">
+      <section className="introContent whiteBackground">
         <p className="bodyText lineBreak">
           Welcome to Spa Maluge's Massage Salon, your oasis of relaxation nestled in the heart of charming Hoboken, New Jersey. At Spa Maluge, we invite you to
           escape the hustle and bustle of daily life and indulge in a rejuvenating experience tailored to soothe your mind, body, and spirit. Our expert
@@ -59,7 +59,7 @@ function Home() {
 
       <section className="sectionBreak center">
         <div className="flexRow">
-          <div className="contentBlock pushRight clearWhiteBackground">
+          <div className="contentBlock pushRight whiteBackground">
             <h2 className="prgTitle">Our Spa Massage Services</h2>
             <p className="bodyText">
               Indulge your senses and embrace the ultimate relaxation with our exquisite massage services. Our team of skilled therapists offers a diverse range
@@ -80,7 +80,7 @@ function Home() {
           <h2 className="sectionTitle sectionImageLabel">Maluge Services</h2>
         </div>
 
-        <div className="clearWhiteBackground servicesFrame marginCenter detailedBorder">
+        <div className="whiteBackground servicesFrame marginCenter detailedBorder">
           {/* <img className='rightBorder' src={RBorder}></img> */}
           <div className="servicesRow center">
             <a className="serviceAnchor" href="/services/detox-custom-swedish-massage">
@@ -189,8 +189,8 @@ function Home() {
       </section>
 
       <section className="conclusionSection">
-        <div className="wideContentBlock clearWhiteBackground">
-          <p className="bodyText">
+        <div className="wideContentBlock whiteBackground heroTwo">
+          <p className="bodyText lightWhite">
             Ready to experience the blissful benefits of our expert massage services? Treat yourself to the ultimate indulgence. Don't wait to invest in your
             well-being and take the first step towards a happier, healthier you by scheduling your appointment now.
           </p>
