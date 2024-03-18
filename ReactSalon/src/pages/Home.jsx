@@ -32,7 +32,7 @@ function Home() {
         {/* <img className="logo" src={Logo}></img> */}
         <img className="topLeftCorner" src={TLCorner} alt="Top Left Frame Corner"></img>
         <img className="topRightCorner" src={TRCorner} alt="Top Right Frame Corner"></img>
-        <img className="logo" src={LogoTwo} ></img>
+        <img className="logo hide" src={LogoTwo} ></img>
         <div className="titleAnim flexColumn">
           <h1 className="pageTitle">
             <p className="smallPageTitle">Welcome to </p> Spa Maluge

@@ -188,14 +188,7 @@ header {
   border: solid 10px #916f16;
   /* border: solid 10px #A97F27; */
 
-  background-image: url(./assets/images/wood/dark-oak.jpg);
-  background-image: url(./assets/images/wood/planks-one.jpg);
-  background-image: url(./assets/images/wood/planks-three.jpg);
-
   background-size: cover;
-  background-image: url(./assets/images/hero/hero-one.png);
-  background-image: url(./assets/images/hero/hero-two.png);
-  background-image: url(./assets/images/hero/hero-three.png);
   background-image: url(./assets/images/hero/hero-four.png);
 }
 
@@ -266,7 +259,7 @@ header {
 }
 
 .smallPageTitle {
-  font-size: 104px;
+  font-size: 118px;
   margin: 0 25px 0 0;
   font-weight: 100;
 }
@@ -280,11 +273,11 @@ header {
   font-weight: bold;
   /* font-size: 72px;
   line-height: 72px; */
-  font-size: 74px;
+  font-size: 82px;
   line-height: 80px;
   margin: 0 0px 0px 0;
 
-  padding: 25px 0 4px 10px;
+  padding: 38px 0 34px 10px;
   background-image: url(./assets/images/background.jpg);
   background-size: cover;
   background-clip: text;
