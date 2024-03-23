@@ -73,6 +73,10 @@ a {
   color: var(--black);
 }
 
+.bold {
+  font-weight: 900;
+}
+
 .flexRow {
   display: flex;
   flex-direction: row;
@@ -104,6 +108,15 @@ a {
 .marginCenter {
   margin-left: auto;
   margin-right: auto;
+}
+
+.mainFont {
+  /* font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal; */
+  font-family: "Aref Ruqaa Ink", serif;
+  font-style: normal;
 }
 
 /* ------------------- Header ------------------- */
@@ -294,7 +307,7 @@ header {
   font-weight: 400;
   /* font-size: 36px; */
   font-size: 46px;
-  margin: 0 0vw 0 18vw;
+  margin: 0 0vw 0 24vw;
   font-family: "Parisienne", cursive;
 
   background-image: url(./assets/images/background.jpg);
@@ -324,6 +337,13 @@ header {
   padding: 0 20vw 0 20vw;
 }
 
+.introText {
+  line-height: 36px;
+  font-style: normal;
+  font-size: 18px;
+  text-align: center;
+}
+
 .bodyText {
   font-family: "Lato", sans-serif;
   line-height: 36px;
@@ -339,6 +359,8 @@ header {
 
 .contentImage {
   width: 38vw;
+  border: solid 8px #916f16;
+  
 }
 
 .prgTitle {
@@ -731,6 +753,12 @@ textarea:focus {
 }
 
 /* ------------------- Screen Adjustments --------------------- */
+@media only screen and (max-width: 1260px) {
+  .welcomeMsg {
+    margin: 0 0 0 27vw;
+  }
+}
+
 @media only screen and (max-width: 1140px) {
   .serviceImg {
     height: 30vw;
@@ -756,5 +784,29 @@ textarea:focus {
 
   .wideContentBlock {
     padding: 10vw 8vw 10vw 8vw;
+  }
+
+  .pageTitle {
+    font-size: clamp(64px, 7vw, 82px);
+  }
+
+  .smallPageTitle {
+    font-size: clamp(92px, 10vw, 118px);
+  }
+
+  .welcomeMsg {
+    font-size: clamp(32px, 4vw, 46px);
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .pageTitle {
+    padding: 38px 10px 34px 10px;
+  }
+
+  .welcomeMsg {
+    margin: 0 0 0 0;
+    align-items: end;
+    opacity: 0.9;
   }
 }

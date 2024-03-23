@@ -13,6 +13,7 @@ import ReflexTwo from "../assets/images/services/reflexTwo.jpg";
 import Cup from "../assets/images/services/cup.jpg";
 import Facial from "../assets/images/services/facial.jpg";
 import Lymph from "../assets/images/services/lymph.jpg";
+import DescImage from "../assets/images/description_stock_image.png";
 
 import Logo from "../assets/test_frame_w.png";
 
@@ -45,13 +46,15 @@ function Home() {
       </section>
 
       <section className="introContent whiteBackground">
-        <p className="bodyText lineBreak">
-          Welcome to Spa Maluge's Massage Salon, your oasis of relaxation nestled in the heart of charming Hoboken, New Jersey. At Spa Maluge, we invite you to
-          escape the hustle and bustle of daily life and indulge in a rejuvenating experience tailored to soothe your mind, body, and spirit. Our expert
+        <p className="introText lineBreak mainFont bold">
+          Welcome to Spa Maluge's Massage Salon, your oasis of relaxation nestled in the heart of charming Hoboken, New Jersey.
+        </p>
+        <p className="introText lineBreak mainFont">
+          At Spa Maluge, we invite you to escape the hustle and bustle of daily life and indulge in a rejuvenating experience tailored to soothe your mind, body, and spirit. Our expert
           therapists are dedicated to providing personalized care and attention, ensuring that each visit leaves you feeling refreshed, renewed, and ready to
           take on the world.
         </p>
-        <p className="bodyText">
+        <p className="introText mainFont">
           Step into our serene sanctuary and embark on a journey of blissful tranquility, where the stresses of the outside world melt away with every gentle
           touch. Discover the serenity you deserve at Spa Maluge.
         </p>
@@ -70,7 +73,7 @@ function Home() {
             </p>
           </div>
 
-          <img className="contentImage pushLeft white" src="" alt="Massage Services Image"></img>
+          <img className="contentImage pushLeft white" src={DescImage} alt="Massage Services Image"></img>
         </div>
       </section>
 

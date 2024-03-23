@@ -27,7 +27,7 @@ function Header() {
         <nav className="menu">
             <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
             <a href="/services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a>
-            {/* <a href="/book-now" className={book ? "highlight menuBarText" : "textColor menuBarText"}>Book Now</a> */}
+            <a href="/book-now" className={book ? "highlight menuBarText" : "textColor menuBarText"}>Book</a>
             <a href="/contact-us" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
         </nav>
     </header>
