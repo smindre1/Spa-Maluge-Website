@@ -5,7 +5,7 @@ function Refund() {
         <h1 className='sectionTitle center'>Cancellation and Refund Policy</h1>
         <div  className='wideContentPage'>
           <p className='bodyText lineBreak'>
-          Cancellation Policies and Fees: Your spa treatments are reserved especially for you. We value your business and ask that you respect the spa’s scheduling policies. Should you need to cancel or reschedule, please notify us <b className='bold'>at least 4 hours in advance.</b>
+          Cancellation Policies and Fees: Your spa treatments are reserved especially for you. We value your business and ask that you respect the spa's scheduling policies. Should you need to cancel or reschedule, please notify us <b className='bold'>at least 4 hours in advance.</b>
           </p>
           <p className='bodyText lineBreak'>
           Any cancellations with less than 4 hours of notice are subject to a cancelation fee amounting to the cost of the scheduled service.

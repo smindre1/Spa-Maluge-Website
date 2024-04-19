@@ -23,7 +23,7 @@ function HotStone() {
 
       <section className='whiteBackground smallPadding prgBreak'>
         <h2 className='serviceSubTitle lineBreak'>Features of a Hot Stone Massage</h2>
-        <p className='mainFont lineBreak'>For A Hot Stone Massage, special stones are used, which are heated to a certain temperature - from 40 to 55 degrees. The choice of stones directly depends on the procedure and the client’s characteristics: the specialist selects material of a certain length, size, weight and shape.</p>
+        <p className='mainFont lineBreak'>For a Hot Stone Massage, special stones are used, which are heated to a certain temperature - from 40 to 55 degrees. The choice of stones directly depends on the procedure and the client's characteristics: the specialist selects material of a certain length, size, weight and shape.</p>
         <p className='mainFont lineBreak'></p>
         
         <p className='mainFont lineBreak'></p>

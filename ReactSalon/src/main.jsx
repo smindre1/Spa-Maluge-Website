@@ -23,6 +23,8 @@ import Reflexology from "./pages/services/Reflexology.jsx";
 import Cupping from "./pages/services/Cupping.jsx";
 import Facial from "./pages/services/Facial.jsx";
 import Lymph from "./pages/services/Lymph.jsx";
+import Anticellulite from "./pages/services/Anticellulite.jsx";
+import Aroma from "./pages/services/Aroma.jsx";
 
 
 const router = createBrowserRouter([
@@ -103,7 +105,16 @@ const router = createBrowserRouter([
       {
         path: "/services/lymph-drainage-massage",
         element: <Lymph />,
-      }
+      },
+      {
+        path: "/services/anticellulite-massage",
+        element: <Anticellulite />,
+      },
+      {
+        path: "/services/aroma-therapy-massage",
+        element: <Aroma />,
+      },
+
     ],
   },
 ]);

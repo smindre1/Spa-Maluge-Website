@@ -408,6 +408,10 @@ header {
   transition: transform 500ms;
 }
 
+.addOnImg {
+  border-radius: 55%;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .serviceImg:hover {
     transform: scale(1.25);

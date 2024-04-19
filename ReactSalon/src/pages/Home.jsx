@@ -13,6 +13,8 @@ import ReflexOne from "../assets/images/services/small_reflex.jpg";
 import Cup from "../assets/images/services/small_cup.jpg";
 import Facial from "../assets/images/services/small_facial.jpg";
 import Lymph from "../assets/images/services/small_lymph.jpg";
+import Anticellulite from "../assets/images/services/small_Anticellulite.jpg";
+import Aroma from "../assets/images/services/small_Aroma.jpg";
 import DescImage from "../assets/images/description_stock_image.png";
 
 import Logo from "../assets/test_frame_w.png";
@@ -119,14 +121,14 @@ function Home() {
                 <h3 className="minorTitle">Sport Massage</h3>
               </div>
             </a>
-            <a className="serviceAnchor" href="/services/cbd-custom-massage">
+            {/* <a className="serviceAnchor" href="/services/cbd-custom-massage">
               <div className="service">
                 <div className="overflow">
                   <img className="serviceImg" src={CBD} alt="CBD Custom Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">CBD Custom Massage</h3>
               </div>
-            </a>
+            </a> */}
             <a className="serviceAnchor" href="/services/head-neck-shoulders-massage">
               <div className="service">
                 <div className="overflow">
@@ -185,6 +187,63 @@ function Home() {
                   <img className="serviceImg" src={Lymph} alt="Lymph Drainage Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Lymph Drainage Massage</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/anticellulite-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Anticellulite} alt="Anticellulite Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Anticellulite Massage</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/aroma-therapy-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Aroma} alt="Aroma Therapy Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Aroma Therapy Massage</h3>
+              </div>
+            </a>
+          </div>
+        </div>
+
+      </section>
+
+      <section className="sectionBreak flexColumn">
+        <div className="center">
+          <img className="sectionTitleFrame" src={TitleFrame} alt="Title Frame"></img>
+          <h2 className="sectionTitle sectionImageLabel">Add Ons</h2>
+        </div>
+
+        <div className="whiteBackground servicesFrame marginCenter detailedBorder">
+          {/* <img className='rightBorder' src={RBorder}></img> */}
+          <div className="servicesRow center">
+
+            <a className="serviceAnchor" href="/services/hot-stone-massage">
+              <div className="service">
+                <div className="overflow addOnImg">
+                  <img className="serviceImg" src={HotStone} alt="Hot Stone Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Hot Stone Massage</h3>
+              </div>
+            </a>
+
+            <a className="serviceAnchor" href="/services/cbd-custom-massage">
+              <div className="service">
+                <div className="overflow addOnImg">
+                  <img className="serviceImg" src={CBD} alt="CBD Custom Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">CBD Custom Massage</h3>
+              </div>
+            </a>
+
+            <a className="serviceAnchor" href="/services/cupping-massage">
+              <div className="service">
+                <div className="overflow addOnImg">
+                  <img className="serviceImg" src={Cup} alt="Cupping Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Cupping Massage</h3>
               </div>
             </a>
           </div>
