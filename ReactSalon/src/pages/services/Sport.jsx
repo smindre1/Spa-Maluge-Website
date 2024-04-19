@@ -8,47 +8,47 @@ function Sport() {
 
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Sports Massage</h1>
-          <p className='serviceText lineBreak'>Sports massage is a technique that is used to prepare the body for physical activity, as well as to speed up the recovery process after training. Sports massage allows you to increase the physical endurance of the body and improve the professional achievements of the athlete. Designed for highly active people.</p>
-          <p className='serviceText lineBreak'></p>
+          <p className='mainFont lineBreak'>Sports massage is a technique that is used to prepare the body for physical activity, as well as to speed up the recovery process after training. Sports massage allows you to increase the physical endurance of the body and improve the professional achievements of the athlete. Designed for highly active people.</p>
+          <p className='mainFont lineBreak'></p>
           <h2 className='serviceSubTitle lineBreak'>Benefits of a Sports Massage:</h2>
           <ul>
-            <li className='list bulletPoint serviceText'>Increasing the body's endurance</li>
-            <li className='list bulletPoint serviceText'>Relieving muscle spasms</li>
-            <li className='list bulletPoint serviceText'>Accelerating the recovery process after physical activity</li>
-            <li className='list bulletPoint serviceText'>Combating the consequences of sprains, bruises, reducing pain</li>
-            <li className='list bulletPoint serviceText'>Reducing the risk of injury and damage</li>
-            <li className='list bulletPoint serviceText'>Reduction in fatigue levels</li>
-            <li className='list bulletPoint serviceText'>Improving the athlete's reaction speed</li>
-            <li className='list bulletPoint serviceText'>Increased muscle elasticity</li>
-            <li className='list bulletPoint serviceText'>Improving lymph outflow, blood circulation, removing toxins from the body</li>
-            <li className='list bulletPoint serviceText'>Improvement of general physical condition</li>
-            <li className='list bulletPoint serviceText'>Getting rid of lactic acid stagnation after serious physical exertion</li>
-            <li className='list bulletPoint serviceText'>Increasing the level of stress resistance of an athlete</li>
+            <li className='list bulletPoint mainFont'>Increasing the body's endurance</li>
+            <li className='list bulletPoint mainFont'>Relieving muscle spasms</li>
+            <li className='list bulletPoint mainFont'>Accelerating the recovery process after physical activity</li>
+            <li className='list bulletPoint mainFont'>Combating the consequences of sprains, bruises, reducing pain</li>
+            <li className='list bulletPoint mainFont'>Reducing the risk of injury and damage</li>
+            <li className='list bulletPoint mainFont'>Reduction in fatigue levels</li>
+            <li className='list bulletPoint mainFont'>Improving the athlete's reaction speed</li>
+            <li className='list bulletPoint mainFont'>Increased muscle elasticity</li>
+            <li className='list bulletPoint mainFont'>Improving lymph outflow, blood circulation, removing toxins from the body</li>
+            <li className='list bulletPoint mainFont'>Improvement of general physical condition</li>
+            <li className='list bulletPoint mainFont'>Getting rid of lactic acid stagnation after serious physical exertion</li>
+            <li className='list bulletPoint mainFont'>Increasing the level of stress resistance of an athlete</li>
           </ul>
         </section>
       </div>
 
       {/* <section className='whiteBackground smallPadding prgBreak'>
         <h2 className='serviceSubTitle lineBreak'>History Of Origin</h2>
-        <p className='serviceText lineBreak'></p>
-        <p className='serviceText lineBreak'></p>
+        <p className='mainFont lineBreak'></p>
+        <p className='mainFont lineBreak'></p>
         
-        <p className='serviceText lineBreak'></p>
-        <p className='serviceText lineBreak'></p>
-        <p className='serviceText lineBreak'></p>
+        <p className='mainFont lineBreak'></p>
+        <p className='mainFont lineBreak'></p>
+        <p className='mainFont lineBreak'></p>
 
       </section> */}
 
       <section className='prgBreak whiteBackground smallPadding'>
         <h2 className='serviceSubTitle lineBreak'>Precaution</h2>
         {/* <h3 className='prgSubject'>The procedure should not be performed on people with any of the following conditions as it can be dangerous.</h3>
-        <p className='serviceText italic lineBreak'></p>
+        <p className='mainFont italic lineBreak'></p>
         <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3> */}
         <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>
         <ul>
-          <li className='serviceText bulletPoint'>30 Minutes - $90.00</li>
-          <li className='serviceText bulletPoint'>60 Minutes - $160.00</li>
-          <li className='serviceText bulletPoint'>90 Minutes - $220.00</li>
+          <li className='mainFont bulletPoint'>30 Minutes - $90.00</li>
+          <li className='mainFont bulletPoint'>60 Minutes - $160.00</li>
+          <li className='mainFont bulletPoint'>90 Minutes - $220.00</li>
         </ul>
       </section>
 

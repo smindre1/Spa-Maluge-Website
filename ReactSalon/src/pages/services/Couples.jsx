@@ -1,4 +1,4 @@
-import CouplesImg from '../../assets/images/services/coupleOne.jpg';
+import CouplesImg from '../../assets/images/services/couple.jpg';
 
 function Couples() {
     return (

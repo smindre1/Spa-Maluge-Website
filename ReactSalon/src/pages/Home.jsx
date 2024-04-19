@@ -1,18 +1,18 @@
 import { useState } from "react";
-import Detox from "../assets/images/services/detox.jpg";
-import Deep from "../assets/images/services/deep.jpg";
-import HotStone from "../assets/images/services/stone.jpg";
-import Sport from "../assets/images/services/sport.jpg";
-import CBD from "../assets/images/services/CBD.jpg";
-import Head from "../assets/images/services/head.jpg";
-import Prenatal from "../assets/images/services/prenatal.jpg";
-import CouplesOne from "../assets/images/services/coupleOne.jpg";
-import CouplesTwo from "../assets/images/services/coupleTwo.jpg";
-import ReflexOne from "../assets/images/services/reflexOne.jpg";
-import ReflexTwo from "../assets/images/services/reflexTwo.jpg";
-import Cup from "../assets/images/services/cup.jpg";
-import Facial from "../assets/images/services/facial.jpg";
-import Lymph from "../assets/images/services/lymph.jpg";
+import Detox from "../assets/images/services/small_detox.jpg";
+import Deep from "../assets/images/services/small_deep.jpg";
+import HotStone from "../assets/images/services/small_stone.jpg";
+import Sport from "../assets/images/services/small_sport.jpg";
+import CBD from "../assets/images/services/small_CBD.jpg";
+import Head from "../assets/images/services/small_head.jpg";
+import Prenatal from "../assets/images/services/small_prenatal.jpg";
+import CouplesOne from "../assets/images/services/small_couple.jpg";
+
+import ReflexOne from "../assets/images/services/small_reflex.jpg";
+
+import Cup from "../assets/images/services/small_cup.jpg";
+import Facial from "../assets/images/services/small_facial.jpg";
+import Lymph from "../assets/images/services/small_lymph.jpg";
 import DescImage from "../assets/images/description_stock_image.png";
 
 import Logo from "../assets/test_frame_w.png";
@@ -63,8 +63,8 @@ function Home() {
       <section className="sectionBreak center">
         <div className="flexRow">
           <div className="contentBlock pushRight whiteBackground">
-            <h2 className="prgTitle">Our Spa Massage Services</h2>
-            <p className="bodyText">
+            <h2 className="prgTitle mainFont">Our Spa Massage Services</h2>
+            <p className="mainFont">
               Indulge your senses and embrace the ultimate relaxation with our exquisite massage services. Our team of skilled therapists offers a diverse range
               of techniques and modalities to cater to your specific needs and preferences. Whether you seek relief from muscle tension, stress reduction, or
               simply a moment of pure tranquility, we are committed to providing you with a deeply rejuvenating experience. From Swedish and deep tissue

@@ -39,6 +39,10 @@ a {
   text-decoration: none;
 }
 
+.lato {
+  font-family: "Lato";
+}
+
 /* ------General Classes For All Pages----------- */
 
 .lineBreak {
@@ -117,6 +121,11 @@ a {
   font-style: normal; */
   font-family: "Aref Ruqaa Ink", serif;
   font-style: normal;
+  line-height: normal;
+
+  /* line-height: 36px; */
+  /* font-weight: 400; */
+  font-size: 18px;
 }
 
 /* ------------------- Header ------------------- */
@@ -442,6 +451,10 @@ header {
   font-style: italic;
   font-weight: 900;
   font-size: clamp(18px, 1.5vw, 24px);
+}
+
+.bodyTextTitle {
+  font-size: 22px;
 }
 
 .servicesFrame {
