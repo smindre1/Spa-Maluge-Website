@@ -25,9 +25,16 @@ import BLCorner from "../assets/images/decals/BL_Baroque_Corner.svg";
 import BRCorner from "../assets/images/decals/BR_Baroque_Corner.svg";
 import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
 import LogoTwo from "../assets/Maluge_Logo_Two.svg";
+import 'dotenv/config';
 
 function Home() {
   const [language, setLanguage] = useState("english");
+  console.log(REACT_APP_TEST, "REACT_APP_TEST");
+  console.log(process.env.REACT_APP_TEST, "process.env.REACT_APP_TEST");
+  console.log(process.env.VITE_REACT_APP_TEST, "process.env.VITE_REACT_APP_TEST");
+  console.log(import.meta.env.TEST, "import.meta.env.TEST");
+  
+  
 
   return (
     <div className="page">
