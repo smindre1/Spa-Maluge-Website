@@ -30,8 +30,8 @@ import 'dotenv/config';
 function Home() {
   const [language, setLanguage] = useState("english");
   console.log(REACT_APP_TEST, "REACT_APP_TEST");
-  console.log(process.env.REACT_APP_TEST, "process.env.REACT_APP_TEST");
-  console.log(process.env.VITE_REACT_APP_TEST, "process.env.VITE_REACT_APP_TEST");
+  console.log(REACT_APP_TEST, "process.env.REACT_APP_TEST");
+  console.log(VITE_REACT_APP_TEST, "process.env.VITE_REACT_APP_TEST");
   console.log(import.meta.env.TEST, "import.meta.env.TEST");
   
   
