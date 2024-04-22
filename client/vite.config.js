@@ -9,7 +9,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/graphql': {
-        target: 'https://spamaluge.com/',
+        target: 'https://spamaluge.com',
         secure: false,
         changeOrigin: true
       }
