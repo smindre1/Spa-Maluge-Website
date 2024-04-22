@@ -1,4 +1,5 @@
 const db = require('../config/connection');
+require('dotenv').config();
 const { Calendar, Schedule, Inventory } = require('../models');
 // import { defaultTimeSlots } from './timeSlots.js';
 const defaultTimeSlots = require('./timeSlots');
