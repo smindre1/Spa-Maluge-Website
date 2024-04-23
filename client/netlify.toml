@@ -1,5 +1,7 @@
-# Redirects all path routes to the root index.html file
+# Redirects specific paths to the root index.html file
 [[redirects]]
-from = "/!(graphql)/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+  query = { path = ":path" }
