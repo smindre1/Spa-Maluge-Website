@@ -1,5 +1,5 @@
 # Redirects all path routes to the root index.html file
 [[redirects]]
-from = "/*"
+from = "/!(graphql)/*"
 to = "/index.html"
 status = 200
