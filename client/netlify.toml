@@ -1,7 +1,5 @@
-# Redirects specific paths to the root index.html file
+# Custom rewrite rule to redirect specific paths to the root index.html file
 [[redirects]]
-  from = "/*"
+  from = "/book-now"
   to = "/index.html"
   status = 200
-  force = true
-  query = { path = ":path" }
