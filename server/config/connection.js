@@ -5,7 +5,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/SpaMaluge
 
 // console.log(process.env.VITE_REACT_APP_MONGODB_URI, "one");
 // console.log(process.env.REACT_APP_MONGODB_URI, "two");
-// console.log(process.env.MONGODB_URI, "three");
+console.log(process.env.MONGODB_URI, "success");
 
 
 module.exports = mongoose.connection;
