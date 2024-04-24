@@ -25,7 +25,7 @@ import BLCorner from "../assets/images/decals/BL_Baroque_Corner.svg";
 import BRCorner from "../assets/images/decals/BR_Baroque_Corner.svg";
 import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
 import LogoTwo from "../assets/Maluge_Logo_Two.svg";
-// import 'dotenv/config';
+import 'dotenv/config';
 
 function Home() {
   const [language, setLanguage] = useState("english");
@@ -34,7 +34,7 @@ function Home() {
   // console.log(VITE_REACT_APP_TEST, "process.env.VITE_REACT_APP_TEST");
   // console.log(import.meta.env.TEST, "import.meta.env.TEST");
   
-  
+  console.log(process.env.MONGDB_URI, "Check 1");
 
   return (
     <div className="page">
