@@ -34,7 +34,7 @@ function Home() {
   // console.log(VITE_REACT_APP_TEST, "process.env.VITE_REACT_APP_TEST");
   // console.log(import.meta.env.TEST, "import.meta.env.TEST");
   
-  console.log(process.env.MONGDB_URI, "Check 1");
+  console.log(import.meta.env.MONGDB_URI, "Check 1");
 
   return (
     <div className="page">
