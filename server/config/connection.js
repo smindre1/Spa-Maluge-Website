@@ -1,11 +1,7 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 console.log("connection");
-mongoose.connect(MONGODB_URI || 'mongodb://127.0.0.1:27017/SpaMalugeReservationSystem');
-
-// console.log(process.env.VITE_REACT_APP_MONGODB_URI, "one");
-// console.log(process.env.REACT_APP_MONGODB_URI, "two");
-// console.log(process.env.MONGODB_URI, "success");
+mongoose.connect("mongodb+srv://testuser:U4osbIAuBdufMeL8@cluster0.cm2hdfp.mongodb.net/SpaMalugeReservationSystem?retryWrites=true&w=majority&appName=Cluster0" || 'mongodb://127.0.0.1:27017/SpaMalugeReservationSystem');
 
 
 module.exports = mongoose.connection;
