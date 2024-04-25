@@ -3,9 +3,3 @@
   from = "/book-now"
   to = "/index.html"
   status = 200
-  
-# Proxy API requests to the backend server
-[[redirects]]
-  from = "/graphql/*"
-  to = "https://spamaluge.com//graphql/:splat"
-  status = 200

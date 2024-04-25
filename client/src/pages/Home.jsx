@@ -25,7 +25,7 @@ import BLCorner from "../assets/images/decals/BL_Baroque_Corner.svg";
 import BRCorner from "../assets/images/decals/BR_Baroque_Corner.svg";
 import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
 import LogoTwo from "../assets/Maluge_Logo_Two.svg";
-import 'dotenv/config';
+
 
 function Home() {
   const [language, setLanguage] = useState("english");
