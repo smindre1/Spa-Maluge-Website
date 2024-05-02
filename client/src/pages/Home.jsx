@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Detox from "../assets/images/services/small_detox.jpg";
 import Deep from "../assets/images/services/small_deep.jpg";
 import HotStone from "../assets/images/services/small_stone.jpg";
@@ -29,6 +29,10 @@ import LogoTwo from "../assets/Maluge_Logo_Two.svg";
 
 function Home() {
   const [language, setLanguage] = useState("english");
+  
+  // useEffect(() => {
+  //   console.log(import.meta.env.VITE_SPA_MALUGE_DB_API, "Test");
+  // }, [])
 
   return (
     <div className="page">

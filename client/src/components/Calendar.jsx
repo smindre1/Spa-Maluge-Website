@@ -1,5 +1,3 @@
-import {useQuery} from '@apollo/client'
-import { GET_CALENDAR } from '../../utils/queries';
 import { useState, useEffect, useRef, forwardRef } from 'react';
 import "../../src/index.css";
 import Schedule from './Schedule';
@@ -10,6 +8,10 @@ const Calendar = forwardRef((props, ref) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     const weekdayLabels = ['Su', 'M', 'Tu', 'W', 'Th', 'F', 'Sa'];
 
+    const [calendar, setCalendar] = useState();
+    const [wait, setWait] = useState(true);
+    const [failed, setFailed] = useState();
+    //
     const [loadYear, setYear] = useState(today.getFullYear());
     const [loadMonth, setMonth] = useState(months[today.getMonth()]);
     const [loadDays, setDays] = useState();
@@ -18,8 +20,29 @@ const Calendar = forwardRef((props, ref) => {
     const [loadOpenStatus, setOpenStatus] = useState();
     const [updated, setUpdated] = useState(false);
     const [loadTimeSlots, setTimeSlots] = useState();
+    
 
-    const { loading: wait, error, data: calendar} = useQuery(GET_CALENDAR);
+    useEffect(() => {
+        // console.log(import.meta.env.VITE_SPA_MALUGE_DB_API, "Test");
+        const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "calendar";
+        //Fetches calendar data
+        fetch(url)
+        //Checks if the responding data is ok
+        .then(response => {
+            if (!response.ok) {
+            throw new Error('Network response was not ok');
+            }
+            // Parse the JSON response
+            return response.json();
+        })
+        .then(data => {
+            setCalendar(data);
+            setWait(false);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
+      }, [])
 
     const scheduleId = useRef(null);
 
@@ -40,7 +63,7 @@ const Calendar = forwardRef((props, ref) => {
     }, [loadYear])
 
     const displayDays = (year, month) => {
-        const specificYear = calendar.calendar.find((calYears) => calYears.year == year);
+        const specificYear = calendar.find((calYears) => calYears.year == year);
         setDays(specificYear[month]);
         
     };
@@ -52,7 +75,7 @@ const Calendar = forwardRef((props, ref) => {
     }
 
     const loadSchedule = () => {
-        const targetYear = calendar.calendar.filter((year) => year.year == loadYear);
+        const targetYear = calendar.filter((year) => year.year == loadYear);
         const target = targetYear[0][loadMonth][loadDay - 1].open;
         // setOpenStatus(target[0][loadMonth][loadDay - 1].open);
         if(props.schedule === "true") {
@@ -75,14 +98,14 @@ const Calendar = forwardRef((props, ref) => {
                 {wait ? <h2>Loading...</h2> : null}
                 <select title="year" name="type" value={loadYear} onChange={(e) => {setDay(1); setYear(e.target.value)}}>
                     <option value="" disabled>-Select-</option>
-                    {calendar?.calendar ? calendar.calendar.map((year) => {
+                    {calendar ? calendar.map((year) => {
                         //This is to exclude any Test Calendar Years (The Test Calendar Year is used in the Settings page)
                         return today.getFullYear() <= year.year && year.year < 3000 ? <option value={year.year} key={year.year}>{year.year}</option> : null;
                     }) : null}
                 </select>
                 <select title="month" name="type" value={loadMonth} onChange={(e) => {setDay(1); setMonth(e.target.value);}}>
                     <option value="" disabled>-Select-</option>
-                    {calendar?.calendar ? months.map((month) => {
+                    {calendar ? months.map((month) => {
                         return <option value={month} key={month}>{month}</option>
                     }) : null}
                 </select>

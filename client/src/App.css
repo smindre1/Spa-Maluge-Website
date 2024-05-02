@@ -827,3 +827,166 @@ textarea:focus {
     opacity: 0.9;
   }
 }
+
+/* ============================================================================================= */
+
+/* ----------------------- Reservations Page ------------------------------ */
+
+.clientReservationCard {
+  background-color: #f0f0f0;
+  padding: 9px 18px 9px 18px;
+  margin: 0 0 18px 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  border: solid #cccccc 2px;
+}
+
+/* .clientName {
+
+} */
+
+.formInputDiv {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+
+.cardText {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* .reservationServiceText {
+  font-size: 18px;
+  margin: 0;
+} */
+
+.sectionLabel {
+  font-weight: 700;
+  margin: 0;
+  padding: 8px 6px 8px 6px;
+  border: solid #373737 1px;
+  background-color: #dbdbdb;
+}
+
+.reservationData {
+  padding: 8px 6px 8px 6px;
+  margin: 0;
+  /* width: fit-content;
+  width: -moz-fit-content; */
+  border: solid #373737 1px;
+  font-size: 16px;
+}
+
+.serviceItemCard {
+  /* border-top: dotted black 2px; */
+  padding: 8px 6px 8px 6px;
+  margin: 0;
+  /* width: fit-content;
+  width: -moz-fit-content; */
+  border: solid #373737 1px;
+  font-size: 16px;
+}
+
+.calendar {
+  background-color: #f3f3f3;
+  border: solid 2px #dfdfdf;
+  padding: 10px;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  margin: 0 40px 0 0;
+}
+
+.calendarDays {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  /* margin: 8px 0 0 0; */
+}
+
+.calendarDayLabel {
+  width: 28px;
+  padding: 4px;
+  margin: 4px 0 0 0;
+  color: #a4a4a4;
+  font-size: 16px;
+  font-family: serif;
+}
+
+.calendarDay {
+  width: 28px;
+  padding: 4px;
+  border-radius: 2px;
+  font-size: 16px;
+  font-family: serif;
+}
+
+.calendarDay:hover {
+  cursor: pointer;
+}
+
+.selectedDay {
+  background-color: #28e6dd;
+}
+
+.closedCalendarDay {
+  /* background-color: #c7c7c7; */
+  color: #cac9c9;
+}
+
+.schedule {
+  background-color: #f3f3f3;
+  border: solid 2px #dfdfdf;
+  padding: 10px;
+  margin: 0;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+}
+
+.listedTimeSlots {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 330px;
+}
+
+.timeslot {
+  border: solid 2px #dfdfdf;
+  padding: 2px 8px 2px 8px;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0 4px 8px 0;
+}
+
+.timeslot:hover {
+  cursor: pointer;
+}
+
+.selectedTime {
+  background-color: #28e6dd;
+}
+
+.selectedTab {
+  background-color: #28e6dd;
+}
+
+.roomTab {
+  border: solid 2px #dfdfdf;
+  padding: 2px 8px 2px 8px;
+}
+
+.roomTab:hover {
+  cursor: pointer;
+}
+
+.dateTool {
+  display: flex;
+  flex-direction: row;
+  margin: 4px 0 4px 0;
+}

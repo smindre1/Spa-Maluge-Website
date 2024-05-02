@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
-import { useMutation } from "@apollo/client";
-import { ADD_RESERVATION } from "../../utils/mutations";
+// import { useMutation } from "@apollo/client";
+// import { ADD_RESERVATION } from "../../utils/mutations";
 import Calendar from "./Calendar";
 import Services from "../assets/Services";
 // import Popup from '../components/Popup';
@@ -35,7 +35,7 @@ const ReservationForm = () => {
   const calendarId = useRef(null);
   const serviceDurationId = useRef(null);
 
-  const [addReservation, { error, data }] = useMutation(ADD_RESERVATION);
+  // const [addReservation, { error, data }] = useMutation(ADD_RESERVATION);
 
   // useEffect(() => {
   //   console.log(loadDuration, "duartion");
@@ -132,15 +132,38 @@ const ReservationForm = () => {
     } else {
       //The payment is being left as a default N/A for testing
       const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: loadService, client: serviceClient, price: intPrice}], specialRequests: specialRequests, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Confusion"}, room: roomNumber };
+      const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reservationFormData) // Convert data to JSON format
+      })
+      .then(response => {
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Parse the JSON response
+      })
+      .then(data => {
+        // Work with the JSON response data
+        console.log("Response data", data);
+      })
+      .catch(error => {
+        // Handle any errors that occur during the fetch
+        console.error('There was a problem with the fetch operation:', error);
+      });
+      // try {
+      //   const { data } = await addReservation({
+      //     variables: { ...reservationFormData }
+      //   });
 
-      try {
-        const { data } = await addReservation({
-          variables: { ...reservationFormData }
-        });
+      // } catch (err) {
+      //   console.error(err);
+      // }
 
-      } catch (err) {
-        console.error(err);
-      }
       // Reset form after successful submission
       setName("");
       setEmail("");
