@@ -43,7 +43,7 @@ function SettingsHeader() {
         let position = user.data ? user.data.position : "Invalid";
         if(position == "Admin" || position == "Boss") {
             return (
-            <a href="/settings" className={settings ? "highlight menuBarText settingsAnchor" : "menuBarText settingsAnchor"}><img className="settingsIcon" src={Settings_Icons}></img></a>
+            <a href="/management/settings" className={settings ? "highlight menuBarText settingsAnchor" : "menuBarText settingsAnchor"}><img className="settingsIcon" src={Settings_Icons}></img></a>
         )};
     }
 
@@ -54,17 +54,17 @@ function SettingsHeader() {
             <nav className="flexRow">
                 <p>{currDate}</p>
                 <div className="menu">
-                    <a href="/" className={home ? "highlight menuBarText" : "menuBarText"}>Home</a>
-                    <a href="/reservations" className={reservations ? "highlight menuBarText" : "menuBarText"}>Reservations</a>
-                    <a href="/employee-roster" className={roster ? "highlight menuBarText" : "menuBarText"}>Employee Roster</a>
-                    <a href="/" className="menuBarText" onClick={Auth.logout}>Logout</a>
+                    <a href="/management" className={home ? "highlight menuBarText" : "menuBarText"}>Home</a>
+                    <a href="/management/reservations" className={reservations ? "highlight menuBarText" : "menuBarText"}>Reservations</a>
+                    <a href="/management/employee-roster" className={roster ? "highlight menuBarText" : "menuBarText"}>Employee Roster</a>
+                    <a href="/management" className="menuBarText" onClick={Auth.logout}>Logout</a>
                     {userCheck()}
                 </div>
 
             </nav>
             ) : (
             <nav className="menu">
-                <a href="/login-or-signup" className={portal ? "highlight menuBarText" : "menuBarText"}>Login/Signup</a>
+                <a href="/management/login-or-signup" className={portal ? "highlight menuBarText" : "menuBarText"}>Login/Signup</a>
             </nav>
         )}
         

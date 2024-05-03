@@ -155,14 +155,6 @@ const ReservationForm = () => {
         // Handle any errors that occur during the fetch
         console.error('There was a problem with the fetch operation:', error);
       });
-      // try {
-      //   const { data } = await addReservation({
-      //     variables: { ...reservationFormData }
-      //   });
-
-      // } catch (err) {
-      //   console.error(err);
-      // }
 
       // Reset form after successful submission
       setName("");

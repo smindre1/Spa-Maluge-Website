@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
-import { useMutation } from '@apollo/client';
-import { LOGIN_EMPLOYEE } from '../../utils/mutations';
+// import { useMutation } from '@apollo/client';
+// import { LOGIN_EMPLOYEE } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 const LoginForm = () => {
@@ -12,7 +12,7 @@ const LoginForm = () => {
   const numberId = useRef(null);
   const passwordId = useRef(null);
 
-  const [login, { error, data }] = useMutation(LOGIN_EMPLOYEE);
+  // const [login, { error, data }] = useMutation(LOGIN_EMPLOYEE);
 
   const checkForm = () => {
     //Creates an array of each form field
@@ -64,17 +64,52 @@ const LoginForm = () => {
     if(email == "" && number == "" || password == "") {
       e.stopPropagation();
     } else {
-      const userFormData = { email: email, phone: number, password: password };
+      // const userFormData = { email: email, phone: number, password: password };
 
-      try {
-        const { data } = await login({
-          variables: { ...userFormData }
-        });
-        //Uses the returned data from the LOGIN_EMPLOYEE template literal to login with the user's token.
-        Auth.login(data.login.token);
-      } catch (err) {
-        console.error(err);
-      }
+      // try {
+      //   const { data } = await login({
+      //     variables: { ...userFormData }
+      //   });
+      //   //Uses the returned data from the LOGIN_EMPLOYEE template literal to login with the user's token.
+      //   Auth.login(data.login.token);
+      // } catch (err) {
+      //   console.error(err);
+      // }
+
+      let url = import.meta.env.VITE_SPA_MALUGE_DB_API + `users/login`;
+      // if(number != "") {
+      //   const phoneNumber = number.replaceAll(" ", "");
+      //   url = url + `${phoneNumber}/`;
+      // }
+      // email != "" ? url = url + `${email}/` : null;
+      // url = url + `${password}`;
+      // console.log(url, "the url");
+      //Fetches user login data
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({phone: number, email: email, password: password}) // Convert data to JSON format
+      })
+      //Checks if the responding data is ok
+      .then(response => {
+          if (!response.ok) {
+          throw new Error('Network response was not ok');
+          }
+          // Parse the JSON response
+          return response.json();
+      })
+      .then(data => {
+          // setCalendar(data);
+          // setWait(false);
+          console.log("data", data);
+          Auth.login(data.token);
+      })
+      .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+      });
+
       // Reset form after successful submission
       setEmail("");
       setNumber("");

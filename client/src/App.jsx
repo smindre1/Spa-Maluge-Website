@@ -1,7 +1,9 @@
 import "./App.css";
 import Header from "./components/Header";
+import SettingsHeader from './components/SettingsHeader';
 import Footer from "./components/Footer";
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import {setContext } from '@apollo/client/link/context';
 // require('dotenv').config();
@@ -27,11 +29,25 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const location = useLocation();
+
+  const [regularPage, setRegularPage] = useState(true);
+
+  useEffect(() => {
+    //Checks the endpoint to load certain header html elements
+    const regex = /management/i;
+    const endpointMatch = location.pathname.match(regex)
+    if(endpointMatch != null) {
+      setRegularPage(false);
+    } else {
+      setRegularPage(true);
+    }
+  }, [location.pathname])
   
   return (
     <ApolloProvider client={client}>
       <div>
-        <Header />
+        { regularPage ? <Header /> : <SettingsHeader />}
         <Outlet />
         <Footer />
       </div>

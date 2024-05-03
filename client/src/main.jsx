@@ -25,7 +25,14 @@ import Facial from "./pages/services/Facial.jsx";
 import Lymph from "./pages/services/Lymph.jsx";
 import Anticellulite from "./pages/services/Anticellulite.jsx";
 import Aroma from "./pages/services/Aroma.jsx";
-
+//Management/Settings Page Imports
+import Management from "./pages/Management.jsx";
+import Portal from './pages/Portal.jsx';
+// import Employees from './pages/Employees.jsx';
+// import Profile from './pages/Profile.jsx';
+// import Reservation from './pages/Reservation.jsx';
+// import Reservations from './pages/Reservations.jsx';
+// import Settings from './pages/Settings.jsx';
 
 const router = createBrowserRouter([
   {
@@ -114,7 +121,35 @@ const router = createBrowserRouter([
         path: "/services/aroma-therapy-massage",
         element: <Aroma />,
       },
-
+      // //Management/Settings Pages
+      {
+        path: "/management",
+        element: <Management />,
+      },
+      {
+        path: "/management/login-or-signup",
+        element: <Portal />,
+      },
+      // {
+      //   path: "/management/employee-roster",
+      //   element: <Employees />,
+      // },
+      // {
+      //   path: "/management/me",
+      //   element: <Profile />,
+      // },
+      // {
+      //   path: "/management/reservations",
+      //   element: <Reservations />,
+      // },
+      // {
+      //   path: "/management/reservations/:reservationId",
+      //   element: <Reservation />,
+      // },
+      // {
+      //   path: "/management/settings",
+      //   element: <Settings />,
+      // }
     ],
   },
 ]);

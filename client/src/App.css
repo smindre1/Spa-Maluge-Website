@@ -600,9 +600,9 @@ textarea:focus {
   cursor: pointer;
 }
 
-.formSection {
+/* .formSection {
   width: 48.5%;
-}
+} */
 
 .errorTxt {
   font-size: 18px;
@@ -828,7 +828,71 @@ textarea:focus {
   }
 }
 
-/* ============================================================================================= */
+
+/* =============================================================== Management/Settings ===================================== */
+.managementMenu {
+  /* display: flex;
+  justify-content: right;
+  align-content: right;
+  flex-direction: row; */
+  margin: 0 0 0 auto;
+}
+
+.managementPageHighlight {
+  background-color: #28e6dd;
+  color: white;
+  height: fit-content;
+  height: -moz-fit-content;
+}
+
+.managementMenuBarText {
+  padding: 8px;
+  margin: 0 8px;
+  font-size: 18px;
+}
+
+.settingsIcon {
+  width: 28px;
+}
+
+.settingsAnchor {
+  position: relative;
+  top: 10px;
+}
+
+/* ----------------------- Portal ------------------------------ */
+.portal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* ----------------------- Login/Signup ------------------------------ */
+
+
+
+.portalErrorTxt {
+  margin: 4px 0 12px 0;
+  color: #cb0202;
+}
+
+.loginForm {
+  margin: 0 5vw 0 0;
+}
+
+.signupForm {
+  margin: 0 0 0 5vw;
+}
+
+/* ----------------------- Reservation Form ------------------------------ */
+
+.reservationFormFields {
+  margin: 4px 0 4px 0;
+}
+
+.reservationFormBtn {
+  margin: 4px 0 0 0;
+}
 
 /* ----------------------- Reservations Page ------------------------------ */
 
@@ -990,3 +1054,4 @@ textarea:focus {
   flex-direction: row;
   margin: 4px 0 4px 0;
 }
+

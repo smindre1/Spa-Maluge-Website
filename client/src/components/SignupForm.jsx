@@ -1,11 +1,14 @@
 import { useState, useRef, useEffect } from "react";
-import { useMutation, useQuery } from '@apollo/client';
-import { ADD_EMPLOYEE } from '../../utils/mutations';
-import { GET_EMPLOYEES } from '../../utils/queries';
+// import { useMutation, useQuery } from '@apollo/client';
+// import { ADD_EMPLOYEE } from '../../utils/mutations';
+// import { GET_EMPLOYEES } from '../../utils/queries';
 // import Popup from '../components/Popup';
 import Auth from '../../utils/auth';
 
 const SignupForm = () => {
+  const [employeeRoster, setEmployeeRoster] = useState();
+  const [wait, setWait] = useState(true);
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -19,12 +22,33 @@ const SignupForm = () => {
   const passwordId = useRef(null);
   const divId = useRef(null);
 
-  const [addUser, { error, data }] = useMutation(ADD_EMPLOYEE);
-  const { loading: wait, error: employeeError, data: employeeRoster} = useQuery(GET_EMPLOYEES);
+  // const [addUser, { error, data }] = useMutation(ADD_EMPLOYEE);
+  // const { loading: wait, error: employeeError, data: employeeRoster} = useQuery(GET_EMPLOYEES);
+
+  useEffect(() => {
+    const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "users";
+    //Fetches calendar data
+    fetch(url)
+    //Checks if the responding data is ok
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        // Parse the JSON response
+        return response.json();
+    })
+    .then(data => {
+        setEmployeeRoster(data);
+        setWait(false);
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+  }, [])
 
   const checkForFirstUser = () => {
     if(!wait) {
-      if(employeeRoster.users.length == 0) {
+      if(employeeRoster.length == 0) {
         return true
       } else {
         return false
@@ -86,18 +110,34 @@ const SignupForm = () => {
       e.stopPropagation();
     } else {
       
-      const position = checkForFirstUser() ? "Admin" : "Invalid";
+      const position = checkForFirstUser() || false ? "Admin" : "Invalid";
       const userFormData = { fullName: name, email: email, phone: number, password: password, position: position };
 
-      try {
-        const { data } = await addUser({
-          variables: { ...userFormData }
-        });
-        //Uses the returned data from the ADD_EMPLOYEE template literal to login with the user's token.
-        Auth.login(data.addUser.token);
-      } catch (err) {
-        console.error(err);
-      }
+      const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "users/";
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userFormData) // Convert data to JSON format
+      })
+      .then(response => {
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json(); // Parse the JSON response
+      })
+      .then(data => {
+        // Work with the JSON response data
+        console.log("Response data", data);
+        Auth.login(data.token);
+      })
+      .catch(error => {
+        // Handle any errors that occur during the fetch
+        console.error('There was a problem with the fetch operation:', error);
+      });
+
       // Reset form after successful submission
       setName("");
       setEmail("");
