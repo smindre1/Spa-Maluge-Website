@@ -1,5 +1,5 @@
-# Redirect specific paths to the root index.html file
+# Redirects all path routes to the root index.html file
 [[redirects]]
-  from = "/book-now"
-  to = "/index.html"
-  status = 200
+from = "/*"
+to = "/index.html"
+status = 200

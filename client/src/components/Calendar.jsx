@@ -10,7 +10,7 @@ const Calendar = forwardRef((props, ref) => {
 
     const [calendar, setCalendar] = useState();
     const [wait, setWait] = useState(true);
-    const [failed, setFailed] = useState();
+    const [scheduleUpdated, setScheduleUpdated] = useState(false);
     //
     const [loadYear, setYear] = useState(today.getFullYear());
     const [loadMonth, setMonth] = useState(months[today.getMonth()]);
@@ -20,10 +20,26 @@ const Calendar = forwardRef((props, ref) => {
     const [loadOpenStatus, setOpenStatus] = useState();
     const [updated, setUpdated] = useState(false);
     const [loadTimeSlots, setTimeSlots] = useState();
+
+    const scheduleId = useRef(null);
+    const scheduleDivId = useRef(null);
     
+    useEffect(() => {
+        setTimeSlots('');
+    }, [loadYear, loadMonth, loadDay])
 
     useEffect(() => {
-        // console.log(import.meta.env.VITE_SPA_MALUGE_DB_API, "Test");
+        // let timeslots = scheduleDivId.current.firstChild.getAttribute('value');
+        props.handleChange({loadYear, loadMonth, loadDay, loadTimeSlots})
+        // scheduleDivId.current.firstChild.getAttribute('value') ? 
+        console.log(loadTimeSlots, "calendar timeslots")
+    }, [loadYear, loadMonth, loadDay, loadTimeSlots, props.handleChange])
+
+    // useEffect(() => {
+    //     console.log(loadTimeSlots, "calendar timeslots updated just now");
+    // }, [loadTimeSlots])
+
+    useEffect(() => {
         const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "calendar";
         //Fetches calendar data
         fetch(url)
@@ -42,9 +58,9 @@ const Calendar = forwardRef((props, ref) => {
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         });
-      }, [])
+    }, [])
 
-    const scheduleId = useRef(null);
+    
 
     useEffect(() => {
         if(calendar) {
@@ -53,8 +69,9 @@ const Calendar = forwardRef((props, ref) => {
     }, [wait, loadYear, loadMonth])
 
     useEffect(() => {
-        if(updated == true) {
-            setTimeSlots(scheduleId.current.getAttribute("timeslots"));
+        if(updated == true && scheduleDivId.current.hasChildNodes()) {
+            console.log("updated: ", scheduleDivId.current.firstChild.getAttribute("value"));
+            setTimeSlots(scheduleDivId.current.firstChild.getAttribute("value"));
             setUpdated(false);
         }
     }, [updated])
@@ -82,9 +99,9 @@ const Calendar = forwardRef((props, ref) => {
 
             //open && targetYear > todayYear  ||  open && targetYear == todayYear && targetMonth > todayMonth || open && targetYear == todayYear && targetMonth == todayMonth && targetDay > todaysDay
             if(target === true && loadYear > today.getFullYear() || target === true && loadYear == today.getFullYear() && months.indexOf(loadMonth) > today.getMonth() || target === true && loadYear == today.getFullYear() && months.indexOf(loadMonth) == today.getMonth() && loadDay > today.getDate()) {
-                return(<Schedule ref={scheduleId} year={loadYear} month={loadMonth} day={loadDay} duration={props.duration} itemCategory={props.itemCategory} setTrigger={setUpdated}/>)
+                return(<Schedule ref={scheduleId} year={loadYear} month={loadMonth} day={loadDay} duration={props.duration} itemCategory={props.itemCategory} setTrigger={setUpdated} />)
             } else {
-                return(<p className='schedule'>No available timeslots for this date.<br></br>(Please select another day)</p>)
+                return(<p value='invalid' className='schedule'>No available timeslots for this date.<br></br>(Please select another day)</p>)
             }
         } else {
             return null;
@@ -129,7 +146,11 @@ const Calendar = forwardRef((props, ref) => {
                 </div>
             </div>
             {/* { props.schedule === "true" && loadOpenStatus === true ? <Schedule ref={scheduleId} year={loadYear} month={loadMonth} day={loadDay} setTrigger={setUpdated}/> : <p className='schedule'>No available timeslots for this date.<br></br>(Please select another day)</p>} */}
-            {calendar ? loadSchedule() : null}
+            <div ref={scheduleDivId}>
+                {calendar ? loadSchedule() : null}
+                <div value='invalid'></div>
+            </div>
+            
         </div>
     );
 });

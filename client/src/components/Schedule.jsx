@@ -21,8 +21,14 @@ const Schedule = forwardRef((props, scheduleId) => {
     }, [])
 
     useEffect(() => {
+        setTimeSlot([]);
         fetchSchedule();
-    }, [props.year, props.month, props.day,])
+        // console.log(loadTimeSlot, 'timeslots on change 1');
+    }, [props.year, props.month, props.day])
+
+    // useEffect(() => {
+    //     console.log(loadTimeSlot, 'timeslots on change 2');
+    // }, [loadTimeSlot])
 
     useEffect(() => {
         props.setTrigger(true);
@@ -39,7 +45,7 @@ const Schedule = forwardRef((props, scheduleId) => {
                     timeslots = [...timeslots, `${count}`];
                     count = count + 1;
                 }
-                // console.log(timeslots, "rounded");
+                // console.log(timeslots, "rounded 1");
                 setTimeSlot(timeslots);
             } else {
                 let roundedTime = Math.ceil(timeCount);
@@ -48,7 +54,7 @@ const Schedule = forwardRef((props, scheduleId) => {
                     timeslots = [...timeslots, `${count}`];
                     count = count + 1;
                 }
-                // console.log(timeslots, "rounded");
+                // console.log(timeslots, "rounded 2");
                 setTimeSlot(timeslots);
 
                 // console.log(roundedTime, loadTimeSlot, "rounded");
@@ -57,6 +63,7 @@ const Schedule = forwardRef((props, scheduleId) => {
         }
         // console.log(loadTimeSlot, "loaded timeslots");
         loadTimeSlot.length == 1 ? checkDuration() : null;
+        
     }, [loadTimeSlot])
 
     //If the user changes the duration the values will be reset
@@ -172,7 +179,7 @@ const Schedule = forwardRef((props, scheduleId) => {
             newTimeSlotList = [...newTimeSlotList, ...timeSlotGrouping];
         }
 
-        let finalTimeSlotList = []
+        let finalTimeSlotList = [];
         newTimeSlotList.forEach((obj) => finalTimeSlotList.push(obj.time));
 
         return(finalTimeSlotList.map((time) => {
@@ -184,7 +191,7 @@ const Schedule = forwardRef((props, scheduleId) => {
 
     return(
         <div ref={scheduleId} value={loadTimeSlot} room={loadRoomNumber} className='schedule'>
-            {wait ? <h2>Loading...</h2> : null}
+            {wait ? <h2 value='invalid'>Loading...</h2> : null}
 
             <p>Please select an appointment time.</p>
             {loadTimeSlot.length > 0 && loadEndTime ? <p>Selected: {timeslotIndex[Math.min(...loadTimeSlot)]} to {loadEndTime} (EST)</p> : <p>No Time Has Been Selected</p>}

@@ -64,33 +64,16 @@ const LoginForm = () => {
     if(email == "" && number == "" || password == "") {
       e.stopPropagation();
     } else {
-      // const userFormData = { email: email, phone: number, password: password };
-
-      // try {
-      //   const { data } = await login({
-      //     variables: { ...userFormData }
-      //   });
-      //   //Uses the returned data from the LOGIN_EMPLOYEE template literal to login with the user's token.
-      //   Auth.login(data.login.token);
-      // } catch (err) {
-      //   console.error(err);
-      // }
+      const userFormData = { email: email, phone: number, password: password };
 
       let url = import.meta.env.VITE_SPA_MALUGE_DB_API + `users/login`;
-      // if(number != "") {
-      //   const phoneNumber = number.replaceAll(" ", "");
-      //   url = url + `${phoneNumber}/`;
-      // }
-      // email != "" ? url = url + `${email}/` : null;
-      // url = url + `${password}`;
-      // console.log(url, "the url");
       //Fetches user login data
       fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({phone: number, email: email, password: password}) // Convert data to JSON format
+        body: JSON.stringify(userFormData) // Convert data to JSON format
       })
       //Checks if the responding data is ok
       .then(response => {

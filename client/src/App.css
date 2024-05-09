@@ -886,12 +886,66 @@ textarea:focus {
 
 /* ----------------------- Reservation Form ------------------------------ */
 
+.reservationForm {
+  width: 50vw;
+  padding: 0 0 0 10vw;
+}
+
 .reservationFormFields {
   margin: 4px 0 4px 0;
+  color: var(--black);
+  background-color: var(--pureWhite);
+  border: solid var(--black) 2px;
+  border-radius: 3px;
+  opacity: 80%;
+  font-size: 16px;
+  padding: 9px;
+  resize: none;
+  margin: 0 0 20px 0;
 }
 
 .reservationFormBtn {
   margin: 4px 0 0 0;
+  color: var(--pureWhite);
+  background-color: var(--black);
+  border: solid var(--black) 2px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 28px 8px 28px;
+  margin: 20px auto 10px auto;
+  font-weight: 900;
+}
+
+.reservationFormBtn:hover {
+  box-shadow: 0 0 10px var(--lightgold);
+  border: solid var(--black) 2px;
+  background-color: var(--gold);
+  cursor: pointer;
+}
+
+.reservationTitle {
+  margin: 12px 0 24px 0;
+  display: flex;
+  /* height: 50px; */
+  justify-content: left;
+  font-family: "Lato", sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 32px;
+  /* font-size: clamp(18px, 1.5vw, 24px); */
+}
+
+.reservationSummary {
+  width: 50vw;
+  display: flex;
+  justify-content: right;
+  padding: 0 10vw 0 0;
+}
+
+.reservationReceipt {
+  border-left: dashed 2px #000000;
+  margin: 12px 0 12px 0;
 }
 
 /* ----------------------- Reservations Page ------------------------------ */
@@ -1055,3 +1109,53 @@ textarea:focus {
   margin: 4px 0 4px 0;
 }
 
+/* ----------------------- Employee Roster Page ------------------------------ */
+
+.employeeRoster {
+  margin: 5px 0 0 6px;
+  /* border: solid #000000 2px; */
+}
+
+.columnLabel {
+  font-weight: 700;
+  margin: 0;
+  padding: 8px 6px 8px 6px;
+  border: solid #373737 1px;
+  background-color: #eaeaea;
+}
+
+.employeeData {
+  padding: 8px 6px 8px 6px;
+  margin: 0;
+  /* width: fit-content;
+  width: -moz-fit-content; */
+  background-color: #ffffff;
+  border: solid #373737 1px;
+  font-size: 16px;
+}
+
+.employeeDataInput {
+  padding: 8px 6px 8px 6px;
+  margin: 0;
+  /* width: fit-content;
+  width: -moz-fit-content; */
+  border: solid #373737 1px;
+  font-size: 15px;
+  font-family: serif;
+}
+
+.admin {
+  color: #a10303;
+}
+
+.boss {
+  color: #151774;
+}
+
+.manager {
+  color:#c75d06;
+}
+
+.employee {
+  color: #10840e;
+}

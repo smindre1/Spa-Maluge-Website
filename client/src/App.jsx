@@ -49,7 +49,7 @@ function App() {
       <div>
         { regularPage ? <Header /> : <SettingsHeader />}
         <Outlet />
-        <Footer />
+        { regularPage ? <Footer /> : null}
       </div>
     </ApolloProvider>
   );
