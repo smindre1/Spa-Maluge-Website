@@ -17,18 +17,15 @@ const Schedule = forwardRef((props, scheduleId) => {
 };
 
     useEffect(() => {
-        fetchSchedule();
-    }, [])
-
-    useEffect(() => {
         setTimeSlot([]);
         fetchSchedule();
-        // console.log(loadTimeSlot, 'timeslots on change 1');
-    }, [props.year, props.month, props.day])
-
-    // useEffect(() => {
-    //     console.log(loadTimeSlot, 'timeslots on change 2');
-    // }, [loadTimeSlot])
+        console.log("cal props");
+        if(Number(props.itemCategory) == 1) {
+            roomOne ? setRoomNumber(1) : setRoomNumber(2);
+        } else if(Number(props.itemCategory) == 2) {
+            setRoomNumber(3);
+        }
+    }, [props.year, props.month, props.day, props.itemCategory])
 
     useEffect(() => {
         props.setTrigger(true);
@@ -73,15 +70,6 @@ const Schedule = forwardRef((props, scheduleId) => {
         setEndTime(null);
     }, [props.duration])
 
-    useEffect(() => {
-        fetchSchedule();
-        if(Number(props.itemCategory) == 1) {
-            roomOne ? setRoomNumber(1) : setRoomNumber(2);
-        } else if(Number(props.itemCategory) == 2) {
-            setRoomNumber(3);
-        }
-    }, [props.itemCategory])
-
     const fetchSchedule = () => {
         setWait(true);
         setSchedule();
@@ -97,7 +85,7 @@ const Schedule = forwardRef((props, scheduleId) => {
             return response.json();
         })
         .then(data => {
-            // console.log("schedule", data);
+            console.log("schedule", data);
             setSchedule(data.data);
             setWait(false);
         })

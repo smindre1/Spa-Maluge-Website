@@ -1,6 +1,4 @@
 import { useState, useRef } from "react";
-// import { useMutation } from '@apollo/client';
-// import { LOGIN_EMPLOYEE } from '../../utils/mutations';
 import Auth from '../../utils/auth';
 
 const LoginForm = () => {
@@ -11,8 +9,6 @@ const LoginForm = () => {
   const emailId = useRef(null);
   const numberId = useRef(null);
   const passwordId = useRef(null);
-
-  // const [login, { error, data }] = useMutation(LOGIN_EMPLOYEE);
 
   const checkForm = () => {
     //Creates an array of each form field
@@ -84,9 +80,7 @@ const LoginForm = () => {
           return response.json();
       })
       .then(data => {
-          // setCalendar(data);
-          // setWait(false);
-          console.log("data", data);
+          // console.log("data", data);
           Auth.login(data.token);
       })
       .catch(error => {
