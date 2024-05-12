@@ -20,8 +20,9 @@ const ReservationForm = () => {
   const [loadDuration, setDuration] = useState("");
   const [itemCategory, setItemCategory] = useState(1);
   //Sets multiple services
-  const [loadReceipt, setReceipt] = useState({});
+  const [loadReceipt, setReceipt] = useState({0: { type: "", client: null, price: null, itemCategory: null, duration: null, timeslots: [], date: null}});
   const [keyCount, setKeyCount] = useState(0);
+
   
   
 
@@ -39,7 +40,7 @@ const ReservationForm = () => {
   const serviceDurationId = useRef(null);
 
   // useEffect(() => {
-  //   console.log(loadDuration, "duartion");
+  //   console.log(loadDuration, "duration");
   //   checkOptions ? console.log(serviceDurationId.current.getAttribute("duration") || "meh", "fail") : console.log(serviceDurationId, "success");
   //   console.log(loadServicePrice, "price");
   // }, [loadDuration, checkOptions])
@@ -55,8 +56,6 @@ const ReservationForm = () => {
 
 
   const updateServiceType = (event, serviceType, itemCategory) => {
-
-
     const key = event.target.parentElement.parentElement.getAttribute('service-key');
     const objKeys = Object.keys(loadReceipt);
 
@@ -103,6 +102,7 @@ const ReservationForm = () => {
           //If the service object is not on the receipt then it is added
           services[key] = { type: serviceType, client: null, price: null, itemCategory: itemNum, duration: null, timeslots: [], date: null};
           setReceipt(services);
+          setUpdated(updated + 1);
         }
         console.log(loadReceipt, "check service type update");
 
@@ -121,13 +121,21 @@ const ReservationForm = () => {
       setReceipt(services);
     } else {
       let services = loadReceipt;
-      services[key] = { type: null, client: serviceClient, price: null, itemCategory: null, duration: null, timeslots: [], date: null};
+      services[key] = { type: "", client: serviceClient, price: null, itemCategory: null, duration: null, timeslots: [], date: null};
       setReceipt(services);
     }
     console.log(loadReceipt, "check service client update");
   }
 
-//rendering date and timeslots require itemCategory in the Calendar to be updated
+  const updateDateAndTime = (calendarData) => {
+    const key = calendarData.ref.parentElement.parentElement.getAttribute('service-key');
+    let services = loadReceipt;
+    services[key].timeslots = calendarData.loadTimeSlots ? JSON.parse(`[${calendarData.loadTimeSlots}]`) : null;
+    const date = `${calendarData.loadMonth} ${calendarData.loadDay}, ${calendarData.loadYear}`;
+    services[key].date = date;
+    setReceipt(services);
+    console.log(loadReceipt, "check service client update");
+  }
 
   const updateServicePrice = (event, servicePrice, serviceDuration) => {
     const key = event.target.parentElement.parentElement.getAttribute('service-key');
@@ -139,7 +147,7 @@ const ReservationForm = () => {
       setReceipt(services);
     } else {
       let services = loadReceipt;
-      services[key] = { type: null, client: null, price: servicePrice, itemCategory: null, duration: serviceDuration, timeslots: [], date: null};
+      services[key] = { type: "", client: null, price: servicePrice, itemCategory: null, duration: serviceDuration, timeslots: [], date: null};
       setReceipt(services);
     }
     console.log(loadReceipt, "check service price/duration update");
@@ -211,7 +219,7 @@ const ReservationForm = () => {
     return (
       <div service-key={keyNumber} >
         <div className="formInputDiv">
-          <select className="reservationFormFields" title="service" name="type" value={loadService} onChange={(e) => {checkServiceInfo(e.target.value, null); updateServiceType(e, e.target.value, 1)}}>
+          <select className="reservationFormFields" title="service" name="type" value={loadReceipt[keyNumber].type} onChange={(e) => {checkServiceInfo(e.target.value, null); updateServiceType(e, e.target.value, 1)}}>
             <option  value="" disabled>-Select Massage-</option>
             {Services.map((item) => {
                 return(<option key={item.Item} value={item.Item} itemcategory={item.itemCategory}>{item.Item}</option>)
@@ -236,7 +244,7 @@ const ReservationForm = () => {
         </div>
 
         {loadDuration ? <div ref={appointmentTimeId}>
-          <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={loadDuration} itemCategory={itemCategory} schedule="true" handleChange={(e) => {console.log(e, "hmm")}} />
+          <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={loadDuration} itemCategory={itemCategory} schedule="true" handleChange={(e) => {updateDateAndTime(e)}} />
           <p className="errorTxt hide">Please choose an available appointment time</p>
         </div> : null}
       </div>)

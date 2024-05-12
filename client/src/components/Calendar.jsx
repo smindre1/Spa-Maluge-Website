@@ -30,9 +30,9 @@ const Calendar = forwardRef((props, ref) => {
 
     useEffect(() => {
         // let timeslots = scheduleDivId.current.firstChild.getAttribute('value');
-        props.handleChange({loadYear, loadMonth, loadDay, loadTimeSlots})
+        let room = scheduleId.current ? scheduleId.current.getAttribute("room") : null;
+        props.handleChange({ref: calendarId.current, loadYear, loadMonth, loadDay, loadTimeSlots, room})
         // scheduleDivId.current.firstChild.getAttribute('value') ? 
-        console.log(loadTimeSlots, "calendar timeslots")
     }, [loadYear, loadMonth, loadDay, loadTimeSlots, props.handleChange])
 
     // useEffect(() => {
