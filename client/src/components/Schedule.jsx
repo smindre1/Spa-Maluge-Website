@@ -195,7 +195,6 @@ const Schedule = forwardRef((props, scheduleId) => {
         return(finalTimeSlotList.map((time) => {
             return <p className={loadTimeSlot[0] == time ? "timeslot selectedTime" : "timeslot"} onClick={(e) => {setTimeSlot([e.target.getAttribute("value")])}} value={time} key={time}>{timeslotIndex[time]}</p>
         }))
-        // return finalTimeSlotList;
     }
 
 

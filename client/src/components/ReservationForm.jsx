@@ -21,9 +21,49 @@ const ReservationForm = () => {
   const [itemCategory, setItemCategory] = useState(1);
   //Sets multiple services
   const [loadReceipt, setReceipt] = useState({0: { type: "", client: null, price: null, itemCategory: null, duration: null, timeslots: [], date: null}});
-  const [keyCount, setKeyCount] = useState(0);
+  const [keyCount, setKeyCount] = useState(1);
 
-  
+  //Service Logs:
+  //Service One
+  const [serviceType_1, setServiceType_1] = useState("");
+  const [serviceClient_1, setServiceClient_1] = useState("");
+  const [servicePrice_1, setServicePrice_1] = useState("");
+  const [serviceItemCategory_1, setServiceItemCategory_1] = useState("");
+  const [serviceDuration_1, setServiceDuration_1] = useState("");
+  const [serviceTimeSlots_1, setServiceTimeSlots_1] = useState([]);
+  const [serviceDate_1, setServiceDate_1] = useState("");
+  //Service Two
+  const [serviceType_2, setServiceType_2] = useState("");
+  const [serviceClient_2, setServiceClient_2] = useState("");
+  const [servicePrice_2, setServicePrice_2] = useState("");
+  const [serviceItemCategory_2, setServiceItemCategory_2] = useState("");
+  const [serviceDuration_2, setServiceDuration_2] = useState("");
+  const [serviceTimeSlots_2, setServiceTimeSlots_2] = useState([]);
+  const [serviceDate_2, setServiceDate_2] = useState("");
+  //Service Three
+  const [serviceType_3, setServiceType_3] = useState("");
+  const [serviceClient_3, setServiceClient_3] = useState("");
+  const [servicePrice_3, setServicePrice_3] = useState("");
+  const [serviceItemCategory_3, setServiceItemCategory_3] = useState("");
+  const [serviceDuration_3, setServiceDuration_3] = useState("");
+  const [serviceTimeSlots_3, setServiceTimeSlots_3] = useState([]);
+  const [serviceDate_3, setServiceDate_3] = useState("");
+  //Service Four
+  const [serviceType_4, setServiceType_4] = useState("");
+  const [serviceClient_4, setServiceClient_4] = useState("");
+  const [servicePrice_4, setServicePrice_4] = useState("");
+  const [serviceItemCategory_4, setServiceItemCategory_4] = useState("");
+  const [serviceDuration_4, setServiceDuration_4] = useState("");
+  const [serviceTimeSlots_4, setServiceTimeSlots_4] = useState([]);
+  const [serviceDate_4, setServiceDate_4] = useState("");
+  //Service Five
+  const [serviceType_5, setServiceType_5] = useState("");
+  const [serviceClient_5, setServiceClient_5] = useState("");
+  const [servicePrice_5, setServicePrice_5] = useState("");
+  const [serviceItemCategory_5, setServiceItemCategory_5] = useState("");
+  const [serviceDuration_5, setServiceDuration_5] = useState("");
+  const [serviceTimeSlots_5, setServiceTimeSlots_5] = useState([]);
+  const [serviceDate_5, setServiceDate_5] = useState("");
   
 
   //Used for the popup, but I plan to redirect page so it may not be necessary.
@@ -102,9 +142,10 @@ const ReservationForm = () => {
           //If the service object is not on the receipt then it is added
           services[key] = { type: serviceType, client: null, price: null, itemCategory: itemNum, duration: null, timeslots: [], date: null};
           setReceipt(services);
-          setUpdated(updated + 1);
+          
         }
-        console.log(loadReceipt, "check service type update");
+        const inventory = data;
+        console.log(inventory, "inventory");
 
     })
     .catch(error => {
@@ -219,7 +260,7 @@ const ReservationForm = () => {
     return (
       <div service-key={keyNumber} >
         <div className="formInputDiv">
-          <select className="reservationFormFields" title="service" name="type" value={loadReceipt[keyNumber].type} onChange={(e) => {checkServiceInfo(e.target.value, null); updateServiceType(e, e.target.value, 1)}}>
+          <select className="reservationFormFields" title="service" name="type" value={loadService} onChange={(e) => {checkServiceInfo(e.target.value, null); updateServiceType(e, e.target.value, 1)}}>
             <option  value="" disabled>-Select Massage-</option>
             {Services.map((item) => {
                 return(<option key={item.Item} value={item.Item} itemcategory={item.itemCategory}>{item.Item}</option>)
@@ -339,7 +380,7 @@ const ReservationForm = () => {
       </div>
 
       <div ref={servicesId} className="flexColumn">
-        {addService(0)}
+        {addService(1)}
       </div>
       
       <button className="reservationFormBtn" type="submit">Reserve</button>
