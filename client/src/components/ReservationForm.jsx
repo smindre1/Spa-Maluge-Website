@@ -1,226 +1,61 @@
 import { useState, useRef, useEffect } from "react";
-import Calendar from "./Calendar";
-import Services from "../assets/Services";
+import Service from "./Service";
 // import Popup from '../components/Popup';
 
 const ReservationForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
-  const [specialRequests, setSpecialRequests] = useState("");
-  // const [services, setServices] = useState([]);
-  const [serviceClient, setServiceClient] = useState("");
-  //Loads the rates for one services
-  const [loadOptions, setOptions] = useState([]);
-  //This is used to measure when the prior state variable is ready
-  const [checkOptions, setCheckOptions] = useState({ 0: false, 1: false});
-  //Sets a single service type
-  const [loadService, setService] = useState("");
-  const [loadServicePrice, setServicePrice] = useState();
-  const [loadDuration, setDuration] = useState("");
-  const [itemCategory, setItemCategory] = useState(1);
-  //Sets multiple services
-  const [loadReceipt, setReceipt] = useState({0: { type: "", client: null, price: null, itemCategory: null, duration: null, timeslots: [], date: null}});
+  // const [specialRequests, setSpecialRequests] = useState("");
+
   const [keyCount, setKeyCount] = useState(1);
-
-  //Service Logs:
-  //Service One
-  const [serviceType_1, setServiceType_1] = useState("");
-  const [serviceClient_1, setServiceClient_1] = useState("");
-  const [servicePrice_1, setServicePrice_1] = useState("");
-  const [serviceItemCategory_1, setServiceItemCategory_1] = useState("");
-  const [serviceDuration_1, setServiceDuration_1] = useState("");
-  const [serviceTimeSlots_1, setServiceTimeSlots_1] = useState([]);
-  const [serviceDate_1, setServiceDate_1] = useState("");
-  //Service Two
-  const [serviceType_2, setServiceType_2] = useState("");
-  const [serviceClient_2, setServiceClient_2] = useState("");
-  const [servicePrice_2, setServicePrice_2] = useState("");
-  const [serviceItemCategory_2, setServiceItemCategory_2] = useState("");
-  const [serviceDuration_2, setServiceDuration_2] = useState("");
-  const [serviceTimeSlots_2, setServiceTimeSlots_2] = useState([]);
-  const [serviceDate_2, setServiceDate_2] = useState("");
-  //Service Three
-  const [serviceType_3, setServiceType_3] = useState("");
-  const [serviceClient_3, setServiceClient_3] = useState("");
-  const [servicePrice_3, setServicePrice_3] = useState("");
-  const [serviceItemCategory_3, setServiceItemCategory_3] = useState("");
-  const [serviceDuration_3, setServiceDuration_3] = useState("");
-  const [serviceTimeSlots_3, setServiceTimeSlots_3] = useState([]);
-  const [serviceDate_3, setServiceDate_3] = useState("");
-  //Service Four
-  const [serviceType_4, setServiceType_4] = useState("");
-  const [serviceClient_4, setServiceClient_4] = useState("");
-  const [servicePrice_4, setServicePrice_4] = useState("");
-  const [serviceItemCategory_4, setServiceItemCategory_4] = useState("");
-  const [serviceDuration_4, setServiceDuration_4] = useState("");
-  const [serviceTimeSlots_4, setServiceTimeSlots_4] = useState([]);
-  const [serviceDate_4, setServiceDate_4] = useState("");
-  //Service Five
-  const [serviceType_5, setServiceType_5] = useState("");
-  const [serviceClient_5, setServiceClient_5] = useState("");
-  const [servicePrice_5, setServicePrice_5] = useState("");
-  const [serviceItemCategory_5, setServiceItemCategory_5] = useState("");
-  const [serviceDuration_5, setServiceDuration_5] = useState("");
-  const [serviceTimeSlots_5, setServiceTimeSlots_5] = useState([]);
-  const [serviceDate_5, setServiceDate_5] = useState("");
   
-
   //Used for the popup, but I plan to redirect page so it may not be necessary.
   const [success, setSuccess] = useState(false);
 
   const nameId = useRef(null);
   const emailId = useRef(null);
   const numberId = useRef(null);
-  const appointmentTimeId = useRef(null);
-  const servicesId = useRef(null);
-  const specialRequestsId = useRef(null);
-  const divId = useRef(null);
-  const calendarId = useRef(null);
-  const serviceDurationId = useRef(null);
-
-  // useEffect(() => {
-  //   console.log(loadDuration, "duration");
-  //   checkOptions ? console.log(serviceDurationId.current.getAttribute("duration") || "meh", "fail") : console.log(serviceDurationId, "success");
-  //   console.log(loadServicePrice, "price");
-  // }, [loadDuration, checkOptions])
+  // const specialRequestsId = useRef(null);
+  const serviceDivId = useRef(null);
+  const serviceOneId = useRef(null);
+  const serviceTwoId = useRef(null);
+  const serviceThreeId = useRef(null);
+  const serviceFourId = useRef(null);
+  const serviceFiveId = useRef(null);
 
   // useEffect(() => {
   //     const preSelected = localStorage.getItem("service");
   //     preSelected ? checkServiceInfo(preSelected) : null;
   // }, [])
 
-    useEffect(() => {
-      console.log(loadReceipt, "receipt");
-  }, [loadReceipt[0]])
-
-
-  const updateServiceType = (event, serviceType, itemCategory) => {
-    const key = event.target.parentElement.parentElement.getAttribute('service-key');
-    const objKeys = Object.keys(loadReceipt);
-
-    //This is the variable that manages when a service div has it's service type selected and can display possible service durations
-    const rateOptions = checkOptions;
-    const rateOptionKeys = Object.keys(rateOptions);
-    if(rateOptionKeys.includes(String(key))) {
-      rateOptions[key] = true;
-      setCheckOptions(rateOptions)
-    } else {
-      rateOptions[key] = true;
-      setCheckOptions(rateOptions);
-    }
-
-    //Grabs inventory data
-    const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `inventory/`;
-    let itemNum;
-    fetch(url)
-    .then(response => {
-        if (!response.ok) {
-        throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-      //Maps through inventory data for the inventory number associated with the serviceType
-        for(let i = 0; i < data.length; i++) {
-          data[i].Items.map((service) => {service.Item == serviceType ? itemNum = data[i].ItemCategory : null})
-        }
-        
-        if(objKeys.includes(String(key)) && itemNum) {
-          let services = loadReceipt;
-          //Since the service type is changed, all values except client are updated
-          services[key].type = serviceType;
-          services[key].price = null;
-          services[key].itemCategory = itemNum;
-          services[key].duration = null;
-          services[key].timeslots = [];
-          services[key].date = null;
-
-          setReceipt(services);
-        } else {
-          let services = loadReceipt;
-          //If the service object is not on the receipt then it is added
-          services[key] = { type: serviceType, client: null, price: null, itemCategory: itemNum, duration: null, timeslots: [], date: null};
-          setReceipt(services);
-          
-        }
-        const inventory = data;
-        console.log(inventory, "inventory");
-
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-  }
-
-  const updateServiceClient = (event, serviceClient) => {
-    const key = event.target.parentElement.parentElement.getAttribute('service-key');
-    const objKeys = Object.keys(loadReceipt);
-    if(objKeys.includes(String(key))) {
-      let services = loadReceipt;
-      services[key].client = serviceClient;
-      setReceipt(services);
-    } else {
-      let services = loadReceipt;
-      services[key] = { type: "", client: serviceClient, price: null, itemCategory: null, duration: null, timeslots: [], date: null};
-      setReceipt(services);
-    }
-    console.log(loadReceipt, "check service client update");
-  }
-
-  const updateDateAndTime = (calendarData) => {
-    const key = calendarData.ref.parentElement.parentElement.getAttribute('service-key');
-    let services = loadReceipt;
-    services[key].timeslots = calendarData.loadTimeSlots ? JSON.parse(`[${calendarData.loadTimeSlots}]`) : null;
-    const date = `${calendarData.loadMonth} ${calendarData.loadDay}, ${calendarData.loadYear}`;
-    services[key].date = date;
-    setReceipt(services);
-    console.log(loadReceipt, "check service client update");
-  }
-
-  const updateServicePrice = (event, servicePrice, serviceDuration) => {
-    const key = event.target.parentElement.parentElement.getAttribute('service-key');
-    const objKeys = Object.keys(loadReceipt);
-    if(objKeys.includes(String(key))) {
-      let services = loadReceipt;
-      services[key].price = servicePrice;
-      services[key].duration = serviceDuration;
-      setReceipt(services);
-    } else {
-      let services = loadReceipt;
-      services[key] = { type: "", client: null, price: servicePrice, itemCategory: null, duration: serviceDuration, timeslots: [], date: null};
-      setReceipt(services);
-    }
-    console.log(loadReceipt, "check service price/duration update");
-  }
-
-
-
-  const checkServiceInfo = (serviceName, key) => {
-    //Duration is changed to reset Calendar and Schedule
-    setDuration("");
-    setService(serviceName);
-    const info = Services.filter((item) => serviceName == item.Item);
-    const itemNumber = info[0].ItemCategory;
-    setItemCategory(itemNumber);
-    setOptions(info[0]?.Prices);
-    setCheckOptions(true);
-  }
 
   const checkForm = () => {
-    //Creates an array of each form field
+    //This is the returned value which will determine if the form should be submitted or not
+    let approved = true;
+
+    //Creates an array of each basic form field
     const items = [{value: name, id: nameId}, {value: email, id: emailId}, {value: number, id: numberId}];
-    //Checks that each field has content, otherwise changes to error state
+    //Checks that each basic form field has content, otherwise changes to error state
     items.forEach((item) => {
       if(item.value == "") {
         item.id.current.firstChild.classList.add("error");
         item.id.current.lastChild.classList.remove("hide");
+        approved = false;
       }
     });
-    if(calendarId.current.childNodes[1].getAttribute("value") == null || calendarId.current.getAttribute("year") == null) {
-      appointmentTimeId.current.firstChild.classList.add("error");
-      appointmentTimeId.current.lastChild.classList.remove("hide");
+
+    const serviceRefs = [serviceOneId, serviceTwoId, serviceThreeId, serviceFourId, serviceFiveId];
+    //Checks each rendered service component for user completion, if not completed it makes an error message
+    for(let i=0; i < keyCount; i++) {
+      if(serviceRefs[i].current.getAttribute("servicedate") == "" || serviceRefs[i].current.getAttribute("timeslots") == "" || serviceRefs[i].current.getAttribute("type") == "" || serviceRefs[i].current.getAttribute("client") == "" || serviceRefs[i].current.getAttribute("price") == "" || serviceRefs[i].current.getAttribute("itemcategory") == "" || serviceRefs[i].current.getAttribute("specialrequest") == "") {
+        // serviceDivId.current.firstChild.classList.add("error");
+        serviceDivId.current.lastChild.classList.remove("hide");
+        approved = false;
+      }
     }
+
+    return approved;
   }
 
   //Removes a form field's error state when the client adds content
@@ -229,6 +64,32 @@ const ReservationForm = () => {
     event.target.classList.contains("error") ? event.target.classList.remove("error"): null;
     const hidden = event.target.parentElement.lastChild.classList.contains("hide")
     !hidden ? event.target.parentElement.lastChild.classList.add("hide") : null;
+  }
+
+  const makeReservation = (data) => {
+    const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data) // Convert data to JSON format
+    })
+    .then(response => {
+      // Check if the response is successful
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json(); // Parse the JSON response
+    })
+    .then(data => {
+      // Work with the JSON response data
+      console.log("Response data", data);
+    })
+    .catch(error => {
+      // Handle any errors that occur during the fetch
+      console.error('There was a problem with making the reservation:', error);
+    });
   }
 
   const handlePhone = (value) => {
@@ -253,94 +114,46 @@ const ReservationForm = () => {
       setNumber(`(${phoneNumber.slice(0, 3)}) ${phoneNumber.slice(3, 6)} - ${phoneNumber.slice(6, 10)}`);
     }
   }
-    
-  const addService = (keyNumber) => {
-    // setKeyCount(keyCount + 1);
-
-    return (
-      <div service-key={keyNumber} >
-        <div className="formInputDiv">
-          <select className="reservationFormFields" title="service" name="type" value={loadService} onChange={(e) => {checkServiceInfo(e.target.value, null); updateServiceType(e, e.target.value, 1)}}>
-            <option  value="" disabled>-Select Massage-</option>
-            {Services.map((item) => {
-                return(<option key={item.Item} value={item.Item} itemcategory={item.itemCategory}>{item.Item}</option>)
-            })}
-          </select>
-
-          {checkOptions[String(keyNumber)] ? 
-          <select className="reservationFormFields" ref={serviceDurationId} title="duration" name="type" value={loadDuration} price={loadServicePrice} onChange={(e) => {setDuration(e.target.value); setServicePrice(e.target.selectedOptions[0].getAttribute("price")); updateServicePrice(e, e.target.selectedOptions[0].getAttribute("price"), e.target.value)}}>
-            <option value="" disabled>-Select Duration-</option>
-            {loadOptions.map((choice) => {
-                return(<option key={choice.time} value={choice.time} price={choice.cost}>{choice.time} Minutes</option>)
-            })}
-          </select>
-            : null}
-          
-          <input className="reservationFormFields" type="text" placeholder="Client for Service" autoComplete="off" value={serviceClient} onChange={(e) => {setServiceClient(e.target.value); updateServiceClient(e, e.target.value)}} />
-          
-        </div>
-
-        <div ref={specialRequestsId}>
-          <input className="reservationFormFields" type="text" placeholder="Special Requests" autoComplete="off" value={specialRequests} onChange={(e) => {setSpecialRequests(e.target.value)}} />
-        </div>
-
-        {loadDuration ? <div ref={appointmentTimeId}>
-          <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={loadDuration} itemCategory={itemCategory} schedule="true" handleChange={(e) => {updateDateAndTime(e)}} />
-          <p className="errorTxt hide">Please choose an available appointment time</p>
-        </div> : null}
-      </div>)
-  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // setServices(JSON.parse(localStorage.getItem("services")));
-    checkForm();
-    const intPrice = Number(loadServicePrice);
-    setServicePrice(intPrice)
-    //This is the date and time(s) taken from the Calendar/Schedule components
-    const year = calendarId.current.getAttribute("year");
-    const month = calendarId.current.getAttribute("month");
-    const day = calendarId.current.getAttribute("day");
-    const date = `${month} ${day}, ${year}`;
-    const allAddOns = [{addition: null, price: null}];
-    //Reformatting HTML attribute into JSON array
-    let timeslots = calendarId.current.childNodes[1].getAttribute("value");
-    let roomNumber = Number(calendarId.current.childNodes[1].getAttribute("room"));
-    timeslots = timeslots.replaceAll(',', ', ');
-    timeslots = `[${timeslots}]`;
-    timeslots = JSON.parse(timeslots);
-    //An empty field will prevent the form from submitting
-    if(name == "" || email == "" || number == "" || day == "" || loadService == "" || timeslots.length == 0) {
-
-    // if(name == "") {
+    //Checks that all form fields and service information have been filled, if not then the form will not submit
+    const formApproved = checkForm();
+    
+    if(!formApproved) {
       setSuccess(false);
       e.stopPropagation();
+      return;
     } else {
-      //The payment is being left as a default N/A for testing
-      const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: loadService, client: serviceClient, price: intPrice, itemCategory: itemCategory}], specialRequests: specialRequests, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Confusion"}, room: roomNumber };
-      const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(reservationFormData) // Convert data to JSON format
-      })
-      .then(response => {
-        // Check if the response is successful
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json(); // Parse the JSON response
-      })
-      .then(data => {
-        // Work with the JSON response data
-        console.log("Response data", data);
-      })
-      .catch(error => {
-        // Handle any errors that occur during the fetch
-        console.error('There was a problem with the fetch operation:', error);
-      });
+
+      const serviceRefs = [serviceOneId, serviceTwoId, serviceThreeId, serviceFourId, serviceFiveId];
+
+      for(let i=0; i < keyCount; i++) {
+
+        // const allAddOns = [{addition: null, price: null}];
+
+        const date = serviceRefs[i].current.getAttribute("servicedate");
+        let timeslots = serviceRefs[i].current.getAttribute("timeslots");
+        timeslots = timeslots.replaceAll(',', ', ');
+        timeslots = `[${timeslots}]`;
+        timeslots = JSON.parse(timeslots);
+        const serviceType = serviceRefs[i].current.getAttribute("type");
+        const client = serviceRefs[i].current.getAttribute("client");
+        const price = serviceRefs[i].current.getAttribute("price");
+        const itemCategory = serviceRefs[i].current.getAttribute("itemcategory");
+        const specialRequest = serviceRefs[i].current.getAttribute("specialrequest");
+        const roomNumber = serviceRefs[i].current.getAttribute("room");
+
+        console.log("date: ", date, "type: ", serviceType, "client: ", client, "price: ", price, "item categ: ", itemCategory, "request: ", specialRequest);
+
+        //The payment is being left as a default N/A since the business is not collecting payment information at the moment
+        const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequests, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
+        console.log(reservationFormData);
+        // makeReservation(reservationFormData);
+
+      }
+
+
 
       // Reset form after successful submission
       setName("");
@@ -348,20 +161,14 @@ const ReservationForm = () => {
       setNumber("");
       // setServices([]);
       localStorage.removeItem("services");
-      setCheckOptions({ 0: false, 1: false});
-      setOptions([]);
-      setDuration("");
-      setService("");
-      setServiceClient("");
-      setSpecialRequests("");
-      setItemCategory(1)
+
       //State change initiates popup
       setSuccess(true);
     }
   };
 
   return (
-    <form className="reservationForm" autoComplete="off" onSubmit={handleSubmit} receipt={loadReceipt}>
+    <form className="reservationForm" autoComplete="off" onSubmit={handleSubmit}>
       <h2 className="reservationTitle" >Reserve Your Spot Today!</h2>
 
       <div ref={nameId} className="formSection">
@@ -379,45 +186,19 @@ const ReservationForm = () => {
         <p className="errorTxt hide">Phone Number cannot be blank</p>
       </div>
 
-      <div ref={servicesId} className="flexColumn">
-        {addService(1)}
+      <div ref={serviceDivId} className="flexColumn">
+        <Service ref={serviceOneId} keynumber={1} />
+        {keyCount > 1 ? <Service ref={serviceTwoId} keynumber={2} /> : null}
+        {keyCount > 2 ? <Service ref={serviceThreeId} keynumber={3} /> : null}
+        {keyCount > 3 ? <Service ref={serviceFourId} keynumber={4} /> : null}
+        {keyCount > 4 ? <Service ref={serviceFiveId} keynumber={5} /> : null}
+        { keyCount < 6 ? <button type="button" onClick={() => {setKeyCount(keyCount + 1)}}>Add Another Service</button> : null}
+        { keyCount > 1 ? <button type="button" onClick={() => {setKeyCount(keyCount - 1)}}>Remove Last Service</button> : null}
+        <p className="errorTxt hide">Full Name cannot be blank</p>
+
       </div>
-      
+
       <button className="reservationFormBtn" type="submit">Reserve</button>
-      {/* <div>
-
-        <div className="formInputDiv">
-          <select className="reservationFormFields" title="service" name="type" value={loadService} onChange={(e) => {checkServiceInfo(e.target.value);}}>
-            <option  value="" disabled>-Select Massage-</option>
-            {Services.map((item) => {
-                return(<option key={item.Item} value={item.Item} itemcategory={item.itemCategory}>{item.Item}</option>)
-            })}
-          </select>
-
-          {checkOptions ? 
-          <select className="reservationFormFields" ref={serviceDurationId} title="duration" name="type" value={loadDuration} price={loadServicePrice} onChange={(e) => {setDuration(e.target.value); setServicePrice(e.target.selectedOptions[0].getAttribute("price"))}}>
-            <option value="" disabled>-Select Duration-</option>
-            {loadOptions.map((choice) => {
-                return(<option key={choice.time} value={choice.time} price={choice.cost}>{choice.time} Minutes</option>)
-            })}
-          </select>
-            : null}
-          
-          <input className="reservationFormFields" type="text" placeholder="Client for Service" autoComplete="off" value={serviceClient} onChange={(e) => {setServiceClient(e.target.value)}} />
-          
-        </div>
-
-        <div ref={specialRequestsId}>
-          <input className="reservationFormFields" type="text" placeholder="Special Requests" autoComplete="off" value={specialRequests} onChange={(e) => {setSpecialRequests(e.target.value)}} />
-        </div>
-
-        {loadDuration ? <div ref={appointmentTimeId}>
-          <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={loadDuration} itemCategory={itemCategory} schedule="true"/>
-          <p className="errorTxt hide">Please choose an available appointment time</p>
-        </div> : null}
-
-        <button className="reservationFormBtn" type="submit">Reserve</button>
-      </div> */}
 
       {/* <Popup trigger={success} setTrigger={setSuccess}>
       </Popup> */}

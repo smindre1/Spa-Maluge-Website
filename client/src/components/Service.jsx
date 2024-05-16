@@ -1,9 +1,11 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef } from "react";
 import Calendar from "./Calendar";
 // import Popup from '../components/Popup';
 
-const Service = (props) => {
+const Service = forwardRef((props, ref) => {
     //Update the rooms being allocated in schedule
+
+    const serviceId = ref;
 
     const [serviceList, setServiceList] = useState([]);
     const [inventories, setInventories] = useState([]);
@@ -26,6 +28,7 @@ const Service = (props) => {
     const [serviceDuration, setServiceDuration] = useState("");
     const [serviceTimeSlots, setServiceTimeSlots] = useState([]);
     const [serviceDate, setServiceDate] = useState("");
+    const [room, setRoom] = useState("");
 
 
     const calendarId = useRef(null);
@@ -34,39 +37,44 @@ const Service = (props) => {
     useEffect(() => {
         const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `inventory/`;
 
-    fetch(url)
-    .then(response => {
-        if (!response.ok) {
-        throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        const serviceCategories = data.filter((itemList) => itemList.ItemCategory == 1 || itemList.ItemCategory == 2);
-        let listOfServices = [];
-        for (let i=0; i < serviceCategories.length; i++) {
-            let itemCategoryNum = serviceCategories[i];
-            list = serviceCategories[i].map((serviceObj) => {return {Item: serviceObj.Item, Prices: serviceObj.Prices, ItemCategory: itemCategoryNum}});
-            listOfServices = [...listOfServices, ...list];
-        }
-        setServiceList(listOfServices);
-        setInventories(data);
-        setWait(false);
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
+        fetch(url)
+        .then(response => {
+            if (!response.ok) {
+            throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            const serviceCategories = data.filter((itemList) => itemList.ItemCategory == 1 || itemList.ItemCategory == 2);
+            let listOfServices = [];
+            for (let i=0; i < serviceCategories.length; i++) {
+                let itemCategoryNum = serviceCategories[i];
+                let orgList = serviceCategories
+                let list = orgList[i].Items.map((serviceObj) => {return {Item: serviceObj.Item, Prices: serviceObj.Prices, ItemCategory: itemCategoryNum.ItemCategory}});
+                listOfServices = [...listOfServices, ...list];
+            }
+            console.log(data, "inventory");
+            setServiceList([...listOfServices]);
+            setInventories(data);
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+        });
     }, []);
 
-  // useEffect(() => {
-  //     const preSelected = localStorage.getItem("service");
-  //     preSelected ? checkServiceInfo(preSelected) : null;
-  // }, [])
+    useEffect(() => {
+        serviceList.length > 0 ? setWait(false) : null;
+    }, [serviceList])
+
+    // useEffect(() => {
+    //     const preSelected = localStorage.getItem("service");
+    //     preSelected ? checkServiceInfo(preSelected) : null;
+    // }, [])
 
     useEffect(() => {
         //Set the service price when the duration has been selected
-        if (serviceDuration =! "" && checkOptions) {
-            const currentRate = loadOptions.filter((rate) => Number(rate.time) == Number(serviceDuration));
+        if (serviceDuration !== "" && checkOptions) {
+            let currentRate = loadOptions.filter((rate) => Number(rate.time) == Number(serviceDuration));
             setServicePrice(currentRate[0].cost);
         }
   }, [serviceDuration])
@@ -76,7 +84,6 @@ const Service = (props) => {
   const checkServiceInfo = (event) => {
     //Duration is updated to reset Calendar and Schedule
     setServiceDuration("");
-    checkServiceInfo(false)
 
     //Maps through service list data for the inventory number associated with the serviceType and service price rates
     serviceList.map((service) => {
@@ -91,6 +98,9 @@ const Service = (props) => {
   }
 
   const updateDateAndTime = (calendarData) => {
+    console.log(calendarData.loadTimeSlots, "updateDateAndTime");
+
+    setRoom(calendarData.room);
     setServiceTimeSlots(JSON.parse(`[${calendarData.loadTimeSlots}]`));
     const date = `${calendarData.loadMonth} ${calendarData.loadDay}, ${calendarData.loadYear}`;
     setServiceDate(date);
@@ -103,7 +113,7 @@ const Service = (props) => {
     
 
   return (
-    <div service-key={props.keyNumber} type={serviceType} client={serviceClient} price={servicePrice} itemCategory={serviceItemCategory} duration={serviceDuration} timeslots={serviceTimeSlots} serviceDate={serviceDate} >
+    <div ref={serviceId} service-key={props.keynumber} type={serviceType} client={serviceClient} price={servicePrice} itemcategory={serviceItemCategory} duration={serviceDuration} timeslots={serviceTimeSlots} servicedate={serviceDate} specialrequest={specialRequests} room={room}>
         <div className="formInputDiv">
           <select className="reservationFormFields" title="service" name="type" value={serviceType} onChange={(e) => {checkServiceInfo(e)}}>
             <option  value="" disabled>-Select Massage-</option>
@@ -135,6 +145,6 @@ const Service = (props) => {
         </div> : null}
       </div>
   );
-};
+});
 
 export default Service;

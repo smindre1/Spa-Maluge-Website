@@ -11,7 +11,7 @@ const Calendar = forwardRef((props, ref) => {
     const [calendar, setCalendar] = useState();
     const [wait, setWait] = useState(true);
     const [scheduleUpdated, setScheduleUpdated] = useState(false);
-    //
+    
     const [loadYear, setYear] = useState(today.getFullYear());
     const [loadMonth, setMonth] = useState(months[today.getMonth()]);
     const [loadDays, setDays] = useState();
@@ -19,7 +19,7 @@ const Calendar = forwardRef((props, ref) => {
     // const [loadItemCategory, setItemCategory] = useState(props.itemCategory);
     const [loadOpenStatus, setOpenStatus] = useState();
     const [updated, setUpdated] = useState(false);
-    const [loadTimeSlots, setTimeSlots] = useState();
+    const [loadTimeSlots, setTimeSlots] = useState('');
 
     const scheduleId = useRef(null);
     const scheduleDivId = useRef(null);
@@ -33,7 +33,7 @@ const Calendar = forwardRef((props, ref) => {
         let room = scheduleId.current ? scheduleId.current.getAttribute("room") : null;
         props.handleChange({ref: calendarId.current, loadYear, loadMonth, loadDay, loadTimeSlots, room})
         // scheduleDivId.current.firstChild.getAttribute('value') ? 
-    }, [loadYear, loadMonth, loadDay, loadTimeSlots, props.handleChange])
+    }, [loadYear, loadMonth, loadDay, loadTimeSlots])
 
     // useEffect(() => {
     //     console.log(loadTimeSlots, "calendar timeslots updated just now");
@@ -66,18 +66,20 @@ const Calendar = forwardRef((props, ref) => {
         if(calendar) {
             displayDays(loadYear, loadMonth);
         }
+
     }, [wait, loadYear, loadMonth])
 
     useEffect(() => {
         if(updated == true && scheduleDivId.current.hasChildNodes()) {
-            console.log("updated: ", scheduleDivId.current.firstChild.getAttribute("value"));
+            // console.log("updated: ", scheduleDivId.current.firstChild.getAttribute("value"));
             setTimeSlots(scheduleDivId.current.firstChild.getAttribute("value"));
             setUpdated(false);
         }
     }, [updated])
 
-    useEffect(() => {
-    }, [loadYear])
+    // useEffect(() => {
+    //     console.log("calendar use effect 6");
+    // }, [loadYear])
 
     const displayDays = (year, month) => {
         const specificYear = calendar.find((calYears) => calYears.year == year);
