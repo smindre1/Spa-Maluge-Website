@@ -8,7 +8,10 @@ const Service = forwardRef((props, ref) => {
     const serviceId = ref;
 
     const [serviceList, setServiceList] = useState([]);
-    const [inventories, setInventories] = useState([]);
+    //The list of add on services the user can choose from
+    const [addOnList, setAddOns] = useState([]);
+    //This is used to measure when the prior state variable is ready
+    const [checkAddOns, setCheckAddOns] = useState(false);
     //This is used to signify the end of the inventory fetch request
     const [wait, setWait] = useState(true);
 
@@ -23,6 +26,10 @@ const Service = forwardRef((props, ref) => {
     const [serviceType, setServiceType] = useState("");
     const [serviceClient, setServiceClient] = useState("");
     const [servicePrice, setServicePrice] = useState("");
+    //Service add on variables
+    const [addOnOne, setAddOnOne] = useState(["", 0]);
+    const [addOnTwo, setAddOnTwo] = useState(["", 0]);
+    const [addOnCount, setAddOnCount] = useState(1);
     //The default value 1 is set because item category 1 is where the main services are located
     const [serviceItemCategory, setServiceItemCategory] = useState(1);
     const [serviceDuration, setServiceDuration] = useState("");
@@ -53,9 +60,11 @@ const Service = forwardRef((props, ref) => {
                 let list = orgList[i].Items.map((serviceObj) => {return {Item: serviceObj.Item, Prices: serviceObj.Prices, ItemCategory: itemCategoryNum.ItemCategory}});
                 listOfServices = [...listOfServices, ...list];
             }
-            console.log(data, "inventory");
+            // console.log(data, "inventory");
             setServiceList([...listOfServices]);
-            setInventories(data);
+            
+            const addOnServices = data.filter((itemList) => itemList.ItemCategory == 4);
+            setAddOns(addOnServices[0].Items);
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
@@ -65,6 +74,14 @@ const Service = forwardRef((props, ref) => {
     useEffect(() => {
         serviceList.length > 0 ? setWait(false) : null;
     }, [serviceList])
+
+    useEffect(() => {
+      addOnList.length > 0 ? setCheckAddOns(true) : null;
+    }, [addOnList])
+
+    useEffect(() => {
+      addOnCount == 1 ? setAddOnTwo(["", 0]) : null;
+  }, [addOnCount])
 
     // useEffect(() => {
     //     const preSelected = localStorage.getItem("service");
@@ -98,7 +115,7 @@ const Service = forwardRef((props, ref) => {
   }
 
   const updateDateAndTime = (calendarData) => {
-    console.log(calendarData.loadTimeSlots, "updateDateAndTime");
+    // console.log(calendarData.loadTimeSlots, "updateDateAndTime");
 
     setRoom(calendarData.room);
     setServiceTimeSlots(JSON.parse(`[${calendarData.loadTimeSlots}]`));
@@ -110,10 +127,22 @@ const Service = forwardRef((props, ref) => {
     const currentRate = loadOptions.filter((rate) => Number(rate.time) == Number(serviceDuration));
     currentRate.length > 0 ? setServicePrice(currentRate[0].cost) : null;
   }
+
+  const handleAddOnService = (event, addOnNumber) => {
+    if(addOnNumber == 1) {
+      const newAddOnOne = [event.target.value, event.target.selectedOptions[0].getAttribute("price")];
+      setAddOnOne(newAddOnOne)
+    }
+
+    if(addOnNumber == 2) {
+      const newAddOnTwo = [event.target.value, event.target.selectedOptions[0].getAttribute("price")];
+      setAddOnTwo(newAddOnTwo)
+    }
+  }
     
 
   return (
-    <div ref={serviceId} service-key={props.keynumber} type={serviceType} client={serviceClient} price={servicePrice} itemcategory={serviceItemCategory} duration={serviceDuration} timeslots={serviceTimeSlots} servicedate={serviceDate} specialrequest={specialRequests} room={room}>
+    <div ref={serviceId} service-key={props.keynumber} type={serviceType} client={serviceClient} price={servicePrice} itemcategory={serviceItemCategory} duration={serviceDuration} timeslots={serviceTimeSlots} servicedate={serviceDate} specialrequest={specialRequests} room={room} addonone={addOnOne} addontwo={addOnTwo}>
         <div className="formInputDiv">
           <select className="reservationFormFields" title="service" name="type" value={serviceType} onChange={(e) => {checkServiceInfo(e)}}>
             <option  value="" disabled>-Select Massage-</option>
@@ -130,6 +159,27 @@ const Service = forwardRef((props, ref) => {
             })}
           </select>
             : null}
+
+          {checkAddOns ? 
+          <select className="reservationFormFields" title="addon" name="type" value={addOnOne[0]} price={addOnOne[1]} onChange={(e) => {handleAddOnService(e, 1)}}>
+            <option value="" price={0}>Add On: -None-</option>
+            {addOnList.map((choice) => {
+                return(<option key={choice.Item} value={choice.Item} price={choice.Prices[0].cost}>Add On: {choice.Item} Service</option>)
+            })}
+          </select>
+            : null}
+
+          {addOnCount > 1 ?
+          <select className="reservationFormFields" title="addon" name="type" value={addOnTwo[0]} price={addOnTwo[1]} onChange={(e) => {handleAddOnService(e, 2)}}>
+          <option value="" price={0}>Add On: -None-</option>
+          {addOnList.map((choice) => {
+              return(<option key={choice.Item} value={choice.Item} price={choice.Prices[0].cost}>Add On: {choice.Item} Service</option>)
+          })}
+          </select>
+            : null}
+
+          { addOnCount < 2 ? <button type="button" onClick={() => {setAddOnCount(addOnCount + 1)}}>Create Add On</button> : null}
+          { addOnCount > 1 ? <button type="button" onClick={() => {setAddOnCount(addOnCount - 1)}}>Remove Add On</button> : null}
           
           <input className="reservationFormFields" type="text" placeholder="Client for Service" autoComplete="off" value={serviceClient} onChange={(e) => {setServiceClient(e.target.value)}} />
           

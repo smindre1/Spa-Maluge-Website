@@ -144,11 +144,38 @@ const ReservationForm = () => {
         const specialRequest = serviceRefs[i].current.getAttribute("specialrequest");
         const roomNumber = serviceRefs[i].current.getAttribute("room");
 
+
         console.log("date: ", date, "type: ", serviceType, "client: ", client, "price: ", price, "item categ: ", itemCategory, "request: ", specialRequest);
 
         //The payment is being left as a default N/A since the business is not collecting payment information at the moment
-        const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequests, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
+        const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequest, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
         console.log(reservationFormData);
+
+        //Takes the add on service values from the Service component
+        let addOnOne = serviceRefs[i].current.getAttribute("addonone").split(",");
+        addOnOne[1] = Number(addOnOne[1]);
+        let addOnTwo = serviceRefs[i].current.getAttribute("addontwo").split(",");
+        addOnTwo[1] = Number(addOnTwo[1]);
+        // console.log("add on string one:", addOnOne, "add on string two:", addOnTwo);
+
+        let addOnData = [];
+        //Checks the add on service values to see if the user selected them
+        if(addOnOne[0] != "") {
+          const addOnOneObj = {addition: addOnOne[0], price: addOnOne[1]};
+          addOnData.push(addOnOneObj);
+        }
+        
+        if(addOnTwo[0] != "") {
+          const addOnTwoObj = {addition: addOnTwo[0], price: addOnTwo[1]}
+          addOnData.push(addOnTwoObj);
+        }
+        //If the user added any add on services then they are added to the reservation request body
+        addOnData.length > 0 ? reservationFormData.services[0].addOns = addOnData : null;
+
+        
+        
+        console.log("Reservation Form:", reservationFormData);
+
         // makeReservation(reservationFormData);
 
       }
