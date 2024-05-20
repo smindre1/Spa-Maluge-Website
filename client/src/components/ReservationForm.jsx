@@ -2,13 +2,16 @@ import { useState, useRef, useEffect } from "react";
 import Service from "./Service";
 // import Popup from '../components/Popup';
 
-const ReservationForm = () => {
+const ReservationForm = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
   // const [specialRequests, setSpecialRequests] = useState("");
 
   const [keyCount, setKeyCount] = useState(1);
+
+  //Used for the BookNow page, sends a signal for when to refresh receipt
+  const [refresh, setRefresh] = useState(false);
   
   //Used for the popup, but I plan to redirect page so it may not be necessary.
   const [success, setSuccess] = useState(false);
@@ -28,6 +31,51 @@ const ReservationForm = () => {
   //     const preSelected = localStorage.getItem("service");
   //     preSelected ? checkServiceInfo(preSelected) : null;
   // }, [])
+
+  useEffect(() => {
+    //Signals the BookNow page to refresh/update the receipt data
+      if(refresh) {
+        props.updateReceipt(true);
+        setRefresh(false);
+      }
+  }, [refresh])
+
+  useEffect(() => {
+    let receipt = localStorage.getItem("receipt");
+    receipt == null ? receipt = {} : receipt = JSON.parse(receipt);
+
+    //Service Two's operator
+    if(keyCount == 1) {
+      //removes any services that the user removed
+      delete receipt.servicetwo;
+      delete receipt.servicethree;
+      delete receipt.servicefour;
+      delete receipt.servicefive;
+    }
+
+    //Service Two's operator
+    if(keyCount == 2) {
+      //removes any services that the user removed
+      delete receipt.servicethree;
+      delete receipt.servicefour;
+      delete receipt.servicefive;
+    }
+
+    //Service Three's operator
+    if(keyCount == 3) {
+      //removes any services that the user removed
+      delete receipt.servicefour;
+      delete receipt.servicefive;
+    }
+
+    //Service Four's operator
+    if(keyCount == 4) {
+      //removes any services that the user removed
+      delete receipt.servicefive;
+    }
+
+    localStorage.setItem("receipt", JSON.stringify(receipt));
+  }, [keyCount])
 
 
   const checkForm = () => {
@@ -149,7 +197,9 @@ const ReservationForm = () => {
 
         //The payment is being left as a default N/A since the business is not collecting payment information at the moment
         const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequest, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
-        console.log(reservationFormData);
+        // console.log(reservationFormData);
+
+        // type: serviceType, client: client, price: price, 
 
         //Takes the add on service values from the Service component
         let addOnOne = serviceRefs[i].current.getAttribute("addonone").split(",");
@@ -174,7 +224,7 @@ const ReservationForm = () => {
 
         
         
-        console.log("Reservation Form:", reservationFormData);
+        // console.log("Reservation Form:", reservationFormData);
 
         // makeReservation(reservationFormData);
 
@@ -195,7 +245,7 @@ const ReservationForm = () => {
   };
 
   return (
-    <form className="reservationForm" autoComplete="off" onSubmit={handleSubmit}>
+    <form className="reservationForm" autoComplete="off" onSubmit={handleSubmit} servicecount={keyCount} >
       <h2 className="reservationTitle" >Reserve Your Spot Today!</h2>
 
       <div ref={nameId} className="formSection">
@@ -214,16 +264,17 @@ const ReservationForm = () => {
       </div>
 
       <div ref={serviceDivId} className="flexColumn">
-        <Service ref={serviceOneId} keynumber={1} />
-        {keyCount > 1 ? <Service ref={serviceTwoId} keynumber={2} /> : null}
-        {keyCount > 2 ? <Service ref={serviceThreeId} keynumber={3} /> : null}
-        {keyCount > 3 ? <Service ref={serviceFourId} keynumber={4} /> : null}
-        {keyCount > 4 ? <Service ref={serviceFiveId} keynumber={5} /> : null}
+        <Service ref={serviceOneId} keynumber={1}  refreshReceipt={setRefresh}/>
+        {keyCount > 1 ? <Service ref={serviceTwoId} keynumber={2} refreshReceipt={setRefresh}/> : null}
+        {keyCount > 2 ? <Service ref={serviceThreeId} keynumber={3}  refreshReceipt={setRefresh}/> : null}
+        {keyCount > 3 ? <Service ref={serviceFourId} keynumber={4}  refreshReceipt={setRefresh}/> : null}
+        {keyCount > 4 ? <Service ref={serviceFiveId} keynumber={5}  refreshReceipt={setRefresh}/> : null}
         { keyCount < 6 ? <button type="button" onClick={() => {setKeyCount(keyCount + 1)}}>Add Another Service</button> : null}
         { keyCount > 1 ? <button type="button" onClick={() => {setKeyCount(keyCount - 1)}}>Remove Last Service</button> : null}
         <p className="errorTxt hide">Full Name cannot be blank</p>
 
       </div>
+
 
       <button className="reservationFormBtn" type="submit">Reserve</button>
 

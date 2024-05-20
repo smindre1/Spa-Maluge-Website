@@ -104,7 +104,7 @@ const Schedule = forwardRef((props, scheduleId) => {
                 });
                 setSchedule([roomThreeSchedule]);
             }
-            console.log(data, "schedule");
+            // console.log(data, "schedule");
 
             setWait(false);
         })

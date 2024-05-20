@@ -37,9 +37,41 @@ const Service = forwardRef((props, ref) => {
     const [serviceDate, setServiceDate] = useState("");
     const [room, setRoom] = useState("");
 
-
     const calendarId = useRef(null);
 
+  //   useEffect(() => {
+  //     props.handleChange({ref: serviceId.current, serviceType, serviceClient, servicePrice, addOnOne, addOnTwo})
+  // }, [serviceType, serviceClient, servicePrice, addOnOne[0], addOnTwo[0]])
+
+    useEffect(() => {
+      let receipt = localStorage.getItem("receipt");
+      
+      receipt == null ? receipt = {} : receipt = JSON.parse(receipt);
+      const keys = ["serviceone", "servicetwo", "servicethree", "servicefour", "servicefive"];
+
+      let addOnData = [];
+      //Checks the add on service values to see if the user selected them
+      if(addOnOne[0] != "") {
+        const addOnOneObj = {addition: addOnOne[0], price: addOnOne[1]};
+        addOnData.push(addOnOneObj);
+      }
+      
+      if(addOnTwo[0] != "") {
+        const addOnTwoObj = {addition: addOnTwo[0], price: addOnTwo[1]}
+        addOnData.push(addOnTwoObj);
+      }
+
+      let servicedata = {type: serviceType, client: serviceClient, price: servicePrice};
+
+      //If the user added any add on services then they are added to the reservation request body
+      addOnData.length > 0 ? servicedata.addons = addOnData : null;
+    
+      receipt[keys[props.keynumber - 1]] = servicedata;
+      localStorage.setItem("receipt", JSON.stringify(receipt));
+
+      props.refreshReceipt(true);
+
+    }, [serviceType, serviceClient, servicePrice, addOnOne[0], addOnTwo[0], serviceDuration])
 
     useEffect(() => {
         const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `inventory/`;
@@ -99,8 +131,9 @@ const Service = forwardRef((props, ref) => {
 
   //Updates the service's type, item category, rates (setOptions state variable), and resets the duration
   const checkServiceInfo = (event) => {
-    //Duration is updated to reset Calendar and Schedule
+    //Duration and Price are updated to reset Calendar and Schedule as well as to update local storage values
     setServiceDuration("");
+    setServicePrice("")
 
     //Maps through service list data for the inventory number associated with the serviceType and service price rates
     serviceList.map((service) => {
