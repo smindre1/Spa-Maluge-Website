@@ -5,15 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "start": "concurrently \"cd ../server && npm run start\" \"npm run dev\"",
-    "build": "vite build && cd ../server && npm i",
+    "start": "vite",
+    "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.14",
     "dotenv": "^8.6.0",
-    "graphql": "^16.6.0",
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
