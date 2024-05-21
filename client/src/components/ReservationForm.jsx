@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, forwardRef } from "react";
 import Service from "./Service";
 // import Popup from '../components/Popup';
 
-const ReservationForm = (props) => {
+const ReservationForm = forwardRef((props, ref) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
@@ -16,6 +16,8 @@ const ReservationForm = (props) => {
   //Used for the popup, but I plan to redirect page so it may not be necessary.
   const [success, setSuccess] = useState(false);
 
+  const reservationFormId = ref;
+
   const nameId = useRef(null);
   const emailId = useRef(null);
   const numberId = useRef(null);
@@ -27,6 +29,8 @@ const ReservationForm = (props) => {
   const serviceFourId = useRef(null);
   const serviceFiveId = useRef(null);
 
+  const checkboxDivId = useRef(null);
+  const checkboxId = useRef(null);
   // useEffect(() => {
   //     const preSelected = localStorage.getItem("service");
   //     preSelected ? checkServiceInfo(preSelected) : null;
@@ -101,6 +105,13 @@ const ReservationForm = (props) => {
         serviceDivId.current.lastChild.classList.remove("hide");
         approved = false;
       }
+    }
+
+    if(!checkboxId.current.checked) {
+      checkboxDivId.current.lastChild.classList.remove("hide");
+      approved = false;
+    } else {
+      checkboxDivId.current.lastChild.classList.add("hide");
     }
 
     return approved;
@@ -230,14 +241,11 @@ const ReservationForm = (props) => {
 
       }
 
-
-
       // Reset form after successful submission
       setName("");
       setEmail("");
       setNumber("");
-      // setServices([]);
-      localStorage.removeItem("services");
+      localStorage.removeItem("receipt");
 
       //State change initiates popup
       setSuccess(true);
@@ -245,7 +253,7 @@ const ReservationForm = (props) => {
   };
 
   return (
-    <form className="reservationForm" autoComplete="off" onSubmit={handleSubmit} servicecount={keyCount} >
+    <form ref={reservationFormId} className="reservationForm" autoComplete="off" onSubmit={handleSubmit} servicecount={keyCount} >
       <h2 className="reservationTitle" >Reserve Your Spot Today!</h2>
 
       <div ref={nameId} className="formSection">
@@ -275,6 +283,14 @@ const ReservationForm = (props) => {
 
       </div>
 
+      <div ref={checkboxDivId} className="formSection">
+        <div className="checkboxContainer flexRow">
+          <p>Please click to confirm that you agree to our following policies: <br></br><a href="/privacy-policy" target="_blank">Privacy Policy</a>, <a href="/cancellation-and-refund-policy" target="_blank">Cancellation/Refund Policy</a>, And the cooresponding medical precautions listed on the service page(s) of your selected service(s)</p>
+          <input ref={checkboxId} className="checkbox" type="checkbox" />
+        </div>
+        
+        <p className="errorTxt hide">Please confirm that you accept the terms and conditions</p>
+      </div>
 
       <button className="reservationFormBtn" type="submit">Reserve</button>
 
@@ -282,6 +298,6 @@ const ReservationForm = (props) => {
       </Popup> */}
     </form>
   );
-};
+});
 
 export default ReservationForm;

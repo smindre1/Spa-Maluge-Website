@@ -604,6 +604,17 @@ textarea:focus {
   width: 48.5%;
 } */
 
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 18px
+}
+
+.checkboxContainer {
+  background-color: var(--pureWhite);
+  border: solid var(--black) 1px;
+}
+
 .errorTxt {
   font-size: 18px;
   color: var(--red);
@@ -937,15 +948,66 @@ textarea:focus {
 }
 
 .reservationSummary {
-  width: 50vw;
-  display: flex;
+  /* width: 50vw; */
+  /* display: flex; */
+  position: absolute;
+  right: 0;
   justify-content: right;
-  padding: 0 10vw 0 0;
+
+  z-index: -1000;
+  /* padding: 0 10vw 0 0; */
+}
+
+.receiptHeightOne {
+  height: 85vh;
+}
+
+.receiptHeightTwo {
+  height: 150vh;
+}
+
+.receiptHeightThree {
+  height: 190vh;
+}
+
+.receiptHeightFour {
+  height: 270vh;
+}
+
+.receiptHeightFive {
+  height: 330vh;
 }
 
 .reservationReceipt {
+  padding: 12px 10vw 90px 36px;
+  border-radius: 0 0 0 50px;
   border-left: dashed 2px #000000;
-  margin: 12px 0 12px 0;
+  background-color: var(--gray);
+  position: sticky;
+  top: 0;
+  
+}
+
+.receiptCharges {
+  /* position: sticky; */
+  height: fit-content;
+  width: 230px;
+  margin: 0 0 12px 0;
+}
+
+.receiptText {
+  color: var(--pureWhite);
+  font-family: "Lato", sans-serif;
+}
+
+.receiptSubText {
+  color: var(--white);
+  font-family: "Lato", serif;
+
+}
+
+.indent {
+  padding-left: 24px;
 }
 
 /* ----------------------- Reservations Page ------------------------------ */
