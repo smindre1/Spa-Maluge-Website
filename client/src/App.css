@@ -1221,3 +1221,44 @@ textarea:focus {
 .employee {
   color: #10840e;
 }
+
+/* ------------------------------- Popup Classes ----------------------------------- */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* background-color: var(--ash); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupInner {
+  position: relative;
+  padding: 32px;
+  width: 100%;
+  max-width: 640px;
+  color: var(--white);
+  text-align: center;
+  background-color: var(--black);
+  border: solid var(--gold) 3px;
+  border-radius: 10px;
+}
+
+.closeBtn {
+  color: var(--black);
+  background-color: var(--gold);
+  border: solid var(--darkgold) 2px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 5px 15px 5px 15px;
+  margin: 20px auto 10px auto;
+}
+
+.closeBtn:hover {
+  background-color: var(--white);
+  cursor: pointer;
+}

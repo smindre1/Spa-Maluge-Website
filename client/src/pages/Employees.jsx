@@ -88,13 +88,13 @@ const Employees = () => {
                         {loadPositions(staff?.position)}
                     </select>)
                 } else if(position === "Boss" && staff.position != "Admin") {
-                    return(<select key={staff._id} title="change position" name="type" value={currentStaffPosition[staff._id]} onChange={(e) => {setCurrentStaffPosition(currentStaffPosition => {
+                    return(<select  className="employeeDataInput" key={staff._id} title="change position" name="type" value={currentStaffPosition[staff._id]} onChange={(e) => {setCurrentStaffPosition(currentStaffPosition => {
                         const newPosition = { ...currentStaffPosition, [staff._id]: e.target.value }; return newPosition;})}}>
                         <option key={staff._id} className={positionColor(staff?.position)}>{staff?.position || "Invalid"}</option>
                         {loadPositions(staff?.position)}
                     </select>)
                 } else if(position === "Manager" && staff.position != "Admin" && staff.position != "Boss" && staff.position != "Manager") {
-                    return (<select key={staff._id} title="change position" name="type" value={currentStaffPosition[staff._id]} onChange={(e) => {setCurrentStaffPosition(currentStaffPosition => {
+                    return (<select  className="employeeDataInput" key={staff._id} title="change position" name="type" value={currentStaffPosition[staff._id]} onChange={(e) => {setCurrentStaffPosition(currentStaffPosition => {
                         const newPosition = { ...currentStaffPosition, [staff._id]: e.target.value }; return newPosition;})}}>
                         <option key={staff._id} className={positionColor(staff?.position)}>{staff?.position || "Invalid"}</option>
                         {loadPositions(staff?.position)}

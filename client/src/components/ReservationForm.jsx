@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, forwardRef } from "react";
 import Service from "./Service";
-// import Popup from '../components/Popup';
+import Popup from '../components/Popup';
 
 const ReservationForm = forwardRef((props, ref) => {
   const [name, setName] = useState("");
@@ -139,11 +139,24 @@ const ReservationForm = forwardRef((props, ref) => {
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
+
+      if (response.ok) {
+        // Reset form after successful submission
+        setName("");
+        setEmail("");
+        setNumber("");
+        setKeyCount(1);
+        checkboxId.current.checked = false;
+        localStorage.removeItem("receipt");
+
+        //State change initiates popup
+        setSuccess(true);
+      }
       return response.json(); // Parse the JSON response
     })
     .then(data => {
       // Work with the JSON response data
-      console.log("Response data", data);
+      // console.log("Response data", data);
     })
     .catch(error => {
       // Handle any errors that occur during the fetch
@@ -204,7 +217,7 @@ const ReservationForm = forwardRef((props, ref) => {
         const roomNumber = serviceRefs[i].current.getAttribute("room");
 
 
-        console.log("date: ", date, "type: ", serviceType, "client: ", client, "price: ", price, "item categ: ", itemCategory, "request: ", specialRequest);
+        // console.log("date: ", date, "type: ", serviceType, "client: ", client, "price: ", price, "item categ: ", itemCategory, "request: ", specialRequest);
 
         //The payment is being left as a default N/A since the business is not collecting payment information at the moment
         const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequest, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
@@ -237,18 +250,9 @@ const ReservationForm = forwardRef((props, ref) => {
         
         // console.log("Reservation Form:", reservationFormData);
 
-        // makeReservation(reservationFormData);
+        makeReservation(reservationFormData);
 
       }
-
-      // Reset form after successful submission
-      setName("");
-      setEmail("");
-      setNumber("");
-      localStorage.removeItem("receipt");
-
-      //State change initiates popup
-      setSuccess(true);
     }
   };
 
@@ -294,8 +298,8 @@ const ReservationForm = forwardRef((props, ref) => {
 
       <button className="reservationFormBtn" type="submit">Reserve</button>
 
-      {/* <Popup trigger={success} setTrigger={setSuccess}>
-      </Popup> */}
+      <Popup trigger={success} setTrigger={setSuccess}>
+      </Popup>
     </form>
   );
 });

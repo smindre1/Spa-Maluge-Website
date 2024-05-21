@@ -101,6 +101,7 @@ const Reservations = () => {
             : <p className='alignText'>There are no Reservations Currently</p>}
 
             {loadRoster.map((reservation) => {
+
                 return (
                 <div className='clientReservationCard' key={reservation._id} reservationid={reservation._id} onClick={recordId}>
                     <p className='cardText'>{TimeSlotIndex[reservation?.appointmentTime[0]] || "none"} (Appointment Time: {findDuration(reservation?.services)} Minutes)</p>
@@ -130,12 +131,12 @@ const Reservations = () => {
                                     <p className='cardText bold'>{service.type}</p>
                                     <p className='cardText'>For: {service.client}</p>
                                     <p className='cardText'>Price: ${service.price}</p>
-                                    <p className='cardText'>AddOns:</p>
+                                    <p className='cardText italic'>AddOns:</p>
                                     {service.addOns.length < 1 ? <p className='cardText'>None</p> : null}
                                     {service?.addOns.map((extraItem) => {
-                                        return(<div>
-                                            <p className='cardText'>Addition: {extraItem.addition}</p>
-                                            <p className='cardText'>Added Price: ${extraItem.price}</p>
+                                        return(<div key={extraItem.addition} >
+                                            <p className='cardText bold'>Addition: {extraItem.addition}</p>
+                                            <p className='cardText'>Price: ${extraItem.price}</p>
                                         </div>)
                                     })}
                                 </div>
