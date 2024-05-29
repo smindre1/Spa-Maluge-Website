@@ -1,7 +1,46 @@
-# salon
+# Spa Maluge's Business Reservation & Management Website
+
+**Developed By:** *Shane Mindreau*
+
+**GitHub Profile:** [smindre1](https://github.com/smindre1)
+
+**Description:** A modern business website made with Vite & React that provides a fast, interactive, and responsive user experience. This website is for the purpose of displaying the high-end massage parlor known as 'Spa Maluge', displaying a variety of services in depth with a classical baroque style inspired theme. The site features both commercial webpages meant for customers to browse information about the services and business, message the business directly, and to make a reservation. There are also non-commercial webpages that are meant for managing the business, protected with user authentication.
+
+## Features
+
+- **Fast and Lightweight:** Leveraging Vite for optimized build performance.
+
+- **SEO Friendly:** Optimized for search engines to improve visibility.
+
+- **Modern UI/UX:** Clean and professional design with intuitive navigation.
+
+- **Simple Messaging:** The 'contact us' webpage displays a contact form that allows customers to easily submit a message that will be sent to the business' email address using the service [smptjs](https://smtpjs.com/).
+
+- **Customer Friendly Reservation:** The customers can go to the website's intelligible 'book now' page to make a reservation for up to five service (each with a maximum of two add-ons) in any available day and timeslot. Anything the customer selects to reserve will be display on the receipt summary on the right of the page.
+
+- **REST API Integration:** Fetches and manages data through a separate REST API, ensuring real-time updates and efficient data handling.
+
+- **Effective Management System:** The website holds several management webpages such as an staff login/signup, employee roster, reservation roster, and settings page (the settings page can only be seen by staff with a boss or admin position title). 
+
+- **Secure:** Built-in security features, such as, user authentication and job position checking using encrypted json webtokens to protect data.
+
+## Data Processing
+
+All data is fetched and/or processed by the [Spa Maluge Database REST API](https://github.com/smindre1/Spa_Maluge_Database). This includes user data (specifically referencing business staff), inventory (The services provided), customer reservations, available business schedule, and available calendar days.
+
+## License
+**The code is under the GNU General Public License v3.0**
+
+The business name 'Spa Maluge' has been copyrighted and any unapproved use of the name is considered Copyright Infringement.
+
+The svg border design assets were made and copyrighted by Shane Mindreau. The Maluge svg logo was redesigned by Shane Mindreau based on the Spa Maluge's brand image which is copyrighted and any unapproved use of the name is considered Copyright Infringement. Shane Mindreau was given permission to redesign the brand logo for the official business website and the redesigns are copyrighted.
+
+## Deployed Website Hyperlink
+**[Spa Maluge](https://spamaluge.com/)**
 
 <!-- https://acuityscheduling.com/ -->
 
 <!-- https://www.remove.bg/upload -->
 
-- The Heroku API's ORIGIN variable allows cross browser requests. So make sure to update that.
+<!-- - The Heroku API's ORIGIN variable allows cross browser requests. So make sure to update that. -->
+
