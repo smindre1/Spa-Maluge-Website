@@ -68,8 +68,8 @@ function Home() {
       </section>
 
       <section className="sectionBreak center">
-        <div className="flexRow">
-          <div className="contentBlock pushRight whiteBackground">
+        <div className="description">
+          <div className="contentBlock whiteBackground">
             <h2 className="prgTitle mainFont">Our Spa Massage Services</h2>
             <p className="mainFont">
               Indulge your senses and embrace the ultimate relaxation with our exquisite massage services. Our team of skilled therapists offers a diverse range

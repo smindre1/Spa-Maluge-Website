@@ -41,7 +41,7 @@ const Reservations = () => {
 
     useEffect(() => {
         //Redirect to the clicked reservation's page
-        param == null ? null : window.location.replace(`/reservations/${param}`);
+        param == null ? null : window.location.replace(`/management/reservations/${param}`);
     }, [param])
 
     const reservationSchedule = () => {   
@@ -60,8 +60,10 @@ const Reservations = () => {
     };
 
     const recordId = (e) => {
+        //Searches for the html element of the clicked target that has the reservationid attribute
+        let targetElement = e.target.closest('[reservationid]');
         //Grabs the <div>'s reservationid and records it to React State Variable
-        setParam(e.target.parentElement.getAttribute("reservationid") || e.target.getAttribute("reservationid"));
+        setParam(targetElement.getAttribute("reservationid"));
     }
 
     const findDuration = (services) => {
@@ -103,7 +105,7 @@ const Reservations = () => {
             {loadRoster.map((reservation) => {
 
                 return (
-                <div className='clientReservationCard' key={reservation._id} reservationid={reservation._id} onClick={recordId}>
+                <div className='clientReservationCard blueHover' key={reservation._id} reservationid={reservation._id} onClick={recordId}>
                     <p className='cardText'>{TimeSlotIndex[reservation?.appointmentTime[0]] || "none"} (Appointment Time: {findDuration(reservation?.services)} Minutes)</p>
                     <div className='flexRow'>
                     <section className='flexColumn'>

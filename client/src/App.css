@@ -9,6 +9,8 @@
   --black: #100b07;
   --gold: #fcc127;
   --red: #df0000;
+  --skyBlue: #28e6dd;
+  --darkBlue: #3587ce;
 
   /* --------- */
   --cream: #f7f3e3;
@@ -338,6 +340,11 @@ header {
   padding: 1vw;
 }
 
+.description {
+  display: flex;
+  flex-direction: row;
+}
+
 .wideContentBlock {
   padding: 10vw 20vw 10vw 20vw;
 }
@@ -364,6 +371,7 @@ header {
 .contentBlock {
   width: 38vw;
   padding: 18px;
+  margin: 0 40px 0 0;
 }
 
 .contentImage {
@@ -785,30 +793,56 @@ textarea:focus {
   .welcomeMsg {
     margin: 0 0 0 27vw;
   }
+
+  .service {
+    margin: 0 4vw;
+  }
+
+  .description {
+    flex-direction: column-reverse;
+  }
+
+  .contentImage {
+    width: 60vw;
+    height: 20vw;
+    margin: 0;
+    /* overflow: hidden; */
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .contentBlock {
+    width: 60vw;
+    margin: 0;
+  }
 }
 
 @media only screen and (max-width: 1140px) {
   .serviceImg {
-    height: 30vw;
-    width: 40vw;
+    height: 24vw;
+    width: 32vw;
   }
 
   .overflow {
-    height: 30vw;
-    width: 40vw;
+    height: 24vw;
+    width: 32vw;
+  }
+
+  .service {
+    margin: 0 3vw;
   }
 
   .minorTitle {
-    font-size: clamp(18px, 2vw, 24px);
+    font-size: clamp(20px, 1vw, 32px);
   }
 
-  .contentBlock {
+  /* .contentBlock {
     width: 40vw;
   }
 
   .contentImage {
     width: 40vw;
-  }
+  } */
 
   .wideContentBlock {
     padding: 10vw 8vw 10vw 8vw;
@@ -825,20 +859,68 @@ textarea:focus {
   .welcomeMsg {
     font-size: clamp(32px, 4vw, 46px);
   }
+
 }
 
 @media only screen and (max-width: 930px) {
+  .hero {
+    border: solid 6px #916f16;
+  }
+
   .pageTitle {
     padding: 38px 10px 34px 10px;
   }
 
   .welcomeMsg {
     margin: 0 0 0 0;
-    align-items: end;
+    align-items: center;
     opacity: 0.9;
+  }
+
+  .smallPageTitle {
+    margin: 0 2vw 0 0;
+  }
+
+  .serviceImg {
+    height: 42vw;
+    width: 56vw;
+    border-radius: 5px;
+  }
+
+  .overflow {
+    height: 42vw;
+    width: 56vw;
+  }
+
+  .minorTitle {
+    font-size: clamp(24px, 1vw, 38px);
+  }
+
+  .contentBlock {
+    width: 80vw;
+  }
+
+  .contentImage {
+    width: 80vw;
+    height: 35vw;
   }
 }
 
+@media only screen and (max-width: 750px) {
+  .smallPageTitle {
+    /* font-size: 72px; */
+    font-size: 10vw;
+  }
+
+  .pageTitle {
+    /* font-size: 62px; */
+    font-size: 8vw;
+ }
+
+ .welcomeMsg {
+  font-size: 28px;
+ }
+}
 
 /* =============================================================== Management/Settings ===================================== */
 .managementMenu {
@@ -1021,6 +1103,14 @@ textarea:focus {
   border: solid #cccccc 2px;
 }
 
+.blueHover:hover{
+  background-color: var(--skyBlue);
+}
+
+.blueHover:hover .sectionLabel {
+  background-color: var(--darkBlue);
+}
+
 /* .clientName {
 
 } */
@@ -1110,7 +1200,7 @@ textarea:focus {
 }
 
 .selectedDay {
-  background-color: #28e6dd;
+  background-color: var(--skyBlue);
 }
 
 .closedCalendarDay {

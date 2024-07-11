@@ -42,5 +42,5 @@ The svg border design assets were made and copyrighted by Shane Mindreau. The Ma
 
 <!-- https://www.remove.bg/upload -->
 
-<!-- - The Heroku API's ORIGIN variable allows cross browser requests. So make sure to update that. -->
+<!-- - The Heroku API's ORIGIN variable allows cross browser requests. So make sure to update that. Add a token secret key .env variable that matches the API your are using's token secret.-->
 
