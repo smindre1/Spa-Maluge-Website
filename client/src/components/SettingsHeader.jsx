@@ -51,8 +51,8 @@ function SettingsHeader() {
     <header>
         {/* if user is logged in show profile and logout buttons */}
         {Auth.loggedIn() ? (
-            <nav className="flexRow">
-                <p>{currDate}</p>
+            <nav className="flexRow settingsHeader">
+                <p className="date">{currDate}</p>
                 <div className="menu">
                     <a href="/management" className={home ? "highlight menuBarText" : "menuBarText"}>Home</a>
                     <a href="/management/reservations" className={reservations ? "highlight menuBarText" : "menuBarText"}>Reservations</a>

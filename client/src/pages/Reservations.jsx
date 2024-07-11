@@ -66,7 +66,8 @@ const Reservations = () => {
         setParam(targetElement.getAttribute("reservationid"));
     }
 
-    const findDuration = (services) => {
+    const findDuration = (services, element) => {
+        console.log(element, "ele")
         //Searches a specific inventory for an item, then returns a time duration based on the rate of a matching price
         const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `inventory/${services[0].itemCategory}`;
         fetch(url)
@@ -84,7 +85,9 @@ const Reservations = () => {
             const serviceData = data.Items.filter((item) => item.Item == name);
             const prices = serviceData[0]?.Prices;
             const ratio = prices ? prices.filter((rate) => rate?.cost == cost) : null;
+            console.log('ratio', ratio)
             if(ratio) {
+                setReload(true);
                 return ratio[0].time;
             } else {
                 return "N/A"
@@ -99,57 +102,24 @@ const Reservations = () => {
         <div className='center flexColumn'>
             {wait ? <h2>Loading...</h2> : null}
             {loadRoster.length
-            ? <p className='alignText'>Viewing {loadRoster.length} {loadRoster.length === 1 ? 'Reservation' : 'Reservations'}:</p>
-            : <p className='alignText'>There are no Reservations Currently</p>}
+            ? <p className='quantityLabel alignText'>Viewing {loadRoster.length} {loadRoster.length === 1 ? 'Reservation' : 'Reservations'}</p>
+            : <p className='quantityLabel alignText'>There are no Reservations Currently</p>}
 
             {loadRoster.map((reservation) => {
 
                 return (
-                <div className='clientReservationCard blueHover' key={reservation._id} reservationid={reservation._id} onClick={recordId}>
-                    <p className='cardText'>{TimeSlotIndex[reservation?.appointmentTime[0]] || "none"} (Appointment Time: {findDuration(reservation?.services)} Minutes)</p>
-                    <div className='flexRow'>
+                <div className='clientReservationCard listItem blueHover flexRow' key={reservation._id} reservationid={reservation._id} onClick={recordId}>
                     <section className='flexColumn'>
-                        <div className='flexRow'>
-                            <section>
-                                <p className='sectionLabel bold'>Client's Name</p>
-                                <p className='reservationData'>{reservation?.name || "No name"}</p>
-                            </section>
-                            <section>
-                                <p className='sectionLabel bold'>Email:</p>
-                                <p className='reservationData bold'>{reservation?.email || "none"}</p>
-                            </section>
-                            <section>
-                                <p className='sectionLabel'>Phone Number:</p>
-                                <p className='reservationData'>{reservation?.phone || "none"}</p>
-                            </section>
-                        </div>
-                        {reservation.specialRequests ? <section><p className='sectionLabel cardText'>Special Requests:</p><p className='reservationData'>{reservation.specialRequests}</p></section> : <section><p className='sectionLabel cardText'>Special Requests:</p><p className='reservationData'>N/A</p></section>}
+                        <p className='cardText'>{TimeSlotIndex[reservation?.appointmentTime[0]] || "none"} - {TimeSlotIndex[reservation?.appointmentTime[reservation?.appointmentTime.length - 1] + 1]} (Apt Time: {findDuration(reservation?.services)} Min)</p>
+                        {/* <p className='cardText'>{TimeSlotIndex[reservation?.appointmentTime[0]] || "none"} (Apt Time: {findDuration(reservation?.services)} Min)</p> */}
+                        <p className='cardText'>Date: {reservation?.day || "none"}</p>
                     </section>
-                        <section>
-                            <p className='sectionLabel cardText'>Service(s):</p>
-                            {reservation.services.map((service) => {
-                                return (
-                                <div key={service.client} className='serviceItemCard'>
-                                    <p className='cardText bold'>{service.type}</p>
-                                    <p className='cardText'>For: {service.client}</p>
-                                    <p className='cardText'>Price: ${service.price}</p>
-                                    <p className='cardText italic'>AddOns:</p>
-                                    {service.addOns.length < 1 ? <p className='cardText'>None</p> : null}
-                                    {service?.addOns.map((extraItem) => {
-                                        return(<div key={extraItem.addition} >
-                                            <p className='cardText bold'>Addition: {extraItem.addition}</p>
-                                            <p className='cardText'>Price: ${extraItem.price}</p>
-                                        </div>)
-                                    })}
-                                </div>
-                                )
-                            })}
-                        </section>
-                    </div>
                     
+                    <section className='flexColumn clientTag'>
+                        {/* <p className='italic'>Client's Name:</p> */}
+                        <p className='bold' >{reservation?.name || "No name"}</p>
                         
-                    
-                    <p className='cardText'>Date: {reservation?.day || "none"}</p>
+                    </section> 
                 </div>
                 );
             })}

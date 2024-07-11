@@ -152,6 +152,7 @@ header {
   margin-left: auto;
   /* padding-top: 1.5%; */
   padding-right: 2%;
+  align-items: center;
 }
 
 .highlight {
@@ -163,9 +164,20 @@ header {
   color: var(--white);
 }
 
+.date {
+  color: var(--cream);
+  margin: 0 0 0 10vw;
+}
+
+.settingsHeader {
+  width: inherit;
+  justify-content: space-between;
+}
+
 .menuBarText {
   font-size: 18px;
   font-weight: bold;
+  color: var(--cream);
   letter-spacing: 0.5px;
   padding: 0 0 5px 0;
   margin: 0 40px 0 0;
@@ -946,6 +958,7 @@ textarea:focus {
 
 .settingsIcon {
   width: 28px;
+  margin: 0 0 12px 0;
 }
 
 .settingsAnchor {
@@ -1094,21 +1107,37 @@ textarea:focus {
 
 /* ----------------------- Reservations Page ------------------------------ */
 
+.quantityLabel {
+  margin: 12px 0 0 10vw;
+  font-weight: 600;
+  font-size: 28px;
+}
+
 .clientReservationCard {
   background-color: #f0f0f0;
   padding: 9px 18px 9px 18px;
-  margin: 0 0 18px 0;
-  width: fit-content;
-  width: -moz-fit-content;
+  /* margin: 0 0 18px 0; */
+  /* width: fit-content;
+  width: -moz-fit-content; */
   border: solid #cccccc 2px;
+}
+
+.listItem {
+  margin: 18px 20vw 0 10vw;
+}
+
+.clientTag {
+  margin-left: auto;
 }
 
 .blueHover:hover{
   background-color: var(--skyBlue);
+  cursor: pointer;
 }
 
 .blueHover:hover .sectionLabel {
   background-color: var(--darkBlue);
+
 }
 
 /* .clientName {
