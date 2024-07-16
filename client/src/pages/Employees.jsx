@@ -143,12 +143,12 @@ const Employees = () => {
 
     return(
         <div className='center flexColumn'>
-            <h1 className='alignText'>Employee Roster:</h1> 
+            <h1 className='center'>Employee Roster:</h1> 
             {wait ? <h2>Loading...</h2> : null}
             {employeeRoster
-            ? <h2 className='alignText'>Viewing {employeeRoster.length} {employeeRoster.length === 1 ? 'Employee' : 'Employees'}</h2>
-            : <h2 className='alignText'>There are no Employees!</h2>}
-            <section className='flexRow employeeRoster'>
+            ? <h2 className='center'>Viewing {employeeRoster.length} {employeeRoster.length === 1 ? 'Employee' : 'Employees'}</h2>
+            : <h2 className='center'>There are no Employees!</h2>}
+            <section className='flexRow employeeRoster center'>
                 <div>
                     <p className='columnLabel'>Name:</p>
                     {employeeRoster ? employeeRoster.map((user) => {

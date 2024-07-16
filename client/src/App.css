@@ -165,6 +165,8 @@ header {
 }
 
 .date {
+  display: flex;
+  align-items: center;
   color: var(--cream);
   margin: 0 0 0 10vw;
 }
@@ -971,6 +973,7 @@ textarea:focus {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: 48px 0 0 0;
 }
 
 /* ----------------------- Login/Signup ------------------------------ */
@@ -1132,6 +1135,7 @@ textarea:focus {
 
 .blueHover:hover{
   background-color: var(--skyBlue);
+  border: var(--darkBlue) solid 2px;
   cursor: pointer;
 }
 
