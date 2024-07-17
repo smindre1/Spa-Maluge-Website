@@ -26,7 +26,6 @@ const Reservations = () => {
 
     useEffect(() => {
         if(month != '' && day != '' && year != '') {
-            console.log("complete date: ", month, day, year);
             // Make a fetch request for the reservation list
             const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations/" + `${year}/${month}/${day}`;
             fetch(url)
@@ -39,7 +38,6 @@ const Reservations = () => {
                 return response.json();
             })
             .then(data => {
-                console.log("data", data)
                 setReservationRoster(data.data);
                 setWait(false);
             })
@@ -146,7 +144,7 @@ const Reservations = () => {
 
     return(
         <div className='flexColumn'>
-            <section className='flexRow'>
+            <section className='flexRow managementPgBreak'>
                 {month != '' && day != '' && year != '' ? 
                 <select className="reservationFormFields" title="months" name="type" value={month} onChange={(e) => {setMonth(e.target.value); setDay('1'); setWait(true)}}>
                     <option value="" disabled>-Select Month-</option>

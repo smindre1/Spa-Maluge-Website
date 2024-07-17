@@ -1110,6 +1110,10 @@ textarea:focus {
 
 /* ----------------------- Reservations Page ------------------------------ */
 
+.managementPgBreak {
+  margin: 12px 0 0 10vw;
+}
+
 .quantityLabel {
   margin: 12px 0 0 10vw;
   font-weight: 600;

@@ -13,8 +13,9 @@ const ReservationForm = forwardRef((props, ref) => {
   //Used for the BookNow page, sends a signal for when to refresh receipt
   const [refresh, setRefresh] = useState(false);
   
-  //Used for the popup, but I plan to redirect page so it may not be necessary.
+  //Variables for the popup component
   const [success, setSuccess] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const reservationFormId = ref;
 
@@ -85,7 +86,7 @@ const ReservationForm = forwardRef((props, ref) => {
   const checkForm = () => {
     //This is the returned value which will determine if the form should be submitted or not
     let approved = true;
-
+    
     //Creates an array of each basic form field
     const items = [{value: name, id: nameId}, {value: email, id: emailId}, {value: number, id: numberId}];
     //Checks that each basic form field has content, otherwise changes to error state
@@ -100,7 +101,7 @@ const ReservationForm = forwardRef((props, ref) => {
     const serviceRefs = [serviceOneId, serviceTwoId, serviceThreeId, serviceFourId, serviceFiveId];
     //Checks each rendered service component for user completion, if not completed it makes an error message
     for(let i=0; i < keyCount; i++) {
-      if(serviceRefs[i].current.getAttribute("servicedate") == "" || serviceRefs[i].current.getAttribute("timeslots") == "" || serviceRefs[i].current.getAttribute("type") == "" || serviceRefs[i].current.getAttribute("client") == "" || serviceRefs[i].current.getAttribute("price") == "" || serviceRefs[i].current.getAttribute("itemcategory") == "" || serviceRefs[i].current.getAttribute("specialrequest") == "") {
+      if(serviceRefs[i].current.getAttribute("servicedate") == "" || serviceRefs[i].current.getAttribute("timeslots") == "" || serviceRefs[i].current.getAttribute("type") == "" || serviceRefs[i].current.getAttribute("client") == "" || serviceRefs[i].current.getAttribute("price") == "" || serviceRefs[i].current.getAttribute("itemcategory") == "") {
         // serviceDivId.current.firstChild.classList.add("error");
         serviceDivId.current.lastChild.classList.remove("hide");
         approved = false;
@@ -126,6 +127,7 @@ const ReservationForm = forwardRef((props, ref) => {
   }
 
   const makeReservation = (data) => {
+    setLoading(true);
     const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
     fetch(url, {
       method: 'POST',
@@ -283,7 +285,7 @@ const ReservationForm = forwardRef((props, ref) => {
         {keyCount > 4 ? <Service ref={serviceFiveId} keynumber={5}  refreshReceipt={setRefresh}/> : null}
         { keyCount < 6 ? <button type="button" onClick={() => {setKeyCount(keyCount + 1)}}>Add Another Service</button> : null}
         { keyCount > 1 ? <button type="button" onClick={() => {setKeyCount(keyCount - 1)}}>Remove Last Service</button> : null}
-        <p className="errorTxt hide">Full Name cannot be blank</p>
+        <p className="errorTxt hide">Please Complete The Form</p>
 
       </div>
 
@@ -298,7 +300,7 @@ const ReservationForm = forwardRef((props, ref) => {
 
       <button className="reservationFormBtn" type="submit">Reserve</button>
 
-      <Popup trigger={success} setTrigger={setSuccess}>
+      <Popup trigger={success} setTrigger={setSuccess} loading={loading} setLoading={setLoading}>
       </Popup>
     </form>
   );

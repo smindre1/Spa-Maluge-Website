@@ -303,9 +303,9 @@ const Settings = () => {
 
   return (
     <section>
-        <h1>Settings:</h1>
+        <h1 className="managementPgBreak">Settings:</h1>
         {/* Operation One: */}
-        <div>
+        <div className="managementPgBreak">
           <h2>Adjust Days Of the Week:</h2>
           {!UpdatingWeekdayCalendar ? <button onClick={() => {setUpdatingWeekdayCalendar(true); setUpdatingBusinessHours(false); setUpdatingSpecificHours(false); setUpdatingCalendar(false);}}>Change Which Weekdays You're Open For</button> : null}
           {UpdatingWeekdayCalendar ? 
@@ -371,7 +371,7 @@ const Settings = () => {
           : null}
         </div>
         {/* Operation Two: */}
-        <div>
+        <div className="managementPgBreak">
           <h2>Adjust Operating Hours:</h2>
           {!UpdatingBusinessHours ? <button onClick={() => {setUpdatingWeekdayCalendar(false); setUpdatingBusinessHours(true); setUpdatingSpecificHours(false); setUpdatingCalendar(false);}}>Change Your Business' General Operating Hours</button> : null}
           {UpdatingBusinessHours ? 
@@ -395,7 +395,7 @@ const Settings = () => {
           : null}
         </div>
         {/* Operation Three: */}
-        <div>
+        <div className="managementPgBreak">
           <h2>Open/Close For Specific Days of the Year (Holidays, Birthdays, etc...):</h2>
           {!UpdatingCalendar ? <button onClick={() => {setUpdatingWeekdayCalendar(false); setUpdatingBusinessHours(false); setUpdatingSpecificHours(false); setUpdatingCalendar(true)}}>Update Specific Operating Days</button> : null}
           {UpdatingCalendar ? 
@@ -423,7 +423,7 @@ const Settings = () => {
             : null}
         </div>
         {/* Operation Four: */}
-        <div>
+        <div className="managementPgBreak">
           <h2>Adjust Operating Hours For Specific Days (Example: Half Days):</h2>
           {!UpdatingSpecificHours ? <button onClick={() => {setUpdatingWeekdayCalendar(false); setUpdatingBusinessHours(false); setUpdatingCalendar(false); setUpdatingSpecificHours(true)}}>Update Specific Operating Days</button> : null}
           {UpdatingSpecificHours ? 
