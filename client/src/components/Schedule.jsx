@@ -19,13 +19,13 @@ const Schedule = forwardRef((props, scheduleId) => {
     useEffect(() => {
         setTimeSlot([]);
         fetchSchedule();
-        //Room Numbers are hard set by itemCategory based on how the database was seeded in the REST API
-        if(Number(props.itemCategory) == 1) {
+        //Room Numbers are hard set by itemcategory based on how the database was seeded in the REST API
+        if(Number(props.itemcategory) == 1) {
             roomOne ? setRoomNumber(1) : setRoomNumber(2);
-        } else if(Number(props.itemCategory) == 2) {
+        } else if(Number(props.itemcategory) == 2) {
             setRoomNumber(3);
         }
-    }, [props.year, props.month, props.day, props.itemCategory])
+    }, [props.year, props.month, props.day, props.itemcategory])
 
     useEffect(() => {
         props.setTrigger(true);
@@ -75,7 +75,7 @@ const Schedule = forwardRef((props, scheduleId) => {
     const fetchSchedule = () => {
         setWait(true);
         setSchedule();
-        const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `schedule/${Number(props.year)}/${props.month}/${Number(props.day)}/${Number(props.itemCategory)}/`;
+        const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `schedule/${Number(props.year)}/${props.month}/${Number(props.day)}/${Number(props.itemcategory)}/`;
         //Fetches schedule day data
         fetch(url)
         //Checks if the responding data is ok
@@ -89,7 +89,8 @@ const Schedule = forwardRef((props, scheduleId) => {
         })
         .then(data => {
             //Adjust to get room numbers from inventory item-list
-            if(Number(props.itemCategory) == 1) {
+            
+            if(Number(props.itemcategory) == 1) {
                 let roomOneSchedule = [];
                 let roomTwoSchedule = [];
                 data.data.timeSlots.map((timeSlot) => {
@@ -97,10 +98,10 @@ const Schedule = forwardRef((props, scheduleId) => {
                     timeSlot.availability[1].available == true ? roomTwoSchedule.push(timeSlot.time) : null;
                 });
                 setSchedule([roomOneSchedule, roomTwoSchedule]);
-            } else if(Number(props.itemCategory) == 2) {
+            } else if(Number(props.itemcategory) == 2) {
                 let roomThreeSchedule = [];
                 data.data.timeSlots.map((timeSlot) => {
-                    timeSlot.availability[2].available == true ? roomOneSchedule.push(timeSlot.time) : null;
+                    timeSlot.availability[2].available == true ? roomThreeSchedule.push(timeSlot.time) : null;
                 });
                 setSchedule([roomThreeSchedule]);
             }

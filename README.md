@@ -14,7 +14,7 @@
 
 - **Modern UI/UX:** Clean and professional design with intuitive navigation.
 
-- **Simple Messaging:** The 'contact us' webpage displays a contact form that allows customers to easily submit a message that will be sent to the business' email address using the service [smptjs](https://smtpjs.com/).
+- **Simple Messaging:** The 'contact us' webpage displays a contact form that allows customers to easily submit a message that will be sent to the business' email address using the service [smtpjs](https://smtpjs.com/).
 
 - **Customer Friendly Reservation:** The customers can go to the website's intelligible 'book now' page to make a reservation for up to five service (each with a maximum of two add-ons) in any available day and timeslot. Anything the customer selects to reserve will be display on the receipt summary on the right of the page.
 

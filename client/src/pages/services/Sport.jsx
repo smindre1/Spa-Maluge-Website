@@ -41,7 +41,6 @@ function Sport() {
 
       <section className='prgBreak whiteBackground smallPadding'>
         <h2 className='serviceSubTitle lineBreak'>Precaution</h2>
-        <h2 className='serviceSubTitle lineBreak'>Precaution</h2>
         <h3 className='prgSubject'>The procedure should not be performed on people with any of the following conditions as it can be dangerous.</h3>
         <p className='mainFont italic lineBreak'>Fresh fracture or wound(s), Thrombosis, Diseases of the heart and vascular system, Predisposition to increased blood pressure, Varicose veins, Pregnancy, Hernias, Inflammatory processes, and/or Tuberculosis.</p>
         <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3>

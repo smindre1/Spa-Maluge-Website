@@ -92,7 +92,6 @@ const Service = forwardRef((props, ref) => {
                 let list = orgList[i].Items.map((serviceObj) => {return {Item: serviceObj.Item, Prices: serviceObj.Prices, ItemCategory: itemCategoryNum.ItemCategory}});
                 listOfServices = [...listOfServices, ...list];
             }
-            // console.log(data, "inventory");
             setServiceList([...listOfServices]);
             
             const addOnServices = data.filter((itemList) => itemList.ItemCategory == 4);
@@ -139,6 +138,7 @@ const Service = forwardRef((props, ref) => {
     serviceList.map((service) => {
         if(service.Item == event.target.value) {
             setServiceItemCategory(Number(service.ItemCategory));
+            // console.log("Item Category", serviceItemCategory);
             //Sets the service's price rates
             setOptions(service.Prices);
         }
@@ -222,8 +222,8 @@ const Service = forwardRef((props, ref) => {
           <input className="reservationFormFields" type="text" placeholder="Special Requests" autoComplete="off" value={specialRequests} onChange={(e) => {setSpecialRequests(e.target.value)}} />
         </div>
 
-        {serviceDuration ? <div>
-          <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={serviceDuration} itemCategory={serviceItemCategory} schedule="true" handleChange={(e) => {updateDateAndTime(e)}} />
+        {serviceDuration ? <div duration={serviceDuration} itemcategory={serviceItemCategory}>
+          <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={serviceDuration} itemcategory={serviceItemCategory} schedule="true" handleChange={(e) => {updateDateAndTime(e)}} />
           <p className="errorTxt hide">Please choose an available appointment time</p>
         </div> : null}
       </div>

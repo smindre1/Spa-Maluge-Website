@@ -33,10 +33,6 @@ function Anticellulite() {
           <li className='mainFont bulletPoint'>Thrombosis and varicose veins of the limbs.</li>
           <li className='mainFont bulletPoint'>Temporary damage to the skin.</li>
           <li className='mainFont bulletPoint'>Fever with elevated body temperature.</li>
-          <li className='mainFont bulletPoint'></li>
-          <li className='mainFont bulletPoint'></li>
-          <li className='mainFont bulletPoint'></li>
-          <li className='mainFont bulletPoint'></li>
         </ul>
 
         <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>

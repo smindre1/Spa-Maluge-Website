@@ -126,44 +126,99 @@ const ReservationForm = forwardRef((props, ref) => {
     !hidden ? event.target.parentElement.lastChild.classList.add("hide") : null;
   }
 
-  const makeReservation = (data) => {
+  const sendEmail = async () => {
+    const bodyMessage = `${name}, your reservation at Spa Maluge has been registered.<br>`;
+    console.log(email, typeof email);
+    
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "malugemc@gmail.com",
+      Password : import.meta.env.VITE_SMTPJS_PASSWORD,
+      To : email,
+      From : "malugemc@gmail.com",
+      Subject : `Spa Maluge: Your Reservation Has Been Made!`,
+      Body : bodyMessage
+    }).then(
+      message => {
+        if(message != "OK") {
+          console.log("message: ", message);
+          alert("Something Went Wrong");
+        }
+      }
+    );
+  }
+
+  const makeReservation = (serviceRefs) => {
     setLoading(true);
     const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
-    fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data) // Convert data to JSON format
-    })
-    .then(response => {
-      // Check if the response is successful
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
+    //Loops through each customer selected service and makes the reservation
+    for(let i=0; i < keyCount; i++) {
 
-      if (response.ok) {
-        // Reset form after successful submission
-        setName("");
-        setEmail("");
-        setNumber("");
-        setKeyCount(1);
-        checkboxId.current.checked = false;
-        localStorage.removeItem("receipt");
+      const date = serviceRefs[i].current.getAttribute("servicedate");
+      let timeslots = serviceRefs[i].current.getAttribute("timeslots");
+      timeslots = timeslots.replaceAll(',', ', ');
+      timeslots = `[${timeslots}]`;
+      timeslots = JSON.parse(timeslots);
+      const serviceType = serviceRefs[i].current.getAttribute("type");
+      const client = serviceRefs[i].current.getAttribute("client");
+      const price = serviceRefs[i].current.getAttribute("price");
+      const itemCategory = serviceRefs[i].current.getAttribute("itemcategory");
+      const specialRequest = serviceRefs[i].current.getAttribute("specialrequest");
+      const roomNumber = serviceRefs[i].current.getAttribute("room");
+      // console.log("date: ", date, "type: ", serviceType, "client: ", client, "price: ", price, "item categ: ", itemCategory, "request: ", specialRequest);
 
-        //State change initiates popup
-        setSuccess(true);
+      //The payment is being left as a default N/A since the business is not collecting payment information at the moment
+      const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequest, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
+
+      //Takes the add on service values from the Service component
+      let addOnOne = serviceRefs[i].current.getAttribute("addonone").split(",");
+      addOnOne[1] = Number(addOnOne[1]);
+      let addOnTwo = serviceRefs[i].current.getAttribute("addontwo").split(",");
+      addOnTwo[1] = Number(addOnTwo[1]);
+
+      let addOnData = [];
+      //Checks the add on service values to see if the user selected them
+      if(addOnOne[0] != "") {
+        const addOnOneObj = {addition: addOnOne[0], price: addOnOne[1]};
+        addOnData.push(addOnOneObj);
       }
-      return response.json(); // Parse the JSON response
-    })
-    .then(data => {
-      // Work with the JSON response data
-      // console.log("Response data", data);
-    })
-    .catch(error => {
-      // Handle any errors that occur during the fetch
-      console.error('There was a problem with making the reservation:', error);
-    });
+      
+      if(addOnTwo[0] != "") {
+        const addOnTwoObj = {addition: addOnTwo[0], price: addOnTwo[1]}
+        addOnData.push(addOnTwoObj);
+      }
+      //If the user added any add on services then they are added to the reservation request body
+      addOnData.length > 0 ? reservationFormData.services[0].addOns = addOnData : null;
+      console.log('check one');
+      //Makes the POST request for each service selected
+      fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(reservationFormData) // Convert data to JSON format
+      })
+      .then(response => {
+        // Check if the response is successful
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        if (response.ok) {
+          //Add a counter to the status check
+          console.log("response: ", response)
+        }
+        return response.json(); // Parse the JSON response
+      })
+      .then(data => {
+        // Work with the JSON response data to do a status check
+        console.log("Response data:", data);
+      })
+      .catch(error => {
+        // Handle any errors that occur during the fetch
+        console.error('There was a problem with making the reservation:', error);
+      });
+    }
   }
 
   const handlePhone = (value) => {
@@ -199,62 +254,19 @@ const ReservationForm = forwardRef((props, ref) => {
       e.stopPropagation();
       return;
     } else {
-
       const serviceRefs = [serviceOneId, serviceTwoId, serviceThreeId, serviceFourId, serviceFiveId];
-
-      for(let i=0; i < keyCount; i++) {
-
-        // const allAddOns = [{addition: null, price: null}];
-
-        const date = serviceRefs[i].current.getAttribute("servicedate");
-        let timeslots = serviceRefs[i].current.getAttribute("timeslots");
-        timeslots = timeslots.replaceAll(',', ', ');
-        timeslots = `[${timeslots}]`;
-        timeslots = JSON.parse(timeslots);
-        const serviceType = serviceRefs[i].current.getAttribute("type");
-        const client = serviceRefs[i].current.getAttribute("client");
-        const price = serviceRefs[i].current.getAttribute("price");
-        const itemCategory = serviceRefs[i].current.getAttribute("itemcategory");
-        const specialRequest = serviceRefs[i].current.getAttribute("specialrequest");
-        const roomNumber = serviceRefs[i].current.getAttribute("room");
-
-
-        // console.log("date: ", date, "type: ", serviceType, "client: ", client, "price: ", price, "item categ: ", itemCategory, "request: ", specialRequest);
-
-        //The payment is being left as a default N/A since the business is not collecting payment information at the moment
-        const reservationFormData = { name: name, email: email, phone: number, day: date, appointmentTime: timeslots, services: [{type: serviceType, client: client, price: price, itemCategory: itemCategory}], specialRequests: specialRequest, payment: {cardOwner: "Bob", cardNumber: 1000, cardExpiration: 1000, securityCode: 123, billingAddress: "Unavailable"}, room: roomNumber };
-        // console.log(reservationFormData);
-
-        // type: serviceType, client: client, price: price, 
-
-        //Takes the add on service values from the Service component
-        let addOnOne = serviceRefs[i].current.getAttribute("addonone").split(",");
-        addOnOne[1] = Number(addOnOne[1]);
-        let addOnTwo = serviceRefs[i].current.getAttribute("addontwo").split(",");
-        addOnTwo[1] = Number(addOnTwo[1]);
-        // console.log("add on string one:", addOnOne, "add on string two:", addOnTwo);
-
-        let addOnData = [];
-        //Checks the add on service values to see if the user selected them
-        if(addOnOne[0] != "") {
-          const addOnOneObj = {addition: addOnOne[0], price: addOnOne[1]};
-          addOnData.push(addOnOneObj);
-        }
-        
-        if(addOnTwo[0] != "") {
-          const addOnTwoObj = {addition: addOnTwo[0], price: addOnTwo[1]}
-          addOnData.push(addOnTwoObj);
-        }
-        //If the user added any add on services then they are added to the reservation request body
-        addOnData.length > 0 ? reservationFormData.services[0].addOns = addOnData : null;
-
-        
-        
-        // console.log("Reservation Form:", reservationFormData);
-
-        makeReservation(reservationFormData);
-
-      }
+      await makeReservation(serviceRefs);
+      //State change initiates popup
+      setSuccess(true);
+      // Call function to email receipt
+      // sendEmail();
+      // Reset form after successful submission
+      setName("");
+      setEmail("");
+      setNumber("");
+      setKeyCount(1);
+      checkboxId.current.checked = false;
+      localStorage.removeItem("receipt");
     }
   };
 

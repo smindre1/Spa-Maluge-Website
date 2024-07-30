@@ -64,8 +64,8 @@ function Cupping() {
 
         <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>
         <ul>
-          <li className='mainFont bulletPoint'>30 Minutes - $90</li>
-          <li className='mainFont bulletPoint'>60 Minutes - $30</li>
+          {/* <li className='mainFont bulletPoint'>30 Minutes - $30</li>
+          <li className='mainFont bulletPoint'>60 Minutes - $90</li> */}
           <li className='mainFont bulletPoint'>Add On a Cupping Massage Therapy - Additional $20.00</li>
         </ul>
       </section>

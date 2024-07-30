@@ -22,18 +22,18 @@ const ContactForm = () => {
     Email.send({
       Host : "smtp.elasticemail.com",
       Username : "malugemc@gmail.com",
-      Password : 'BC26D149AEBFB730D449AE28B67C7EDBB638',
+      Password : import.meta.env.VITE_SMTPJS_PASSWORD,
       To : 'malugemc@gmail.com',
       From : "malugemc@gmail.com",
       Subject : `Website Msg: ${subject}`,
       Body : bodyMessage
-  }).then(
-    message => {
-      if(message != "OK") {
-        alert("Something Went Wrong");
+    }).then(
+      message => {
+        if(message != "OK") {
+          alert("Something Went Wrong");
+        }
       }
-    }
-  );
+    );
   }
 
   const checkForm = () => {

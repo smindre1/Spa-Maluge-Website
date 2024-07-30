@@ -16,7 +16,7 @@ const Calendar = forwardRef((props, ref) => {
     const [loadMonth, setMonth] = useState(months[today.getMonth()]);
     const [loadDays, setDays] = useState();
     const [loadDay, setDay] = useState(today.getDate());
-    // const [loadItemCategory, setItemCategory] = useState(props.itemCategory);
+    // const [loadItemCategory, setItemCategory] = useState(props.itemcategory);
     const [loadOpenStatus, setOpenStatus] = useState();
     const [updated, setUpdated] = useState(false);
     const [loadTimeSlots, setTimeSlots] = useState('');
@@ -101,7 +101,7 @@ const Calendar = forwardRef((props, ref) => {
 
             //open && targetYear > todayYear  ||  open && targetYear == todayYear && targetMonth > todayMonth || open && targetYear == todayYear && targetMonth == todayMonth && targetDay > todaysDay
             if(target === true && loadYear > today.getFullYear() || target === true && loadYear == today.getFullYear() && months.indexOf(loadMonth) > today.getMonth() || target === true && loadYear == today.getFullYear() && months.indexOf(loadMonth) == today.getMonth() && loadDay > today.getDate()) {
-                return(<Schedule ref={scheduleId} year={loadYear} month={loadMonth} day={loadDay} duration={props.duration} itemCategory={props.itemCategory} setTrigger={setUpdated} />)
+                return(<Schedule ref={scheduleId} year={loadYear} month={loadMonth} day={loadDay} duration={props.duration} itemcategory={props.itemcategory} setTrigger={setUpdated} />)
             } else {
                 return(<p value='invalid' className='schedule'>No available timeslots for this date.<br></br>(Please select another day)</p>)
             }
