@@ -69,6 +69,20 @@ function Home() {
 
       <section className="sectionBreak center">
         <div className="description">
+          <img className="contentImage white" src={DescImage} alt="Massage Services Image"></img>
+          <div className="descriptionText">
+            <h2 className="descriptionTitle mainFont">Our Spa Massage Services</h2>
+            <p>
+              Indulge your senses and embrace the ultimate relaxation with our exquisite massage services. Our team of skilled therapists offers a diverse range
+              of techniques and modalities to cater to your specific needs and preferences. Whether you seek relief from muscle tension, stress reduction, or
+              simply a moment of pure tranquility, we are committed to providing you with a deeply rejuvenating experience. From Swedish and deep tissue
+              massages to aromatherapy and hot stone treatments, each session is crafted to promote healing, balance, and holistic well-being. Step into our
+              serene sanctuary and let us melt away your cares, leaving you feeling restored, refreshed, and renewed.
+            </p>
+          </div>
+        </div>
+      
+        {/* <div className="description">
           <div className="contentBlock whiteBackground">
             <h2 className="prgTitle mainFont">Our Spa Massage Services</h2>
             <p className="mainFont">
@@ -81,7 +95,7 @@ function Home() {
           </div>
 
           <img className="contentImage pushLeft white" src={DescImage} alt="Massage Services Image"></img>
-        </div>
+        </div> */}
       </section>
 
       <section className="sectionBreak flexColumn">
