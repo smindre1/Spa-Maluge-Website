@@ -354,6 +354,12 @@ header {
   margin: 10vw 10vw 10vw 10vw;
   padding: 1vw;
   border-radius: 6px;
+  background-image: linear-gradient(45deg,#220E06, #531b04, #220E06);
+  color: var(--gold);
+}
+
+.colorLG {
+  color: var(--light-gold)
 }
 
 .description {
@@ -365,11 +371,11 @@ header {
 .descriptionText {
   position: absolute;
   color: #d0a023;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Aref Ruqaa Ink", serif;
   font-style: normal;
   line-height: normal;
-  margin: 21vw 6vw 0 6vw;
+  margin: 29vw 0 0 65vw;
   padding: 1vw 4vw 2vw 4vw;
   background-color: var(--opac-black);
   backdrop-filter: blur(2px);
@@ -497,11 +503,11 @@ header {
 @media (prefers-reduced-motion: no-preference) {
   .descriptionText {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateX(40px);
     /* For the moving animation */
     animation: fade-up linear forwards;
     animation-timeline: view();
-    animation-range: entry 70% cover 48%;
+    animation-range: entry 25% cover 31%;
   }
 
   @keyframes fade-up {

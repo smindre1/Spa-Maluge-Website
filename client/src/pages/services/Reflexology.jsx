@@ -9,8 +9,8 @@ function Reflexology() {
 
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Reflexology Massage</h1>
-          <p className='mainFont lineBreak'>Reflexology is more than just a foot massage. The theory behind foot massage, supported by centuries of experience, suggests that each internal human organ corresponds to a specific reflex zone on the foot. The outcome of a foot massage is the induction of physiological changes within the human body. This massage gradually alleviates tension, restores balance, and reinstates the normal functioning of internal systems. We inherited healing foot massage from the magical art of excellent doctors in China.</p>
-          <p className='mainFont lineBreak'>Stimulates blood circulation and lymph flow, promotes the removal of toxins, and heals whole body. Foot reflexology will relieve stress, tension and fatigue.</p>
+          <p className='mainFont lineBreak'>Reflexology is more than just a foot massage. The theory behind foot massage, supported by centuries of experience, suggests that each internal human organ corresponds to a specific reflex zone on the foot. The outcome of a foot massage is the induction of physiological changes within the human body. We inherited healing foot massage from the magical art of excellent doctors in China.</p>
+          {/* <p className='mainFont lineBreak'></p> */}
           {/* <h2 className='serviceSubTitle lineBreak'>What does a Swedish massage give?</h2>
           <ul>
             <li className='list bulletPoint mainFont'>The technique copes well with adhesions, various seals and scars in the joints.</li>
@@ -26,9 +26,17 @@ function Reflexology() {
 
       <section className='whiteBackground smallPadding prgBreak'>
         <h2 className='serviceSubTitle lineBreak'>Benefits</h2>
-        <p className='mainFont lineBreak'>In addition to the relaxation that you feel, reflex massage penetrates much deeper and we are not talking about subcutaneous tissues or muscles, we are talking about organs and all human systems. There are a huge number of biologically active points on the feet that are directly connected to all organs and systems. Thus, by providing the correct impact on certain areas of the foot, you can normalize the functioning of organs, improve overall well-being, increase immunity and body resistance.</p>
+        <ul>
+            <li className='list bulletPoint mainFont'>Stimulates blood circulation and lymph flow</li>
+            <li className='list bulletPoint mainFont'>Promotes the removal of toxins</li>
+            <li className='list bulletPoint mainFont'>Gradually alleviates tension</li>
+            <li className='list bulletPoint mainFont'>relieve stress, tension and fatigue</li>
+            <li className='list bulletPoint mainFont'>Reinstates the normal functioning of internal systems</li>
+            {/* <li className='list bulletPoint mainFont'></li> */}
+          </ul>
+        {/* <p className='mainFont lineBreak'>In addition to the relaxation that you feel, reflex massage penetrates much deeper and we are not talking about subcutaneous tissues or muscles, we are talking about organs and all human systems. There are a huge number of biologically active points on the feet that are directly connected to all organs and systems. Thus, by providing the correct impact on certain areas of the foot, you can normalize the functioning of organs, improve overall well-being, increase immunity and body resistance.</p>
         
-        <p className='mainFont lineBreak'>A wide range of health problems can be addressed through reflexology. From periodic headaches to diseases of the gastrointestinal tract and circulatory system. If tenderness or tenderness occurs when certain areas of the foot are stimulated, it usually indicates weakness or imbalance in the body in the corresponding organ. As early as the second session of applying proper pressure and manipulating the nerves in the foot, reflexology can help restore the flow of blood, nutrients and nerve impulses to the diseased organ, improving overall well-being and life balance.</p>
+        <p className='mainFont lineBreak'>A wide range of health problems can be addressed through reflexology. From periodic headaches to diseases of the gastrointestinal tract and circulatory system. If tenderness or tenderness occurs when certain areas of the foot are stimulated, it usually indicates weakness or imbalance in the body in the corresponding organ. As early as the second session of applying proper pressure and manipulating the nerves in the foot, reflexology can help restore the flow of blood, nutrients and nerve impulses to the diseased organ, improving overall well-being and life balance.</p> */}
 
       </section>
 

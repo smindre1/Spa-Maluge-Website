@@ -52,8 +52,8 @@ function Home() {
         <img className="bottomRightCorner" src={BRCorner} alt="Bottom Right Frame Corner"></img>
       </section>
 
-      <section className="introContent whiteBackground">
-        <p className="introText lineBreak mainFont bold">
+      <section className="introContent">
+        <p className="introText lineBreak mainFont bold colorLG">
           Welcome to Spa Maluge's Massage Salon, your oasis of relaxation nestled in the heart of charming Hoboken, New Jersey.
         </p>
         <p className="introText lineBreak mainFont">

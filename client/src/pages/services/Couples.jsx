@@ -9,8 +9,22 @@ function Couples() {
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Couples Massage</h1>
           <p className='mainFont lineBreak'>Enhance your relationship with a touch of romance by indulging in relaxing treatments at the cozy Spa Maluge. Immerse yourself in the France atmosphere as our specialists lavish you with care and attention. Experience the harmony of body and soul, sharing a state of complete peace together.</p>
+          <p className='mainFont lineBreak'>During a couples massage, you and your partner will receive simultaneous massages in the same room, allowing you to enjoy the nurturing, relaxing, and therapeutic benefits of massage together. Not only do couples massages provide a relaxing and romantic experience for you and your partner, but they also offer numerous benefits for your physical, mental, and relationship health.</p>
         </section>
       </div>
+
+      <section className='whiteBackground smallPadding prgBreak'>
+        <h2 className='serviceSubTitle lineBreak'>Here are 7 benefits you can enjoy when you opt for a couple's massage:</h2>
+        <ul>
+            <li className='list bulletPoint mainFont'>Strengthen your bond</li>
+            <li className='list bulletPoint mainFont'>Improve sleep time</li>
+            <li className='list bulletPoint mainFont'>Reduce stress and anxiety</li>
+            <li className='list bulletPoint mainFont'>Improve physical touch</li>
+            <li className='list bulletPoint mainFont'>Learn new massage techniques</li>
+            <li className='list bulletPoint mainFont'>Quality couple time</li>
+            <li className='list bulletPoint mainFont'>Create lasting memories</li>
+          </ul>
+      </section>
 
       <section className='whiteBackground smallPadding prgBreak'>
         <h2 className='serviceSubTitle lineBreak'>Mini Couple's Spa Day</h2>
