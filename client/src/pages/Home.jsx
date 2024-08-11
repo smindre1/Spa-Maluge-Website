@@ -35,7 +35,7 @@ function Home() {
   // }, [])
 
   return (
-    <div className="page">
+    <div>
       <section className="hero">
         {/* <img className="logo" src={Logo}></img> */}
         <img className="topLeftCorner" src={TLCorner} alt="Top Left Frame Corner"></img>

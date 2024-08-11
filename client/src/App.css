@@ -34,6 +34,9 @@ body {
   background-repeat: no-repeat;
   background-size: contain; */
   background-image: url(./assets/images/baroque_pixelated_pattern.png);
+  /* This is to prevent the fade-left animation from expanding the viewport */
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -370,12 +373,13 @@ header {
 
 .descriptionText {
   position: absolute;
+  bottom: 0;
   color: #d0a023;
   font-size: 18px;
   font-family: "Aref Ruqaa Ink", serif;
   font-style: normal;
   line-height: normal;
-  margin: 29vw 0 0 65vw;
+  margin: 0 0 1vw 65vw;
   padding: 1vw 4vw 2vw 4vw;
   background-color: var(--opac-black);
   backdrop-filter: blur(2px);
@@ -505,17 +509,23 @@ header {
     opacity: 0;
     transform: translateX(40px);
     /* For the moving animation */
-    animation: fade-up linear forwards;
+    animation-timing-function: ease-in-out;
+    animation: fade-left linear forwards;
     animation-timeline: view();
     animation-range: entry 25% cover 31%;
+
   }
 
-  @keyframes fade-up {
+  @keyframes fade-left {
     /* from {translate: 200px;} This moves from right to left*/
     /* from {transform: translateY(20px);} */
+    from {
+      opacity: 0;
+    }
     to {
       opacity: 1;
-      transform: translateY(0px);
+      transform: translateX(0px);
+      
     }
   }
 }
@@ -855,6 +865,12 @@ textarea:focus {
   }
 }
 
+@media only screen and (max-width: 1700px) {
+  .descriptionTitle {
+    font-size: 28px;
+  }
+}
+
 /* ------------------- Screen Adjustments --------------------- */
 @media only screen and (max-width: 1260px) {
   .welcomeMsg {
@@ -863,10 +879,6 @@ textarea:focus {
 
   .service {
     margin: 0 4vw;
-  }
-
-  .descriptionText {
-    margin: 25vw 6vw 0 6vw;
   }
 
   .contentBlock {
@@ -899,7 +911,7 @@ textarea:focus {
   }*/
 
   .descriptionText {
-    margin: 18vw 6vw 0 6vw;
+    margin: 0 6vw 14vw 6vw;
   }
 
   .wideContentBlock {
@@ -927,6 +939,10 @@ textarea:focus {
 
   .pageTitle {
     padding: 38px 10px 34px 10px;
+  }
+
+  .descriptionText {
+    margin: 0 6vw 10vw 6vw;
   }
 
   .welcomeMsg {
@@ -967,7 +983,7 @@ textarea:focus {
 @media only screen and (max-width: 810px) {
   .descriptionText {
     font-size: 18px;
-    margin: 14vw 6vw 0 6vw;
+    margin: 0 6vw 14vw 6vw;
     padding: 1vw 4vw 2vw 4vw;
   }
   
@@ -989,6 +1005,10 @@ textarea:focus {
     height: 700px;
   }
 
+  .descriptionText {
+    margin: 0 6vw 20vw 6vw;
+  }
+
   .smallPageTitle {
     /* font-size: 72px; */
     font-size: 10vw;
@@ -1002,6 +1022,37 @@ textarea:focus {
  .welcomeMsg {
   font-size: 28px;
  }
+
+ .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 30px 0;
+ }
+}
+
+@media only screen and (max-width: 550px) {
+  .descriptionText {
+    transform: translateY(40px);
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .contentImage {
+    display: none;
+  }
+
+  .description {
+    padding-top: 24px;
+    background-image: linear-gradient(45deg,#220E06, #531b04, #220E06);
+
+  }
+
+  .descriptionText {
+    bottom: initial;
+    position: inherit;
+    background-color: initial;
+  }
 }
 
 /* =============================================================== Management/Settings ===================================== */

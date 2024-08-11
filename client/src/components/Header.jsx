@@ -7,6 +7,7 @@ function Header() {
     const [services, setServices] = useState(false);
     const [contact, setContact] = useState(false);
     const [book, setBookNow] = useState(false);
+    const [history, setHistory] = useState(false);
 
 
     const pageSelection = () => {
@@ -15,11 +16,12 @@ function Header() {
         page == "/services" ? setServices(true) : setServices(false);
         page == "/contact-us" ? setContact(true) : setContact(false);
         page == "/book-now" ? setBookNow(true) : setBookNow(false);
+        page == "/history" ? setHistory(true) : setHistory(false);
     };
 
     useEffect(() => {
         pageSelection();
-    }, [home, services, contact, book])
+    }, [home, services, contact, book, history])
     
     return (
     <header className={home ? "homeHeader" : null}>
@@ -28,6 +30,7 @@ function Header() {
             <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
             {/* <a href="/services" className={services ? "highlight menuBarText" : "textColor menuBarText"}>Services</a> */}
             <a href="/book-now" className={book ? "highlight menuBarText" : "textColor menuBarText"}>Book</a>
+            <a href="/history" className={history ? "highlight menuBarText" : "textColor menuBarText"}>History</a>
             <a href="/contact-us" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
         </nav>
     </header>

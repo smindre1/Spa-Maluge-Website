@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import BookNow from "./pages/BookNow.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
+import History from "./pages/History.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Refund from "./pages/Refund.jsx";
 import Services from "./pages/Services.jsx";
@@ -51,6 +52,10 @@ const router = createBrowserRouter([
       {
         path: "/contact-us",
         element: <ContactUs />,
+      },
+      {
+        path: "/history",
+        element: <History />,
       },
       {
         path: "/privacy-policy",
