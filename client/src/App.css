@@ -24,13 +24,12 @@
   box-sizing: border-box;
   list-style: none;
   margin: 0;
-  /* font-family: ""; */
 }
 
 body {
   background-color: var(--pureWhite);
   height: 100%;
-  /* background-image: url(./assets/background_pattern.jpg);
+  /*
   background-repeat: no-repeat;
   background-size: contain; */
   background-image: url(./assets/images/baroque_pixelated_pattern.png);
@@ -122,16 +121,9 @@ a {
 }
 
 .mainFont {
-  /* font-family: "Dancing Script", cursive;
-  font-optical-sizing: auto;
-  font-weight: normal;
-  font-style: normal; */
   font-family: "Aref Ruqaa Ink", serif;
   font-style: normal;
   line-height: normal;
-
-  /* line-height: 36px; */
-  /* font-weight: 400; */
   font-size: 18px;
 }
 
@@ -231,7 +223,7 @@ header {
   /* border: solid 10px #A97F27; */
 
   background-size: cover;
-  background-image: url(./assets/images/hero/hero-four.png);
+  background-image: url(./assets/images/hero/hero-one.png);
 }
 
 .topLeftCorner {
@@ -310,8 +302,7 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: left;
-  /* font-family: "Times New Roman", Times, serif; */
-  font-family: "Great Vibes", cursive;
+  font-family: "Great Vibes";
   font-weight: bold;
   /* font-size: 72px;
   line-height: 72px; */
@@ -320,7 +311,7 @@ header {
   margin: 0 0px 0px 0;
 
   padding: 38px 0 34px 10px;
-  background-image: url(./assets/images/background.jpg);
+  background-image: url(./assets/images/title-background.webp);
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
@@ -331,27 +322,17 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* font-family: "Lato", sans-serif; */
-  /* font-style: italic; */
   font-weight: 400;
-  /* font-size: 36px; */
   font-size: 46px;
   margin: 0 0vw 0 24vw;
-  font-family: "Parisienne", cursive;
+  font-family: "Parisienne";
 
-  background-image: url(./assets/images/background.jpg);
+  background-image: url(./assets/images/sub-title-background.webp);
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }
-
-/* .pin {
-  font-family: "Pinyon Script", cursive;
-  font-family: "Alex Brush", cursive;
-  font-family: "Parisienne", cursive;
-  font-family: "Great Vibes", cursive;
-} */
 
 .introContent {
   margin: 10vw 10vw 10vw 10vw;
@@ -593,10 +574,7 @@ header {
 .heroTwo {
   background-size: cover;
   overflow: hidden;
-  background-image: url(./assets/images/hero/hero-two.png);
-  background-image: url(./assets/images/hero/hero-three.png);
-  background-image: url(./assets/images/hero/hero-four.png);
-  background-image: url(./assets/images/hero/hero-one-small.png);
+  background-image: url(./assets/images/hero/hero-two.webp); 
   background-color: #4a4a4a;
   margin: 10vw 0 0 0;
 }

@@ -1,4 +1,4 @@
-import CouplesImg from '../../assets/images/services/couple.jpg';
+import CouplesImg from '../../assets/images/services/couple.webp';
 
 function Couples() {
     return (

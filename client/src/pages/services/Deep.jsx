@@ -1,4 +1,4 @@
-import DeepImg from '../../assets/images/services/deep.jpg';
+import DeepImg from '../../assets/images/services/deep.webp';
 //Deep Tissue Massage Page
 function Deep() {
     return (

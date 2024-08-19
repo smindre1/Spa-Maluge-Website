@@ -1,4 +1,4 @@
-import AromaImg from '../../assets/images/services/Aroma.jpg';
+import AromaImg from '../../assets/images/services/Aroma.webp';
 
 function Aroma() {
     return (

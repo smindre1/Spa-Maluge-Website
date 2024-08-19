@@ -189,7 +189,7 @@ const ReservationForm = forwardRef((props, ref) => {
       }
       //If the user added any add on services then they are added to the reservation request body
       addOnData.length > 0 ? reservationFormData.services[0].addOns = addOnData : null;
-      console.log('check one');
+      console.log('check one: ', url, reservationFormData);
       //Makes the POST request for each service selected
       fetch(url, {
         method: 'POST',
@@ -201,6 +201,7 @@ const ReservationForm = forwardRef((props, ref) => {
       .then(response => {
         // Check if the response is successful
         if (!response.ok) {
+          console.log(response.body);
           throw new Error('Network response was not ok');
         }
 

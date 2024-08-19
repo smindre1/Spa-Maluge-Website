@@ -1,4 +1,4 @@
-import DetoxImg from '../../assets/images/services/detox.jpg';
+import DetoxImg from '../../assets/images/services/detox.webp';
 
 function Detox() {
     return (

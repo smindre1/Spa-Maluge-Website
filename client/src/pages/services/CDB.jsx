@@ -1,4 +1,4 @@
-import CBDImg from '../../assets/images/services/CBD.jpg';
+import CBDImg from '../../assets/images/services/CBD.webp';
 
 function CBD() {
     return (

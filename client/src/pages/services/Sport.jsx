@@ -1,4 +1,4 @@
-import SportImg from '../../assets/images/services/sport.jpg';
+import SportImg from '../../assets/images/services/sport.webp';
 
 function Sport() {
     return (

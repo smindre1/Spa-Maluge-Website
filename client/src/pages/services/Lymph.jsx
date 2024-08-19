@@ -1,4 +1,4 @@
-import LymphImg from '../../assets/images/services/lymph.jpg';
+import LymphImg from '../../assets/images/services/lymph.webp';
 
 function Lymph() {
     return (

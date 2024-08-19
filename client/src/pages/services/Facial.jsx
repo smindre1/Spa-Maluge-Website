@@ -1,4 +1,4 @@
-import FacialImg from '../../assets/images/services/facial.jpg';
+import FacialImg from '../../assets/images/services/facial.webp';
 
 function Facial() {
     return (

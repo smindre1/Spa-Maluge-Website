@@ -1,4 +1,4 @@
-import CuppingImg from '../../assets/images/services/cup.jpg';
+import CuppingImg from '../../assets/images/services/cup.webp';
 
 function Cupping() {
     return (

@@ -28,6 +28,20 @@
 
 All data is fetched and/or processed by the [Spa Maluge Database REST API](https://github.com/smindre1/Spa_Maluge_Database). This includes user data (specifically referencing business staff), inventory (The services provided), customer reservations, available business schedule, and available calendar days.
 
+## Fonts
+
+The following are the font-families used throughout the website:
+ - **Exported Fonts:** Lato, Aref Ruqaa Ink, Great Vibes, Parisienne
+ - **Default Fonts:** Serif, Sans-Serif, Times New Roman, Times
+
+### *The exported fonts from google are added through the index.html script:*
+```
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400;700&family=Great+Vibes&family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Parisienne&display=swap" rel="stylesheet">
+```
+
 ## License
 **The code is under the GNU General Public License v3.0**
 

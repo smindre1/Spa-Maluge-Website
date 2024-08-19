@@ -1,4 +1,4 @@
-import HeadImg from '../../assets/images/services/head.jpg';
+import HeadImg from '../../assets/images/services/head.webp';
 
 function Head() {
     return (

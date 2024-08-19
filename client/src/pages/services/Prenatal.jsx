@@ -1,4 +1,4 @@
-import PrenatalImg from '../../assets/images/services/prenatal.jpg';
+import PrenatalImg from '../../assets/images/services/prenatal.webp';
 
 function Prenatal() {
     return (

@@ -1,4 +1,4 @@
-import HotStoneImg from '../../assets/images/services/stone.jpg';
+import HotStoneImg from '../../assets/images/services/stone.webp';
 
 function HotStone() {
     return (

@@ -1,4 +1,4 @@
-import AnticelluliteImg from '../../assets/images/services/Anticellulite.jpg';
+import AnticelluliteImg from '../../assets/images/services/Anticellulite.webp';
 
 function Anticellulite() {
     return (

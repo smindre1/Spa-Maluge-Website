@@ -1,4 +1,4 @@
-import ReflexologyImg from '../../assets/images/services/reflexOne.jpg';
+import ReflexologyImg from '../../assets/images/services/reflexOne.webp';
 
 function Reflexology() {
     return (

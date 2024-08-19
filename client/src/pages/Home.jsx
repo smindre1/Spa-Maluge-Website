@@ -1,21 +1,21 @@
 import { useState, useEffect } from "react";
-import Detox from "../assets/images/services/small_detox.jpg";
-import Deep from "../assets/images/services/small_deep.jpg";
-import HotStone from "../assets/images/services/small_stone.jpg";
-import Sport from "../assets/images/services/small_sport.jpg";
-import CBD from "../assets/images/services/small_CBD.jpg";
-import Head from "../assets/images/services/small_head.jpg";
-import Prenatal from "../assets/images/services/small_prenatal.jpg";
-import CouplesOne from "../assets/images/services/small_couple.jpg";
+import Detox from "../assets/images/services/small_detox.webp";
+import Deep from "../assets/images/services/small_deep.webp";
+import HotStone from "../assets/images/services/small_stone.webp";
+import Sport from "../assets/images/services/small_sport.webp";
+import CBD from "../assets/images/services/small_CBD.webp";
+import Head from "../assets/images/services/small_head.webp";
+import Prenatal from "../assets/images/services/small_prenatal.webp";
+import CouplesOne from "../assets/images/services/small_couple.webp";
 
-import ReflexOne from "../assets/images/services/small_reflex.jpg";
+import ReflexOne from "../assets/images/services/small_reflex.webp";
 
-import Cup from "../assets/images/services/small_cup.jpg";
-import Facial from "../assets/images/services/small_facial.jpg";
-import Lymph from "../assets/images/services/small_lymph.jpg";
-import Anticellulite from "../assets/images/services/small_Anticellulite.jpg";
-import Aroma from "../assets/images/services/small_Aroma.jpg";
-import DescImage from "../assets/images/description_stock_image.png";
+import Cup from "../assets/images/services/small_cup.webp";
+import Facial from "../assets/images/services/small_facial.webp";
+import Lymph from "../assets/images/services/small_lymph.webp";
+import Anticellulite from "../assets/images/services/small_Anticellulite.webp";
+import Aroma from "../assets/images/services/small_Aroma.webp";
+import DescImage from "../assets/images/description_stock_image.webp";
 
 import Logo from "../assets/test_frame_w.png";
 
