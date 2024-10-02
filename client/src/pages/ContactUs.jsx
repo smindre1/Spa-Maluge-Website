@@ -4,7 +4,7 @@ function ContactUs() {
     return (
     <div className='contactPage flexColumn'>
       <h1 className='sectionTitle center'>Contact Us</h1>
-      <section className='center flexRow'>
+      <section className='contactPageContent'>
         <div className='businessInfo'>
           <h2 className="minorTitle">Business Contacts</h2>
           <p className='businessInfoTxt'>Call Us At: </p>

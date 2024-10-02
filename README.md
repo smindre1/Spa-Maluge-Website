@@ -58,3 +58,8 @@ The svg border design assets were made and copyrighted by Shane Mindreau. The Ma
 
 <!-- - The Heroku API's ORIGIN variable allows cross browser requests. So make sure to update that. Add a token secret key .env variable that matches the API your are using's token secret.-->
 
+<!-- 
+Changes Made:
+Cleaned up the Signup Component 
+Update the API to be the one to check if an email or phone number has already been used to make an account
+-->

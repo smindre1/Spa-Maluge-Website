@@ -33,6 +33,16 @@ function Header() {
             <a href="/history" className={history ? "highlight menuBarText" : "textColor menuBarText"}>History</a>
             <a href="/contact-us" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
         </nav>
+        <details className="mobileMenu">
+            <summary class="mobileMenuTitle">≡</summary>
+            <div className="mobileMenuDiv">
+                {home ? null : <a href="/" className="mobileMenuText">Home</a>}
+                {book ? null : <a href="/book-now" className="mobileMenuText">Book</a> }
+                {history ? null : <a href="/history" className="mobileMenuText">History</a> }
+                {contact ? null : <a href="/contact-us" className="mobileMenuText">Contact Us</a> }
+            </div>
+
+        </details>
     </header>
     );
   }

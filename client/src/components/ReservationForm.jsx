@@ -126,28 +126,6 @@ const ReservationForm = forwardRef((props, ref) => {
     !hidden ? event.target.parentElement.lastChild.classList.add("hide") : null;
   }
 
-  const sendEmail = async () => {
-    const bodyMessage = `${name}, your reservation at Spa Maluge has been registered.<br>`;
-    console.log(email, typeof email);
-    
-    Email.send({
-      Host : "smtp.elasticemail.com",
-      Username : "malugemc@gmail.com",
-      Password : import.meta.env.VITE_SMTPJS_PASSWORD,
-      To : email,
-      From : "malugemc@gmail.com",
-      Subject : `Spa Maluge: Your Reservation Has Been Made!`,
-      Body : bodyMessage
-    }).then(
-      message => {
-        if(message != "OK") {
-          console.log("message: ", message);
-          alert("Something Went Wrong");
-        }
-      }
-    );
-  }
-
   const makeReservation = (serviceRefs) => {
     setLoading(true);
     const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
@@ -189,7 +167,7 @@ const ReservationForm = forwardRef((props, ref) => {
       }
       //If the user added any add on services then they are added to the reservation request body
       addOnData.length > 0 ? reservationFormData.services[0].addOns = addOnData : null;
-      console.log('check one: ', url, reservationFormData);
+      // console.log('check one: ', url, reservationFormData);
       //Makes the POST request for each service selected
       fetch(url, {
         method: 'POST',
@@ -201,20 +179,20 @@ const ReservationForm = forwardRef((props, ref) => {
       .then(response => {
         // Check if the response is successful
         if (!response.ok) {
-          console.log(response.body);
+          // console.log(response.body);
           throw new Error('Network response was not ok');
         }
 
-        if (response.ok) {
-          //Add a counter to the status check
-          console.log("response: ", response)
-        }
+        // if (response.ok) {
+        //   //Add a counter to the status check
+        //   console.log("response: ", response)
+        // }
         return response.json(); // Parse the JSON response
       })
-      .then(data => {
-        // Work with the JSON response data to do a status check
-        console.log("Response data:", data);
-      })
+      // .then(data => {
+      //   // Work with the JSON response data to do a status check
+      //   console.log("Response data:", data);
+      // })
       .catch(error => {
         // Handle any errors that occur during the fetch
         console.error('There was a problem with making the reservation:', error);
@@ -259,8 +237,6 @@ const ReservationForm = forwardRef((props, ref) => {
       await makeReservation(serviceRefs);
       //State change initiates popup
       setSuccess(true);
-      // Call function to email receipt
-      // sendEmail();
       // Reset form after successful submission
       setName("");
       setEmail("");

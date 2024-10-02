@@ -7,16 +7,17 @@ function Footer() {
                     <img className='textColor' src='' alt=''></img>
                 </a>
             </nav> */}
-            <p className='textColor footerText'>©2024 Spa Maluge ® - All Rights Reserved</p>
+            
             <div className='flexRow'>
                 <a className='textColor footerLink' href='/'>Home</a>
-                <p className='textColor'>|</p>
+                {/* <p className='textColor'>|</p> */}
                 <a className='textColor footerLink' href='/privacy-policy'>Privacy Policy</a>
-                <p className='textColor'>|</p>
-                <a className='textColor footerLink' href='/cancellation-and-refund-policy'>Cancellation and Refund Policy</a>
-                <p className='textColor'>|</p>
+                {/* <p className='textColor'>|</p> */}
+                <a className='textColor footerLink' href='/cancellation-and-refund-policy'>Cancellations & Refunds</a>
+                {/* <p className='textColor'>|</p> */}
                 <a className='textColor footerLink' href='/contact-us'>Contact</a>
             </div>
+            <p className='textColor footerText'>©2024 Spa Maluge ® - All Rights Reserved</p>
         </div>
         
         

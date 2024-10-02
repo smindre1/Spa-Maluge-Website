@@ -152,6 +152,55 @@ header {
   align-items: center;
 }
 
+.menuBarText {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+  padding: 0 0 5px 0;
+  margin: 0 40px 0 0;
+}
+
+.menuBarText:hover {
+  color: var(--gold);
+}
+
+.mobile {
+  display: none;
+}
+
+.mobileMenuTitle {
+  color: var(--cream);
+  font-weight: 900;
+  font-size: 24px;
+  padding: 2px 10px;
+}
+
+.mobileMenuDiv {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  right: -40px;
+}
+
+.mobileMenu {
+  position: relative;
+  display: none;
+  /* background-color: var(--light-gold); */
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mobileMenuText {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--cream);
+  letter-spacing: 0.5px;
+  padding: 0 6px 6px 6px;
+  margin: 0 40px 0 0;
+  background-color: var(--base);
+}
+
 .highlight {
   border-bottom: solid var(--gold) 3px;
   color: var(--gold);
@@ -171,19 +220,6 @@ header {
 .settingsHeader {
   width: inherit;
   justify-content: space-between;
-}
-
-.menuBarText {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--cream);
-  letter-spacing: 0.5px;
-  padding: 0 0 5px 0;
-  margin: 0 40px 0 0;
-}
-
-.menuBarText:hover {
-  color: var(--gold);
 }
 
 .logo {
@@ -593,6 +629,12 @@ header {
   padding: 5vw 10vw 5vw 10vw;
 }
 
+.contactPageContent {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
 .businessInfo {
   width: 35vw;
   padding: 0 2.5vw 0 0;
@@ -663,10 +705,6 @@ textarea:focus {
   cursor: pointer;
 }
 
-/* .formSection {
-  width: 48.5%;
-} */
-
 .checkbox {
   width: 18px;
   height: 18px;
@@ -717,11 +755,15 @@ textarea:focus {
 }
 
 .footerText {
-  margin: 0 0 10px 0;
+  margin: 24px 0 10px 0;
 }
 
 .footerLink {
-  margin: 0 5px 0 5px;
+  margin: 0 12px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  text-decoration-skip-ink: auto;
 }
 
 .footerLink:hover {
@@ -1030,6 +1072,61 @@ textarea:focus {
     bottom: initial;
     position: inherit;
     background-color: initial;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .contactPageContent {
+    flex-direction: column;
+  }
+
+  .businessInfo {
+    width: inherit;
+    padding: 0 0 48px 0;
+    border: none;
+    border-bottom: solid var(--base) 2px;
+  }
+
+  .contactForm {
+    width: inherit;
+    margin: 0;
+  }
+
+  .formDiv {
+    flex-direction: column;
+  }
+
+  .businessInfo {
+    margin: 0 0 24px 0;
+  }
+
+  .footer {
+    padding: 20px 5px;
+  }
+
+  .footerLink {
+    text-align: center;
+    text-wrap: pretty;
+    width: 22vw;
+    margin: 0 4px;
+    text-decoration: underline;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .mobile {
+    display: inline-block;
+  }
+
+  .mobileMenu {
+    display: inline-block;
+  }
+
+  header {
+    padding: 4% 8px 2% 8px;
+    justify-content: end;
   }
 }
 

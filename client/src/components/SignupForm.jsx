@@ -1,8 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-// import { useMutation, useQuery } from '@apollo/client';
-// import { ADD_EMPLOYEE } from '../../utils/mutations';
-// import { GET_EMPLOYEES } from '../../utils/queries';
-// import Popup from '../components/Popup';
 import Auth from '../../utils/auth';
 
 const SignupForm = () => {
@@ -21,9 +17,6 @@ const SignupForm = () => {
   const numberId = useRef(null);
   const passwordId = useRef(null);
   const divId = useRef(null);
-
-  // const [addUser, { error, data }] = useMutation(ADD_EMPLOYEE);
-  // const { loading: wait, error: employeeError, data: employeeRoster} = useQuery(GET_EMPLOYEES);
 
   useEffect(() => {
     const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "users";
