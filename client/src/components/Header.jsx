@@ -24,7 +24,7 @@ function Header() {
     }, [home, services, contact, book, history])
     
     return (
-    <header className={home ? "homeHeader" : null}>
+    <header className={home ? "homeHeader" : null || history ? "historyHeader" : null}>
         {/* <img className="logo" src={LogoTwo} ></img> */}
         <nav className="menu">
             <a href="/" className={home ? "highlight menuBarText" : "textColor menuBarText"}>Home</a>
@@ -34,7 +34,7 @@ function Header() {
             <a href="/contact-us" className={contact ? "highlight menuBarText" : "textColor menuBarText"}>Contact Us</a>
         </nav>
         <details className="mobileMenu">
-            <summary class="mobileMenuTitle">≡</summary>
+            <summary className="mobileMenuTitle">≡</summary>
             <div className="mobileMenuDiv">
                 {home ? null : <a href="/" className="mobileMenuText">Home</a>}
                 {book ? null : <a href="/book-now" className="mobileMenuText">Book</a> }

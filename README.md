@@ -60,6 +60,5 @@ The svg border design assets were made and copyrighted by Shane Mindreau. The Ma
 
 <!-- 
 Changes Made:
-Cleaned up the Signup Component 
-Update the API to be the one to check if an email or phone number has already been used to make an account
+
 -->
