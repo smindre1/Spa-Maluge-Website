@@ -60,5 +60,5 @@ The svg border design assets were made and copyrighted by Shane Mindreau. The Ma
 
 <!-- 
 Changes Made:
-
+- Updated the dropdown menu's CSS.
 -->

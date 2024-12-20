@@ -181,7 +181,8 @@ header {
 .mobileMenuTitle {
   color: var(--cream);
   font-weight: 900;
-  font-size: 24px;
+  font-size: 60px;
+  line-height: 28px;
   padding: 2px 10px;
 }
 
@@ -189,14 +190,14 @@ header {
   position: absolute;
   display: flex;
   flex-direction: column;
-  right: -40px;
+  right: 0%;
 }
 
 .mobileMenu {
   position: relative;
   display: none;
   /* background-color: var(--light-gold); */
-  border-radius: 5px;
+  /* border-radius: 5px; */
   cursor: pointer;
 }
 
@@ -206,8 +207,9 @@ header {
   color: var(--cream);
   letter-spacing: 0.5px;
   padding: 0 6px 6px 6px;
-  margin: 0 40px 0 0;
-  background-color: var(--base);
+  /* margin: 0 40px 0 0; */
+  /* background-color: #ebebeb70; */
+  background-color: #220E0670;
 }
 
 .highlight {
@@ -306,20 +308,6 @@ header {
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .titleAnim {
-    opacity: 1;
-    /* transform: translateX(40px); */
-    /* For the moving animation */
-    /* animation: fade-right linear both;
-    animation-timeline: view();
-    animation-range: cover 30 cover 20; */
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    padding: 3vw 0 0 0;
-
-    /* padding: 10vw 20vw 10vw 0; */
-  }
 
   @keyframes fade-right {
     /* from {translate: 200px;} This moves from right to left*/
@@ -361,6 +349,12 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+.titleBreak {
+  display: flex;
+  justify-content: center;
+  padding: 3vw 0 0 0;
 }
 
 .welcomeMsg {
@@ -992,6 +986,10 @@ textarea:focus {
     padding: 38px 10px 34px 10px;
   }
 
+  .titleBreak {
+    padding: 0 0 0 0;
+  }
+
   .descriptionText {
     margin: 0 6vw 10vw 6vw;
   }
@@ -1080,15 +1078,67 @@ textarea:focus {
   align-items: center;
   margin: 0 0 30px 0;
  }
+ /* Switches the header to a more mobile friendly appearance */
+ .menu {
+  display: none;
+}
+
+.mobile {
+  display: inline-block;
+}
+
+.mobileMenu {
+  display: inline-block;
+}
+
+header {
+  padding: 4% 8px 2% 8px;
+  justify-content: end;
+}
 }
 
 @media only screen and (max-width: 550px) {
+  
+  .topLeftCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .topRightCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .bottomLeftCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .bottomRightCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .pageTitle {
+    flex-direction: column;
+    padding: 0 10px 6px 0;
+    line-height: normal;
+    font-size: 15vw;
+  }
+  
+  .smallPageTitle {
+    line-height: normal;
+    font-size: 8vw;
+  }
+  
+  .titleBreak {
+    margin: 0 10vw;
+  }
+  
+  .welcomeMsg {
+    font-size: 5.25vw;
+  }
+  
   .descriptionText {
     transform: translateY(40px);
   }
-}
 
-@media only screen and (max-width: 550px) {
   .contentImage {
     display: none;
   }
@@ -1096,7 +1146,6 @@ textarea:focus {
   .description {
     padding-top: 24px;
     background-image: linear-gradient(45deg, var(--brown), var(--lightBrown), var(--darkBrown));
-
   }
 
   .descriptionText {
@@ -1104,6 +1153,7 @@ textarea:focus {
     position: inherit;
     background-color: initial;
   }
+
 }
 
 @media only screen and (max-width: 430px) {
@@ -1141,23 +1191,6 @@ textarea:focus {
     width: 22vw;
     margin: 0 4px;
     text-decoration: underline;
-  }
-
-  .menu {
-    display: none;
-  }
-
-  .mobile {
-    display: inline-block;
-  }
-
-  .mobileMenu {
-    display: inline-block;
-  }
-
-  header {
-    padding: 4% 8px 2% 8px;
-    justify-content: end;
   }
 }
 

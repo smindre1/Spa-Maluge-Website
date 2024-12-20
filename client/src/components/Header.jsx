@@ -39,7 +39,7 @@ function Header() {
                 {home ? null : <a href="/" className="mobileMenuText">Home</a>}
                 {book ? null : <a href="/book-now" className="mobileMenuText">Book</a> }
                 {history ? null : <a href="/history" className="mobileMenuText">History</a> }
-                {contact ? null : <a href="/contact-us" className="mobileMenuText">Contact Us</a> }
+                {contact ? null : <a href="/contact-us" className="mobileMenuText">Contact</a> }
             </div>
 
         </details>

@@ -41,7 +41,7 @@ function Home() {
         <img className="topLeftCorner" src={TLCorner} alt="Top Left Frame Corner"></img>
         <img className="topRightCorner" src={TRCorner} alt="Top Right Frame Corner"></img>
         <img className="logo hide" src={LogoTwo} ></img>
-        <div className="titleAnim flexColumn">
+        <div className="titleBreak flexColumn">
           <h1 className="pageTitle">
             <p className="smallPageTitle">Welcome to </p> Spa Maluge
           </h1>

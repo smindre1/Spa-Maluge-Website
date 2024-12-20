@@ -52,11 +52,11 @@ function BookNow() {
 
   return (
     <div className="flexRow">
-        <section className={receiptHeight}>
+        {/* <section className={receiptHeight}>
           <div className="reservationReceipt">
             {!refresh ? loadServiceInfo() : null}
           </div>
-        </section>
+        </section> */}
         <ReservationForm ref={reservationFormId} updateReceipt={setRefresh}/>
     </div>
   );
