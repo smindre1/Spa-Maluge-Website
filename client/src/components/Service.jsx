@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, forwardRef } from "react";
 import Calendar from "./Calendar";
+import shopCheck from "../../utils/shopCheck";
 // import Popup from '../components/Popup';
 
 const Service = forwardRef((props, ref) => {
@@ -14,7 +15,6 @@ const Service = forwardRef((props, ref) => {
     const [checkAddOns, setCheckAddOns] = useState(false);
     //This is used to signify the end of the inventory fetch request
     const [wait, setWait] = useState(true);
-
 
     const [specialRequests, setSpecialRequests] = useState("");
     //Loads the rates for one services
@@ -33,9 +33,16 @@ const Service = forwardRef((props, ref) => {
     //The default value 1 is set because item category 1 is where the main services are located
     const [serviceItemCategory, setServiceItemCategory] = useState(1);
     const [serviceDuration, setServiceDuration] = useState("");
-    const [serviceTimeSlots, setServiceTimeSlots] = useState([]);
     const [serviceDate, setServiceDate] = useState("");
+    const [serviceTimeSlots, setServiceTimeSlots] = useState([]);
     const [room, setRoom] = useState("");
+    //Variables to check error status
+    const [duplicateError, setDuplicateError] = useState(false);
+    const [serviceTypeError, setServiceTypeError] = useState(false);
+    const [serviceDurationError, setServiceDurationError] = useState(false);
+    const [serviceTimeSlotsError, setServiceTimeSlotsError] = useState(false);
+    const [serviceDateError, setServiceDateError] = useState(false);
+    
 
     const calendarId = useRef(null);
 
@@ -67,40 +74,16 @@ const Service = forwardRef((props, ref) => {
       addOnData.length > 0 ? servicedata.addons = addOnData : null;
     
       receipt[keys[props.keynumber - 1]] = servicedata;
-      localStorage.setItem("receipt", JSON.stringify(receipt));
+      // localStorage.setItem("receipt", JSON.stringify(receipt));
 
       props.refreshReceipt(true);
 
     }, [serviceType, serviceClient, servicePrice, addOnOne[0], addOnTwo[0], serviceDuration])
 
     useEffect(() => {
-        const url = import.meta.env.VITE_SPA_MALUGE_DB_API + `inventory/`;
-
-        fetch(url)
-        .then(response => {
-            if (!response.ok) {
-            throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            const serviceCategories = data.filter((itemList) => itemList.ItemCategory == 1 || itemList.ItemCategory == 2);
-            let listOfServices = [];
-            for (let i=0; i < serviceCategories.length; i++) {
-                let itemCategoryNum = serviceCategories[i];
-                let orgList = serviceCategories
-                let list = orgList[i].Items.map((serviceObj) => {return {Item: serviceObj.Item, Prices: serviceObj.Prices, ItemCategory: itemCategoryNum.ItemCategory}});
-                listOfServices = [...listOfServices, ...list];
-            }
-            setServiceList([...listOfServices]);
-            
-            const addOnServices = data.filter((itemList) => itemList.ItemCategory == 4);
-            setAddOns(addOnServices[0].Items);
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-    }, []);
+      setServiceList(props.items);
+      setAddOns(props.additions);
+    }, [props.items, props.additions])
 
     useEffect(() => {
         serviceList.length > 0 ? setWait(false) : null;
@@ -127,6 +110,37 @@ const Service = forwardRef((props, ref) => {
         }
   }, [serviceDuration])
 
+  const inputsFilled = () => {
+    //Checks if all required service inputs are filled
+    if(serviceType != "" && serviceType != null) {
+      setServiceTypeError(false);
+    } else {
+      setServiceTypeError(true);
+      return false;
+    }
+
+    if(serviceDuration != "" && serviceDuration != null) {
+      serviceTypeError === false ? setServiceDurationError(false) : null;
+    } else {
+      setServiceDurationError(true);
+      return false
+    }
+
+    if(serviceDate != "" && serviceDate != null) {
+      serviceTypeError === false && serviceDurationError === false ? setServiceDateError(false) : null;
+    } else {
+      setServiceDateError(true);
+      return false;
+    }
+
+    if(serviceTimeSlots.length > 0 && serviceTimeSlots != null) {
+      serviceTypeError === false && serviceDurationError === false && serviceDateError == false ? setServiceTimeSlotsError(false) : null;
+    } else {
+      setServiceTimeSlotsError(true)
+      return false;
+    }
+    return true;
+  }
 
   //Updates the service's type, item category, rates (setOptions state variable), and resets the duration
   const checkServiceInfo = (event) => {
@@ -173,6 +187,39 @@ const Service = forwardRef((props, ref) => {
     }
   }
     
+  //Will record the service to local storage and reset variables
+  const addService = () => {
+    let list = localStorage.getItem("spa_maluge_cart");
+    list === null ? list = [] : list = JSON.parse(list);
+    
+    //Key For Local Storage variables:
+    //type: pro, client: cl, price: pr, itemcategory: cat, duration: dur, timeslots: app, servicedate: day, specialrequest: req, room: ro, addonone: a_i, addontwo: a_ii
+    const serviceObj = {pro:serviceType, cl:serviceClient, pr:servicePrice, cat:serviceItemCategory, dur:serviceDuration, app:serviceTimeSlots, day:serviceDate, req:specialRequests, ro:room, a_i:addOnOne, a_ii:addOnTwo};
+    
+    let duplicate = shopCheck.checkDouble(list, serviceObj);
+    duplicate ? setDuplicateError(true) : setDuplicateError(false);
+    
+    
+
+    if(!duplicate && inputsFilled()) {
+      list.push(serviceObj);
+      localStorage.setItem("spa_maluge_cart", JSON.stringify(list));
+
+      //Reset Service Values
+      setServiceType("");
+      setServiceClient("");
+      setServicePrice("");
+      setAddOnOne(["", 0]);
+      setAddOnTwo(["", 0]);
+      setAddOnCount(1);
+      setServiceItemCategory(1);
+      setServiceDuration("");
+      setServiceTimeSlots([]);
+      setServiceDate("");
+      setSpecialRequests("");
+      setRoom("");
+    }
+  }
 
   return (
     <div ref={serviceId} service-key={props.keynumber} type={serviceType} client={serviceClient} price={servicePrice} itemcategory={serviceItemCategory} duration={serviceDuration} timeslots={serviceTimeSlots} servicedate={serviceDate} specialrequest={specialRequests} room={room} addonone={addOnOne} addontwo={addOnTwo}>
@@ -183,6 +230,7 @@ const Service = forwardRef((props, ref) => {
                 return(<option key={item.Item} value={item.Item} itemcategory={item.itemCategory}>{item.Item}</option>)
             }) : null}
           </select>
+          {serviceTypeError ? <p className="errorTxt">*Please select a service</p> : null}
 
           {checkOptions ? 
           <select className="reservationFormFields" title="duration" name="type" value={serviceDuration} price={servicePrice} onChange={(e) => {setServiceDuration(e.target.value); updateServicePrice(e.target.value)}}>
@@ -192,6 +240,7 @@ const Service = forwardRef((props, ref) => {
             })}
           </select>
             : null}
+          {serviceDurationError ? <p className="errorTxt">*Please select the service's duration</p> : null}
 
           {checkAddOns ? 
           <select className="reservationFormFields" title="addon" name="type" value={addOnOne[0]} price={addOnOne[1]} onChange={(e) => {handleAddOnService(e, 1)}}>
@@ -211,8 +260,8 @@ const Service = forwardRef((props, ref) => {
           </select>
             : null}
 
-          { addOnCount < 2 ? <button type="button" onClick={() => {setAddOnCount(addOnCount + 1)}}>Create Add On</button> : null}
-          { addOnCount > 1 ? <button type="button" onClick={() => {setAddOnCount(addOnCount - 1)}}>Remove Add On</button> : null}
+          { addOnCount < 2 ? <button type="button" className="resBtn" onClick={() => {setAddOnCount(addOnCount + 1)}}>Create Add On</button> : null}
+          { addOnCount > 1 ? <button type="button" className="resBtn" onClick={() => {setAddOnCount(addOnCount - 1)}}>Remove Add On</button> : null}
           
           <input className="reservationFormFields" type="text" placeholder="Client for Service" autoComplete="off" value={serviceClient} onChange={(e) => {setServiceClient(e.target.value)}} />
           
@@ -224,9 +273,13 @@ const Service = forwardRef((props, ref) => {
 
         {serviceDuration ? <div duration={serviceDuration} itemcategory={serviceItemCategory}>
           <Calendar ref={calendarId} year="" month="" day="" timeslots="" duration={serviceDuration} itemcategory={serviceItemCategory} schedule="true" handleChange={(e) => {updateDateAndTime(e)}} />
-          <p className="errorTxt hide">Please choose an available appointment time</p>
+          {duplicateError ? <p className="errorTxt">*Duplicate timeslot conflict<br></br>*Please select either another room (if available) or another timeslot to avoid scheduling conflicts</p>: null}
+          {serviceDateError ? <p className="errorTxt">*Please choose an available date</p> : null}
+          {serviceTimeSlotsError ? <p className="errorTxt">*Please choose an available appointment time</p> : null}
         </div> : null}
-      </div>
+        <button type="button" onClick={() => {addService()}}>Add To Cart</button>
+        
+    </div>
   );
 });
 

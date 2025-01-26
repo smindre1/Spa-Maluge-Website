@@ -60,5 +60,40 @@ The svg border design assets were made and copyrighted by Shane Mindreau. The Ma
 
 <!-- 
 Changes Made:
-- Updated the dropdown menu's CSS.
+- Updated the reservation form.
+- Added Service Checks
+-Check if the service is filled before allowing it to be added
+-Compare dates, times, and rooms to make sure nothing conflicts (don't want to double book).
+- Complete service form/ service input error messages & error variables
+- Made it so services could be removed
+-make sure blank add ons are not displayed
+-gets local storage list and records it to local variable
+-add service (add to both local storage list and local variable)
+
+Changes Planned:
+****-reset local storage
+[Reservation Form]
+-reservation makes a check of times to see if they are all still available
+-confirm reservation with/through pay method
+
+-Set a check to see if the local storage value has been corrupted or changed in server (if so, reset it)
+
+-have booknow adjust reservationforms keycount
+
+- edit services
+- max of 5 services
+
+- Update reservationForm to remove keycount, serviceRefs, serviceId's
+
+- Fix calendar (so it goes to next available day, not current day.)
+- Make the calendar and schedule absolute
+
+- get rid of attributes on service component since they are not needed
+
+- add-on price is string when an actual add on service is selected
+
+- Check if date for services are still available (both if it was already reserved or if the date already past)
+
+- duplicate email issue
+
 -->

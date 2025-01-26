@@ -101,6 +101,12 @@ a {
   flex-direction: column;
 }
 
+.spcBtw {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .bkgrdColor {
   background-color: var(--base);
 }
@@ -732,10 +738,10 @@ textarea:focus {
 }
 
 .errorTxt {
-  font-size: 18px;
+  font-size: 16px;
   color: var(--red);
   text-align: left;
-  margin: -10px 0 10px;
+  margin: 0 0 6px 0;
 }
 
 .hide {
@@ -859,6 +865,16 @@ textarea:focus {
 .bookNowBtn:hover {
   background-color: var(--gold);
   color: var(--black);
+}
+
+.delBtn {
+  background-color: unset;
+  border: none;
+  color: var(--red);
+  cursor: pointer;
+  line-height: 0;
+  margin: 2px 0 0 0;
+  font-size: 18px;
 }
 
 /* ------------------- Privacy & Refund Pages --------------------- */
@@ -1253,22 +1269,39 @@ header {
 
 /* ----------------------- Reservation Form ------------------------------ */
 
+.resPage {
+  background-color: var(--fadedWhite);
+  min-height: 90vh;
+  scrollbar-width: none;
+}
+
+.resBtn {
+  width: fit-content;
+}
+
 .reservationForm {
   width: 50vw;
-  padding: 0 0 0 10vw;
+  padding: 0 0 10vh 10vw;
 }
 
 .reservationFormFields {
   margin: 4px 0 4px 0;
   color: var(--black);
   background-color: var(--pureWhite);
-  border: solid var(--black) 2px;
-  border-radius: 3px;
+  border: solid var(--black) 1px;
+  border-radius: 2px;
   opacity: 80%;
+  /* font-size: 16px; */
+  /* padding: 9px; */
   font-size: 16px;
-  padding: 9px;
+  padding: 4px;
   resize: none;
-  margin: 0 0 20px 0;
+}
+
+.reservationFormFields:focus {
+  border: solid var(--gold) 1px;
+  /* outline: var(--gold); */
+  box-shadow: 0 0 4px var(--lightBrown);
 }
 
 .reservationFormBtn {
@@ -1306,11 +1339,12 @@ header {
 .reservationSummary {
   /* width: 50vw; */
   /* display: flex; */
-  position: absolute;
-  right: 0;
+  /* position: absolute; */
+  /* right: 0; */
+  margin-left: auto;
   justify-content: right;
 
-  z-index: -1000;
+  /* z-index: -1000; */
   /* padding: 0 10vw 0 0; */
 }
 
@@ -1336,12 +1370,12 @@ header {
 
 .reservationReceipt {
   padding: 12px 10vw 90px 36px;
-  border-radius: 0 0 0 50px;
   border-left: dashed 2px #000000;
   background-color: var(--gray);
   position: sticky;
   top: 0;
-  
+  min-height: 100vh;
+  height: max-content;
 }
 
 .receiptCharges {
