@@ -105,6 +105,7 @@ const ReservationForm = forwardRef((props, ref) => {
 
     const url = import.meta.env.VITE_SPA_MALUGE_DB_API + "reservations";
     //Loops through each customer selected service and makes the reservation
+    let log = [];
     for(let i=0; i < cart.length; i++) {
       //Key For Local Storage variables:
       //product-type: pro, client: cl, price: pr, itemcategory: cat, duration: dur, timeslots: app, servicedate: day, specialrequest: req, room: ro, addonone: a_i, addontwo: a_ii
@@ -133,35 +134,35 @@ const ReservationForm = forwardRef((props, ref) => {
       }
       //If the user added any add on services then they are added to the reservation request body
       addOnData.length > 0 ? reservationFormData.services[0].addOns = addOnData : null;
-
-      //Makes the POST request for each service selected
-      fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(reservationFormData) // Convert data to JSON format
-      })
-      .then(response => {
-        // Check if the response is successful
-        if (!response.ok) {
-          // console.log(response.body);
-          throw new Error('Network response was not ok');
-        }
-        // if (response.ok) {
-        //   console.log("response: ", response)
-        // }
-        return response.json(); // Parse the JSON response
-      })
-      // .then(data => {
-      //   // Work with the JSON response data to do a status check
-      //   console.log("Response data:", data);
-      // })
-      .catch(error => {
-        // Handle any errors that occur during the fetch
-        console.error('There was a problem with making the reservation:', error);
-      });
+      log.push(reservationFormData)
     }
+      //Makes the POST request for all services selected
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(log) // Convert data to JSON format
+    })
+    .then(response => {
+      // Check if the response is successful
+      if (!response.ok) {
+        console.log("API Response: ", response.json());
+        throw new Error('Network response was not ok');
+      }
+      // if (response.ok) {
+      //   console.log("response: ", response)
+      // }
+      return response.json(); // Parse the JSON response
+    })
+    // .then(data => {
+    //   // Work with the JSON response data to do a status check
+    //   console.log("Response data:", data);
+    // })
+    .catch(error => {
+      // Handle any errors that occur during the fetch
+      console.error('There was a problem with making the reservation:', error);
+    });
   }
 
   const handlePhone = (value) => {
@@ -206,7 +207,7 @@ const ReservationForm = forwardRef((props, ref) => {
       setNumber("");
       setKeyCount(1);
       checkboxId.current.checked = false;
-      localStorage.removeItem("receipt");
+      localStorage.removeItem("spa_maluge_cart");
     }
   };
 
