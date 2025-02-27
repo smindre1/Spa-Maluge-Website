@@ -11,6 +11,7 @@ import History from "./pages/History.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Refund from "./pages/Refund.jsx";
 import Services from "./pages/Services.jsx";
+import Manicure from "./pages/Manicure.jsx";
 // All the service page imports:
 import Detox from "./pages/services/Detox.jsx";
 import Deep from "./pages/services/Deep.jsx";
@@ -34,6 +35,7 @@ import Employees from './pages/Employees.jsx';
 import Reservation from './pages/Reservation.jsx';
 import Reservations from './pages/Reservations.jsx';
 import Settings from './pages/Settings.jsx';
+import Test from './pages/Test.jsx';
 
 const router = createBrowserRouter([
   {
@@ -50,9 +52,17 @@ const router = createBrowserRouter([
         element: <BookNow />,
       },
       {
+        path: "/test",
+        element: <Test />,
+      },
+      {
         path: "/contact-us",
         element: <ContactUs />,
       },
+      {
+        path: "/manicures",
+        element: <Manicure />,
+      },      
       {
         path: "/history",
         element: <History />,

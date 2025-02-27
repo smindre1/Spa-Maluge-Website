@@ -7,13 +7,13 @@ function Aroma() {
         <img className='servicePageImg' src={AromaImg} alt='CBD Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>
-          <h1 className='serviceTitle lineBreak'>Aroma Massage</h1>
+          <h1 className='serviceTitle lineBreak'>Aroma Therapy Massage</h1>
           <p className='mainFont lineBreak'></p>
           <p className='mainFont lineBreak'></p>
 
-          <h2 className='serviceSubTitle lineBreak'>What is an Aroma Massage?</h2>
+          <h2 className='serviceSubTitle lineBreak'>What is an Aroma Therapy Massage?</h2>
           <p className='mainFont lineBreak'>Many years of practice have convincingly proven the benefits of essential oils. Due to their low molecular weight, they penetrate into the blood and have a beneficial effect on the entire body.</p>
-          <p className='mainFont lineBreak'>Aroma massage not only has a cosmetic effect (fights cellulite, rejuvenates the skin), but also has a positive effect on the nervous system.</p>
+          <p className='mainFont lineBreak'>An Aroma Therapy Massage not only has a cosmetic effect (fights cellulite, rejuvenates the skin), but also has a positive effect on the nervous system.</p>
           <p className='mainFont lineBreak'>A procedure for relieving tension, doubly useful thanks to acupressure and the use of aromatic mixtures. Oils and mixture composition are selected individually.</p>
         </section>
       </div>
@@ -28,7 +28,7 @@ function Aroma() {
           {/* <li className='mainFont bulletPoint'></li> */}
         </ul>
       
-        <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>
+        <a className='bookNowBtn' rel="noopener noreferrer" href='https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVHj0D92Kry9uKJLZng8QKTshJ0ig+gxT+zAwSlxpgmQd2t6awtBVDSehSgX6YMhE4h8pgxdqsCzEr3PDH+0LQVdjhosn8OItSRdV6n3hkyy1N2HWzaNyW8XqNpiT9XmVY58yGFBXV88yFpzAp0mtl+a5iHiywk18l79oNcGwD8O5Pm5WYh08sQbkBaiJFPyb/hN06+eIq38fL73V6miVAWmrNIWgQc8/RA/fOulplM2MyWEBL7g+6TjXJiiK82VD9W7pIJ5Mkg88wSdfjmMAcUFhXbH1QLYmnvwHZjmcYUYhKT327kzQyxp58PCGOwHr4Oyim430dsKuML7WBO0DOcquQMteJt06XBvXL3hd0WejRyiDxm0VNIrYeCsl3juH82LnfHls/8lSWEP+ipuE1SR98E2xadQPCZUPR/4FW1jG3bigvM0zGNLo3sWb112uyw=='>Book Your Massage Here</a>
         <ul>
             <li className='mainFont bulletPoint'>30 Minutes - $70.00</li>
             <li className='mainFont bulletPoint'>60 Minutes - $110.00</li>

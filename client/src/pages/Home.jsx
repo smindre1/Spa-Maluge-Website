@@ -52,7 +52,7 @@ function Home() {
         <img className="bottomRightCorner" src={BRCorner} alt="Bottom Right Frame Corner"></img>
       </section>
 
-      <section className="introContent">
+      {/* <section className="introContent">
         <p className="introText lineBreak mainFont bold colorLG">
           Welcome to Spa Maluge's Massage Salon, your oasis of relaxation nestled in the heart of charming Hoboken, New Jersey.
         </p>
@@ -65,7 +65,7 @@ function Home() {
           Step into our serene sanctuary and embark on a journey of blissful tranquility, where the stresses of the outside world melt away with every gentle
           touch. Discover the serenity you deserve at Spa Maluge.
         </p>
-      </section>
+      </section> */}
 
       <section className="sectionBreak center">
         <div className="description">
@@ -132,12 +132,12 @@ function Home() {
               </div>
             </a>
 
-            <a className="serviceAnchor" href="/services/sport-massage">
+            <a className="serviceAnchor" href="/services/sports-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Sport} alt="Sport Massage Image"></img>
+                  <img className="serviceImg" src={Sport} alt="Sports Massage Image"></img>
                 </div>
-                <h3 className="minorTitle">Sport Massage</h3>
+                <h3 className="minorTitle">Sports Massage</h3>
               </div>
             </a>
             {/* <a className="serviceAnchor" href="/services/cbd-custom-massage">

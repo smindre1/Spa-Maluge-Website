@@ -8,7 +8,7 @@ function Couples() {
 
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Couples Massage</h1>
-          <p className='mainFont lineBreak'>Enhance your relationship with a touch of romance by indulging in relaxing treatments at the cozy Spa Maluge. Immerse yourself in the France atmosphere as our specialists lavish you with care and attention. Experience the harmony of body and soul, sharing a state of complete peace together.</p>
+          <p className='mainFont lineBreak'>Enhance your relationship with a touch of romance by indulging in relaxing treatments at the cozy Spa Maluge. Immerse yourself in the tranquil atmosphere as our specialists lavish you with care and attention. Experience the harmony of body and soul, sharing a state of complete peace together.</p>
           <p className='mainFont lineBreak'>During a couples massage, you and your partner will receive simultaneous massages in the same room, allowing you to enjoy the nurturing, relaxing, and therapeutic benefits of massage together. Not only do couples massages provide a relaxing and romantic experience for you and your partner, but they also offer numerous benefits for your physical, mental, and relationship health.</p>
         </section>
       </div>
@@ -27,8 +27,8 @@ function Couples() {
       </section>
 
       <section className='whiteBackground smallPadding prgBreak'>
-        <h2 className='serviceSubTitle lineBreak'>Mini Couple's Spa Day</h2>
-        <p className='mainFont'>Our Mini Couple's Spa Day gives you and a loved one a good taste of each of our specialties including:</p>
+        <h2 className='serviceSubTitle lineBreak'>Couple's Mini Spa Day</h2>
+        <p className='mainFont'>Our Couple's Mini Spa Day gives you and a loved one a good taste of each of our specialties including:</p>
         <ul>
           <li className='list bulletPoint mainFont'>Two glasses of champagne</li>
           <li className='list bulletPoint mainFont'>Strawberries + Nutella Dip</li>
@@ -38,7 +38,7 @@ function Couples() {
         </ul>
         <p className='mainFont bold'>A $199 Value!</p>
         <p className='mainFont lineBreak bold'>Duration: 60 Mins Deluxe massage for couples</p>
-        <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>
+        <a className='bookNowBtn' rel="noopener noreferrer" href='https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVHj0D92Kry9uKJLZng8QKTshJ0ig+gxT+zAwSlxpgmQd2t6awtBVDSehSgX6YMhE4h8pgxdqsCzEr3PDH+0LQVdjhosn8OItSRdV6n3hkyy1N2HWzaNyW8XqNpiT9XmVY58yGFBXV88yFpzAp0mtl+a5iHiywk18l79oNcGwD8O5Pm5WYh08sQbkBaiJFPyb/hN06+eIq38fL73V6miVAWmrNIWgQc8/RA/fOulplM2MyWEBL7g+6TjXJiiK82VD9W7pIJ5Mkg88wSdfjmMAcUFhXbH1QLYmnvwHZjmcYUYhKT327kzQyxp58PCGOwHr4Oyim430dsKuML7WBO0DOcquQMteJt06XBvXL3hd0WejRyiDxm0VNIrYeCsl3juH82LnfHls/8lSWEP+ipuE1SR98E2xadQPCZUPR/4FW1jG3bigvM0zGNLo3sWb112uyw=='>Book Your Massage Here</a>
       </section>
 
       <section className='whiteBackground smallPadding prgBreak'>
@@ -55,7 +55,7 @@ function Couples() {
         </ul>
         <p className='mainFont bold'>90 minutes/ $299</p>
         <p className='mainFont lineBreak bold'>120 minutes/ $360</p>
-        <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>
+        <a className='bookNowBtn' rel="noopener noreferrer" href='https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVHj0D92Kry9uKJLZng8QKTshJ0ig+gxT+zAwSlxpgmQd2t6awtBVDSehSgX6YMhE4h8pgxdqsCzEr3PDH+0LQVdjhosn8OItSRdV6n3hkyy1N2HWzaNyW8XqNpiT9XmVY58yGFBXV88yFpzAp0mtl+a5iHiywk18l79oNcGwD8O5Pm5WYh08sQbkBaiJFPyb/hN06+eIq38fL73V6miVAWmrNIWgQc8/RA/fOulplM2MyWEBL7g+6TjXJiiK82VD9W7pIJ5Mkg88wSdfjmMAcUFhXbH1QLYmnvwHZjmcYUYhKT327kzQyxp58PCGOwHr4Oyim430dsKuML7WBO0DOcquQMteJt06XBvXL3hd0WejRyiDxm0VNIrYeCsl3juH82LnfHls/8lSWEP+ipuE1SR98E2xadQPCZUPR/4FW1jG3bigvM0zGNLo3sWb112uyw=='>Book Your Massage Here</a>
       </section>
 
       {/*

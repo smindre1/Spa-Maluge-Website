@@ -30,7 +30,7 @@ function Reflexology() {
             <li className='list bulletPoint mainFont'>Stimulates blood circulation and lymph flow</li>
             <li className='list bulletPoint mainFont'>Promotes the removal of toxins</li>
             <li className='list bulletPoint mainFont'>Gradually alleviates tension</li>
-            <li className='list bulletPoint mainFont'>relieve stress, tension and fatigue</li>
+            <li className='list bulletPoint mainFont'>Relieve stress, tension and fatigue</li>
             <li className='list bulletPoint mainFont'>Reinstates the normal functioning of internal systems</li>
             {/* <li className='list bulletPoint mainFont'></li> */}
           </ul>
@@ -45,7 +45,7 @@ function Reflexology() {
         <h3 className='prgSubject'>Important things to remember when performing reflexology</h3>
         <p className='mainFont italic lineBreak'>Reflexology is contraindicated during pregnancy. Drink water after the procedure to remove toxins and lactic acid accumulated during the massage.</p>
         <h3 className='prgBreak'>If you have serious leg problems, unhealed wounds on the body, blood vessel diseases associated with clots or varicose veins, consult your doctor before a reflexology session.</h3>
-        <a className='bookNowBtn' href='/book-now'>Book Your Massage Here</a>
+        <a className='bookNowBtn' rel="noopener noreferrer" href='https://www.vagaro.com/Users/BusinessWidget.aspx?enc=MMLjhIwJMcwFQhXLL7ifVHj0D92Kry9uKJLZng8QKTshJ0ig+gxT+zAwSlxpgmQd2t6awtBVDSehSgX6YMhE4h8pgxdqsCzEr3PDH+0LQVdjhosn8OItSRdV6n3hkyy1N2HWzaNyW8XqNpiT9XmVY58yGFBXV88yFpzAp0mtl+a5iHiywk18l79oNcGwD8O5Pm5WYh08sQbkBaiJFPyb/hN06+eIq38fL73V6miVAWmrNIWgQc8/RA/fOulplM2MyWEBL7g+6TjXJiiK82VD9W7pIJ5Mkg88wSdfjmMAcUFhXbH1QLYmnvwHZjmcYUYhKT327kzQyxp58PCGOwHr4Oyim430dsKuML7WBO0DOcquQMteJt06XBvXL3hd0WejRyiDxm0VNIrYeCsl3juH82LnfHls/8lSWEP+ipuE1SR98E2xadQPCZUPR/4FW1jG3bigvM0zGNLo3sWb112uyw=='>Book Your Massage Here</a>
         <ul>
           <li className='mainFont bulletPoint'>15 Minutes - $40</li>
           <li className='mainFont bulletPoint'>30 Minutes - $80</li>

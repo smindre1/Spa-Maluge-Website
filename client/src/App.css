@@ -17,6 +17,8 @@
   --brown: #220E06;
   --lightBrown: #531b04;
   --darkBrown: #220E06;
+  --bronze: #f4ad60;
+  --light-pink: #FFF0E4;
 
   /* --------- */
   --cream: #f7f3e3;
@@ -274,7 +276,7 @@ header {
   justify-content: center;
   border: solid 10px var(--dark-gold);
   /* border: solid 10px #A97F27; */
-
+  margin-bottom: 240px;
   background-size: cover;
   background-image: url(./assets/images/hero/hero-one.png);
 }
@@ -773,6 +775,7 @@ textarea:focus {
 .footerOne {
   background-color: #1b1b1b;
   box-shadow: 0 -20px 20px 10px #1b1b1b;
+  position: relative;
 }
 
 .footerTwo {
@@ -1590,6 +1593,209 @@ header {
   margin: 4px 0 4px 0;
 }
 
+/* ----------------------- Manicure Page ------------------------------ */
+
+.m-hero {
+  margin: 0 0 0 0;
+  justify-content: end;
+  border-bottom: 4px solid var(--light-gold);
+  /* border-width: 5px;
+  border-image: linear-gradient(to left, var(--black) 0%, var(--dark-gold) 100%) 1; */
+}
+
+/* .m-hero-img {
+
+} */
+
+.m-hero-title {
+  margin: 167px 70px 0 0;
+  font-weight: 100;
+  display: flex;
+
+  flex-direction: row;
+  justify-content: left;
+  font-family: "Great Vibes";
+  font-weight: 100px;
+  font-size: 145px;
+  padding: 38px 18px 34px 10px;
+  background-image: url(/src/assets/images/title-background.webp);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.m-hero-subtitle {
+  position: absolute;
+  margin: 190px 0 0 265px;
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 46px;
+  font-family: "Great Vibes";
+  background-image: url(/src/assets/images/title-background.webp);
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+}
+
+.m-section-title {
+  margin: 0 0 120px 0;
+  font-size: 120px;
+  font-family: "Great Vibes";
+  color: var(--bronze);
+  padding: 12px 0 12px 10vw;
+  background-color: var(--black);
+  position: relative;
+}
+
+.m-section {
+  position: relative;
+  background-color: var(--pureWhite);
+  padding: 0 0 10vw 0;
+}
+
+.m-height {
+  height: 1200px;
+}
+
+.m-service-module {
+  position: absolute;
+}
+
+.m-service {
+  margin: 0 0 12px 10vw;
+  width: fit-content;
+  max-width: 700px;
+  cursor:inherit;
+  position: relative;
+
+}
+
+.m-service-tag {
+  background-color: var(--light-pink);
+  color: var(--brown);
+  width: 650px;
+  padding: 16px;
+}
+
+.m-price {
+  /* background-color: var(--cream); */
+  /* background: linear-gradient(to right, var(--light-pink) 20%, var(--cream) 40%, var(--cream) 50%); */
+  background-color: var(--black);
+  color: var(--bronze);
+  font-size: 24px;
+  align-content: center;
+  padding: 0 12px 0 12px;
+  border-radius: 0 10px 10px 0;
+  min-width: fit-content;
+  width: 130px;
+  text-align: center;
+}
+
+.m-service:hover .m-price {
+  border-radius: 0 10px 0 0;
+}
+
+.m-service:hover .m-service-desc {
+  display: flex;
+  padding: 6px 12px 12px 12px;
+  height: 150px;
+}
+
+
+.m-service-desc {
+  font-size: 18px;
+  font-family: "Aref Ruqaa Ink", serif;
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.5s ease-in-out;
+  background-color: #ffece9;
+  margin: 6px 0 0 0;
+  padding: 6px 12px 0 12px;
+}
+
+.m-img-one {
+  width: 60vw;
+  justify-content: end;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  /* margin-top: 27vw; */
+  margin-top: 173px;
+}
+
+.m-img-two {
+  width: 50vw;
+  justify-content: end;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  /* margin-top: 27vw; */
+  margin-top: 173px;
+}
+
+.m-service-tag-b {
+  background-color: #c31954;
+  color: var(--brown);
+  width: 650px;
+  padding: 16px;
+}
+
+.m-price-b {
+  background-color: var(--black);
+  color: var(--bronze);
+  font-size: 24px;
+  align-content: center;
+  padding: 0 12px 0 12px;
+  border-radius: 0 10px 0 0;
+  min-width: fit-content;
+  width: 130px;
+  text-align: center;
+}
+
+.m-service-desc-b {
+  font-size: 18px;
+  font-family: "Aref Ruqaa Ink", serif;
+  background-color: #ea599d;
+  padding: 6px 12px 24px 12px;
+}
+
+.m-service-sub-title {
+  font-family: "Great Vibes";
+  font-size: 48px;
+  margin: 64px 0 18px 10vw;
+  color: var(--dark-gold);
+}
+
+.m-service-sub-tag {
+  font-size: 18px;
+  font-family: "Aref Ruqaa Ink", serif;
+  font-weight: 800;
+  margin: 0 0 12px 10vw;
+}
+
+.m-service-tag-c {
+  /* background-color: var(--light-gold); */
+  font-size: 28px;
+  color: var(--dark-gold);
+  border: solid 2px var(--dark-gold);
+  width: 350px;
+  background-color: var(--light-gold);
+  padding: 16px;
+}
+
+.m-price-c {
+  background-color: var(--black);
+  color: var(--bronze);
+  font-size: 24px;
+  align-content: center;
+  padding: 0 12px 0 12px;
+  border-radius: 0 12px 12px 0;
+  min-width: fit-content;
+  width: 130px;
+  text-align: center;
+}
+
 /* ----------------------- Employee Roster Page ------------------------------ */
 
 .employeeRoster {
@@ -1710,4 +1916,12 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+/* ------------------------------------ Misc. --------------------------------------- */
+
+.vagaro a {
+  font-size: 14px;
+  color: #AAA;
+  text-decoration: none;
 }

@@ -91,6 +91,9 @@ Changes Planned:
 
 -0$ for service is an incorrect color in receipt summary
 
+-Animation for receipt
+-client name variable for receipt
+
 - update server with heroku remote commit
     - change email address/password
     - update email html
