@@ -100,24 +100,24 @@ const ContactForm = () => {
 
   return (
     <form className="contactForm" autoComplete="off" onSubmit={handleSubmit}>
-      <h2 className="minorTitle">Send A Message:</h2>
+      <h2 className="minorTitle colorBckgrdG">Send A Message:</h2>
       <div ref={divId} className="formDiv">
         <div ref={nameId} className="flexColumn">
-          <input className="formFields" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
+          <input className="formFields lrg-input" type="text" placeholder="Full Name" autoComplete="off" value={name} onChange={(e) => {setName(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Full Name cannot be blank</p>
         </div>
         <div ref={emailId} className="flexColumn">
-          <input className="formFields" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => {setEmail(e.target.value); handleChange(e)}} />
+          <input className="formFields lrg-input" type="text" placeholder="Email" autoComplete="off" value={email} onChange={(e) => {setEmail(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Email cannot be blank</p>
         </div>
       </div>
       <div className="formDiv">
         <div ref={subjectId} className="flexColumn">
-          <input className="formFields" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => {setSubject(e.target.value); handleChange(e)}} />
+          <input className="formFields lrg-input" type="text" placeholder="Subject" autoComplete="off" value={subject} onChange={(e) => {setSubject(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Subject cannot be blank</p>
         </div>
         <div ref={numberId} className="flexColumn">
-          <input className="formFields" type="tel" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handlePhone(e.target.value); handleChange(e)}} />
+          <input className="formFields lrg-input" type="tel" placeholder="Phone Number" autoComplete="off" value={number} onChange={(e) => {setNumber(e.target.value); handlePhone(e.target.value); handleChange(e)}} />
           <p className="errorTxt hide">Phone Number cannot be blank</p>
         </div>
       </div>

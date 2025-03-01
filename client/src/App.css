@@ -648,38 +648,62 @@ header {
 
 /* ------------------- Contact Page ------------------- */
 
+.contactTitle {
+  font-family: "Great Vibes";
+  font-weight: bold;
+  font-size: 82px;
+  line-height: 80px;
+  margin: 0 0px 0px 0;
+  padding: 38px 0 34px 0;
+  background-image: url(./assets/images/title-background.webp);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .contactPage {
-  padding: 5vw 10vw 5vw 10vw;
+  margin: 5vw 16vw 5vw 16vw;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: var(--black);
+  border-radius: 38px;
+  border: solid 2px var(--dark-gold);
 }
 
 .contactPageContent {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .businessInfo {
-  width: 35vw;
-  padding: 0 2.5vw 0 0;
-  border-right: solid var(--base) 2px;
+  text-align: center;
+  padding: 24px 0;
+  border-radius: 2px;
 }
 
 .businessInfoTxt {
   font-size: 18px;
+  font-weight: 900;
   margin: 0 0 5px 0;
+  background-image: url(/src/assets/images/title-background.webp);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* ------------------- Contact Form ------------------- */
 
 .contactForm {
-  width: 35vw;
   text-align: center;
-  margin: 0 0 0 2.5vw;
+  margin: 68px 0 30px 0;
 }
 
 .formFields {
   color: var(--black);
-  background-color: var(--pureWhite);
+  background-color: var(--light-gold);
   border: solid var(--black) 2px;
   border-radius: 3px;
   opacity: 80%;
@@ -709,9 +733,13 @@ textarea:focus {
   justify-content: space-between;
 }
 
+.lrg-input {
+  width: 290px;
+}
+
 .formBtn {
   color: var(--pureWhite);
-  background-color: var(--black);
+  background-color: var(--dark-gold);
   border: solid var(--black) 2px;
   border-radius: 3px;
   font-size: 16px;
@@ -722,9 +750,10 @@ textarea:focus {
 }
 
 .formBtn:hover {
+  color: var(--black);
   box-shadow: 0 0 10px var(--lightgold);
   border: solid var(--black) 2px;
-  background-color: var(--gold);
+  background-color: var(--light-gold);
   cursor: pointer;
 }
 
@@ -994,6 +1023,9 @@ textarea:focus {
     font-size: clamp(32px, 4vw, 46px);
   }
 
+  .contactPage {
+    margin: 5vw 6vw;
+  }
 }
 
 @media only screen and (max-width: 930px) {
@@ -1060,11 +1092,28 @@ textarea:focus {
     font-size: 28px;
   }
 
-    .contentImage {
+  .contentImage {
     height: 80vw;
     overflow: hidden;
     object-fit: cover;
     object-position: bottom;
+  }
+
+  .contactForm {
+    width: 65vw;
+  }
+
+  .contactPage {
+    margin: 0;
+    border-radius: initial;
+    border: none;
+  }
+
+  .lrg-input {
+    width: initial;
+  }
+  .formDiv {
+    flex-direction: column;
   }
 }
 
@@ -1283,7 +1332,7 @@ header {
 }
 
 .reservationForm {
-  width: 50vw;
+  /* width: 50vw; */
   padding: 0 0 10vh 10vw;
 }
 
