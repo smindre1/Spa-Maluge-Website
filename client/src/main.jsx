@@ -35,6 +35,7 @@ import Employees from './pages/Employees.jsx';
 import Reservation from './pages/Reservation.jsx';
 import Reservations from './pages/Reservations.jsx';
 import Settings from './pages/Settings.jsx';
+import Salt from './pages/services/Salt.jsx';
 import Test from './pages/Test.jsx';
 
 const router = createBrowserRouter([
@@ -50,10 +51,6 @@ const router = createBrowserRouter([
       {
         path: "/book-now",
         element: <BookNow />,
-      },
-      {
-        path: "/test",
-        element: <Test />,
       },
       {
         path: "/contact-us",
@@ -135,6 +132,10 @@ const router = createBrowserRouter([
       {
         path: "/services/aroma-therapy-massage",
         element: <Aroma />,
+      },
+      {
+        path: "/services/himalayan-salt-stone-massage",
+        element: <Salt />,
       },
       // //Management/Settings Pages
       {

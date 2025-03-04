@@ -7,6 +7,8 @@ import CBD from "../assets/images/services/small_CBD.webp";
 import Head from "../assets/images/services/small_head.webp";
 import Prenatal from "../assets/images/services/small_prenatal.webp";
 import CouplesOne from "../assets/images/services/small_couple.webp";
+import SaltOne from "../assets/images/services/salt_one.webp";
+import SaltTwo from '../assets/images/services/salt_three.webp';
 
 import ReflexOne from "../assets/images/services/small_reflex.webp";
 
@@ -17,7 +19,8 @@ import Anticellulite from "../assets/images/services/small_Anticellulite.webp";
 import Aroma from "../assets/images/services/small_Aroma.webp";
 import DescImage from "../assets/images/description_stock_image.webp";
 
-import Logo from "../assets/test_frame_w.png";
+
+// import Logo from "../assets/test_frame_w.png";
 
 import TLCorner from "../assets/images/decals/TL_Baroque_Corner.svg";
 import TRCorner from "../assets/images/decals/TR_Baroque_Corner.svg";
@@ -224,6 +227,14 @@ function Home() {
                 <h3 className="minorTitle">Aroma Therapy Massage</h3>
               </div>
             </a>
+            <a className="serviceAnchor" href="/services/himalayan-salt-stone-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={SaltOne} alt="Himalayan Salt Stone Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Himalayan Salt Stone Massage</h3>
+              </div>
+            </a>
           </div>
         </div>
 
@@ -263,6 +274,15 @@ function Home() {
                   <img className="serviceImg" src={Cup} alt="Cupping Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Cupping Massage</h3>
+              </div>
+            </a>
+
+            <a className="serviceAnchor" href="/services/himalayan-salt-stone-massage">
+              <div className="service">
+                <div className="overflow addOnImg">
+                  <img className="serviceImg" src={SaltTwo} alt="Himalayan Salt Stone Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Himalayan Salt Stone Massage</h3>
               </div>
             </a>
           </div>
