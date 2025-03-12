@@ -2079,6 +2079,24 @@ textarea:focus {
     display: none;
   }
 
+  .m-hero-title {
+    font-size: 64px;
+    margin: 82px 0px 24px 20vw;
+  }
+
+  .m-hero-subtitle {
+    font-size: 24px;
+    padding: 0 0 0 131px;
+    margin: 112px 0 0 20vw;
+  }
+
+  .m-title-hg-mobile {
+    width: 100vw;
+    height: 240px;
+    left: 0%;
+    top: 36px;
+  }
+
   .m-img-one {
     right: 0%;
     top: initial;
@@ -2095,6 +2113,14 @@ textarea:focus {
     bottom: 10%;
     border-radius: 100%;
     border: solid 2px var(--black);
+  }
+
+  .m-section-title {
+    font-size: 52px;
+  }
+
+  .m-service-tag-c {
+    font-size: 18px;
   }
 }
 
@@ -2134,4 +2160,23 @@ textarea:focus {
     margin: 0 4px;
     text-decoration: underline;
   }
+
+  .m-hero-title {
+    font-size: 52px;
+    margin: 80px 0px 24px 20vw;
+  }
+
+  .m-hero-subtitle {
+    font-size: 20px;
+    padding: 0 0 0 100px;
+    margin: 112px 0 0 20vw;
+  }
+
+  /* .m-title-hg-mobile {
+    width: 100vw;
+    height: 240px;
+    left: 0%;
+    top: 36px;
+  } */
+
 }
