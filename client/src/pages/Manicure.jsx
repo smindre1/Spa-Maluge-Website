@@ -1,4 +1,4 @@
-import heroImg from "../assets/images/manicure/img_1576.jpg";
+import heroImg from "../assets/images/manicure/img_15760.jpg";
 import ImgOne from "../assets/images/manicure/img_1577.png";
 import flwrBr from "../assets/images/manicure/flower-border.jpg";
 import ImgTwo from "../assets/images/manicure/img_1579.png";
@@ -6,10 +6,12 @@ import ImgTwo from "../assets/images/manicure/img_1579.png";
 function Manicure() {
     return (
     <div className='flexColumn'>
-        <section className="m-hero flexRow whiteBackground">
-            <div>
+        <section className="m-hero whiteBackground">
+            <div className="m-mobile-bckgrd">
+                <div className="m-title-hg-mobile"></div>
                 <h2 className="m-hero-subtitle">Spa Maluge</h2>
                 <h1 className='m-hero-title center'>Manicures</h1>
+                
             </div>
             <img className="m-hero-img" src={heroImg} alt="manicure hero image" />
         </section>
@@ -73,133 +75,138 @@ function Manicure() {
         <section className="m-section">
             <img className="m-img-two" src={ImgTwo} alt="side profile manicure image" />
             <h2 className="m-section-title">Pedicures</h2>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-b">Classic Pedicure</h3>
-                    <p className="m-price-b">$45</p>
-                </section>
-                <p className="m-service-desc-b">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the polish of your choice is applied</p>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-b">Gel Pedicure</h3>
-                    <p className="m-price-b">$55</p> 
-                </section>
-                <p className="m-service-desc-b">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the Gel polish of your choice is applied</p>
-            </div>
+            <section className="m-service-mobile">
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-b">Classic Pedicure</h3>
+                        <p className="m-price-b">$45</p>
+                    </section>
+                    <p className="m-service-desc-b">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the polish of your choice is applied</p>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-b">Gel Pedicure</h3>
+                        <p className="m-price-b">$55</p> 
+                    </section>
+                    <p className="m-service-desc-b">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the Gel polish of your choice is applied</p>
+                </div>
             <h3 className="m-service-sub-title">Add Ons:</h3>
             <p className="m-service-sub-tag">French $20</p>
             <p className="m-service-sub-tag">Acrylic Removal $20</p>
             <p className="m-service-sub-tag">Dipping Removal $20</p>
             <p className="m-service-sub-tag">Gel Removal $10</p>
             <p className="m-service-sub-tag">Art Design (Varies)</p>
+            </section>
+
         </section>
         <section className="m-section">
             {/* <img className="m-img-one" src={ImgOne} alt="side profile manicure image" /> */}
             <h2 className="m-section-title">Waxing</h2>
-            <h3 className="m-service-sub-title">* Prices May Vary</h3>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Lip</h3>
-                    <p className="m-price-c">$10</p>
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Chest</h3>
-                    <p className="m-price-c">$30</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Back</h3>
-                    <p className="m-price-c">$50*</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Tummy</h3>
-                    <p className="m-price-c">$19</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Chin</h3>
-                    <p className="m-price-c">$10</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Forehead</h3>
-                    <p className="m-price-c">$15</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Eyebrows</h3>
-                    <p className="m-price-c">$15</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Sideburn</h3>
-                    <p className="m-price-c">$15</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Full Face</h3>
-                    <p className="m-price-c">$50</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Neck</h3>
-                    <p className="m-price-c">$19</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Under Arms</h3>
-                    <p className="m-price-c">$19</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Half Arms</h3>
-                    <p className="m-price-c">$30</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Full Arms</h3>
-                    <p className="m-price-c">$40</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Lower Legs</h3>
-                    <p className="m-price-c">$40</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Full Legs</h3>
-                    <p className="m-price-c">$60</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Bikini</h3>
-                    <p className="m-price-c">$40*</p> 
-                </section>
-            </div>
-            <div className="m-service">
-                <section className="flexRow">
-                    <h3 className="m-service-tag-c">Brazilian Bikini</h3>
-                    <p className="m-price-c">$60*</p> 
-                </section>
-            </div>
+            <section className="m-service-mobile">
+                <h3 className="m-service-sub-title">* Prices May Vary</h3>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Lip</h3>
+                        <p className="m-price-c">$10</p>
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Chest</h3>
+                        <p className="m-price-c">$30</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Back</h3>
+                        <p className="m-price-c">$50*</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Tummy</h3>
+                        <p className="m-price-c">$19</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Chin</h3>
+                        <p className="m-price-c">$10</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Forehead</h3>
+                        <p className="m-price-c">$15</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Eyebrows</h3>
+                        <p className="m-price-c">$15</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Sideburn</h3>
+                        <p className="m-price-c">$15</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Full Face</h3>
+                        <p className="m-price-c">$50</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Neck</h3>
+                        <p className="m-price-c">$19</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Under Arms</h3>
+                        <p className="m-price-c">$19</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Half Arms</h3>
+                        <p className="m-price-c">$30</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Full Arms</h3>
+                        <p className="m-price-c">$40</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Lower Legs</h3>
+                        <p className="m-price-c">$40</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Full Legs</h3>
+                        <p className="m-price-c">$60</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Bikini</h3>
+                        <p className="m-price-c">$40*</p> 
+                    </section>
+                </div>
+                <div className="m-service">
+                    <section className="flexRow">
+                        <h3 className="m-service-tag-c">Brazilian Bikini</h3>
+                        <p className="m-price-c">$60*</p> 
+                    </section>
+                </div>
+            </section>
         </section>
         
       {/* <section className='contactPageContent'>

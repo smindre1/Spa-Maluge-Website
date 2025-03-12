@@ -958,309 +958,6 @@ textarea:focus {
   }
 }
 
-@media only screen and (max-width: 1700px) {
-  .descriptionTitle {
-    font-size: 28px;
-  }
-}
-
-/* ------------------- Screen Adjustments --------------------- */
-@media only screen and (max-width: 1260px) {
-  .welcomeMsg {
-    margin: 0 0 0 27vw;
-  }
-
-  .service {
-    margin: 0 4vw;
-  }
-
-  .contentBlock {
-    width: 60vw;
-    margin: 0;
-  }
-}
-
-@media only screen and (max-width: 1140px) {
-  .serviceImg {
-    height: 24vw;
-    width: 32vw;
-  }
-
-  .overflow {
-    height: 24vw;
-    width: 32vw;
-  }
-
-  .service {
-    margin: 0 3vw;
-  }
-
-  .minorTitle {
-    font-size: clamp(20px, 1vw, 32px);
-  }
-
-  /* .contentBlock {
-    width: 40vw;
-  }*/
-
-  .descriptionText {
-    margin: 0 6vw 14vw 6vw;
-  }
-
-  .wideContentBlock {
-    padding: 10vw 8vw 10vw 8vw;
-  }
-
-  .pageTitle {
-    font-size: clamp(64px, 7vw, 82px);
-  }
-
-  .smallPageTitle {
-    font-size: clamp(92px, 10vw, 118px);
-  }
-
-  .welcomeMsg {
-    font-size: clamp(32px, 4vw, 46px);
-  }
-
-  .contactPage {
-    margin: 5vw 6vw;
-  }
-}
-
-@media only screen and (max-width: 930px) {
-  .hero {
-    border: solid 6px var(--dark-gold);
-  }
-
-  .pageTitle {
-    padding: 38px 10px 34px 10px;
-  }
-
-  .titleBreak {
-    padding: 0 0 0 0;
-  }
-
-  .descriptionText {
-    margin: 0 6vw 10vw 6vw;
-  }
-
-  .welcomeMsg {
-    margin: 0 0 0 0;
-    align-items: center;
-    opacity: 0.9;
-  }
-
-  .smallPageTitle {
-    margin: 0 2vw 0 0;
-  }
-
-  .serviceImg {
-    height: 42vw;
-    width: 56vw;
-    border-radius: 5px;
-  }
-
-  .overflow {
-    height: 42vw;
-    width: 56vw;
-  }
-
-  .minorTitle {
-    font-size: clamp(24px, 1vw, 38px);
-  }
-
-  .contentBlock {
-    width: 80vw;
-  }
-
-  /* .contentImage {
-    width: 80vw;
-    height: 35vw;
-  } */
-}
-
-@media only screen and (max-width: 810px) {
-  .descriptionText {
-    font-size: 18px;
-    margin: 0 6vw 14vw 6vw;
-    padding: 1vw 4vw 2vw 4vw;
-  }
-  
-  .descriptionTitle {
-    margin: 0 0 18px 0;
-    font-size: 28px;
-  }
-
-  .contentImage {
-    height: 80vw;
-    overflow: hidden;
-    object-fit: cover;
-    object-position: bottom;
-  }
-
-  .contactForm {
-    width: 65vw;
-  }
-
-  .contactPage {
-    margin: 0;
-    border-radius: initial;
-    border: none;
-  }
-
-  .lrg-input {
-    width: initial;
-  }
-  .formDiv {
-    flex-direction: column;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  .contentImage {
-    height: 700px;
-  }
-
-  .descriptionText {
-    margin: 0 6vw 20vw 6vw;
-  }
-
-  .smallPageTitle {
-    /* font-size: 72px; */
-    font-size: 10vw;
-  }
-
-  .pageTitle {
-    /* font-size: 62px; */
-    font-size: 8vw;
- }
-
- .welcomeMsg {
-  font-size: 28px;
- }
-
- .service {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0 30px 0;
- }
- /* Switches the header to a more mobile friendly appearance */
- .menu {
-  display: none;
-}
-
-.mobile {
-  display: inline-block;
-}
-
-.mobileMenu {
-  display: inline-block;
-}
-
-header {
-  padding: 4% 8px 2% 8px;
-  justify-content: end;
-}
-}
-
-@media only screen and (max-width: 550px) {
-  
-  .topLeftCorner {
-    height: clamp(70px, 25vw, 150px);
-  }
-  
-  .topRightCorner {
-    height: clamp(70px, 25vw, 150px);
-  }
-  
-  .bottomLeftCorner {
-    height: clamp(70px, 25vw, 150px);
-  }
-  
-  .bottomRightCorner {
-    height: clamp(70px, 25vw, 150px);
-  }
-  
-  .pageTitle {
-    flex-direction: column;
-    padding: 0 10px 6px 0;
-    line-height: normal;
-    font-size: 15vw;
-  }
-  
-  .smallPageTitle {
-    line-height: normal;
-    font-size: 8vw;
-  }
-  
-  .titleBreak {
-    margin: 0 10vw;
-  }
-  
-  .welcomeMsg {
-    font-size: 5.25vw;
-  }
-  
-  .descriptionText {
-    transform: translateY(40px);
-  }
-
-  .contentImage {
-    display: none;
-  }
-
-  .description {
-    padding-top: 24px;
-    background-image: linear-gradient(45deg, var(--brown), var(--lightBrown), var(--darkBrown));
-  }
-
-  .descriptionText {
-    bottom: initial;
-    position: inherit;
-    background-color: initial;
-  }
-
-}
-
-@media only screen and (max-width: 430px) {
-  .contactPageContent {
-    flex-direction: column;
-  }
-
-  .businessInfo {
-    width: inherit;
-    padding: 0 0 48px 0;
-    border: none;
-    border-bottom: solid var(--base) 2px;
-  }
-
-  .contactForm {
-    width: inherit;
-    margin: 0;
-  }
-
-  .formDiv {
-    flex-direction: column;
-  }
-
-  .businessInfo {
-    margin: 0 0 24px 0;
-  }
-
-  .footer {
-    padding: 20px 5px;
-  }
-
-  .footerLink {
-    text-align: center;
-    text-wrap: pretty;
-    width: 22vw;
-    margin: 0 4px;
-    text-decoration: underline;
-  }
-}
 
 /* =============================================================== Management/Settings ===================================== */
 .managementMenu {
@@ -1395,7 +1092,7 @@ header {
   /* right: 0; */
   margin-left: auto;
   justify-content: right;
-
+  
   /* z-index: -1000; */
   /* padding: 0 10vw 0 0; */
 }
@@ -1445,7 +1142,7 @@ header {
 .receiptSubText {
   color: var(--white);
   font-family: "Lato", serif;
-
+  
 }
 
 .indent {
@@ -1489,7 +1186,7 @@ header {
 
 .blueHover:hover .sectionLabel {
   background-color: var(--darkBlue);
-
+  
 }
 
 /* .clientName {
@@ -1645,6 +1342,8 @@ header {
 /* ----------------------- Manicure Page ------------------------------ */
 
 .m-hero {
+  display: flex;
+  flex-direction: row;
   margin: 0 0 0 0;
   justify-content: end;
   border-bottom: 4px solid var(--light-gold);
@@ -1652,19 +1351,18 @@ header {
   border-image: linear-gradient(to left, var(--black) 0%, var(--dark-gold) 100%) 1; */
 }
 
-/* .m-hero-img {
-
-} */
+.m-hero-img {
+  width: 50vw;
+  margin: 0 0 0 6vw;
+}
 
 .m-hero-title {
   margin: 167px 70px 0 0;
   font-weight: 100;
   display: flex;
-
   flex-direction: row;
   justify-content: left;
   font-family: "Great Vibes";
-  font-weight: 100px;
   font-size: 145px;
   padding: 38px 18px 34px 10px;
   background-image: url(/src/assets/images/title-background.webp);
@@ -1672,6 +1370,8 @@ header {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  position: relative;
+  z-index: 10;
 }
 
 .m-hero-subtitle {
@@ -1687,12 +1387,16 @@ header {
   color: transparent;
 }
 
+.m-title-hg-mobile {
+  display: none;
+}
+
 .m-section-title {
   margin: 0 0 120px 0;
   font-size: 120px;
   font-family: "Great Vibes";
   color: var(--bronze);
-  padding: 12px 0 12px 10vw;
+  padding: 26px 0 12px 10vw;
   background-color: var(--black);
   position: relative;
 }
@@ -1717,7 +1421,11 @@ header {
   max-width: 700px;
   cursor:inherit;
   position: relative;
+}
 
+.m-service-mobile {
+  display: flex;
+  flex-direction: column;
 }
 
 .m-service-tag {
@@ -1783,6 +1491,10 @@ header {
   margin-top: 173px;
 }
 
+.m-border-img {
+  display: flex;
+}
+
 .m-service-tag-b {
   background-color: #c31954;
   color: var(--brown);
@@ -1843,6 +1555,10 @@ header {
   min-width: fit-content;
   width: 130px;
   text-align: center;
+}
+
+.m-mobile-bckgrd {
+  background-image: none;
 }
 
 /* ----------------------- Employee Roster Page ------------------------------ */
@@ -1973,4 +1689,449 @@ header {
   font-size: 14px;
   color: #AAA;
   text-decoration: none;
+}
+
+/* ------------------- Screen Adjustments --------------------- */
+
+@media only screen and (max-width: 1700px) {
+  .descriptionTitle {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .m-hero-img {
+    margin: 0;
+  }
+  .m-hero-title {
+    margin: 167px 24px 0 0;;
+  }
+}
+
+@media only screen and (max-width: 1260px) {
+  .m-hero-title {
+    margin: 167px 24px 0 0;;
+  }
+
+  .m-section-title {
+    font-size: 84px;
+  }
+
+  .m-img-one {
+    margin-top: 138px;;
+  }
+
+  .m-img-two {
+    margin-top: 142px;
+  }
+
+  .welcomeMsg {
+    margin: 0 0 0 27vw;
+  }
+
+  .service {
+    margin: 0 4vw;
+  }
+
+  .contentBlock {
+    width: 60vw;
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .serviceImg {
+    height: 24vw;
+    width: 32vw;
+  }
+
+  .overflow {
+    height: 24vw;
+    width: 32vw;
+  }
+
+  .service {
+    margin: 0 3vw;
+  }
+
+  .minorTitle {
+    font-size: clamp(20px, 1vw, 32px);
+  }
+
+  .descriptionText {
+    margin: 0 6vw 14vw 6vw;
+  }
+
+  .wideContentBlock {
+    padding: 10vw 8vw 10vw 8vw;
+  }
+
+  .pageTitle {
+    font-size: clamp(64px, 7vw, 82px);
+  }
+
+  .smallPageTitle {
+    font-size: clamp(92px, 10vw, 118px);
+  }
+
+  .welcomeMsg {
+    font-size: clamp(32px, 4vw, 46px);
+  }
+
+  .contactPage {
+    margin: 5vw 6vw;
+  }
+
+  .m-hero {
+    justify-content: space-between;
+  }
+
+  .m-hero-title {
+    font-size: 96px;
+    margin: 124px 24px 0 110px;
+  }
+
+  .m-hero-subtitle {
+    font-size: 36px;
+    margin: 147px 0 0 265px;
+  }
+}
+
+@media only screen and (max-width: 930px) {
+  .hero {
+    border: solid 6px var(--dark-gold);
+  }
+
+  .pageTitle {
+    padding: 38px 10px 34px 10px;
+  }
+
+  .titleBreak {
+    padding: 0 0 0 0;
+  }
+
+  .descriptionText {
+    margin: 0 6vw 10vw 6vw;
+  }
+
+  .welcomeMsg {
+    margin: 0 0 0 0;
+    align-items: center;
+    opacity: 0.9;
+  }
+
+  .smallPageTitle {
+    margin: 0 2vw 0 0;
+  }
+
+  .serviceImg {
+    height: 42vw;
+    width: 56vw;
+    border-radius: 5px;
+  }
+
+  .overflow {
+    height: 42vw;
+    width: 56vw;
+  }
+
+  .minorTitle {
+    font-size: clamp(24px, 1vw, 38px);
+  }
+
+  .contentBlock {
+    width: 80vw;
+  }
+
+  .m-hero-title {
+    font-size: 96px;
+    margin: 124px 24px 0 52px;
+  }
+
+  .m-hero-subtitle {
+    font-size: 36px;
+    margin: 147px 0 0 207px;
+  }
+
+  .m-service-mobile {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .m-service-module {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .m-service {
+    margin: 0 0 12px 0;
+  }
+
+  .m-service-sub-title {
+    margin: 64px 0 18px 0px;
+  }
+
+  .m-service-sub-tag {
+    margin: 0 0 12px 24px;
+  }
+}
+
+@media only screen and (max-width: 810px) {
+  .descriptionText {
+    font-size: 18px;
+    margin: 0 6vw 14vw 6vw;
+    padding: 1vw 4vw 2vw 4vw;
+  }
+  
+  .descriptionTitle {
+    margin: 0 0 18px 0;
+    font-size: 28px;
+  }
+
+  .contentImage {
+    height: 80vw;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  .contactForm {
+    width: 65vw;
+  }
+
+  .contactPage {
+    margin: 0;
+    border-radius: initial;
+    border: none;
+  }
+
+  .lrg-input {
+    width: initial;
+  }
+  .formDiv {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .contentImage {
+    height: 700px;
+  }
+
+  .descriptionText {
+    margin: 0 6vw 20vw 6vw;
+  }
+
+  .smallPageTitle {
+    /* font-size: 72px; */
+    font-size: 10vw;
+  }
+
+  .pageTitle {
+    /* font-size: 62px; */
+    font-size: 8vw;
+  }
+
+  .welcomeMsg {
+  font-size: 28px;
+  }
+
+  .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 0 30px 0;
+  }
+  /* Switches the header to a more mobile friendly appearance */
+  .menu {
+  display: none;
+  }
+
+  .mobile {
+    display: inline-block;
+  }
+
+  .mobileMenu {
+    display: inline-block;
+  }
+
+  header {
+    padding: 4% 8px 2% 8px;
+    justify-content: end;
+  }
+
+  .m-hero-img {
+    object-fit: cover;
+    object-position: left;
+  }
+
+  .m-hero-title {
+    margin: 124px 24px 24px 52px;
+  }
+
+  .m-service-tag {
+    width: 90vw;
+  }
+
+  .m-service {
+    max-width: 90vw;
+  }
+
+  .m-service:hover .m-service-desc {
+    height: 164px;
+  }
+
+}
+
+@media only screen and (max-width: 550px) {
+  
+  .topLeftCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .topRightCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .bottomLeftCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .bottomRightCorner {
+    height: clamp(70px, 25vw, 150px);
+  }
+  
+  .pageTitle {
+    flex-direction: column;
+    padding: 0 10px 6px 0;
+    line-height: normal;
+    font-size: 15vw;
+  }
+  
+  .smallPageTitle {
+    line-height: normal;
+    font-size: 8vw;
+  }
+  
+  .titleBreak {
+    margin: 0 10vw;
+  }
+  
+  .welcomeMsg {
+    font-size: 5.25vw;
+  }
+  
+  .descriptionText {
+    transform: translateY(40px);
+  }
+
+  .contentImage {
+    display: none;
+  }
+
+  .description {
+    padding-top: 24px;
+    background-image: linear-gradient(45deg, var(--brown), var(--lightBrown), var(--darkBrown));
+  }
+
+  .descriptionText {
+    bottom: initial;
+    position: inherit;
+    background-color: initial;
+  }
+
+  .m-service:hover .m-service-desc {
+    height: 185px;
+  }
+
+  .m-hero-img {
+    width: 100vw;
+    border-top: solid 4px var(--black);
+  }
+
+  .m-hero {
+    flex-direction: column;
+  }
+
+  .m-mobile-bckgrd {
+    background-image: url('./assets/images/manicure/flower-border.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .m-title-hg-mobile {
+    display: flex;
+    position: absolute;
+    /* background: radial-gradient(var(--pureWhite), var(--light-pink), transparent, transparent); */
+    background: radial-gradient(var(--light-pink), var(--pureWhite), transparent, transparent);
+    width: 540px;
+    height: 240px;
+    left: 0%;
+    top: 92px;
+  }
+
+  .m-border-img {
+    display: none;
+  }
+
+  .m-img-one {
+    right: 0%;
+    top: initial;
+    bottom: 0%;
+    /* margin-top: 27vw; */
+    width: 100vw;
+    margin-top: 173px;
+    border-top: solid 4px var(--black);
+  }
+
+  .m-img-two {
+    right: 2%;
+    top: initial;
+    bottom: 10%;
+    border-radius: 100%;
+    border: solid 2px var(--black);
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .contactPageContent {
+    flex-direction: column;
+  }
+
+  .businessInfo {
+    width: inherit;
+    padding: 0 0 48px 0;
+    border: none;
+    border-bottom: solid var(--base) 2px;
+  }
+
+  .contactForm {
+    width: inherit;
+    margin: 0;
+  }
+
+  .formDiv {
+    flex-direction: column;
+  }
+
+  .businessInfo {
+    margin: 0 0 24px 0;
+  }
+
+  .footer {
+    padding: 20px 5px;
+  }
+
+  .footerLink {
+    text-align: center;
+    text-wrap: pretty;
+    width: 22vw;
+    margin: 0 4px;
+    text-decoration: underline;
+  }
 }
