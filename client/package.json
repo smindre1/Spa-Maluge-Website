@@ -1,5 +1,7 @@
 {
   "name": "spa-maluge-packages",
+  "author": "Shane Mindreau",
+  "author-contact": "shane.mindreau@gmail.com",
   "private": true,
   "version": "0.0.0",
   "type": "module",

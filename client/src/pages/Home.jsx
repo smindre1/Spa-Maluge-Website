@@ -7,8 +7,11 @@ import CBD from "../assets/images/services/small_CBD.webp";
 import Head from "../assets/images/services/small_head.webp";
 import Prenatal from "../assets/images/services/small_prenatal.webp";
 import CouplesOne from "../assets/images/services/small_couple.webp";
-import SaltOne from "../assets/images/services/salt_one.webp";
-import SaltTwo from '../assets/images/services/salt_three.webp';
+import Salt from '../assets/images/services/small_salt.webp';
+import SaltTwo from "../assets/images/services/salt_three.webp";
+import Medical from "../assets/images/services/small_medical.webp";
+import Shiatsu from "../assets/images/services/small_shiatsu.webp";
+import Orange from "../assets/images/services/small_orange.webp";
 
 import ReflexOne from "../assets/images/services/small_reflex.webp";
 
@@ -230,9 +233,33 @@ function Home() {
             <a className="serviceAnchor" href="/services/himalayan-salt-stone-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={SaltOne} alt="Himalayan Salt Stone Massage Image"></img>
+                  <img className="serviceImg" src={Salt} alt="Himalayan Salt Stone Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Himalayan Salt Stone Massage</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/medical-massage-therapy">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Medical} alt="Medical Massage Therapy Image"></img>
+                </div>
+                <h3 className="minorTitle">Medical Massage Therapy</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/shiatsu-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Shiatsu} alt="Shaitsu Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Shiatsu Massage</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/hot-orange-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Orange} alt="Hot Orange Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Hot Orange Massage</h3>
               </div>
             </a>
           </div>

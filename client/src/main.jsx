@@ -36,6 +36,9 @@ import Reservation from './pages/Reservation.jsx';
 import Reservations from './pages/Reservations.jsx';
 import Settings from './pages/Settings.jsx';
 import Salt from './pages/services/Salt.jsx';
+import Medical from './pages/services/Medical.jsx';
+import Shiatsu from './pages/services/Shiatsu.jsx';
+import Orange from './pages/services/Orange.jsx';
 import Test from './pages/Test.jsx';
 
 const router = createBrowserRouter([
@@ -136,6 +139,18 @@ const router = createBrowserRouter([
       {
         path: "/services/himalayan-salt-stone-massage",
         element: <Salt />,
+      },
+      {
+        path: "/services/medical-massage-therapy",
+        element: <Medical />,
+      },
+      {
+        path: "/services/shiatsu-massage",
+        element: <Shiatsu />,
+      },
+      {
+        path: "/services/hot-orange-massage",
+        element: <Orange />,
       },
       // //Management/Settings Pages
       {
