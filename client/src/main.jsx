@@ -93,7 +93,7 @@ const router = createBrowserRouter([
         element: <HotStone />,
       },
       {
-        path: "/services/sport-massage",
+        path: "/services/sports-massage",
         element: <Sport />,
       },
       {

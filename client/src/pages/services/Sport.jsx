@@ -9,7 +9,11 @@ function Sport() {
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Sports Massage</h1>
           <p className='mainFont lineBreak'>Sports massage is a technique that is used to prepare the body for physical activity, as well as to speed up the recovery process after training. Sports massage allows you to increase the physical endurance of the body and improve the professional achievements of the athlete. Designed for highly active people.</p>
-          <p className='mainFont lineBreak'></p>
+          {/* <p className='mainFont lineBreak'></p> */}
+        </section>
+      </div>
+
+      <section className='whiteBackground smallPadding prgBreak'>
           <h2 className='serviceSubTitle lineBreak'>Benefits of a Sports Massage:</h2>
           <ul>
             <li className='list bulletPoint mainFont'>Increasing the body's endurance</li>
@@ -25,8 +29,7 @@ function Sport() {
             <li className='list bulletPoint mainFont'>Getting rid of lactic acid stagnation after serious physical exertion</li>
             <li className='list bulletPoint mainFont'>Increasing the level of stress resistance of an athlete</li>
           </ul>
-        </section>
-      </div>
+      </section>
 
       {/* <section className='whiteBackground smallPadding prgBreak'>
         <h2 className='serviceSubTitle lineBreak'>History Of Origin</h2>
