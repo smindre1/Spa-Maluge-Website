@@ -27,7 +27,7 @@ function Deep() {
       <section className='whiteBackground smallPadding prgBreak'>
           <h2 className='serviceSubTitle lineBreak'>Benefits of a Deep Tissue Massage:</h2>
           <ul>
-            <li className='list bulletPoint mainFont'>Mental health: Massage helps to reduce symptoms of stress, anxiety, and depression</li>
+            <li className='list bulletPoint mainFont'>Mental health, this massage helps to reduce symptoms of stress, anxiety, and depression</li>
             <li className='list bulletPoint mainFont'>Relieve pain and stiffness</li>
             <li className='list bulletPoint mainFont'>Improve circulation to reduce swelling or buildup of fluid around the injury</li>
             <li className='list bulletPoint mainFont'>Speed up healing of muscle strains and sprains</li>

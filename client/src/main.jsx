@@ -39,6 +39,9 @@ import Salt from './pages/services/Salt.jsx';
 import Medical from './pages/services/Medical.jsx';
 import Shiatsu from './pages/services/Shiatsu.jsx';
 import Orange from './pages/services/Orange.jsx';
+import Myofascial from "./pages/services/Myofascial.jsx";
+import Neuromuscular from "./pages/services/Neuromuscular.jsx";
+import Orthopedic from "./pages/services/Orthopedic.jsx";
 import Test from './pages/Test.jsx';
 
 const router = createBrowserRouter([
@@ -151,6 +154,18 @@ const router = createBrowserRouter([
       {
         path: "/services/hot-orange-massage",
         element: <Orange />,
+      },
+      {
+        path: "/services/myofascial-release-therapy",
+        element: <Myofascial />,
+      },
+      {
+        path: "/services/neuromuscular-massage-therapy",
+        element: <Neuromuscular />,
+      },
+      {
+        path: "/services/orthopedic-massage",
+        element: <Orthopedic />,
       },
       // //Management/Settings Pages
       {

@@ -12,6 +12,9 @@ import SaltTwo from "../assets/images/services/salt_three.webp";
 import Medical from "../assets/images/services/small_medical.webp";
 import Shiatsu from "../assets/images/services/small_shiatsu.webp";
 import Orange from "../assets/images/services/small_orange.webp";
+import Myofascial from "../assets/images/services/small_myofascial.webp";
+import Neuromuscular from "../assets/images/services/small_neuromuscular.webp";
+import Orthopedic from "../assets/images/services/small_orthopedic.webp";
 
 import ReflexOne from "../assets/images/services/small_reflex.webp";
 
@@ -260,6 +263,30 @@ function Home() {
                   <img className="serviceImg" src={Orange} alt="Hot Orange Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Hot Orange Massage</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/myofascial-release-therapy">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Myofascial} alt="Myofascial Release Therapy Image"></img>
+                </div>
+                <h3 className="minorTitle">Myofascial Release Therapy</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/neuromuscular-massage-therapy">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Neuromuscular} alt="Neuromuscular Massage Therapy Image"></img>
+                </div>
+                <h3 className="minorTitle">Neuromuscular Massage Therapy</h3>
+              </div>
+            </a>
+            <a className="serviceAnchor" href="/services/orthopedic-massage">
+              <div className="service">
+                <div className="overflow">
+                  <img className="serviceImg" src={Orthopedic} alt="Hot Orange Massage Image"></img>
+                </div>
+                <h3 className="minorTitle">Orthopedic Massage</h3>
               </div>
             </a>
           </div>
