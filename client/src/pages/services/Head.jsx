@@ -3,7 +3,7 @@ import HeadImg from '../../assets/images/services/head.webp';
 function Head() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={HeadImg}></img>
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Head, Neck, And Shoulders Massage</h1>

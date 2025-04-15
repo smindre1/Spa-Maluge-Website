@@ -845,6 +845,11 @@ textarea:focus {
   margin: 0 3vw 0 0;
 }
 
+.serviceIntro {
+  display: flex;
+  flex-direction: row;
+}
+
 .serviceTitle {
   font-family: "Times New Roman", Times, serif;
   font-weight: 900;
@@ -1736,6 +1741,17 @@ textarea:focus {
   .contentBlock {
     width: 60vw;
     margin: 0;
+  }
+
+  .servicePageImg {
+    margin: 0;
+    height: 50vw;
+    width: 90vw;
+    object-fit: cover;
+  }
+
+  .serviceIntro {
+    flex-direction: column;
   }
 }
 

@@ -3,7 +3,7 @@ import SportImg from '../../assets/images/services/sport.webp';
 function Sport() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={SportImg} alt='Sports Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

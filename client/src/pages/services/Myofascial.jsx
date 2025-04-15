@@ -3,7 +3,7 @@ import MyofascialImg from '../../assets/images/services/myofascial.webp';
 function Myofascial() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={MyofascialImg} alt='Myofascial Release Therapy Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

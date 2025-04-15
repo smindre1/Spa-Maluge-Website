@@ -3,7 +3,7 @@ import DetoxImg from '../../assets/images/services/detox.webp';
 function Detox() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={DetoxImg} alt='Detox Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

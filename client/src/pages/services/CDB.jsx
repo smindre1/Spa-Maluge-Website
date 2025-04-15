@@ -3,7 +3,7 @@ import CBDImg from '../../assets/images/services/CBD.webp';
 function CBD() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={CBDImg} alt='CBD Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

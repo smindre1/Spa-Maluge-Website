@@ -3,7 +3,7 @@ import OrthopedicImg from '../../assets/images/services/orthopedic.webp';
 function Orthopedic() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={OrthopedicImg} alt='Orthopedic Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

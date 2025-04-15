@@ -3,7 +3,7 @@ import HotStoneImg from '../../assets/images/services/stone.webp';
 function HotStone() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={HotStoneImg} alt='Hot Stone Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

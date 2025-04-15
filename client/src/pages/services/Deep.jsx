@@ -3,7 +3,7 @@ import DeepImg from '../../assets/images/services/deep.webp';
 function Deep() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={DeepImg} alt='Deep Tissue Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

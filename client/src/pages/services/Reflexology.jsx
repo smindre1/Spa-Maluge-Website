@@ -4,7 +4,7 @@ function Reflexology() {
     return (
     <div className='servicePage'>
         
-        <div className='flexRow prgBreak'>
+        <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={ReflexologyImg}></img>
 
         <section className='serviceSummary whiteBackground'>

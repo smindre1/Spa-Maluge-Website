@@ -3,7 +3,7 @@ import OrangeImg from '../../assets/images/services/orange.webp';
 function Orange() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={OrangeImg} alt='Hot Orange Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

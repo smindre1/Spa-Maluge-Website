@@ -4,7 +4,7 @@ function Cupping() {
     return (
     <div className='servicePage'>
         
-        <div className='flexRow prgBreak'>
+        <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={CuppingImg}></img>
 
         <section className='serviceSummary whiteBackground'>

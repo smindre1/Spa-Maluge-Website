@@ -3,7 +3,7 @@ import MedicalImg from '../../assets/images/services/medical.webp';
 function Medical() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={MedicalImg} alt='Medical Massage Therapy Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

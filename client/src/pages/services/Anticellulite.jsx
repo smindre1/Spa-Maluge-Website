@@ -3,7 +3,7 @@ import AnticelluliteImg from '../../assets/images/services/Anticellulite.webp';
 function Anticellulite() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={AnticelluliteImg} alt='CBD Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

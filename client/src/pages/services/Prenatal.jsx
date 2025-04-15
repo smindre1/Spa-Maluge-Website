@@ -3,7 +3,7 @@ import PrenatalImg from '../../assets/images/services/prenatal.webp';
 function Prenatal() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={PrenatalImg}></img>
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Prenatal & Postnatal Massage</h1>

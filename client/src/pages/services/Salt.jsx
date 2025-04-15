@@ -3,7 +3,7 @@ import SaltImg from '../../assets/images/services/salt_one.webp';
 function Salt() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={SaltImg} alt='Himalayan Salt Stone Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

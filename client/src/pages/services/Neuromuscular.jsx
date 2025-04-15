@@ -3,7 +3,7 @@ import NeuromuscularImg from '../../assets/images/services/neuromuscular.webp';
 function Neuromuscular() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={NeuromuscularImg} alt='Neuromuscular Massage Therapy Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

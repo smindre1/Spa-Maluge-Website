@@ -3,7 +3,7 @@ import CouplesImg from '../../assets/images/services/couple.webp';
 function Couples() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={CouplesImg} alt='Couples Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

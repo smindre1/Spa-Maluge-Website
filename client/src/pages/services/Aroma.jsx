@@ -3,7 +3,7 @@ import AromaImg from '../../assets/images/services/Aroma.webp';
 function Aroma() {
     return (
       <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={AromaImg} alt='CBD Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>

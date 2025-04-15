@@ -4,7 +4,7 @@ function Facial() {
     return (
     <div className='servicePage'>
         
-        <div className='flexRow prgBreak'>
+        <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={FacialImg}></img>
         <section className='serviceSummary whiteBackground'>
           <h1 className='serviceTitle lineBreak'>Facial Massage</h1>

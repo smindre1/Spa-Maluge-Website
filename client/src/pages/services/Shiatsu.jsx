@@ -3,7 +3,7 @@ import ShiatsuImg from '../../assets/images/services/shiatsu.webp';
 function Shiatsu() {
     return (
     <div className='servicePage'>
-      <div className='flexRow prgBreak'>
+      <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={ShiatsuImg} alt='Shiatsu Massage Display Image'></img>
 
         <section className='serviceSummary whiteBackground'>
