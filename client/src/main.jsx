@@ -42,13 +42,13 @@ import Orange from './pages/services/Orange.jsx';
 import Myofascial from "./pages/services/Myofascial.jsx";
 import Neuromuscular from "./pages/services/Neuromuscular.jsx";
 import Orthopedic from "./pages/services/Orthopedic.jsx";
-import Test from './pages/Test.jsx';
+import ErrorPage from "./pages/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    errorElement: <h1 className="display-2">Wrong page!</h1>,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,

@@ -1688,6 +1688,33 @@ textarea:focus {
   color: transparent;
 }
 
+/* ------------------------------------ Error Page --------------------------------------- */
+
+.errBtn {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--cream);
+  background-color: var(--opac-cream);
+  padding: 10px 15px;
+  margin: 16px 0 0 0;
+  border-radius: 25px;
+  border: solid 2px var(--cream);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.errBtn:hover {
+  color: var(--gold);
+  border: solid 2px var(--gold);
+}
+
+.errImg {
+  width: 10vw;
+  min-width: 150px;
+  border-radius: 100%;
+  margin: 24px auto 54px auto;
+}
+
 /* ------------------------------------ Misc. --------------------------------------- */
 
 .vagaro a {

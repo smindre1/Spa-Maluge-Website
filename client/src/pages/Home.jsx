@@ -25,37 +25,26 @@ import Anticellulite from "../assets/images/services/small_Anticellulite.webp";
 import Aroma from "../assets/images/services/small_Aroma.webp";
 import DescImage from "../assets/images/description_stock_image.webp";
 
-
-// import Logo from "../assets/test_frame_w.png";
-
 import TLCorner from "../assets/images/decals/TL_Baroque_Corner.svg";
 import TRCorner from "../assets/images/decals/TR_Baroque_Corner.svg";
 import BLCorner from "../assets/images/decals/BL_Baroque_Corner.svg";
 import BRCorner from "../assets/images/decals/BR_Baroque_Corner.svg";
 import TitleFrame from "../assets/images/decals/Section_Title_Frame.svg";
-import LogoTwo from "../assets/Maluge_Logo_Two.svg";
 
 
 function Home() {
   const [language, setLanguage] = useState("english");
-  
-  // useEffect(() => {
-  //   console.log(import.meta.env.VITE_SPA_MALUGE_DB_API, "Test");
-  // }, [])
 
   return (
     <div>
       <section className="hero">
-        {/* <img className="logo" src={Logo}></img> */}
         <img className="topLeftCorner" src={TLCorner} alt="Top Left Frame Corner"></img>
         <img className="topRightCorner" src={TRCorner} alt="Top Right Frame Corner"></img>
-        <img className="logo hide" src={LogoTwo} ></img>
         <div className="titleBreak flexColumn">
           <h1 className="pageTitle">
             <p className="smallPageTitle">Welcome to </p> Spa Maluge
           </h1>
           <h2 className="welcomeMsg pari">Enjoy Relaxation At It's Finest</h2>
-          {/* <a>Schedule Now</a> */}
         </div>
         <img className="bottomLeftCorner" src={BLCorner} alt="Bottom Left Frame Corner"></img>
         <img className="bottomRightCorner" src={BRCorner} alt="Bottom Right Frame Corner"></img>
@@ -78,7 +67,7 @@ function Home() {
 
       <section className="sectionBreak center">
         <div className="description">
-          <img className="contentImage white" src={DescImage} alt="Massage Services Image"></img>
+          <img className="contentImage white" src={DescImage} title="Massage Services" alt="Massage Services Image"></img>
           <div className="descriptionText">
             <h2 className="descriptionTitle mainFont">Our Spa Massage Services</h2>
             <p>
@@ -103,7 +92,7 @@ function Home() {
             </p>
           </div>
 
-          <img className="contentImage pushLeft white" src={DescImage} alt="Massage Services Image"></img>
+          <img className="contentImage pushLeft white" src={DescImage} title="Massage Services" alt="Massage Services Image"></img>
         </div> */}
       </section>
 
@@ -119,7 +108,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/detox-custom-swedish-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Detox} alt="Petox Custom Swedish Massage Image"></img>
+                  <img className="serviceImg" src={Detox} title="Detox Custom Swedish Massage" alt="Detox Custom Swedish Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Detox Custom Swedish Massage</h3>
               </div>
@@ -127,7 +116,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/deep-tissue-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Deep} alt="Deep Tissue Massage Image"></img>
+                  <img className="serviceImg" src={Deep} title="Deep Tissue Massage" alt="Deep Tissue Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Deep Tissue Massage</h3>
               </div>
@@ -135,7 +124,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/hot-stone-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={HotStone} alt="Hot Stone Massage Image"></img>
+                  <img className="serviceImg" src={HotStone} title="Hot Stone Massage" alt="Hot Stone Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Hot Stone Massage</h3>
               </div>
@@ -144,7 +133,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/sports-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Sport} alt="Sports Massage Image"></img>
+                  <img className="serviceImg" src={Sport} title="Sports Massage" alt="Sports Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Sports Massage</h3>
               </div>
@@ -152,7 +141,7 @@ function Home() {
             {/* <a className="serviceAnchor" href="/services/cbd-custom-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={CBD} alt="CBD Custom Massage Image"></img>
+                  <img className="serviceImg" src={CBD} title="CBD Custom Massage" alt="CBD Custom Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">CBD Custom Massage</h3>
               </div>
@@ -160,7 +149,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/head-neck-shoulders-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Head} alt="Head-Neck-Shoulders Massage Image"></img>
+                  <img className="serviceImg" src={Head} title="Head-Neck-Shoulders Massage" alt="Head-Neck-Shoulders Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Head - Neck - Shoulders Massage</h3>
               </div>
@@ -169,7 +158,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/prenatal-and-postnatal-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Prenatal} alt="Prenatal and Postnatal Massage Image"></img>
+                  <img className="serviceImg" src={Prenatal} title="Prenatal and Postnatal Massage" alt="Prenatal and Postnatal Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Prenatal and Postnatal Massage</h3>
               </div>
@@ -177,8 +166,8 @@ function Home() {
             <a className="serviceAnchor" href="/services/couples-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={CouplesOne} alt="Couples Massage Image"></img>
-                  {/* <img className='serviceImg' src={CouplesTwo} alt='Couples Massage Image'></img> */}
+                  <img className="serviceImg" src={CouplesOne} title="Couples Massage" alt="Couples Massage Image"></img>
+                  {/* <img className='serviceImg' src={CouplesTwo} title="Couples Massage" alt='Couples Massage Image'></img> */}
                 </div>
                 <h3 className="minorTitle">Couples Massage</h3>
               </div>
@@ -186,8 +175,8 @@ function Home() {
             <a className="serviceAnchor" href="/services/reflexology-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={ReflexOne} alt="Reflexology Massage Image"></img>
-                  {/* <img className='serviceImg' src={ReflexOne} alt='Reflexology Massage Image'></img> */}
+                  <img className="serviceImg" src={ReflexOne} title="Reflexology Massage" alt="Reflexology Massage Image"></img>
+                  {/* <img className='serviceImg' src={ReflexOne} title="Reflexology Massage" alt='Reflexology Massage Image'></img> */}
                 </div>
                 <h3 className="minorTitle">Reflexology Massage</h3>
               </div>
@@ -196,7 +185,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/cupping-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Cup} alt="Cupping Massage Image"></img>
+                  <img className="serviceImg" src={Cup} title="Cupping Massage" alt="Cupping Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Cupping Massage</h3>
               </div>
@@ -204,7 +193,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/facial-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Facial} alt="Facial Massage Image"></img>
+                  <img className="serviceImg" src={Facial} title="Facial Massage" alt="Facial Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Facial Massage</h3>
               </div>
@@ -212,7 +201,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/lymph-drainage-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Lymph} alt="Lymph Drainage Massage Image"></img>
+                  <img className="serviceImg" src={Lymph} title="Lymph Drainage Massage" alt="Lymph Drainage Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Lymph Drainage Massage</h3>
               </div>
@@ -220,7 +209,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/anticellulite-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Anticellulite} alt="Anticellulite Massage Image"></img>
+                  <img className="serviceImg" src={Anticellulite} title="Anticellulite Massage" alt="Anticellulite Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Anticellulite Massage</h3>
               </div>
@@ -228,7 +217,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/aroma-therapy-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Aroma} alt="Aroma Therapy Massage Image"></img>
+                  <img className="serviceImg" src={Aroma} title="Aroma Therapy Massage" alt="Aroma Therapy Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Aroma Therapy Massage</h3>
               </div>
@@ -236,7 +225,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/himalayan-salt-stone-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Salt} alt="Himalayan Salt Stone Massage Image"></img>
+                  <img className="serviceImg" src={Salt} title="Himalayan Salt Stone Massage" alt="Himalayan Salt Stone Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Himalayan Salt Stone Massage</h3>
               </div>
@@ -244,7 +233,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/medical-massage-therapy">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Medical} alt="Medical Massage Therapy Image"></img>
+                  <img className="serviceImg" src={Medical} title="Medical Massage Therapy" alt="Medical Massage Therapy Image"></img>
                 </div>
                 <h3 className="minorTitle">Medical Massage Therapy</h3>
               </div>
@@ -252,7 +241,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/shiatsu-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Shiatsu} alt="Shaitsu Massage Image"></img>
+                  <img className="serviceImg" src={Shiatsu} title="Shaitsu Massage" alt="Shaitsu Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Shiatsu Massage</h3>
               </div>
@@ -260,7 +249,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/hot-orange-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Orange} alt="Hot Orange Massage Image"></img>
+                  <img className="serviceImg" src={Orange} title="Hot Orange Massage" alt="Hot Orange Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Hot Orange Massage</h3>
               </div>
@@ -268,7 +257,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/myofascial-release-therapy">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Myofascial} alt="Myofascial Release Therapy Image"></img>
+                  <img className="serviceImg" src={Myofascial} title="Myofascial Release Therapy" alt="Myofascial Release Therapy Image"></img>
                 </div>
                 <h3 className="minorTitle">Myofascial Release Therapy</h3>
               </div>
@@ -276,7 +265,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/neuromuscular-massage-therapy">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Neuromuscular} alt="Neuromuscular Massage Therapy Image"></img>
+                  <img className="serviceImg" src={Neuromuscular} title="Neuromuscular Massage Therapy" alt="Neuromuscular Massage Therapy Image"></img>
                 </div>
                 <h3 className="minorTitle">Neuromuscular Massage Therapy</h3>
               </div>
@@ -284,7 +273,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/orthopedic-massage">
               <div className="service">
                 <div className="overflow">
-                  <img className="serviceImg" src={Orthopedic} alt="Hot Orange Massage Image"></img>
+                  <img className="serviceImg" src={Orthopedic} title="Hot Orange Massage" alt="Hot Orange Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Orthopedic Massage</h3>
               </div>
@@ -307,7 +296,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/hot-stone-massage">
               <div className="service">
                 <div className="overflow addOnImg">
-                  <img className="serviceImg" src={HotStone} alt="Hot Stone Massage Image"></img>
+                  <img className="serviceImg" src={HotStone} title="Hot Stone Massage Addition" alt="Hot Stone Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Hot Stone Massage</h3>
               </div>
@@ -316,7 +305,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/cbd-custom-massage">
               <div className="service">
                 <div className="overflow addOnImg">
-                  <img className="serviceImg" src={CBD} alt="CBD Custom Massage Image"></img>
+                  <img className="serviceImg" src={CBD} title="CBD Custom Massage Addition" alt="CBD Custom Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">CBD Custom Massage</h3>
               </div>
@@ -325,7 +314,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/cupping-massage">
               <div className="service">
                 <div className="overflow addOnImg">
-                  <img className="serviceImg" src={Cup} alt="Cupping Massage Image"></img>
+                  <img className="serviceImg" src={Cup} title="Cupping Massage Addition" alt="Cupping Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Cupping Massage</h3>
               </div>
@@ -334,7 +323,7 @@ function Home() {
             <a className="serviceAnchor" href="/services/himalayan-salt-stone-massage">
               <div className="service">
                 <div className="overflow addOnImg">
-                  <img className="serviceImg" src={SaltTwo} alt="Himalayan Salt Stone Massage Image"></img>
+                  <img className="serviceImg" src={SaltTwo} title="Himalayan Salt Stone Massage Addition" alt="Himalayan Salt Stone Massage Image"></img>
                 </div>
                 <h3 className="minorTitle">Himalayan Salt Stone Massage</h3>
               </div>
