@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Blocking common private and irrelevant paths
+Disallow: /book-now
+Disallow: /management
+Disallow: /management/login-or-signup
+Disallow: /management/employee-roster
+Disallow: /management/me
+Disallow: /management/reservations
+Disallow: /management/reservations/:reservationId
+Disallow: /management/settings

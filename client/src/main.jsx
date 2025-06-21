@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
+import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -10,7 +11,6 @@ import ContactUs from "./pages/ContactUs.jsx";
 import History from "./pages/History.jsx";
 import PrivacyPolicy from "./pages/PrivacyPolicy.jsx";
 import Refund from "./pages/Refund.jsx";
-import Services from "./pages/Services.jsx";
 import Manicure from "./pages/Manicure.jsx";
 // All the service page imports:
 import Detox from "./pages/services/Detox.jsx";
@@ -77,10 +77,6 @@ const router = createBrowserRouter([
       {
         path: "/cancellation-and-refund-policy",
         element: <Refund />,
-      },
-      {
-        path: "/services",
-        element: <Services />,
       },
       // Service Pages
       {
@@ -200,4 +196,10 @@ const router = createBrowserRouter([
   },
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(<RouterProvider router={router} />);
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
+  </React.StrictMode>
+);

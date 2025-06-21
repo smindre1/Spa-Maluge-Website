@@ -1,7 +1,18 @@
 import HotStoneImg from '../../assets/images/services/stone.webp';
+import { Helmet } from "react-helmet-async";
 
 function HotStone() {
     return (
+    <>
+      <Helmet>
+        <title>Hot Stone Massage | Spa Maluge</title>
+        <meta name="description" content="Melt away tension and restore balance with our Hot Stone Massage. Heated volcanic stones promote circulation, relaxation, and deep healing." />
+        <meta property="og:title" content="Hot Stone Massage" />
+        <meta property="og:description" content="Relax your body and mind with a Hot Stone Massage at Spa Maluge. Stimulate circulation, release energy blockages, and experience full-body harmony." />
+        <meta property="og:image" content="https://spamaluge.com/og/stone.webp" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className='servicePage'>
       <div className='serviceIntro prgBreak'>
         <img className='servicePageImg' src={HotStoneImg} alt='Hot Stone Massage Display Image'></img>
@@ -46,7 +57,8 @@ function HotStone() {
         </ul>
       </section>
 
-    </div>
+      </div>
+    </>
   );
 }
 
