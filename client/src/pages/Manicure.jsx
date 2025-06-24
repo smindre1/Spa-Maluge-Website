@@ -16,6 +16,18 @@ function Manicure() {
             <img className="m-hero-img" src={heroImg} alt="manicure hero image" />
         </section>
         <img className="m-border-img" src={flwrBr} alt="flower border image"></img>
+
+        <div className="wideContentBlock pink-bckg">
+        <section className="sm-blurb">
+            <p className="SM-Txt">Real vibes. Real beauty. Real Spa Maluge.</p>
+            <p className="SM-Txt">Tap into our world on Instagram & Facebook — you'll love what you see.</p>
+            <div>
+            <a href='https://www.instagram.com/spa_maluge/' target='blank'><img className="sm-color-icon" src="/instagram-c-icon-color.svg" alt="Instagram link"></img></a>
+            <a href='https://www.facebook.com/people/Maryna-Mindreau/61556201655523/' target='_blank'><img className="sm-color-icon" src="/facebook-c-icon-color.svg" alt="Facebook link"></img></a>
+            </div>
+        </section>
+        </div>
+
         <section className="m-section m-height">
             <img className="m-img-one" src={ImgOne} alt="side profile manicure image" />
             <h2 className="m-section-title">Styles</h2>

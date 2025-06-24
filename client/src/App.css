@@ -638,6 +638,14 @@ header {
   margin: 10vw 0 0 0;
 }
 
+.SM-Txt {
+      font-family: "Lato", sans-serif;
+    line-height: 36px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+}
+
 .pushRight {
   margin: 0 40px 0 0;
 }
@@ -831,6 +839,28 @@ textarea:focus {
 
 .footerLink:hover {
   color: var(--gold);
+}
+
+.flexFooter {
+  display: flex;
+  flex-direction: row;
+}
+
+.sm-icon {
+  width: 35px;
+  background-color: var(--white);
+  border-radius: 50%;
+  border: solid var(--white) 2px;
+  margin: -7px 5px;
+}
+
+.sm-icon:hover {
+  background-color: var(--gold);
+  border: solid var(--gold) 2px;
+}
+
+.sm-icon-div {
+  margin: 0 0 0 20px
 }
 
 /* ------------------- Service Page's ------------------- */
@@ -1723,6 +1753,30 @@ textarea:focus {
   text-decoration: none;
 }
 
+.sm-color-icon {
+  width: 50px;
+  margin: 20px 10px 0 10px;
+}
+
+.lgt-bckg {
+  background-color: var(--opac-black);
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pink-bckg {
+  background-color: var(--light-pink);
+}
+
+.sm-blurb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* ------------------- Screen Adjustments --------------------- */
 
 @media only screen and (max-width: 1700px) {
@@ -2165,6 +2219,30 @@ textarea:focus {
   .m-service-tag-c {
     font-size: 18px;
   }
+
+  .footer {
+    align-items: start;
+  }
+
+  .flexFooter {
+  flex-direction: column;
+  }
+
+  .footerLink {
+    margin: 10px 20px 10px 0;
+  }
+
+  .sm-icon {
+    margin: 10px 15px 0 0;
+  }
+
+  .sm-icon-div {
+    margin: 0;
+  }
+
+  .SM-Txt {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 430px) {
@@ -2196,13 +2274,13 @@ textarea:focus {
     padding: 20px 5px;
   }
 
-  .footerLink {
+  /* .footerLink {
     text-align: center;
     text-wrap: pretty;
     width: 22vw;
     margin: 0 4px;
     text-decoration: underline;
-  }
+  } */
 
   .m-hero-title {
     font-size: 52px;

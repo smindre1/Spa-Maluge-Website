@@ -345,10 +345,14 @@ function Home() {
 
         <section className="conclusionSection">
           <div className="wideContentBlock whiteBackground heroTwo">
-            <p className="bodyText lightWhite">
-              Ready to experience the blissful benefits of our expert massage services? Treat yourself to the ultimate indulgence. Don't wait to invest in your
-              well-being and take the first step towards a happier, healthier you by scheduling your appointment now.
-            </p>
+            <section className="lgt-bckg">
+              <p className="SM-Txt lightWhite"><b>Curious what it really looks like inside?</b></p>
+              <p className="SM-Txt lightWhite"><b>Come take a peek — we post all the behind the scenes beauty on Instagram & Facebook!</b></p>
+              <div>
+                <a href='https://www.instagram.com/spa_maluge/' target='blank'><img className="sm-color-icon" src="/instagram-c-icon-color.svg" alt="Instagram link"></img></a>
+                <a href='https://www.facebook.com/people/Maryna-Mindreau/61556201655523/' target='_blank'><img className="sm-color-icon" src="/facebook-c-icon-color.svg" alt="Facebook link"></img></a>
+              </div>
+            </section>
           </div>
         </section>
       </div>
