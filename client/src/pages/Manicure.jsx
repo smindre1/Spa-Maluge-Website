@@ -29,7 +29,7 @@ function Manicure() {
         </div>
 
         <section className="m-section m-height">
-            <img className="m-img-one" src={ImgOne} alt="side profile manicure image" />
+            {/* <img className="m-img-one" src={ImgOne} alt="side profile manicure image" /> */}
             <h2 className="m-section-title">Styles</h2>
             <section className="m-service-module">
                 <div className="m-service">
@@ -85,7 +85,7 @@ function Manicure() {
             
         </section>
         <section className="m-section">
-            <img className="m-img-two" src={ImgTwo} alt="side profile manicure image" />
+            {/* <img className="m-img-two" src={ImgTwo} alt="side profile manicure image" /> */}
             <h2 className="m-section-title">Pedicures</h2>
             <section className="m-service-mobile">
                 <div className="m-service">
