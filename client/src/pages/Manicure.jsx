@@ -21,7 +21,7 @@ function Manicure() {
         </section> */}
 
 
-        <img className="m-border-img m-hero" src={flwrBr} alt="flower border image"></img>
+        <img className="m-hero" src={flwrBr} alt="flower border image"></img>
 
         <div className="wideContentBlock pink-bckg">
         <section className="sm-blurb">
@@ -98,17 +98,17 @@ function Manicure() {
             <section className="m-service-mobile">
                 <div className="m-service">
                     <section className="flexRow">
-                        <h3 className="m-service-tag-b">Classic Pedicure</h3>
+                        <h3 className="m-service-tag">Classic Pedicure</h3>
                         <p className="m-price-b">$45</p>
                     </section>
-                    <p className="m-service-desc-b">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the polish of your choice is applied</p>
+                    <p className="m-service-desc">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the polish of your choice is applied</p>
                 </div>
                 <div className="m-service">
                     <section className="flexRow">
-                        <h3 className="m-service-tag-b">Gel Pedicure</h3>
+                        <h3 className="m-service-tag">Gel Pedicure</h3>
                         <p className="m-price-b">$55</p> 
                     </section>
-                    <p className="m-service-desc-b">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the Gel polish of your choice is applied</p>
+                    <p className="m-service-desc">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the Gel polish of your choice is applied</p>
                 </div>
             <h3 className="m-service-sub-title">Add Ons:</h3>
             <p className="m-service-sub-tag">French $20</p>

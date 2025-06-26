@@ -1432,7 +1432,7 @@ textarea:focus {
   font-family: "Great Vibes";
   color: var(--bronze);
   padding: 26px 0 12px 10vw;
-  background-color: var(--black);
+  background-color: var(--lightBrown);
   position: relative;
 }
 
