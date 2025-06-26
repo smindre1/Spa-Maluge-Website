@@ -100,14 +100,14 @@ function Manicure() {
                 <div className="m-service">
                     <section className="flexRow">
                         <h3 className="m-service-tag">Classic Pedicure</h3>
-                        <p className="m-price-b">$45</p>
+                        <p className="m-price">$45</p>
                     </section>
                     <p className="m-service-desc">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the polish of your choice is applied</p>
                 </div>
                 <div className="m-service">
                     <section className="flexRow">
                         <h3 className="m-service-tag">Gel Pedicure</h3>
-                        <p className="m-price-b">$55</p> 
+                        <p className="m-price">$55</p> 
                     </section>
                     <p className="m-service-desc">Luxurious soak in our pedicure tub, cuticle treatments including push back, trimming and buffing of toenails along with and amazing mini massage provided before the Gel polish of your choice is applied</p>
                 </div>

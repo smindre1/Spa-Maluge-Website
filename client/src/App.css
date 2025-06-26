@@ -1474,7 +1474,7 @@ textarea:focus {
 .m-price {
   /* background-color: var(--cream); */
   /* background: linear-gradient(to right, var(--light-pink) 20%, var(--cream) 40%, var(--cream) 50%); */
-  background-color: var(--black);
+  background-color: #C19E80;
   color: var(--bronze);
   font-size: 24px;
   align-content: center;
