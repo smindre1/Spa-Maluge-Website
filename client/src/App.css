@@ -821,6 +821,11 @@ textarea:focus {
   box-shadow: 0 -20px 20px var(--black);
 }
 
+.footerThree {
+  background-color: var(--gray);
+  /* box-shadow: 0 -20px 20px var(--black); */
+}
+
 .footer {
   align-items: center;
   padding: 20px 0 20px 0;

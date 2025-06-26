@@ -3,11 +3,12 @@ import { useLocation } from 'react-router-dom';
 function Footer() {
     const location = useLocation();
     let footerClass = 'footerSect center';
-    if (location.pathname === '/' | location.pathname === '/manicures') {
+    if (location.pathname === '/') {
         footerClass = 'footerOne center';
     } else if (location.pathname === '/history') {
         footerClass = 'footerTwo center'
-    }
+    } 
+    // else if (location.pathname === '/manicures') {}
 
 
     return (
