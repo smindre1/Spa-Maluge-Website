@@ -1,4 +1,6 @@
 import heroImg from "../assets/images/manicure/img_15760.jpg";
+import heroOne from "../assets/images/manicure/manicure-hero-img-one.webp";
+import heroTwo from "../assets/images/manicure/manicure-hero-img-two.webp";
 import ImgOne from "../assets/images/manicure/img_1577.png";
 import flwrBr from "../assets/images/manicure/flower-border.jpg";
 import ImgTwo from "../assets/images/manicure/img_1579.png";
@@ -6,7 +8,9 @@ import ImgTwo from "../assets/images/manicure/img_1579.png";
 function Manicure() {
     return (
     <div className='flexColumn'>
-        <section className="m-hero whiteBackground">
+        <img className="m-hero" src={heroOne} alt="Manicure Hero Image"></img>
+
+        {/* <section className="m-hero whiteBackground">
             <div className="m-mobile-bckgrd">
                 <div className="m-title-hg-mobile"></div>
                 <h2 className="m-hero-subtitle">Spa Maluge</h2>
@@ -14,8 +18,10 @@ function Manicure() {
                 
             </div>
             <img className="m-hero-img" src={heroImg} alt="manicure hero image" />
-        </section>
-        <img className="m-border-img" src={flwrBr} alt="flower border image"></img>
+        </section> */}
+
+
+        <img className="m-border-img m-hero" src={flwrBr} alt="flower border image"></img>
 
         <div className="wideContentBlock pink-bckg">
         <section className="sm-blurb">
@@ -84,6 +90,8 @@ function Manicure() {
             </section>
             
         </section>
+
+        <img src={heroTwo} alt="Pedicure Hero Image"></img>
         <section className="m-section">
             {/* <img className="m-img-two" src={ImgTwo} alt="side profile manicure image" /> */}
             <h2 className="m-section-title">Pedicures</h2>
@@ -111,8 +119,7 @@ function Manicure() {
             </section>
 
         </section>
-        <section className="m-section">
-            {/* <img className="m-img-one" src={ImgOne} alt="side profile manicure image" /> */}
+        {/* <section className="m-section">
             <h2 className="m-section-title">Waxing</h2>
             <section className="m-service-mobile">
                 <h3 className="m-service-sub-title">* Prices May Vary</h3>
@@ -219,7 +226,7 @@ function Manicure() {
                     </section>
                 </div>
             </section>
-        </section>
+        </section> */}
         
       {/* <section className='contactPageContent'>
         <div className='businessInfo'>
