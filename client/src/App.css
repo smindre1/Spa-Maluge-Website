@@ -19,6 +19,7 @@
   --darkBrown: #220E06;
   --bronze: #f4ad60;
   --light-pink: #FFF0E4;
+  --pink-brown: #A0735C;
 
   /* --------- */
   --cream: #f7f3e3;
@@ -1432,7 +1433,7 @@ textarea:focus {
   font-family: "Great Vibes";
   color: var(--bronze);
   padding: 26px 0 12px 10vw;
-  background-color: var(--lightBrown);
+  background-color: var(--pink-brown);
   position: relative;
 }
 

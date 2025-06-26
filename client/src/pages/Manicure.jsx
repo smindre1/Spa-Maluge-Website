@@ -8,6 +8,9 @@ import ImgTwo from "../assets/images/manicure/img_1579.png";
 function Manicure() {
     return (
     <div className='flexColumn'>
+
+        <img className="m-hero" src={flwrBr} alt="flower border image"></img>
+
         <img className="m-hero" src={heroOne} alt="Manicure Hero Image"></img>
 
         {/* <section className="m-hero whiteBackground">
@@ -21,15 +24,13 @@ function Manicure() {
         </section> */}
 
 
-        <img className="m-hero" src={flwrBr} alt="flower border image"></img>
-
         <div className="wideContentBlock pink-bckg">
         <section className="sm-blurb">
             <p className="SM-Txt">Real vibes. Real beauty. Real Spa Maluge.</p>
             <p className="SM-Txt">Tap into our world on Instagram & Facebook — you'll love what you see.</p>
             <div>
-            <a href='https://www.instagram.com/spa_maluge/' target='blank'><img className="sm-color-icon" src="/instagram-c-icon-color.svg" alt="Instagram link"></img></a>
-            <a href='https://www.facebook.com/people/Maryna-Mindreau/61556201655523/' target='_blank'><img className="sm-color-icon" src="/facebook-c-icon-color.svg" alt="Facebook link"></img></a>
+            <a href='https://www.instagram.com/spa_maluge/' target='blank'><img className="sm-color-icon" src="/insta-icon.svg" alt="Instagram link"></img></a>
+            <a href='https://www.facebook.com/people/Maryna-Mindreau/61556201655523/' target='_blank'><img className="sm-color-icon" src="/facebook-icon.svg" alt="Facebook link"></img></a>
             </div>
         </section>
         </div>
