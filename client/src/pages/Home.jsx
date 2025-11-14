@@ -225,12 +225,12 @@ function Home() {
                   <h3 className="minorTitle">Anticellulite Massage</h3>
                 </div>
               </a>
-              <a className="serviceAnchor" href="/services/aroma-therapy-massage">
+              <a className="serviceAnchor" href="/services/aromatherapy-massage">
                 <div className="service">
                   <div className="overflow">
-                    <img className="serviceImg" src={Aroma} title="Aroma Therapy Massage" alt="Aroma Therapy Massage Image"></img>
+                    <img className="serviceImg" src={Aroma} title="Aromatherapy Massage" alt="Aromatherapy Massage Image"></img>
                   </div>
-                  <h3 className="minorTitle">Aroma Therapy Massage</h3>
+                  <h3 className="minorTitle">Aromatherapy Massage</h3>
                 </div>
               </a>
               <a className="serviceAnchor" href="/services/himalayan-salt-stone-massage">

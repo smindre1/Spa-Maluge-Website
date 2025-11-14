@@ -29,11 +29,11 @@ function Cupping() {
         <section className='whiteBackground smallPadding prgBreak'>
           <h2 className='serviceSubTitle lineBreak'>Cup Massage Therapy Helps Remedy</h2>
           <ul>
-            <li className='mainFont bulletPoint'>Osteochondrosis of the cervical, lumbar and thoracic spine and its prevention;</li>
-            <li className='mainFont bulletPoint'>Radiculitis and its prevention;</li>
-            <li className='mainFont bulletPoint'>Scoliosis;</li>
-            <li className='mainFont bulletPoint'>Weak immunity, frequent colds and ARVI;</li>
-            <li className='mainFont bulletPoint'>Muscle pain;</li>
+            <li className='mainFont bulletPoint'>Osteochondrosis of the cervical, lumbar and thoracic spine and its prevention.</li>
+            <li className='mainFont bulletPoint'>Radiculitis and its prevention.</li>
+            <li className='mainFont bulletPoint'>Scoliosis.</li>
+            <li className='mainFont bulletPoint'>Weak immunity, frequent colds and ARVI.</li>
+            <li className='mainFont bulletPoint'>Muscle pain.</li>
             <li className='mainFont bulletPoint'>Tracheitis, bronchitis (outside the period of exacerbation).</li>
             <li className='mainFont bulletPoint'>Cupping massage for weight loss is especially popular today.</li>
             <li className='mainFont bulletPoint'>Cupping massage is indispensable in the preventive treatment of colds and inflammatory diseases, and is very effective for muscle pain (for example, after physical overload).</li>
@@ -61,10 +61,10 @@ function Cupping() {
             <li className='mainFont bulletPoint'>Infectious diseases.</li>
           </ul>
 
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319772&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
-            {/* <li className='mainFont bulletPoint'>30 Minutes - $30</li>
-            <li className='mainFont bulletPoint'>60 Minutes - $90</li> */}
+            <li className='mainFont bulletPoint'>30 Minutes - $70</li>
+            <li className='mainFont bulletPoint'>60 Minutes - $110</li>
             <li className='mainFont bulletPoint'>Add On a Cupping Massage Therapy - Additional $20.00</li>
           </ul>
         </section>

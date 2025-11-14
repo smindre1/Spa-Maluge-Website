@@ -40,7 +40,7 @@ function Shiatsu() {
             <ul>
               <li className='list bulletPoint mainFont'>Poor posture</li>
               <li className='list bulletPoint mainFont'>Joint problems such as arthritis</li>
-              <li className='list bulletPoint mainFont'>Painfull mussels</li>
+              <li className='list bulletPoint mainFont'>Painful muscles</li>
               <li className='list bulletPoint mainFont'>Digestive and bowel disorders</li>
               <li className='list bulletPoint mainFont'>Sports injuries</li>
               <li className='list bulletPoint mainFont'>Asthma</li>
@@ -49,7 +49,7 @@ function Shiatsu() {
               <li className='list bulletPoint mainFont'>Sciatica</li>
               <li className='list bulletPoint mainFont'>Acute and chronic aches and pains</li>
               <li className='list bulletPoint mainFont'>Fatigue</li>
-              <li className='list bulletPoint mainFont'>Muscle tention</li>
+              <li className='list bulletPoint mainFont'>Muscle tension</li>
               <li className='list bulletPoint mainFont'>Sinusitis</li>
               <li className='list bulletPoint mainFont'>Bronkitis</li>
               <li className='list bulletPoint mainFont'>Anxiety</li>
@@ -71,7 +71,7 @@ function Shiatsu() {
           <p className='mainFont italic lineBreak'>Acute illness, fever, osteoporoses, high blood pressure, arrhythmia, uncontrolled diabetes, bone fractures, recent wounds, recent scars, areas of inflammation, varicose veins, blood cancers, viruses (such as flu and chickenpox), and/or herniated disk(s)</p>
           <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3>
 
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320050&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
               <li className='mainFont bulletPoint'>15 Minutes - $35</li>
               <li className='mainFont bulletPoint'>30 Minutes - $60</li>

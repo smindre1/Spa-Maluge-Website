@@ -20,7 +20,7 @@ function Neuromuscular() {
           <section className='serviceSummary whiteBackground'>
             <h1 className='serviceTitle lineBreak'>Neuromuscular Massage Therapy</h1>
             <p className='mainFont lineBreak'>Neuromuscular massage therapy (NMT) is a specialized form of soft tissue manipulation that targets specific muscles and the nervous system to relieve tension, improve circulation, and promote overall muscle function. The therapy uses techniques such as trigger point therapy, deep tissue massage, and myofascial release to treat musculoskeletal pain, stiffness, and dysfunction.</p>
-            <p className='mainFont lineBreak'>This massage The process typically involves identifying areas of muscle tension and applying focused pressure to these points to release the muscle's contraction and relieve the body.</p>
+            <p className='mainFont lineBreak'>This massage typically involves identifying areas of muscle tension and applying focused pressure to these points to release the muscle's contraction and relieve the body.</p>
           </section>
         </div>
 
@@ -57,7 +57,7 @@ function Neuromuscular() {
           <p className='mainFont italic lineBreak'>Acute illness, fever, osteoporoses, high blood pressure, arrhythmia, uncontrolled diabetes, bone fractures, recent wounds, recent scars, areas of inflammation, varicose veins, blood cancers, viruses (such as flu and chickenpox), and/or herniated disk(s)</p>
           <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3>
 
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320113&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
               <li className='mainFont bulletPoint'>30 Minutes - $69</li>
               <li className='mainFont bulletPoint'>45 Minutes - $89</li>

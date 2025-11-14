@@ -132,7 +132,7 @@ const router = createBrowserRouter([
         element: <Anticellulite />,
       },
       {
-        path: "/services/aroma-therapy-massage",
+        path: "/services/aromatherapy-massage",
         element: <Aroma />,
       },
       {

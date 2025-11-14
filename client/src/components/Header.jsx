@@ -38,7 +38,7 @@ function Header() {
             <summary className="mobileMenuTitle">≡</summary>
             <div className="mobileMenuDiv">
                 {home ? null : <a href="/" className="mobileMenuText">Home</a>}
-                {book ? null : <a className="mobileMenuText" target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book</a> }
+                {book ? null : <a className="mobileMenuText" target="_blank" rel="noopener noreferrer" href={"https://www.fresha.com/book-now/spa-maluge-ees8yy6h/all-offer?share=true&pId=2701511"}>Book</a> }
                 {history ? null : <a href="/history" className="mobileMenuText">History</a> }
                 {contact ? null : <a href="/contact-us" className="mobileMenuText">Contact</a> }
                 {manicure ? null : <a href="/manicures" className="mobileMenuText">Manicures</a> }

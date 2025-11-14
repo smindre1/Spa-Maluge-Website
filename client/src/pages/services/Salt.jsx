@@ -55,7 +55,7 @@ function Salt() {
           <p className='mainFont italic lineBreak'>Drink plenty of water before, during, and after the massage to help prevent dehydration and burns from dry skin.</p>
           <p className='mainFont italic lineBreak'>Apply a skin moisturizer to prevent dry skin as sry skin can burn more easily with the salt stones used in this massage.</p>
           <p className='mainFont italic lineBreak'>Monitor sodium intake if you have kidney, heart, or liver issues, or if you're on a sodium-restricted diet as your skin will be absorbing salt from the salt stones used in this massage.</p>
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319960&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
             <li className='mainFont bulletPoint'>30 Minutes - $90</li>
             <li className='mainFont bulletPoint'>60 Minutes - $160</li>

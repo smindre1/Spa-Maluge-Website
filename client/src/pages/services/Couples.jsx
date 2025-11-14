@@ -50,7 +50,7 @@ function Couples() {
           </ul>
           <p className='mainFont bold'>A $199 Value!</p>
           <p className='mainFont lineBreak bold'>Duration: 60 Mins Deluxe massage for couples</p>
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319706&share=true&pId=2701511"}>Book Your Massage Here</a>
         </section>
 
         <section className='whiteBackground smallPadding prgBreak'>
@@ -67,7 +67,7 @@ function Couples() {
           </ul>
           <p className='mainFont bold'>90 minutes/ $299</p>
           <p className='mainFont lineBreak bold'>120 minutes/ $360</p>
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319687&share=true&pId=2701511"}>Book Your Massage Here</a>
         </section>
 
       </div>

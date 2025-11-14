@@ -38,7 +38,7 @@ function Orange() {
           body.</p>
           <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3>
     
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320071&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
             <li className='mainFont bulletPoint'>30 Minutes - $70</li>
             <li className='mainFont bulletPoint'>45 Minutes - $100</li>

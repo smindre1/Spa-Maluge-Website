@@ -40,7 +40,7 @@ function Reflexology() {
           <h3 className='prgSubject'>Important things to remember when performing reflexology</h3>
           <p className='mainFont italic lineBreak'>Reflexology is contraindicated during pregnancy. Drink water after the procedure to remove toxins and lactic acid accumulated during the massage.</p>
           <h3 className='prgBreak'>If you have serious leg problems, unhealed wounds on the body, blood vessel diseases associated with clots or varicose veins, consult your doctor before a reflexology session.</h3>
-          <a className='bookNowBtn' rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319728&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
             <li className='mainFont bulletPoint'>15 Minutes - $40</li>
             <li className='mainFont bulletPoint'>30 Minutes - $80</li>
