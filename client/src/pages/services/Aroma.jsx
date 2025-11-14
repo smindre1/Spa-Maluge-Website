@@ -38,7 +38,7 @@ function Aroma() {
             <li className='mainFont bulletPoint'>Increases blood circulation, providing cells with oxygen and beneficial components.</li>
           </ul>
         
-          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319921&share=true&pId=2701511"}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING +"A25319921&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
               <li className='mainFont bulletPoint'>30 Minutes - $70.00</li>
               <li className='mainFont bulletPoint'>60 Minutes - $110.00</li>
