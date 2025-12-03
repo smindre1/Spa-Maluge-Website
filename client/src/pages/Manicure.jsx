@@ -7,94 +7,131 @@ import ImgTwo from "../assets/images/manicure/img_1579.png";
 
 function Manicure() {
     return (
-    <div className='flexColumn'>
+    <div className='sandBackground'>
 
-        <img className="m-hero" src={flwrBr} alt="flower border image"></img>
+        {/* <img className="m-hero" src={flwrBr} alt="flower border image"></img> */}
 
-        <img className="m-hero" src={heroOne} alt="Manicure Hero Image"></img>
+        {/* <img className="m-hero" src={heroOne} alt="Manicure Hero Image"></img> */}
 
-        {/* <section className="m-hero whiteBackground">
-            <div className="m-mobile-bckgrd">
-                <div className="m-title-hg-mobile"></div>
-                <h2 className="m-hero-subtitle">Spa Maluge</h2>
-                <h1 className='m-hero-title center'>Manicures</h1>
-                
-            </div>
-            <img className="m-hero-img" src={heroImg} alt="manicure hero image" />
-        </section> */}
-
-
-        <div className="wideContentBlock pink-bckg">
-        <section className="sm-blurb">
-            <p className="SM-Txt">Real vibes. Real beauty. Real Spa Maluge.</p>
-            <p className="SM-Txt">Tap into our world on Instagram & Facebook — you'll love what you see.</p>
-            <div>
-            <a href='https://www.instagram.com/spa_maluge/' target='blank'><img className="sm-color-icon" src="/insta-icon.svg" alt="Instagram link"></img></a>
-            <a href='https://www.facebook.com/people/Maryna-Mindreau/61556201655523/' target='_blank'><img className="sm-color-icon" src="/facebook-icon.svg" alt="Facebook link"></img></a>
-            </div>
-        </section>
-        </div>
-
-        <section className="m-section m-height">
-            {/* <img className="m-img-one" src={ImgOne} alt="side profile manicure image" /> */}
-            <h2 className="m-section-title">Styles</h2>
-            <section className="m-service-module">
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Classic Manicure (Reg/Gel)</h3>
-                        <p className="m-price">$25 | $49</p>
-                    </section>
-                    <p className="m-service-desc">Includes the reshaping and cleaning of the nails, cuticle grooming, a light moisturizing flex massage and then finished with a polish color of your choice</p>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Happy Hands Manicure (Reg / Gel)</h3>
-                        <p className="m-price">$30 | $55</p> 
-                    </section>
-                    <p className="m-service-desc">Includes all of the steps of the classic manicure with an additional extended flex massage.</p>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Deluxe Manicure (Reg / Gel)</h3>
-                        <p className="m-price">$59 | $69</p> 
-                    </section>
-                    <p className="m-service-desc">Treat yourself to a "SPA" manicure. Includes hydrating mask, exfoliating scrub and light moisturizing. Hot towel wrap and finished with a polish color of your choice.</p>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Enhancement Après Gel X (s,m,l)</h3>
-                        <p className="m-price">$100</p> 
-                    </section>
-                    <p className="m-service-desc">Prepare and Apply "natural" Tips to the edge of your natural nails. Après gel is applied for strength and durability. Then length, file, buff, shape and polish as per your preference. (4+ week duration)</p>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Bio Structure Gel (Long Nails)</h3>
-                        <p className="m-price">$100</p> 
-                    </section>
-                    <p className="m-service-desc">Prepare and Apply our high quality BIO GEL to the edge of your LONG NATURAL NAILS. Bio Gel is applied for strength and durability of your long or short natural nails. Then file, buff, shape and polish as per your preference. (4+ week duration)</p>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Bio Structure Gel (Short / Medium)</h3>
-                        <p className="m-price">$80</p> 
-                    </section>
-                    <p className="m-service-desc">Prepare and Apply our high quality BIO GEL to the edge of your SHORT/MEDIUM NATURAL NAILS. Bio Gel is applied for strength and durability of your long or short natural nails. Then file, buff, shape and polish as per your preference. (4+ week duration)</p>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag">Signature Gel</h3>
-                        <p className="m-price">$80</p>
-                    </section>
-                    <p className="m-service-desc">Cuticle treatments including push back, remove excess skin then shape, buff your nails. Hand lotion and a mini massage is provided after deep cuticle removal with special techniques than a final nail strengthener and clear polish are applied. (4+ week duration)</p>
-                </div>
-            </section>
-            
+        <section className="m-menu-title-block">
+            <div className="brand">Spa Maluge — Hoboken, NJ</div>
+            <div className="m-menu-title">Manicure & Pedicure Menu</div>
         </section>
 
-        <img src={heroTwo} alt="Pedicure Hero Image"></img>
         <section className="m-section">
-            {/* <img className="m-img-two" src={ImgTwo} alt="side profile manicure image" /> */}
+            <h2 className="m-section-title">Manicures & Pedicures</h2>
+            <ul className="m-menu">
+                <li className="m-menu-item">Signature BIAB Manicure <span className="m-menu-price">$80</span>
+                    <li className="muted">A premium strengthening system applied on your natural nails to create a flexible, glass-smooth surface that helps them grow longer and stronger. Ideal for weak or thin nails — elegant, durable, and naturally radiant.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320434&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Russian Pedicure — with Gel<span className="m-menu-price">$80</span>
+                    <li className="muted">Gentle, precise e-file technique for refined cuticle care. Protects the natural skin barrier.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320416&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Russian Pedicure — Classic<span className="m-menu-price">$70</span>
+                    <li className="muted">Gentle, precise e-file technique for refined cuticle care. Protects the natural skin barrier.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320406&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Russian Gel Manicure<span className="m-menu-price">$75</span>
+                    <li className="muted"></li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320392&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Russian Dry Manicure<span className="m-menu-price">$65</span>
+                    <li className="muted">Advanced European technique for ultra-precise cuticle work and flawless nail finish.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320389&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Dry Gel Pedicure<span className="m-menu-price">$65</span>
+                    <li className="muted">Dry pedicure finished with gel polish for a glossy, durable result.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320382&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Dry Classic Pedicure<span className="m-menu-price">$50</span>
+                    <li className="muted">Clean, waterless pedicure with gentle shaping and cuticle care.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320373&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Dry Gel Manicure<span className="m-menu-price">$60</span>
+                    <li className="muted">Dry manicure with gel polish application for long-lasting shine.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320354&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Dry Classic Manicure<span className="m-menu-price">$45</span>
+                    <li className="muted">Precise dry care with regular polish — ideal for natural nails.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320349&share=true&pId=2701511"}>Book Now</a>
+                </li>
+            </ul>
+        </section>
+
+        <section className="m-section">
+            <h2 className="m-section-title">Nail Extensions & Enhancements</h2>
+            <div>
+                <h3 className="m-section-subtitle">Aprés Gel-X System (S/M/L)</h3>
+                <li className="muted">Dry manicure with gel polish application for long-lasting shine.</li>
+                <li>Small — $85      |   Medium — $95   |   Long — $105</li>
+                <div className="flexRow">
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320467&share=true&pId=2701511"}>Book Small</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320468&share=true&pId=2701511"}>Book Medium</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320469&share=true&pId=2701511"}>Book Long</a>
+                </div>
+            </div>
+            <div>
+                <h3 className="m-section-subtitle">Polygel System (Small / Medium / Long)</h3>
+                <li className="muted">Hybrid innovation combining acrylic strength with gel flexibility — light, durable, and sculpted to perfection.</li>
+                <li>Small — $70      |   Medium — $80   |   Long — $90</li>
+                <div className="flexRow">
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320484&share=true&pId=2701511"}>Book Small</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320485&share=true&pId=2701511"}>Book Medium</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320486&share=true&pId=2701511"}>Book Long</a>
+                </div>
+            </div>
+            <div>
+                <h3 className="m-section-subtitle">Hard Gel System (Small / Medium / Long)</h3>
+                <li className="muted">Premium sculpted technique built entirely by hand — ideal for custom shape and lasting shine.</li>
+                <li>Small — $95      |   Medium — $105   |   Long — $115</li>
+                <div className="flexRow">
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320500&share=true&pId=2701511"}>Book Small</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320501&share=true&pId=2701511"}>Book Medium</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320502&share=true&pId=2701511"}>Book Long</a>
+                </div>
+            </div>
+        </section>
+
+        <section className="m-section">
+            <h2 className="m-section-title">Spa Nails Advanced Care</h2>
+            <ul className="m-menu">
+                <li className="m-menu-item">Gel Polish Removal<span className="m-menu-price">$15</span>
+                    <li className="muted"></li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320584&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Single Nail Repair<span className="m-menu-price">$15</span>
+                    <li className="muted">**Price depends on design and complexity.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320572&share=true&pId=2701511"}>Book Now</a>
+                </li>
+            </ul>
+        </section>
+
+        <section className="m-section">
+            <h2 className="m-section-title">Premium Spa Rituals</h2>
+            <ul className="m-menu">
+                <li className="m-menu-item">Seasonal Signature Manicure — with Gel<span className="m-menu-price">$80</span>
+                    <li className="muted">Essential oil blend, seasonal scrub, warm towel therapy and custom massage.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320557&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Seasonal Signature Manicure — Classic<span className="m-menu-price">$70</span>
+                    <li className="muted">Essential oil blend, seasonal scrub, warm towel therapy and custom massage.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320550&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Spa Ritual Manicure — with Gel<span className="m-menu-price">$75</span>
+                    <li className="muted">Exfoliating scrub, hydrating mask, hot towel wrap, and warm oil massage.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320547&share=true&pId=2701511"}>Book Now</a>
+                </li>
+                <li className="m-menu-item">Spa Ritual Manicure — Classic<span className="m-menu-price">$65</span>
+                    <li className="muted">Exfoliating scrub, hydrating mask, hot towel wrap, and warm oil massage.</li>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320540&share=true&pId=2701511"}>Book Now</a>
+                </li>
+            </ul>
+        </section>
+
+        {/* <img src={heroTwo} alt="Pedicure Hero Image"></img> */}
+        {/* <section className="m-section">
             <h2 className="m-section-title">Pedicures</h2>
             <section className="m-service-mobile">
                 <div className="m-service">
@@ -119,125 +156,16 @@ function Manicure() {
             <p className="m-service-sub-tag">Art Design (Varies)</p>
             </section>
 
-        </section>
-        {/* <section className="m-section">
-            <h2 className="m-section-title">Waxing</h2>
-            <section className="m-service-mobile">
-                <h3 className="m-service-sub-title">* Prices May Vary</h3>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Lip</h3>
-                        <p className="m-price-c">$10</p>
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Chest</h3>
-                        <p className="m-price-c">$30</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Back</h3>
-                        <p className="m-price-c">$50*</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Tummy</h3>
-                        <p className="m-price-c">$19</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Chin</h3>
-                        <p className="m-price-c">$10</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Forehead</h3>
-                        <p className="m-price-c">$15</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Eyebrows</h3>
-                        <p className="m-price-c">$15</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Sideburn</h3>
-                        <p className="m-price-c">$15</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Full Face</h3>
-                        <p className="m-price-c">$50</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Neck</h3>
-                        <p className="m-price-c">$19</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Under Arms</h3>
-                        <p className="m-price-c">$19</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Half Arms</h3>
-                        <p className="m-price-c">$30</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Full Arms</h3>
-                        <p className="m-price-c">$40</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Lower Legs</h3>
-                        <p className="m-price-c">$40</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Full Legs</h3>
-                        <p className="m-price-c">$60</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Bikini</h3>
-                        <p className="m-price-c">$40*</p> 
-                    </section>
-                </div>
-                <div className="m-service">
-                    <section className="flexRow">
-                        <h3 className="m-service-tag-c">Brazilian Bikini</h3>
-                        <p className="m-price-c">$60*</p> 
-                    </section>
-                </div>
-            </section>
         </section> */}
-        
-      {/* <section className='contactPageContent'>
-        <div className='businessInfo'>
-          <h2 className="minorTitle">Business Contacts</h2>
-          <p className='businessInfoTxt'>Call Us At: </p>
-          <p className='businessInfoTxt'>Email Us At: </p>
-          <a className='businessInfoTxt'>Find Us At: 108 Adams St, Hoboken, NJ 07030</a>
-        </div>
-      </section> */}
-      
+
+        <section className="sm-blurb wideContentBlock">
+            <p className="SM-Txt">Real vibes. Real beauty. Real Spa Maluge.</p>
+            <p className="SM-Txt">Tap into our world on Instagram & Facebook — you'll love what you see.</p>
+            <div>
+            <a href='https://www.instagram.com/spa_maluge/' target='blank'><img className="sm-color-icon" src="/insta-icon.svg" alt="Instagram link"></img></a>
+            <a href='https://www.facebook.com/people/Maryna-Mindreau/61556201655523/' target='_blank'><img className="sm-color-icon" src="/facebook-icon.svg" alt="Facebook link"></img></a>
+            </div>
+        </section>
     </div>
   );
 }

@@ -24,18 +24,16 @@ function Header() {
     }, [home, services, contact, book, history, manicure])
     
     return (
-    <header className={home | manicure? "homeHeader" : null || history ? "historyHeader" : null}>
-        {/* <img className="logo" src={LogoTwo} ></img> */}
+    <header className={(home || manicure) ? "homeHeader" : (history ? "historyHeader" : null)}>
         <nav className="menu">
-            <a href="/" className={home ? "hide menuBarText" : "textColor menuBarText"}>Home</a>
-            {/* <a href="/services" className={services ? "hide menuBarText" : "textColor menuBarText"}>Services</a> */}
-            <a href="/manicures" className={manicure ? "hide menuBarText" : "textColor menuBarText"}>Manicure</a>
-            <a className={book ? "hide menuBarText" : "textColor menuBarText"} target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book</a>
-            <a href="/history" className={history ? "hide menuBarText" : "textColor menuBarText"}>History</a>
-            <a href="/contact-us" className={contact ? "hide menuBarText" : "textColor menuBarText"}>Contact Us</a>
+            <a href="/" className={home ? "hide menuBarText" : (manicure ? "rose menuBarText" : "textColor menuBarText")}>Home</a>
+            <a href="/manicures" className={manicure ? "hide menuBarText" : (manicure ? "rose menuBarText" : "textColor menuBarText")}>Manicure</a>
+            <a className={book ? "hide menuBarText" : (manicure ? "rose menuBarText" : "textColor menuBarText")} target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING}>Book</a>
+            <a href="/history" className={history ? "hide menuBarText" : (manicure ? "rose menuBarText" : "textColor menuBarText")}>History</a>
+            <a href="/contact-us" className={contact ? "hide menuBarText" : (manicure ? "rose menuBarText" : "textColor menuBarText")}>Contact Us</a>
         </nav>
         <details className="mobileMenu">
-            <summary className="mobileMenuTitle">≡</summary>
+            <summary className={manicure ? "rose mobileMenuTitle" : "cream mobileMenuTitle"}>≡</summary>
             <div className="mobileMenuDiv">
                 {home ? null : <a href="/" className="mobileMenuText">Home</a>}
                 {book ? null : <a className="mobileMenuText" target="_blank" rel="noopener noreferrer" href={"https://www.fresha.com/book-now/spa-maluge-ees8yy6h/all-offer?share=true&pId=2701511"}>Book</a> }
