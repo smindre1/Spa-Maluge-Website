@@ -1,9 +1,9 @@
-import heroImg from "../assets/images/manicure/img_15760.jpg";
-import heroOne from "../assets/images/manicure/manicure-hero-img-one.webp";
-import heroTwo from "../assets/images/manicure/manicure-hero-img-two.webp";
-import ImgOne from "../assets/images/manicure/img_1577.png";
-import flwrBr from "../assets/images/manicure/flower-border.jpg";
-import ImgTwo from "../assets/images/manicure/img_1579.png";
+// import heroImg from "../assets/images/manicure/img_15760.jpg";
+// import heroOne from "../assets/images/manicure/manicure-hero-img-one.webp";
+// import heroTwo from "../assets/images/manicure/manicure-hero-img-two.webp";
+// import ImgOne from "../assets/images/manicure/img_1577.png";
+// import flwrBr from "../assets/images/manicure/flower-border.jpg";
+// import ImgTwo from "../assets/images/manicure/img_1579.png";
 
 function Manicure() {
     return (
