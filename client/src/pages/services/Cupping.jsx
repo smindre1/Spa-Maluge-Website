@@ -61,7 +61,7 @@ function Cupping() {
             <li className='mainFont bulletPoint'>Infectious diseases.</li>
           </ul>
 
-          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319772&share=true&pId=2701511"}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4952432&oiid=sv%3A25319772&share=true&pId=2701511"}>Book Your Massage Here</a>
           <ul>
             <li className='mainFont bulletPoint'>30 Minutes - $70</li>
             <li className='mainFont bulletPoint'>60 Minutes - $110</li>

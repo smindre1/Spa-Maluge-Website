@@ -48,7 +48,7 @@ function HotStone() {
         <h3 className='prgSubject'>The procedure should not be performed on people with any of the following conditions as it can be dangerous.</h3>
         <p className='mainFont italic lineBreak'>In case of circulatory disorders, cancer, skin diseases, varicose veins, acute inflammatory and infectious processes, and diseases of the cardiovascular system a Hot Stone Massage will not bring any benefit, and will only cause harm.</p>
         <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3>
-        <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319256&share=true&pId=2701511"}>Book Your Massage Here</a>
+        <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4952432&oiid=sv%3A25319256&share=true&pId=2701511"}>Book Your Massage Here</a>
         <ul>
           <li className='mainFont bulletPoint'>30 Minutes - $90.00</li>
           <li className='mainFont bulletPoint'>60 Minutes - $160.00</li>

@@ -23,39 +23,39 @@ function Manicure() {
             <ul className="m-menu">
                 <li className="m-menu-item">Signature BIAB Manicure <span className="m-menu-price">$80</span>
                     <li className="muted">A premium strengthening system applied on your natural nails to create a flexible, glass-smooth surface that helps them grow longer and stronger. Ideal for weak or thin nails — elegant, durable, and naturally radiant.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320434&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320434&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Russian Pedicure — with Gel<span className="m-menu-price">$80</span>
                     <li className="muted">Gentle, precise e-file technique for refined cuticle care. Protects the natural skin barrier.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320416&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320416&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Russian Pedicure — Classic<span className="m-menu-price">$70</span>
                     <li className="muted">Gentle, precise e-file technique for refined cuticle care. Protects the natural skin barrier.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320406&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320406&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Russian Gel Manicure<span className="m-menu-price">$75</span>
                     <li className="muted"></li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320392&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320392&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Russian Dry Manicure<span className="m-menu-price">$65</span>
                     <li className="muted">Advanced European technique for ultra-precise cuticle work and flawless nail finish.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320389&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320389&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Dry Gel Pedicure<span className="m-menu-price">$65</span>
                     <li className="muted">Dry pedicure finished with gel polish for a glossy, durable result.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320382&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320382&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Dry Classic Pedicure<span className="m-menu-price">$50</span>
                     <li className="muted">Clean, waterless pedicure with gentle shaping and cuticle care.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320373&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320373&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Dry Gel Manicure<span className="m-menu-price">$60</span>
                     <li className="muted">Dry manicure with gel polish application for long-lasting shine.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320354&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320354&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Dry Classic Manicure<span className="m-menu-price">$45</span>
                     <li className="muted">Precise dry care with regular polish — ideal for natural nails.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320349&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320349&share=true&pId=2701511"}>Book Now</a>
                 </li>
             </ul>
         </section>
@@ -67,9 +67,9 @@ function Manicure() {
                 <li className="muted">Dry manicure with gel polish application for long-lasting shine.</li>
                 <li>Small — $85      |   Medium — $95   |   Long — $105</li>
                 <div className="flexRow">
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320467&share=true&pId=2701511"}>Book Small</a>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320468&share=true&pId=2701511"}>Book Medium</a>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320469&share=true&pId=2701511"}>Book Long</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320467&share=true&pId=2701511"}>Book Small</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320468&share=true&pId=2701511"}>Book Medium</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320469&share=true&pId=2701511"}>Book Long</a>
                 </div>
             </div>
             <div>
@@ -77,9 +77,9 @@ function Manicure() {
                 <li className="muted">Hybrid innovation combining acrylic strength with gel flexibility — light, durable, and sculpted to perfection.</li>
                 <li>Small — $70      |   Medium — $80   |   Long — $90</li>
                 <div className="flexRow">
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320484&share=true&pId=2701511"}>Book Small</a>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320485&share=true&pId=2701511"}>Book Medium</a>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320486&share=true&pId=2701511"}>Book Long</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320484&share=true&pId=2701511"}>Book Small</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320485&share=true&pId=2701511"}>Book Medium</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320486&share=true&pId=2701511"}>Book Long</a>
                 </div>
             </div>
             <div>
@@ -87,9 +87,9 @@ function Manicure() {
                 <li className="muted">Premium sculpted technique built entirely by hand — ideal for custom shape and lasting shine.</li>
                 <li>Small — $95      |   Medium — $105   |   Long — $115</li>
                 <div className="flexRow">
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320500&share=true&pId=2701511"}>Book Small</a>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320501&share=true&pId=2701511"}>Book Medium</a>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320502&share=true&pId=2701511"}>Book Long</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320500&share=true&pId=2701511"}>Book Small</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320501&share=true&pId=2701511"}>Book Medium</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320502&share=true&pId=2701511"}>Book Long</a>
                 </div>
             </div>
         </section>
@@ -99,11 +99,11 @@ function Manicure() {
             <ul className="m-menu">
                 <li className="m-menu-item">Gel Polish Removal<span className="m-menu-price">$15</span>
                     <li className="muted"></li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320584&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320584&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Single Nail Repair<span className="m-menu-price">$15</span>
                     <li className="muted">**Price depends on design and complexity.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320572&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320572&share=true&pId=2701511"}>Book Now</a>
                 </li>
             </ul>
         </section>
@@ -113,19 +113,19 @@ function Manicure() {
             <ul className="m-menu">
                 <li className="m-menu-item">Seasonal Signature Manicure — with Gel<span className="m-menu-price">$80</span>
                     <li className="muted">Essential oil blend, seasonal scrub, warm towel therapy and custom massage.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320557&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320557&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Seasonal Signature Manicure — Classic<span className="m-menu-price">$70</span>
                     <li className="muted">Essential oil blend, seasonal scrub, warm towel therapy and custom massage.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320550&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320550&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Spa Ritual Manicure — with Gel<span className="m-menu-price">$75</span>
                     <li className="muted">Exfoliating scrub, hydrating mask, hot towel wrap, and warm oil massage.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320547&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320547&share=true&pId=2701511"}>Book Now</a>
                 </li>
                 <li className="m-menu-item">Spa Ritual Manicure — Classic<span className="m-menu-price">$65</span>
                     <li className="muted">Exfoliating scrub, hydrating mask, hot towel wrap, and warm oil massage.</li>
-                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25320540&share=true&pId=2701511"}>Book Now</a>
+                    <a className='m-btn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4933842&oiid=sv%3A25320540&share=true&pId=2701511"}>Book Now</a>
                 </li>
             </ul>
         </section>

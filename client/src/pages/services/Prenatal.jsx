@@ -47,9 +47,9 @@ function Prenatal() {
           <p className='mainFont italic lineBreak'>Fresh fracture or wound(s), Thrombosis, Diseases of the heart and vascular system, Predisposition to increased blood pressure, Varicose veins, Hernias, Inflammatory processes, and/or Tuberculosis.</p>
           <h3 className='prgBreak'>If you match any of the prior listed conditions please consult your doctor before booking your massage.</h3>
           <li className='italic bold mainFont'>Prenatal Massage:</li>
-          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319327&share=true&pId=2701511"}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4952432&oiid=sv%3A25319327&share=true&pId=2701511"}>Book Your Massage Here</a>
           <li className='italic bold mainFont'>Postnatal Massage:</li>
-          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "A25319374&share=true&pId=2701511"}>Book Your Massage Here</a>
+          <a className='bookNowBtn' target="_blank" rel="noopener noreferrer" href={import.meta.env.VITE_MASSAGE_BOOKING + "4952432&oiid=sv%3A25319374&share=true&pId=2701511"}>Book Your Massage Here</a>
           <li className='italic bold mainFont '>Our Rates:</li>
           <ul>
             <li className='mainFont bulletPoint'>30 Minutes - $80.00</li>
