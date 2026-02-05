@@ -7,11 +7,9 @@ function ContactUs() {
       <section className='contactPageContent'>
         <div className='businessInfo'>
           {/* <h2 className="minorTitle">Business Contacts</h2> */}
-          <p className='businessInfoTxt'>(917) 921-4237</p>
-          <p className='businessInfoTxt'>malugemc@gmail.com</p>
-          <a className='businessInfoTxt'>108B Adams Street, Hoboken, NJ 07030</a>
+          <p className='businessInfoTxt'>This is a mockup webpage</p>
         </div>
-        <Form></Form>
+        {/* <Form></Form> */}
       </section>
       
     </div>
